@@ -5,6 +5,9 @@ import numpy as np
 currentdir = os.path.dirname(os.path.realpath(__file__))
 
 # remove old data
+if not os.path.exists(f"{currentdir}/data"):
+    os.mkdir(f"{currentdir}/data")
+
 for file in os.listdir(f"{currentdir}/data"):
     os.remove(f"{currentdir}/data/{file}")
 
