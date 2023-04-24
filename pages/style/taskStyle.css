@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('colorStyle.css');
+@import url('bodyStyle.css');
+@import url('headerStyle.css');
+
+
+/* GLOBAL PARAMETER */
+
+/* :root{
+    
+} */
+
+body{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* GRAPHICS */
+
+.graphics{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    color: var(--primary-color);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 0 5px var(--box-shadow-color);
+    margin: 16px;
+}
+
+h1{
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    /* color: var(--secondary-color); */
+    text-decoration: none;
+    margin-block: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+#code{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+    font-size: clamp(6px, 1.5vw, 12px);
+}
+#code>div{
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 0 5px var(--box-shadow-color);
+    color: var(--primary-color);
+}
+
+/* DEBUG TOOLS */
+/* you can see more clearly the box model with this */
+/* div{
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 0 5px var(--black);
+}  */
+
+#compare-tool{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
