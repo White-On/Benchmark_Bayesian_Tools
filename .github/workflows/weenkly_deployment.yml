@@ -25,22 +25,23 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  check-file-exists:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout pages existance file
-        uses: actions/checkout@v2
-      - name: Check if file exists
-        run: |
-          ls -la
-          cd pages
-          if [ -f ./pages/ ]; then
-            echo "File exists"
-            echo "file-exists=true" >> $GITHUB_OUTPUT
-          else
-            echo "File does not exist"
-            echo "file-exists=false" >> $GITHUB_OUTPUT
-          fi
+# TODO
+  # check-file-exists:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout pages existance file
+  #       uses: actions/checkout@v2
+  #     - name: Check if file exists
+  #       run: |
+  #         ls -la
+  #         cd pages
+  #         if [ -f ./pages/ ]; then
+  #           echo "File exists"
+  #           echo "file-exists=true" >> $GITHUB_OUTPUT
+  #         else
+  #           echo "File does not exist"
+  #           echo "file-exists=false" >> $GITHUB_OUTPUT
+  #         fi
   deploy:
     needs: check-file-exists
     if: ${{ needs.check-file-exists.outputs.file-exists == 'true' }}
