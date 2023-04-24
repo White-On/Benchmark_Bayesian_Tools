@@ -32,8 +32,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Check if file exists
         run: |
-          echo cd $GITHUB_WORKSPACE
-          echo ls -la
+          ls -la
+          cd pages
           if [ -f ./pages/ ]; then
             echo "File exists"
             echo "file-exists=true" >> $GITHUB_OUTPUT
