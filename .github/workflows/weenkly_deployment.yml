@@ -25,8 +25,24 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
+  check-file-exists:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout pages existance file
+        uses: actions/checkout@v2
+      - name: Check if file exists
+        run: |
+          if [ -f ./pages ]; then
+            echo "File exists"
+            echo "::set-output name=file-exists::true"
+          else
+            echo "File does not exist"
+            echo "::set-output name=file-exists::false"
+          fi
   deploy:
+    needs: check-file-exists
+    if: ${{ needs.check-file-exists.outputs.file-exists == 'true' }}
+    name: Deploy to GitHub Pages
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
