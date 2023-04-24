@@ -32,7 +32,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Check if file exists
         run: |
-          if [ -f ./pages ]; then
+          if [ -f pages/ ]; then
             echo "File exists"
             echo "::set-output name=file-exists::true"
           else
