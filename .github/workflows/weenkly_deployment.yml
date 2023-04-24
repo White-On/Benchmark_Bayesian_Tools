@@ -43,8 +43,8 @@ jobs:
   #           echo "file-exists=false" >> $GITHUB_OUTPUT
   #         fi
   deploy:
-    needs: check-file-exists
-    if: ${{ needs.check-file-exists.outputs.file-exists == 'true' }}
+    # needs: check-file-exists
+    # if: ${{ needs.check-file-exists.outputs.file-exists == 'true' }}
     name: Deploy to GitHub Pages
     environment:
       name: github-pages
