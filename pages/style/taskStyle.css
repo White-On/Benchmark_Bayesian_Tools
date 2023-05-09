@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('colorStyle.css');
+@import url('bodyStyle.css');
+@import url('headerStyle.css');
+@import url('navigationStyle.css');
+@import url('rankBarStyle.css');
+
+
+/* GLOBAL PARAMETER */
+
+/* :root{
+    
+} */
+
+body{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* GRAPHICS */
+
+.graphics{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    color: var(--primary-color);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 0 5px var(--box-shadow-color);
+    margin: 16px;
+    width: clamp(300px, 50vw, 600px);
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    /* color: var(--secondary-color); */
+    text-decoration: none;
+    margin-block: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+#code{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    font-size: clamp(6px, 1.5vw, 12px);
+}
+#code>div{
+    display: none;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 0 5px var(--box-shadow-color);
+    color: var(--primary-color);
+}
+
+/* DEBUG TOOLS */
+/* you can see more clearly the box model with this */
+/* div{
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 0 5px var(--black);
+}  */
+
+#compare-tool{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
