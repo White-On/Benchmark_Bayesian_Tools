@@ -11,8 +11,8 @@ currentdir = os.path.dirname(os.path.realpath(__file__))
 samples = read_csv(f"{currentdir}/data/sample_{sys.argv[1]}_alarm.csv", sep=",")
 
 # estimate structure
-est = ExhaustiveSearch(samples)
-best_model = est.estimate(scoring_method=BicScore(samples))
+est = ExhaustiveSearch(samples, scoring_method=BicScore(samples))
+best_model = est.estimate()
 
 # estimate parameters
 best_model = BayesianModel(best_model.edges())
