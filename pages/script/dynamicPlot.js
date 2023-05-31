@@ -1,19 +1,19 @@
 export  function LineChart(data, {
-    x = ([x]) => x, // given d in data, returns the (temporal) x-value
-    y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
-    z = () => 1, // given d in data, returns the (categorical) z-value
-    title, // given d in data, returns the title text
+    values = ([value]) => value, // given d in data, returns the (quantitative) x-value
+    categories = ([, categories]) => categories,  // given d in data, returns the (temporal) y-value
+    inerClass = ([, , inerClass]) => inerClass, // given d in data, returns the (categorical) z-value
+
+    title = "Plot", // title of the chart
+    titleFontSize = 20, // font size of the title
+
     defined, // for gaps in data
 
     curve = d3.curveBumpX, // method of interpolation between points
 
-    marginTop = 20, // top margin, in pixels
-    marginRight = 30, // right margin, in pixels
-    marginBottom = 30, // bottom margin, in pixels
-    marginLeft = 50, // left margin, in pixels
-
     width = 640, // outer width, in pixels
     height = 400, // outer height, in pixels
+
+    margin = { top: 20, right: 30, bottom: 30, left: 50 },
 
     xType = d3.scaleLinear, // type of x-scale
     yType = d3.scaleLinear, // type of y-scale
@@ -21,16 +21,17 @@ export  function LineChart(data, {
     xDomain, // [xmin, xmax]
     yDomain, // [ymin, ymax]
 
-    xRange = [marginLeft, width - marginRight], // [left, right]
-    yRange = [height - marginBottom, marginTop], // [bottom, top]
+    xRange = [margin.left, width - margin.right], // [left, right]
+    yRange = [height - margin.bottom, margin.top], // [bottom, top]
 
     yFormat, // a format specifier string for the y-axis
     xFormat = d3.format(".0s"), // a format specifier string for the x-axis
+    xLabel, // a label for the x-axis
     yLabel, // a label for the y-axis
     zDomain, // array of z-values
     labelFontSize = 20, // font size of axis labels
 
-    color = "blue", // stroke color of line, as a constant or a function of *z*
+    color = d3.scaleOrdinal(d3.schemeCategory10), // stroke color of line, as a constant or a function of *z*
 
     strokeLinecap, // stroke line cap of line
     strokeLinejoin, // stroke line join of line
@@ -46,12 +47,12 @@ export  function LineChart(data, {
 
     mixBlendMode = "multiply", // blend mode of lines
 
-    legend = false, // show a legend?
-    xLegend = width*0.1, // x-axis legend
-    yLegend = height*0.1, // y-axis legend
-    legendColorBoxSize = [20, 20], // size of the color box in the legend
+    displayLegend = true, // show a legend?
+    xLegend = margin.left + 15, // x-axis legend
+    yLegend = 0, // y-axis legend
+    legendColorBoxSize = [10, 10], // size of the color box in the legend
     legendColorBoxGap = 5, // margin of the color box in the legend
-    legendFontSize = 20, // font size of the legend
+    legendFontSize = 12, // font size of the legend
 
     graphicalreduction = 0.1, // graphical reduction of the chart 
 
@@ -59,17 +60,28 @@ export  function LineChart(data, {
     } = {}) {
     // Compute values.
     // We compute the x, y, z, and defined values for each data point.
-    const X = d3.map(data, x);
-    const Y = d3.map(data, y);
-    const Z = d3.map(data, z);
+    const X = d3.map(data, categories);
+    const Y = d3.map(data, values);
+    const Z = d3.map(data, inerClass);
     const O = d3.map(data, d => d);
     if (defined === undefined) defined = (d, i) => !isNaN(X[i]) && !isNaN(Y[i]);
     const D = d3.map(data, defined);
 
     // Compute default domains, and unique the z-domain.
     // The Domain is the range of values that the data can take on.
-    const xMinMaxValue = d3.extent(X);
-    const xDynamicRange = xMinMaxValue[1] - xMinMaxValue[0];
+    let xMinMaxValue;
+    let xDynamicRange;
+    if(typeof X[0] !== "string"){
+        xMinMaxValue = d3.extent(X);
+        xDynamicRange = xMinMaxValue[1] - xMinMaxValue[0];
+
+        if (xDomain === undefined) xDomain = [xMinMaxValue[0] - xDynamicRange*graphicalreduction, xMinMaxValue[1] + xDynamicRange*graphicalreduction];
+
+    }
+    else{
+        xType = d3.scaleBand;
+        xDomain = X;
+    }
     
     const yMinMaxValue = [d3.min(Y, d => typeof d === "string" ? +d : d), d3.max(Y, d => typeof d === "string" ? +d : d)];
     const yDynamicRange = yMinMaxValue[1] - yMinMaxValue[0];
@@ -90,13 +102,10 @@ export  function LineChart(data, {
     const xAxis = d3.axisBottom(xScale).ticks(width / 80, xFormat).tickSizeOuter(0);
     const yAxis = d3.axisLeft(yScale).ticks(height / 60, yFormat);
 
-    // Compute titles.
-    const T = title === undefined ? Z : title === null ? null : d3.map(data, title);
-
     // Construct a line generator.
     // Take the data point by point, and draw a line between them acording to the curve specified.
     const line = d3.line()
-        .defined(i => D[i])
+        // .defined(i => D[i])
         .curve(curve)
         .x(i => xScale(X[i]))
         .y(i => yScale(Y[i]));
@@ -126,36 +135,58 @@ export  function LineChart(data, {
     
     // add the x-axis to the chart.
     svg.append("g")
-        .attr("transform", `translate(0,${height - marginBottom})`)
+        .attr("transform", `translate(0,${height - margin.bottom})`)
         .call(xAxis)
         .attr("font-size", labelFontSize)
         // change orientation of x-axis labels.
-        // .attr("text-anchor", "end")
-        // .selectAll("text")
-        // .attr("transform", "rotate(-45)")
+        .call(g => g.selectAll("text")
+        .attr("text-anchor", "end")
+        .attr("transform", "rotate(-45)"))
         .call(g => g.select(".domain").remove())
         .call(voronoi ? () => {} : g => g.selectAll(".tick line").clone()
-            .attr("y2", marginTop + marginBottom - height)
-            .attr("stroke-opacity", 0.1));
+            .attr("y2", margin.top + margin.bottom - height)
+            .attr("stroke-opacity", 0.1))
+        .call(g => g.append("text")
+            .attr("font-size", labelFontSize)
+            .attr("x", width - margin.right)
+            .attr("y", + margin.bottom/2)
+            .attr("text-anchor", "end")
+            .attr("fill", "currentColor")
+
+            .text(xLabel));
 
     // add the y-axis to the chart.
     svg.append("g")
-        .attr("transform", `translate(${marginLeft},0)`)
+        .attr("transform", `translate(${margin.left},0)`)
         .call(yAxis)
         .attr("font-size", labelFontSize)
         .call(g => g.select(".domain").remove())
         .call(voronoi ? () => {} : g => g.selectAll(".tick line").clone()
-            .attr("x2", width - marginLeft - marginRight)
+            .attr("x2", width - margin.left - margin.right)
             .attr("stroke-opacity", 0.1))
         .call(g => g.append("text")
-            .attr("x", -marginLeft)
+            .attr("x", -margin.left)
             .attr("y", 10 + labelFontSize/2)
             .attr("fill", "currentColor")
             .attr("text-anchor", "start")
             .text(yLabel));
+        
+    // add the title to the chart.
+    svg.append("text")
+        .attr("x", width / 2)
+        .attr("y", 10 + titleFontSize)
+        .attr("text-anchor", "middle")
+        .attr("fill", "currentColor")
+        .attr("font-size", titleFontSize)
+        .text(title);
     
     // add circles to the chart where the datapoints are
     const circles = svg.append("g");
+
+    // console.log(yScale.range());
+    // for(let i of I ) {
+    //     console.log(Y[i]);
+    // }
 
     circles
         .attr("fill", typeof color === "string" ? color : null)
@@ -182,7 +213,11 @@ export  function LineChart(data, {
         .attr("stroke", typeof color === "function" ? ([z]) => color(z) : null)
         .attr("d", ([, I]) => line(I));
     
-    
+    // console.log(path);
+    console.log(d3.group(I, i => Z[i]));
+    // for(let i of I) {
+    //     console.log(D[i]);
+    // }
 
     // add the dot when the mouse is over the line.
     const dot = svg.append("g")
@@ -238,7 +273,7 @@ export  function LineChart(data, {
     }
 
     // add the swatches to the chart.
-    if (legend) swatches();
+    if (displayLegend) swatches();
 
     function pointermoved(event) {
         const [xm, ym] = d3.pointer(event);
@@ -251,8 +286,7 @@ export  function LineChart(data, {
         // dot.style("fill", color(Z[i]));
         dot.style("fill", typeof color === "string" ? color : color(Z[i]));
         circles.selectAll('circle').style("fill", "#ddd");
-        // TODO fix the Titles
-        if (T) dot.select("text").text(Y[i].toFixed(2));
+        if (Z) dot.select("text").text(Y[i].toFixed(2));
         svg.property("value", O[i]).dispatch("input", {bubbles: true});
     }
 

@@ -2,8 +2,8 @@ import { HeatMap } from "./heatMapChart.js";
 
 // let themeName = document.getElementById('entry-title').innerHTML;
 
-let width = window.innerWidth * 0.5;
-let height = window.innerHeight * 0.5;
+let width = window.innerWidth * 1;
+let height = window.innerHeight * 1;
 
 console.log(importedData)
 
@@ -17,13 +17,15 @@ chart = HeatMap(importedData, {
     width: width,
     height: height,
 
-    margin: { top: 30, right: 0, bottom: 0, left: 120 },
+    margin: { top: 30, right: 0, bottom: 0, left: 250 },
+    yLabel: "Task",
     
 });
 
 document.body.appendChild(chart);
 
-let themeName = document.getElementById('entry-title').innerHTML;
+// let themeName = document.getElementById('entry-title').innerHTML;
+console.log(themeName);
 //we want to make the navActive class active on the library page 
 let navActive = document.getElementById(themeName + "-nav");
 

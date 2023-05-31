@@ -14,7 +14,7 @@ import {Histogram} from './histogram.js';
 
 //3. get the task name from the title of the page
 const libraryName = document.getElementById('entry-title').innerHTML;
-console.log("libraryName = " + libraryName);
+// console.log("libraryName = " + libraryName);
 
 
 const reductFactor = 0.8;
@@ -27,7 +27,7 @@ let chart;
 // let treatedData = ResultTreatement(data[libraryName],libraryName);
 // console.log(treatedData);
 
-// console.log(importedData);
+console.log(importedData);
 
 let AllTaskName = Object.keys(importedData);
 
@@ -38,7 +38,7 @@ for (let taskName of AllTaskName) {
     console.log("taskName = " + taskName);
     // let intermediateData = FormatedData({[libraryName]:data[libraryName]}, AllTaskName[i]);
     let intermediateData = importedData[taskName];
-    console.log(intermediateData);
+    // console.log(intermediateData);
     if ( intermediateData["status"] != "Run") {
         const dictionary = {
             "Error": "A Error occured during the execution of the task" + taskName, 
@@ -63,7 +63,7 @@ for (let taskName of AllTaskName) {
             color:  d => colorPalette[d],
             width: width,
             height: height,
-            yLabel: "Run Time (ms) ↑",
+            yLabel: "Run Time (s) ↑",
             labelFontSize: 20,
             marginLeft: 80,
             marginTop: 40,
@@ -76,10 +76,10 @@ for (let taskName of AllTaskName) {
     }
     else{
         chart =  LineChart(intermediateData["data"], {
-            x: d => d.arguments,
-            y: d => d.resultElement,
-            z: d => d.libraryName,
-            yLabel: "Run Time (ms) ↑",
+            values: d => d.resultElement,
+            categories: d => d.arguments,
+            inerClass: d => d.libraryName,
+            yLabel: "Run Time (s) ↑",
             width: width,
             height: height,
             // color: d => colorPalette[d],
@@ -91,7 +91,7 @@ for (let taskName of AllTaskName) {
             marginTop: 40,
             
 
-            legend: false,
+            displayLegend: false,
             legendColorBoxGap: 10,
             legendColorBoxSize: [40,40],
         });

@@ -12,8 +12,6 @@ export function HeatMap(data,{
 
     labelFontSize = 20, // font size of the labels
 
-    xLabel, // label of the x-axis
-    yLabel, // label of the y-axis
 
     cubeSize = 100, // size of the cube
 
@@ -39,10 +37,11 @@ export function HeatMap(data,{
         .domain(CY)
         .padding(0);
 
-    console.log(xScale.domain());
-    console.log(yScale.domain());
-    console.log(xScale.bandwidth());
+    // console.log(xScale.domain());
+    // console.log(yScale.domain());
+    // console.log(xScale.bandwidth());
     // console.log(xScale(CX[0]));
+    
 
     const xAxis = d3.axisTop(xScale);
     const yAxis = d3.axisLeft(yScale);
@@ -68,6 +67,8 @@ export function HeatMap(data,{
         .attr("y", (i) => yScale(CY[i]))
         .attr("width", xScale.bandwidth().toFixed(0))
         .attr("height",yScale.bandwidth().toFixed(0))
+        .attr("stroke", "black")
+        .attr("stroke-width", 2)
         .attr("fill", (i) => colorScale(V[i]));
     
     // add the x-axis to the chart.
@@ -75,34 +76,47 @@ export function HeatMap(data,{
         .attr("transform", `translate(0,${margin.top})`)
         .call(xAxis)
         .attr("font-size", labelFontSize)
+        .on('click', function(d) {
+            // we redirect to the page of the element
+            window.location.href = d.srcElement.innerHTML + ".html";
+            
+        })
+        .style("cursor", "pointer")
         .call(g => g.select(".domain").remove())
-        .call(g => g.append("text")
-            .text(xLabel))
-            .on('click', function(d) {
-                // we redirect to the page of the element
-                window.location.href = d.srcElement.innerHTML + ".html";
-                
-            })
-            .style("cursor", "pointer");
-  
+        .call(g => g.selectAll(".tick line").remove());
+    
+
     // add the y-axis to the chart.
+
     svg.append("g")
         .attr("transform", `translate(${margin.left},0)`)
         .call(yAxis)
-        .attr("font-size", labelFontSize)
         .call(g => g.select(".domain").remove())
-        .call(g => g.append("text")
-            .attr("x", -margin.left)
-            .attr("y", 10 + labelFontSize/2)
-            .attr("text-anchor", "start")
-            .text(yLabel))
-            .on('click', function(d) {
-                // we redirect to the page of the element
-                window.location.href = d.srcElement.innerHTML + ".html";
-                
-            })
-            .style("cursor", "pointer");
-    
+        .call(g => g.selectAll(".tick line").remove())
+        .selectAll("text")
+        // the text lenght need to shrink to fit the label if it is too long
+        .attr('textLength', function(d) {
+            if (d.length*10 > margin.left -10) {
+                return margin.left -10;
+            }
+            return d.length*10;
+        })
+        .attr('lengthAdjust', 'spacingAndGlyphs')
+        // we remote the underscore from the label
+        .text(function(d) {
+            return d.replaceAll("_", " ");
+        })
+        .attr("font-size", labelFontSize)
+        
+        
+        
+        .on('click', function(d) {
+            window.location.href = d.srcElement.innerHTML.replaceAll(" ", "_")+ ".html";
+            
+        })
+        .style("cursor", "pointer");
+
+            
     return svg.node(); 
   }
   

@@ -1,19 +1,19 @@
-export function GroupedBarChart(data,{
-    values = ([value]) => value, // given d in data, returns the (quantitative) x-value
-    categories = ([, categories]) => categories,  // given d in data, returns the (temporal) y-value
-    inerClass = ([, , inerClass]) => inerClass, // given d in data, returns the (categorical) z-value
+export function ViolonsChart(data,{
+    values = ([value]) => value, 
+    categories = ([, categories]) => categories, 
+    inerClass = ([, , inerClass]) => inerClass,
 
-    title = "Grouped Bar Chart",
+    title,
 
-    width,
-    height,
+    width = width,
+    height = height,
 
     margin = { top: 20, right: 20, bottom: 30, left: 40 },
 
     color = d3.scaleOrdinal(d3.schemeCategory10),
 
     labelFontSize = 8, // font size of the labels
-    tooltipFontSize = 12, // font size of the title
+    titleFontSize =12, // font size of the title
 
     yRange = [height - margin.bottom, margin.top], // [bottom, top]
     yFormat, // format of the y-axis
@@ -21,20 +21,15 @@ export function GroupedBarChart(data,{
     yLabel, // label of the y-axis
     xLabel, // label of the x-axis
 
-    // xLegend = width*0.1, // x-axis legend
-    // yLegend = height*0.1, // y-axis legend
-
-    xLegend = margin.left + 15, // x-axis legend
-    yLegend = 0, // y-axis legend
+    xLegend = width*0.1, // x-axis legend
+    yLegend = height*0.1, // y-axis legend
     legendColorBoxSize = [10, 10], // size of the color box in the legend
     legendColorBoxGap = 5, // margin of the color box in the legend
-    legendFontSize = 12, // font size of the legend
+    legendFontSize = 8, // font size of the legend
 
     activationFunction = null,
 
-    displayLegend = true,
-
-    yType = d3.scaleLinear, // "linear" or "log"
+    scale = "linear", // "linear" or "log"
 
 } = {}) {
 
@@ -47,6 +42,23 @@ export function GroupedBarChart(data,{
     const indices = [...Values.keys()].sort((a, b) => Values[b] - Values[a]);
 
     const I = d3.range(Values.length);
+
+    // TEMPORAIRE Il faudrait que les quantiles soient calculés en fonction des données
+    let upperQuantile = [];
+    let lowerQuantile = [];
+    let maxValues = [];
+    let minValues = [];
+    for (let _ of I) {
+        let uq = 1 + Math.floor(Math.random() * 5);
+        let lq = -1 - Math.floor(Math.random() * 5);
+        let max = uq + Math.floor(Math.random() * 2) + 1;
+        let min = lq - Math.floor(Math.random() * 2) - 1;
+        upperQuantile.push(uq);
+        lowerQuantile.push(lq);
+        maxValues.push(max);
+        minValues.push(min);
+
+    }
 
     // console.log(Values);
     // console.log(Categories);
@@ -80,13 +92,13 @@ export function GroupedBarChart(data,{
 
     let yDomain;
     let yScale;
-    if (yType == d3.scaleLog) {
+    if (scale == "log") {
         yDomain = [yMinMaxValue[0] <= 0 ? 0.0001 : yMinMaxValue[0], yMinMaxValue[1]];
         yScale = d3.scaleLog(yDomain, yRange)
     }
     else {
         yDomain = [0, yMinMaxValue[1]];
-        yScale = yType(yDomain, yRange);
+        yScale = d3.scaleLinear(yDomain, yRange);
     }
 
     let xAxis = d3.axisBottom(xScaleCategory);
@@ -108,9 +120,6 @@ export function GroupedBarChart(data,{
             return "translate(" + xScaleCategory(Categories[d]) + ",0)"
         });
     
-    // console.log(I);
-    // console.log(InerClass);
-    // console.log(Values);
     
     rect
         .append("rect")
@@ -119,11 +128,11 @@ export function GroupedBarChart(data,{
             return xScaleInerCategory(InerClass[d]);
         })
         .attr("y", function (d) {
-            return yScale(Values[d]);
+            return yScale(Values[d] + upperQuantile[d]);
         })
         .attr("width", xScaleInerCategory.bandwidth())
         .attr("height", function (d) {
-            return height - yScale(Values[d]) - margin.bottom;
+            return yScale(Values[d] + lowerQuantile[d]) - yScale(Values[d] + upperQuantile[d]);
         })
         .attr("fill", function (d) {
             return color(InerClass[d]);
@@ -137,7 +146,7 @@ export function GroupedBarChart(data,{
         .append("text")
         .join("text")
         .attr("opacity", 0)
-        .attr("font-size", tooltipFontSize)
+        .attr("font-size", titleFontSize)
         .attr("text-anchor", "middle")
         .attr("fill", "black")
         .attr("x", function (d) {
@@ -150,21 +159,35 @@ export function GroupedBarChart(data,{
             return Values[d].toFixed(countDecimals(Values[d])<=2?countDecimals(Values[d]):2);
         })
         ;
-  
+
+    //we add the violons to the chart
+    rect
+        .append("path")
+        .join("path")
+        .attr("d", function (d) {
+            let middle = xScaleInerCategory.bandwidth()/2 + xScaleInerCategory(InerClass[d]);
+            let halfWidth = xScaleInerCategory.bandwidth()/2;
+            return `M ${middle} ${yScale(Values[d] + upperQuantile[d])} L ${middle} ${yScale(Values[d] + maxValues[d])} M ${middle - halfWidth} ${yScale(Values[d] + maxValues[d])} L ${middle + halfWidth} ${yScale(Values[d] + maxValues[d])} Z
+                    M ${middle} ${yScale(Values[d] + lowerQuantile[d])} L ${middle} ${yScale(Values[d] + minValues[d])} M ${middle - halfWidth} ${yScale(Values[d] + minValues[d])} L ${middle + halfWidth} ${yScale(Values[d] + minValues[d])} Z`
+        })
+        .attr("stroke", "black")
+        .attr("stroke-width", 1);
 
     // add the x-axis to the chart.
     let xAxisG = svg.append("g")
         .attr("transform", `translate(0,${height - margin.bottom})`)
         .call(xAxis)
         .attr("font-size", labelFontSize)
-        .call(g => g.selectAll("text")
         .attr("text-anchor", "end")
-            .attr("transform", "rotate(-45)"))
-        .call(g => g.select(".domain").remove())
+        .selectAll("text")
+        .attr("transform", "rotate(-45)")
+        .call(g => g.select(".domain").remove());
+        
+    svg
         .call(g => g.append("text")
             .attr("font-size", labelFontSize)
             .attr("x", width - margin.right)
-            .attr("y", + margin.bottom/2)
+            .attr("y", height -(10 + labelFontSize/2))
             .attr("text-anchor", "end")
             .attr("fill", "currentColor")
             .text(xLabel));
@@ -182,17 +205,6 @@ export function GroupedBarChart(data,{
             .attr("text-anchor", "start")
             .attr("fill", "currentColor")
             .text(yLabel));
-
-    
-    // add the title to the chart.
-    svg.append("text")
-        .attr("x", width / 2)
-        .attr("y", 10 + tooltipFontSize)
-        .attr("text-anchor", "middle")
-        .attr("fill", "currentColor")
-        .attr("font-size", tooltipFontSize)
-        .text(title);
-
 
     
     const swatches = svg.append("g")
@@ -225,17 +237,15 @@ export function GroupedBarChart(data,{
 
     function handleClick(clickedElement) {
         let innerClassSelected;
+        // console.log(clickedElement.srcElement.__data__);
+        // console.log(clickedElement.srcElement.nodeName);
         if (clickedElement.srcElement.nodeName == "rect"){
-            if (typeof clickedElement.srcElement.__data__ == "number"){
-                innerClassSelected = InerClass[clickedElement.srcElement.__data__];
-            }
-            else{
-                innerClassSelected = clickedElement.srcElement.__data__;
-            }
+            innerClassSelected = InerClass[clickedElement.srcElement.__data__];
         }
         else{
             innerClassSelected = clickedElement.srcElement.__data__;
-        }        
+        }
+        
 
         // If the clicked element is already active, remove it from the active list
         if(activeElement.includes(innerClassSelected)){
