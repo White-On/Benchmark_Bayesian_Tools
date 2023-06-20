@@ -2,6 +2,7 @@ import pyAgrum as gum
 import os
 
 def createSamples(**kwargs):
+    """Create samples from a BN and save them in a csv file"""
     bifFile = kwargs['bifFile']
     sample_size = kwargs['sample_size']
     currentdir = os.path.dirname(os.path.realpath(__file__))
