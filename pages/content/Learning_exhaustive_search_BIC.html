@@ -22,7 +22,7 @@
     <header id="header-grid">
         <nav class="header-nav">
             <a href="../index.html"><b>Home</b></a>
-            <a href="about.html"><b>About</b></a>
+            <a href="https://white-on.github.io/BenchSite/"><b>About</b></a>
             <a href="../result.json" download="data.json"><b>Download</b></a>
         </nav>
         <nav class="header-nav">
@@ -76,13 +76,23 @@
                 </li>
             
                 <li class="menu-item has-submenu">
+                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Inference.html' id='Inference-nav'>Inference</a></button>
+                
+                <ul class="subMenu collapse">
+                    
+                        <a href='Approx_Inference.html' id='Approx_Inference-nav'>Approx Inference</a>
+                    
+                        <a href='Exact_Inference.html' id='Exact_Inference-nav'>Exact Inference</a>
+                    
+                </ul>
+                </li>
+            
+                <li class="menu-item has-submenu">
                 <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='BIF_manipulation.html' id='BIF_manipulation-nav'>BIF manipulation</a></button>
                 
                 <ul class="subMenu collapse">
                     
                         <a href='BIFReading.html' id='BIFReading-nav'>BIFReading</a>
-                    
-                        <a href='InferenceRandomBN.html' id='InferenceRandomBN-nav'>InferenceRandomBN</a>
                     
                 </ul>
                 </li>
@@ -135,7 +145,7 @@
             </a>
         </div>
     </div>
-    <div>2023-05-17 10:52:16</div>
+    <div>2023-06-20 16:20:47</div>
 </div>
 <script type="module">
     import { rankBar } from "../script/rankBar.js";
@@ -153,7 +163,7 @@
     });
 
     document.getElementById("rank-str").appendChild(chart);
-</script><script defer  >const importedData = {'runtime': {'data': [{'arguments': 1000, 'runTime': 0.10950091285631061, 'libraryName': 'pyAgrum'}, {'arguments': 1500, 'runTime': 0.09946868179831653, 'libraryName': 'pyAgrum'}, {'arguments': 2000, 'runTime': 0.10240590674802658, 'libraryName': 'pyAgrum'}, {'arguments': 2500, 'runTime': 0.12758838683366774, 'libraryName': 'pyAgrum'}, {'arguments': 3000, 'runTime': 0.14618242622818794, 'libraryName': 'pyAgrum'}, {'arguments': 3500, 'runTime': 0.13043355382978916, 'libraryName': 'pyAgrum'}, {'arguments': 4000, 'runTime': 0.14927987041883173, 'libraryName': 'pyAgrum'}, {'arguments': 4500, 'runTime': 0.17068235476035623, 'libraryName': 'pyAgrum'}, {'arguments': 5000, 'runTime': 0.15868480470962826, 'libraryName': 'pyAgrum'}, {'arguments': 7500, 'runTime': 0.22175429072231057, 'libraryName': 'pyAgrum'}, {'arguments': 10000, 'runTime': 0.27442095831502233, 'libraryName': 'pyAgrum'}], 'display': 'line', 'title': 'Runtime', 'XLabel': 'Number of samples', 'YLabel': 'Time (s)', 'scale': 'auto'}, 'eval': {'data': [{'arguments': '1000', 'runTime': 0.5813953488372093, 'libraryName': 'pyAgrum'}, {'arguments': '1500', 'runTime': 0.5555555555555556, 'libraryName': 'pyAgrum'}, {'arguments': '2000', 'runTime': 0.5494505494505495, 'libraryName': 'pyAgrum'}, {'arguments': '2500', 'runTime': 0.6956521739130435, 'libraryName': 'pyAgrum'}, {'arguments': '3000', 'runTime': 0.7391304347826085, 'libraryName': 'pyAgrum'}, {'arguments': '3500', 'runTime': 0.7391304347826085, 'libraryName': 'pyAgrum'}, {'arguments': '4000', 'runTime': 0.6021505376344086, 'libraryName': 'pyAgrum'}, {'arguments': '4500', 'runTime': 0.5531914893617021, 'libraryName': 'pyAgrum'}, {'arguments': '5000', 'runTime': 0.5869565217391305, 'libraryName': 'pyAgrum'}, {'arguments': '7500', 'runTime': 0.7578947368421053, 'libraryName': 'pyAgrum'}, {'arguments': '10000', 'runTime': 0.7872340425531915, 'libraryName': 'pyAgrum'}], 'display': 'groupedBar', 'title': 'Evaluation', 'XLabel': 'Number of samples', 'YLabel': 'Fscore', 'scale': 'auto'}};</script>
+</script><script defer  >const importedData = {'runtime': {'data': [{'arguments': 1000, 'runTime': 0.10941982036175349, 'libraryName': 'pyAgrum'}, {'arguments': 1500, 'runTime': 0.10519220799969017, 'libraryName': 'pyAgrum'}, {'arguments': 2000, 'runTime': 0.12501908381901475, 'libraryName': 'pyAgrum'}, {'arguments': 2500, 'runTime': 0.12509222718323476, 'libraryName': 'pyAgrum'}, {'arguments': 3000, 'runTime': 0.12376537990663068, 'libraryName': 'pyAgrum'}, {'arguments': 3500, 'runTime': 0.14550602099800677, 'libraryName': 'pyAgrum'}, {'arguments': 4000, 'runTime': 0.1669989676346714, 'libraryName': 'pyAgrum'}, {'arguments': 4500, 'runTime': 0.1797279829090919, 'libraryName': 'pyAgrum'}, {'arguments': 5000, 'runTime': 0.18058712118098894, 'libraryName': 'pyAgrum'}, {'arguments': 7500, 'runTime': 0.22561569290982417, 'libraryName': 'pyAgrum'}, {'arguments': 10000, 'runTime': 0.259330072363148, 'libraryName': 'pyAgrum'}], 'display': 'line', 'title': 'Runtime', 'XLabel': 'Number of samples', 'YLabel': 'Time (s)', 'scale': 'auto'}, 'evaluateFscore': {'data': [{'arguments': 1000, 'runTime': 0.5547906498155009, 'libraryName': 'pyAgrum'}, {'arguments': 1500, 'runTime': 0.5706689193389664, 'libraryName': 'pyAgrum'}, {'arguments': 2000, 'runTime': 0.578819109928298, 'libraryName': 'pyAgrum'}, {'arguments': 2500, 'runTime': 0.6358356943426563, 'libraryName': 'pyAgrum'}, {'arguments': 3000, 'runTime': 0.6193462771081433, 'libraryName': 'pyAgrum'}, {'arguments': 3500, 'runTime': 0.6231179620812877, 'libraryName': 'pyAgrum'}, {'arguments': 4000, 'runTime': 0.6151469353482111, 'libraryName': 'pyAgrum'}, {'arguments': 4500, 'runTime': 0.6123716708365465, 'libraryName': 'pyAgrum'}, {'arguments': 5000, 'runTime': 0.6652566288596445, 'libraryName': 'pyAgrum'}, {'arguments': 7500, 'runTime': 0.6672042052939174, 'libraryName': 'pyAgrum'}, {'arguments': 10000, 'runTime': 0.6267392446637129, 'libraryName': 'pyAgrum'}], 'display': 'groupedBar', 'title': 'Evaluatefscore', 'XLabel': 'Number of samples', 'YLabel': 'Fscore', 'scale': 'auto'}};</script>
 <script defer  >const TaskName = 'Learning_exhaustive_search_BIC';</script>
 <script defer  >const argDescription = 'Number of samples';</script>
 <script defer  >const displayScale = 'linear';</script>

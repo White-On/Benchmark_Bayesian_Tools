@@ -22,7 +22,7 @@
     <header id="header-grid">
         <nav class="header-nav">
             <a href="../index.html"><b>Home</b></a>
-            <a href="about.html"><b>About</b></a>
+            <a href="https://white-on.github.io/BenchSite/"><b>About</b></a>
             <a href="../result.json" download="data.json"><b>Download</b></a>
         </nav>
         <nav class="header-nav">
@@ -76,13 +76,23 @@
                 </li>
             
                 <li class="menu-item has-submenu">
+                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Inference.html' id='Inference-nav'>Inference</a></button>
+                
+                <ul class="subMenu collapse">
+                    
+                        <a href='Approx_Inference.html' id='Approx_Inference-nav'>Approx Inference</a>
+                    
+                        <a href='Exact_Inference.html' id='Exact_Inference-nav'>Exact Inference</a>
+                    
+                </ul>
+                </li>
+            
+                <li class="menu-item has-submenu">
                 <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='BIF_manipulation.html' id='BIF_manipulation-nav'>BIF manipulation</a></button>
                 
                 <ul class="subMenu collapse">
                     
                         <a href='BIFReading.html' id='BIFReading-nav'>BIFReading</a>
-                    
-                        <a href='InferenceRandomBN.html' id='InferenceRandomBN-nav'>InferenceRandomBN</a>
                     
                 </ul>
                 </li>
@@ -135,12 +145,12 @@
             </a>
         </div>
     </div>
-    <div>2023-05-17 10:52:16</div>
+    <div>2023-06-20 16:20:47</div>
 </div>
 <script type="module">
     import { rankBar } from "../script/rankBar.js";
     // let cls = {"pyAgrum":0, "pgmpy":1, "bnlearn":2};
-    const cls = {'pyAgrum': 0, 'bnlearn': 1, 'pgmpy': 2}
+    const cls = {'bnlearn': 0, 'pyAgrum': 1, 'pgmpy': 2}
     console.log(cls);
 
     let chart = rankBar(cls, {
@@ -155,12 +165,12 @@
     document.getElementById("rank-str").appendChild(chart);
 </script>
 <!-- Theme Main components -->
-<script defer  >const importedData = [{'taskName': 'BIF_manipulation', 'libraryName': 'pyAgrum', 'results': 0}, {'taskName': 'BIF_manipulation', 'libraryName': 'bnlearn', 'results': 1}, {'taskName': 'BIF_manipulation', 'libraryName': 'pgmpy', 'results': 2}, {'taskName': 'BIFReading', 'libraryName': 'bnlearn', 'results': 0}, {'taskName': 'BIFReading', 'libraryName': 'pyAgrum', 'results': 1}, {'taskName': 'BIFReading', 'libraryName': 'pgmpy', 'results': 2}, {'taskName': 'InferenceRandomBN', 'libraryName': 'pyAgrum', 'results': 0}, {'taskName': 'InferenceRandomBN', 'libraryName': 'pgmpy', 'results': 1}, {'taskName': 'InferenceRandomBN', 'libraryName': 'bnlearn', 'results': 2}];</script>
+<script defer  >const importedData = [{'taskName': 'BIF_manipulation', 'libraryName': 'bnlearn', 'results': 0}, {'taskName': 'BIF_manipulation', 'libraryName': 'pyAgrum', 'results': 1}, {'taskName': 'BIF_manipulation', 'libraryName': 'pgmpy', 'results': 2}, {'taskName': 'BIFReading', 'libraryName': 'bnlearn', 'results': 0}, {'taskName': 'BIFReading', 'libraryName': 'pyAgrum', 'results': 1}, {'taskName': 'BIFReading', 'libraryName': 'pgmpy', 'results': 2}];</script>
 <script defer  >const themeName = 'BIF_manipulation';</script>
 <script defer type='module' src ='../script/themeScript.js'></script>
 
 <h1 id="entry-title">BIF manipulation</h1>
-<h2>This theme is compose of <a href='BIFReading.html' >BIFReading</a>, <a href='InferenceRandomBN.html' >InferenceRandomBN</a></h2><!-- Google tag (gtag.js) -->
+<h2>This theme is compose of <a href='BIFReading.html' >BIFReading</a></h2><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
 <script>
   window.dataLayer = window.dataLayer || [];

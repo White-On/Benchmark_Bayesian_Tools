@@ -22,7 +22,7 @@
     <header id="header-grid">
         <nav class="header-nav">
             <a href="../index.html"><b>Home</b></a>
-            <a href="about.html"><b>About</b></a>
+            <a href="https://white-on.github.io/BenchSite/"><b>About</b></a>
             <a href="../result.json" download="data.json"><b>Download</b></a>
         </nav>
         <nav class="header-nav">
@@ -76,13 +76,23 @@
                 </li>
             
                 <li class="menu-item has-submenu">
+                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Inference.html' id='Inference-nav'>Inference</a></button>
+                
+                <ul class="subMenu collapse">
+                    
+                        <a href='Approx_Inference.html' id='Approx_Inference-nav'>Approx Inference</a>
+                    
+                        <a href='Exact_Inference.html' id='Exact_Inference-nav'>Exact Inference</a>
+                    
+                </ul>
+                </li>
+            
+                <li class="menu-item has-submenu">
                 <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='BIF_manipulation.html' id='BIF_manipulation-nav'>BIF manipulation</a></button>
                 
                 <ul class="subMenu collapse">
                     
                         <a href='BIFReading.html' id='BIFReading-nav'>BIFReading</a>
-                    
-                        <a href='InferenceRandomBN.html' id='InferenceRandomBN-nav'>InferenceRandomBN</a>
                     
                 </ul>
                 </li>
@@ -128,7 +138,13 @@
     <h1 id='title'>About GeneratedVelocity</h1>
 
     <div class="left text-block">
-        <div><img src="../assets/explaination.png" alt="explaination"></div>
+        <div>
+            <video controls width="100%"  poster="../assets/explaination.png" autoplay loop>
+                <source src="../assets/explanation_video.webm" type="video/webm">
+                <source src="../assets/explanation_video.mov" type="video/mov">
+                <source src="../assets/explanation_video.mp4" type="video/mp4">
+                <p>Your browser does not support the video tag.</p>
+            </video>
         <div>
             <h2>What is GeneratedVelocity</h2>
             <p>GeneratedVelocity is a platform designed to <b>compare the performance of different libraries and frameworks</b>. It

@@ -150,7 +150,7 @@
 <script type="module">
     import { rankBar } from "../script/rankBar.js";
     // let cls = {"pyAgrum":0, "pgmpy":1, "bnlearn":2};
-    const cls = {'bnlearn': 0, 'pyAgrum': 1, 'pgmpy': 2}
+    const cls = {'pgmpy': 0, 'bnlearn': 1, 'pyAgrum': 1}
     console.log(cls);
 
     let chart = rankBar(cls, {
@@ -163,21 +163,40 @@
     });
 
     document.getElementById("rank-str").appendChild(chart);
-</script><script defer  >const importedData = {'runtime': {'data': [{'arguments': 'pigs.bif', 'runTime': 6.192140002549092, 'libraryName': 'pgmpy'}, {'arguments': 'water.bif', 'runTime': 5.9603305487287965, 'libraryName': 'pgmpy'}, {'arguments': 'munin.bif', 'runTime': 8.379367893999104, 'libraryName': 'pgmpy'}, {'arguments': 'mildew.bif', 'runTime': 18.225381997817582, 'libraryName': 'pgmpy'}, {'arguments': 'link.bif', 'runTime': 6.705026020908917, 'libraryName': 'pgmpy'}, {'arguments': 'insurance.bif', 'runTime': 5.748547875635433, 'libraryName': 'pgmpy'}, {'arguments': 'hepar2.bif', 'runTime': 5.8296601036361775, 'libraryName': 'pgmpy'}, {'arguments': 'hailfinder.bif', 'runTime': 5.809543557456808, 'libraryName': 'pgmpy'}, {'arguments': 'earthquake.bif', 'runTime': 3.385464886271703, 'libraryName': 'pgmpy'}, {'arguments': 'diabetes.bif', 'runTime': 12.414525162637636, 'libraryName': 'pgmpy'}, {'arguments': 'child.bif', 'runTime': 5.378224634818087, 'libraryName': 'pgmpy'}, {'arguments': 'cancer.bif', 'runTime': 3.396613451271399, 'libraryName': 'pgmpy'}, {'arguments': 'barley.bif', 'runTime': 8.654883129817046, 'libraryName': 'pgmpy'}, {'arguments': 'asia.bif', 'runTime': 3.6982763392707882, 'libraryName': 'pgmpy'}, {'arguments': 'andes.bif', 'runTime': 5.8829420566360735, 'libraryName': 'pgmpy'}, {'arguments': 'alarm.bif', 'runTime': 5.681315445093787, 'libraryName': 'pgmpy'}, {'arguments': 'pigs.bif', 'runTime': 0, 'libraryName': 'bnlearn'}, {'arguments': 'water.bif', 'runTime': 0.04773378963909636, 'libraryName': 'bnlearn'}, {'arguments': 'pathfinder.bif', 'runTime': 0.01911852436437171, 'libraryName': 'bnlearn'}, {'arguments': 'munin.bif', 'runTime': 0, 'libraryName': 'bnlearn'}, {'arguments': 'mildew.bif', 'runTime': 0.042684167637245, 'libraryName': 'bnlearn'}, {'arguments': 'link.bif', 'runTime': 0, 'libraryName': 'bnlearn'}, {'arguments': 'insurance.bif', 'runTime': 0, 'libraryName': 'bnlearn'}, {'arguments': 'hepar2.bif', 'runTime': 0.015360711274710908, 'libraryName': 'bnlearn'}, {'arguments': 'hailfinder.bif', 'runTime': 0, 'libraryName': 'bnlearn'}, {'arguments': 'earthquake.bif', 'runTime': 0, 'libraryName': 'bnlearn'}, {'arguments': 'diabetes.bif', 'runTime': 0.04800064818135235, 'libraryName': 'bnlearn'}, {'arguments': 'child.bif', 'runTime': 0.0764989724562342, 'libraryName': 'bnlearn'}, {'arguments': 'cancer.bif', 'runTime': 0, 'libraryName': 'bnlearn'}, {'arguments': 'barley.bif', 'runTime': 0.03955876863735532, 'libraryName': 'bnlearn'}, {'arguments': 'asia.bif', 'runTime': 0, 'libraryName': 'bnlearn'}, {'arguments': 'andes.bif', 'runTime': 0, 'libraryName': 'bnlearn'}, {'arguments': 'alarm.bif', 'runTime': 0, 'libraryName': 'bnlearn'}, {'arguments': 'pigs.bif', 'runTime': 0.026330916905697613, 'libraryName': 'pyAgrum'}, {'arguments': 'water.bif', 'runTime': 0.0474675317263146, 'libraryName': 'pyAgrum'}, {'arguments': 'munin.bif', 'runTime': 0.219934682818844, 'libraryName': 'pyAgrum'}, {'arguments': 'mildew.bif', 'runTime': 0.7172382843645292, 'libraryName': 'pyAgrum'}, {'arguments': 'link.bif', 'runTime': 0.07140719681757962, 'libraryName': 'pyAgrum'}, {'arguments': 'insurance.bif', 'runTime': 0, 'libraryName': 'pyAgrum'}, {'arguments': 'hepar2.bif', 'runTime': 0.012770898730443812, 'libraryName': 'pyAgrum'}, {'arguments': 'hailfinder.bif', 'runTime': 0.004570209451974899, 'libraryName': 'pyAgrum'}, {'arguments': 'earthquake.bif', 'runTime': 0, 'libraryName': 'pyAgrum'}, {'arguments': 'diabetes.bif', 'runTime': 0.7271664145436344, 'libraryName': 'pyAgrum'}, {'arguments': 'cancer.bif', 'runTime': 0.012517466999931705, 'libraryName': 'pyAgrum'}, {'arguments': 'barley.bif', 'runTime': 0.2860037277244952, 'libraryName': 'pyAgrum'}, {'arguments': 'asia.bif', 'runTime': 0, 'libraryName': 'pyAgrum'}, {'arguments': 'andes.bif', 'runTime': 0.022338405906835265, 'libraryName': 'pyAgrum'}, {'arguments': 'alarm.bif', 'runTime': 0, 'libraryName': 'pyAgrum'}], 'display': 'groupedBar', 'title': 'Runtime', 'XLabel': 'Name of the network', 'YLabel': 'Time (s)', 'scale': 'auto'}};</script>
-<script defer  >const TaskName = 'BIFReading';</script>
-<script defer  >const argDescription = 'Bayesian network';</script>
+</script><script defer  >const importedData = {'runtime': {'data': [{'arguments': 'pigs.bif', 'runTime': 0, 'libraryName': 'pgmpy'}, {'arguments': 'water.bif', 'runTime': 0, 'libraryName': 'pgmpy'}, {'arguments': 'munin.bif', 'runTime': 0, 'libraryName': 'pgmpy'}, {'arguments': 'mildew.bif', 'runTime': 0.05029934299967532, 'libraryName': 'pgmpy'}, {'arguments': 'link.bif', 'runTime': 0, 'libraryName': 'pgmpy'}, {'arguments': 'insurance.bif', 'runTime': 0, 'libraryName': 'pgmpy'}, {'arguments': 'hepar2.bif', 'runTime': 0.001970798271941021, 'libraryName': 'pgmpy'}, {'arguments': 'hailfinder.bif', 'runTime': 0.1126514474543166, 'libraryName': 'pgmpy'}, {'arguments': 'earthquake.bif', 'runTime': 0.05698078799799656, 'libraryName': 'pgmpy'}, {'arguments': 'diabetes.bif', 'runTime': 0, 'libraryName': 'pgmpy'}, {'arguments': 'child.bif', 'runTime': 0, 'libraryName': 'pgmpy'}, {'arguments': 'cancer.bif', 'runTime': 0.054429891361988586, 'libraryName': 'pgmpy'}, {'arguments': 'barley.bif', 'runTime': 0, 'libraryName': 'pgmpy'}, {'arguments': 'asia.bif', 'runTime': 0, 'libraryName': 'pgmpy'}, {'arguments': 'andes.bif', 'runTime': 0, 'libraryName': 'pgmpy'}, {'arguments': 'alarm.bif', 'runTime': 0.011394773545444796, 'libraryName': 'pgmpy'}], 'display': 'groupedBar', 'title': 'Runtime', 'XLabel': 'Files Infered On', 'YLabel': 'Time (s)', 'scale': 'auto'}};</script>
+<script defer  >const TaskName = 'Exact_Inference';</script>
+<script defer  >const argDescription = 'Files Infered On';</script>
 <script defer  >const displayScale = 'linear';</script>
 <script defer type='module' src ='../script/taskScript.js'></script>
 
 
 <!-- Task Main Component -->
 <div class="main-content">
-    <h1 id="entry-title">BIFReading</h1>
+    <h1 id="entry-title">Exact Inference</h1>
     <!-- <div id="menu"></div> -->
     <div>
-        The Bayesian Interchange Format (BIF) is a file format used for storing Bayesian network models, which are probabilistic graphical models used for representing uncertain knowledge and reasoning about probabilistic relationships among variables. The BIF format consists of a plain text file that contains a specification of the Bayesian network model. The file is structured as a series of sections, each of which begins with a keyword that indicates the type of data in the section. The sections include a network definition section, variable definition sections, probability definition sections, and comment sections. The network definition section specifies the name of the network and any additional information about the network structure, such as its type and whether it is acyclic or cyclic. The variable definition sections define the variables used in the Bayesian network model. Each variable definition includes the variable's name, a list of its possible values, and any additional information about the variable, such as its type or domain. The probability definition sections define the conditional probability tables (CPTs) for each variable in the network. The CPTs specify the probability distribution for each variable given the values of its parent variables in the network. The comment sections are used to include additional information about the model or to provide context for the other sections. To read a BIF file, you typically start by parsing the file into its component sections and then processing each section in turn. The exact details of how to read a BIF file will depend on the programming language and file I/O library you are using. It's worth noting that the BIF format is widely used in the field of Bayesian networks and probabilistic modeling, and is supported by many software packages and libraries.
+        Exact inference in Bayesian networks refers to the process of computing the exact probability distribution over a set of variables given some evidence.
+This is done by using the joint probability distribution of the variables and applying the Bayes rule.
+The exact inference algorithm computes the posterior distribution by summing over all possible values of the unobserved variables.
+This can be computationally expensive for large networks, but it guarantees the correct result.
         
-
+        <details>
+            <summary>More details</summary>
+            <div>
+                <div>
+                    Exact inference in Bayesian networks is used to compute the posterior distribution of a set of variables given some evidence.
+The posterior distribution is the probability distribution of the variables after taking into account the evidence.
+The evidence is represented by setting the observed variables to their observed values.
+The joint probability distribution is the product of the probability distributions of each variable given its parents in the network.
+The exact inference algorithm is guaranteed to give the correct result, but it can be computationally expensive for large networks.
+In practice, approximate inference algorithms are often used to compute the posterior distribution.
+These algorithms are faster than exact inference, but they may not give the exact result.
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+        </details>
         
     </div>
 
@@ -196,9 +215,11 @@
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">5</span>
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">6</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f0dfaf">from</span> <span style="color: #dcdccc">pgmpy.readwrite</span> <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">BIFReader</span>
-<span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">sys</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">8</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f0dfaf">from</span> <span style="color: #dcdccc">pgmpy.readwrite</span> <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">BIFReader</span>
+<span style="color: #f0dfaf">from</span> <span style="color: #dcdccc">pgmpy.inference</span> <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">VariableElimination</span>
 <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">os</span>
+<span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">sys</span>
 
 <span style="color: #dcdccc">currentdir</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">os</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">path</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">dirname</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">os</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">path</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">realpath</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">__file__</span><span style="color: #f0efd0">))</span>
 
@@ -210,13 +231,17 @@
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">5</span>
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">6</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">bnlearn</span> <span style="color: #efdcbc">as</span> <span style="color: #dcdccc">bnlearn</span>
-<span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">os</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">8</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">os</span>
+<span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">bnlearn</span> <span style="color: #efdcbc">as</span> <span style="color: #dcdccc">bn</span>
 <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">sys</span>
 
 <span style="color: #dcdccc">currentdir</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">os</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">path</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">dirname</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">os</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">path</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">realpath</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">__file__</span><span style="color: #f0efd0">))</span>
 
-<span style="color: #dcdccc">bn</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">bnlearn</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">import_DAG</span><span style="color: #f0efd0">(</span><span style="color: #cc9393">f&quot;</span><span style="color: #dca3a3; font-weight: bold">{</span><span style="color: #dcdccc">currentdir</span><span style="color: #dca3a3; font-weight: bold">}</span><span style="color: #cc9393">/data/</span><span style="color: #dca3a3; font-weight: bold">{</span><span style="color: #dcdccc">sys</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">argv</span><span style="color: #f0efd0">[</span><span style="color: #8cd0d3">1</span><span style="color: #f0efd0">]</span><span style="color: #dca3a3; font-weight: bold">}</span><span style="color: #cc9393">&quot;</span><span style="color: #f0efd0">)</span>
+<span style="color: #dcdccc">model</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">bn</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">import_DAG</span><span style="color: #f0efd0">(</span><span style="color: #cc9393">f&quot;</span><span style="color: #dca3a3; font-weight: bold">{</span><span style="color: #dcdccc">currentdir</span><span style="color: #dca3a3; font-weight: bold">}</span><span style="color: #cc9393">/data/</span><span style="color: #dca3a3; font-weight: bold">{</span><span style="color: #dcdccc">sys</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">argv</span><span style="color: #f0efd0">[</span><span style="color: #8cd0d3">1</span><span style="color: #f0efd0">]</span><span style="color: #dca3a3; font-weight: bold">}</span><span style="color: #cc9393">&quot;</span><span style="color: #f0efd0">,</span><span style="color: #dcdccc">verbose</span><span style="color: #f0efd0">=</span><span style="color: #8cd0d3">0</span><span style="color: #f0efd0">)</span>
+
+<span style="color: #dcdccc">query</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">bn</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">inference</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">fit</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">model</span><span style="color: #f0efd0">,</span> <span style="color: #dcdccc">variables</span><span style="color: #f0efd0">=[],</span> <span style="color: #dcdccc">evidence</span><span style="color: #f0efd0">={},</span><span style="color: #dcdccc">verbose</span><span style="color: #f0efd0">=</span><span style="color: #8cd0d3">0</span><span style="color: #f0efd0">)</span>
 </pre></div></td></tr></table></div>
  </code> <code id='pyAgrum'> <h2>pyAgrum</h2> <div class="zenburn" style="background: #3f3f3f"><table class="zenburntable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">2</span>
@@ -224,13 +249,17 @@
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">5</span>
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">6</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">sys</span>
-<span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">pyAgrum</span> <span style="color: #efdcbc">as</span> <span style="color: #dcdccc">gum</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">8</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">pyAgrum</span> <span style="color: #efdcbc">as</span> <span style="color: #dcdccc">gum</span>
 <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">os</span>
+<span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">sys</span>
 
 <span style="color: #dcdccc">currentdir</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">os</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">path</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">dirname</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">os</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">path</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">realpath</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">__file__</span><span style="color: #f0efd0">))</span>
 
 <span style="color: #dcdccc">bn</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">gum</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">loadBN</span><span style="color: #f0efd0">(</span><span style="color: #cc9393">f&quot;</span><span style="color: #dca3a3; font-weight: bold">{</span><span style="color: #dcdccc">currentdir</span><span style="color: #dca3a3; font-weight: bold">}</span><span style="color: #cc9393">/data/</span><span style="color: #dca3a3; font-weight: bold">{</span><span style="color: #dcdccc">sys</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">argv</span><span style="color: #f0efd0">[</span><span style="color: #8cd0d3">1</span><span style="color: #f0efd0">]</span><span style="color: #dca3a3; font-weight: bold">}</span><span style="color: #cc9393">&quot;</span><span style="color: #f0efd0">)</span>
+<span style="color: #dcdccc">ie</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">gum</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">VariableElemination</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">bn</span><span style="color: #f0efd0">)</span>
+<span style="color: #dcdccc">ie</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">makeInference</span><span style="color: #f0efd0">()</span>
 </pre></div></td></tr></table></div>
  </code></div>
         </div>

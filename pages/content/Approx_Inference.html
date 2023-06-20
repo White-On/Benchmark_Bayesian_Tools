@@ -22,7 +22,7 @@
     <header id="header-grid">
         <nav class="header-nav">
             <a href="../index.html"><b>Home</b></a>
-            <a href="about.html"><b>About</b></a>
+            <a href="https://white-on.github.io/BenchSite/"><b>About</b></a>
             <a href="../result.json" download="data.json"><b>Download</b></a>
         </nav>
         <nav class="header-nav">
@@ -76,13 +76,23 @@
                 </li>
             
                 <li class="menu-item has-submenu">
+                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Inference.html' id='Inference-nav'>Inference</a></button>
+                
+                <ul class="subMenu collapse">
+                    
+                        <a href='Approx_Inference.html' id='Approx_Inference-nav'>Approx Inference</a>
+                    
+                        <a href='Exact_Inference.html' id='Exact_Inference-nav'>Exact Inference</a>
+                    
+                </ul>
+                </li>
+            
+                <li class="menu-item has-submenu">
                 <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='BIF_manipulation.html' id='BIF_manipulation-nav'>BIF manipulation</a></button>
                 
                 <ul class="subMenu collapse">
                     
                         <a href='BIFReading.html' id='BIFReading-nav'>BIFReading</a>
-                    
-                        <a href='InferenceRandomBN.html' id='InferenceRandomBN-nav'>InferenceRandomBN</a>
                     
                 </ul>
                 </li>
@@ -135,12 +145,12 @@
             </a>
         </div>
     </div>
-    <div>2023-05-17 10:52:16</div>
+    <div>2023-06-20 16:20:47</div>
 </div>
 <script type="module">
     import { rankBar } from "../script/rankBar.js";
     // let cls = {"pyAgrum":0, "pgmpy":1, "bnlearn":2};
-    const cls = {'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}
+    const cls = {'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 1}
     console.log(cls);
 
     let chart = rankBar(cls, {
@@ -153,21 +163,40 @@
     });
 
     document.getElementById("rank-str").appendChild(chart);
-</script><script defer  >const importedData = {'runtime': {'data': [{'arguments': 'BN_16_1.5_3.bif', 'runTime': 0.39308945513330507, 'libraryName': 'pgmpy'}, {'arguments': 'BN_17_1.5_3.bif', 'runTime': 0.37012055858503956, 'libraryName': 'pgmpy'}, {'arguments': 'BN_16_1.5_3.bif', 'runTime': 0.007081440743058914, 'libraryName': 'pyAgrum'}, {'arguments': 'BN_17_1.5_3.bif', 'runTime': 5.958979018033661e-05, 'libraryName': 'pyAgrum'}], 'display': 'groupedBar', 'title': 'Runtime', 'XLabel': 'name of the network', 'YLabel': 'Time (s)', 'scale': 'auto'}, 'eval': {'data': [], 'display': 'groupedBar', 'title': 'Evaluation', 'XLabel': 'X-axis', 'YLabel': 'Y-axis', 'scale': 'auto'}};</script>
-<script defer  >const TaskName = 'InferenceRandomBN';</script>
-<script defer  >const argDescription = 'Bayesian network';</script>
+</script><script defer  >const importedData = {'runtime': {'data': [{'arguments': 'pigs.bif', 'runTime': 7.940006681637897, 'libraryName': 'pyAgrum'}, {'arguments': 'water.bif', 'runTime': 0.11781652863415233, 'libraryName': 'pyAgrum'}, {'arguments': 'munin.bif', 'runTime': 44.05676017154606, 'libraryName': 'pyAgrum'}, {'arguments': 'mildew.bif', 'runTime': 0.11463556490939068, 'libraryName': 'pyAgrum'}, {'arguments': 'link.bif', 'runTime': 21.09849875872417, 'libraryName': 'pyAgrum'}, {'arguments': 'insurance.bif', 'runTime': 0.08658507836050623, 'libraryName': 'pyAgrum'}, {'arguments': 'hepar2.bif', 'runTime': 0.2955736879979337, 'libraryName': 'pyAgrum'}, {'arguments': 'hailfinder.bif', 'runTime': 0.18919747636623055, 'libraryName': 'pyAgrum'}, {'arguments': 'earthquake.bif', 'runTime': 0.00787410118292345, 'libraryName': 'pyAgrum'}, {'arguments': 'diabetes.bif', 'runTime': 7.396363639635886, 'libraryName': 'pyAgrum'}, {'arguments': 'cancer.bif', 'runTime': 0.01856019309260856, 'libraryName': 'pyAgrum'}, {'arguments': 'barley.bif', 'runTime': 0.1919045975467849, 'libraryName': 'pyAgrum'}, {'arguments': 'asia.bif', 'runTime': 0.02882078536574475, 'libraryName': 'pyAgrum'}, {'arguments': 'andes.bif', 'runTime': 2.1925346629991096, 'libraryName': 'pyAgrum'}, {'arguments': 'alarm.bif', 'runTime': 0.1171393402758192, 'libraryName': 'pyAgrum'}], 'display': 'groupedBar', 'title': 'Runtime', 'XLabel': 'Files Infered On', 'YLabel': 'Time (s)', 'scale': 'auto'}};</script>
+<script defer  >const TaskName = 'Approx_Inference';</script>
+<script defer  >const argDescription = 'Files Infered On';</script>
 <script defer  >const displayScale = 'linear';</script>
 <script defer type='module' src ='../script/taskScript.js'></script>
 
 
 <!-- Task Main Component -->
 <div class="main-content">
-    <h1 id="entry-title">InferenceRandomBN</h1>
+    <h1 id="entry-title">Approx Inference</h1>
     <!-- <div id="menu"></div> -->
     <div>
-        Inference is the process of using a Bayesian Network to compute the probability of an event given some evidence or observations. Bayesian Networks are graphical models that represent the relationships between random variables using directed acyclic graphs. Each node in the graph represents a random variable, and the edges represent the conditional dependencies between them. Inference can be used to answer questions like "What is the probability of a certain event occurring, given that some other event has already occurred?" or "What is the most likely value of a certain variable, given some observed data?" Inference can also be used to propagate uncertainty through the network, allowing us to reason about the probabilities of complex events that depend on multiple variables. The Inference task in a benchmark of Bayesian Network libraries would typically involve measuring the speed and accuracy of various methods for performing inference on a given Bayesian Network. This could include methods like exact inference, approximate inference using Monte Carlo methods, or message-passing algorithms like belief propagation. To perform the Inference task, a benchmarking tool would typically provide a set of test cases, each consisting of a Bayesian Network and some evidence or observations. The tool would then run each of the inference methods being tested on each test case, measuring the time required to perform the inference and the accuracy of the results obtained. The results of the benchmark could then be used to compare the performance and accuracy of different Bayesian Network libraries for the task of inference.
+        Exact inference in Bayesian networks refers to the process of computing the exact probability distribution over a set of variables given some evidence.
+This is done by using the joint probability distribution of the variables and applying the Bayes rule.
+The exact inference algorithm computes the posterior distribution by summing over all possible values of the unobserved variables.
+This can be computationally expensive for large networks, but it guarantees the correct result.
         
-
+        <details>
+            <summary>More details</summary>
+            <div>
+                <div>
+                    Exact inference in Bayesian networks is used to compute the posterior distribution of a set of variables given some evidence.
+The posterior distribution is the probability distribution of the variables after taking into account the evidence.
+The evidence is represented by setting the observed variables to their observed values.
+The joint probability distribution is the product of the probability distributions of each variable given its parents in the network.
+The exact inference algorithm is guaranteed to give the correct result, but it can be computationally expensive for large networks.
+In practice, approximate inference algorithms are often used to compute the posterior distribution.
+These algorithms are faster than exact inference, but they may not give the exact result.
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+        </details>
         
     </div>
 
@@ -180,27 +209,7 @@
         <div id="code-menu">
             <p>Choose the target you want to compare ( if a targets doesn't figure in the possible choices, that means the targets can't support the task )</p>
             <div id="codeSelector"></div>
-            <div id="code"> <code id='pgmpy'> <h2>pgmpy</h2> <div class="zenburn" style="background: #3f3f3f"><table class="zenburntable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 1</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 2</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 3</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 4</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 5</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 6</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 7</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 8</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 9</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">10</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f0dfaf">from</span> <span style="color: #dcdccc">pgmpy.readwrite</span> <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">BIFReader</span>
-<span style="color: #f0dfaf">from</span> <span style="color: #dcdccc">pgmpy.inference</span> <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">VariableElimination</span>
-<span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">sys</span>
-<span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">os</span>
-
-<span style="color: #dcdccc">currentdir</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">os</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">path</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">dirname</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">os</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">path</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">realpath</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">__file__</span><span style="color: #f0efd0">))</span>
-
-<span style="color: #dcdccc">reader</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">BIFReader</span><span style="color: #f0efd0">(</span><span style="color: #cc9393">f&quot;</span><span style="color: #dca3a3; font-weight: bold">{</span><span style="color: #dcdccc">currentdir</span><span style="color: #dca3a3; font-weight: bold">}</span><span style="color: #cc9393">/data/</span><span style="color: #dca3a3; font-weight: bold">{</span><span style="color: #dcdccc">sys</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">argv</span><span style="color: #f0efd0">[</span><span style="color: #8cd0d3">1</span><span style="color: #f0efd0">]</span><span style="color: #dca3a3; font-weight: bold">}</span><span style="color: #cc9393">&quot;</span><span style="color: #f0efd0">)</span>
-
-<span style="color: #dcdccc">bn</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">VariableElimination</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">reader</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">get_model</span><span style="color: #f0efd0">())</span>
-</pre></div></td></tr></table></div>
- </code> <code id='bnlearn'> <h2>bnlearn</h2> None </code> <code id='pyAgrum'> <h2>pyAgrum</h2> <div class="zenburn" style="background: #3f3f3f"><table class="zenburntable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 1</span>
+            <div id="code"> <code id='pgmpy'> <h2>pgmpy</h2> No code found </code> <code id='bnlearn'> <h2>bnlearn</h2> No code found </code> <code id='pyAgrum'> <h2>pyAgrum</h2> <div class="zenburn" style="background: #3f3f3f"><table class="zenburntable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -217,7 +226,7 @@
 
 <span style="color: #dcdccc">bn</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">gum</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">loadBN</span><span style="color: #f0efd0">(</span><span style="color: #cc9393">f&quot;</span><span style="color: #dca3a3; font-weight: bold">{</span><span style="color: #dcdccc">currentdir</span><span style="color: #dca3a3; font-weight: bold">}</span><span style="color: #cc9393">/data/</span><span style="color: #dca3a3; font-weight: bold">{</span><span style="color: #dcdccc">sys</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">argv</span><span style="color: #f0efd0">[</span><span style="color: #8cd0d3">1</span><span style="color: #f0efd0">]</span><span style="color: #dca3a3; font-weight: bold">}</span><span style="color: #cc9393">&quot;</span><span style="color: #f0efd0">)</span>
 
-<span style="color: #dcdccc">ie</span><span style="color: #f0efd0">=</span><span style="color: #dcdccc">gum</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">LazyPropagation</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">bn</span><span style="color: #f0efd0">)</span>
+<span style="color: #dcdccc">ie</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">gum</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">GibbsSampling</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">bn</span><span style="color: #f0efd0">)</span>
 <span style="color: #dcdccc">ie</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">makeInference</span><span style="color: #f0efd0">()</span>
 </pre></div></td></tr></table></div>
  </code></div>

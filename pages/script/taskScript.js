@@ -59,30 +59,32 @@ for(let element in importedData){
     }
 
     // need a better way to get all the libraries
-    allLibraries = chartdata.map(d => d.libraryName);
-    allLibraries = [...new Set(allLibraries)];
-
+    if (allLibraries == undefined){
+        allLibraries = chartdata.map(d => d.libraryName);
+        allLibraries = [...new Set(allLibraries)];
+    }
     // check if the arguments are numbers or not to sort the data if needed
-    // if(typeof chartdata[0].arguments === "number"){
-    //     // if the arguments are numbers we sort the data by the arguments
-    //     let orderingFunction = (a, b) => d3.ascending(a.arguments, b.arguments);
-    //     chartdata.sort(orderingFunction);
-    //     console.log("arguments are numbers");
-    // }
-    // else{
-    //     // if the arguments are not numbers we sort the data by the arguments
-    //     let orderingFunction = (a, b) => d3.ascending(a.runTime, b.runTime);
-    //     chartdata.sort(orderingFunction);
-    //     console.log("arguments are not numbers");
-    // }
+    if(typeof chartdata[0].arguments === "number"){
+        // if the arguments are numbers we sort the data by the arguments
+        let orderingFunction = (a, b) => d3.ascending(a.arguments, b.arguments);
+        chartdata.sort(orderingFunction);
+        console.log("arguments are numbers");
+    }
+    else{
+        // if the arguments are not numbers we sort the data by the arguments
+        let orderingFunction = (a, b) => d3.ascending(a.runTime, b.runTime);
+        chartdata.sort(orderingFunction);
+        console.log("arguments are not numbers");
+    }
 
-    let orderingFunction = (a, b) => d3.ascending(a.arguments, b.arguments);
-    chartdata.sort(orderingFunction);
+    // let orderingFunction = (a, b) => d3.ascending(a.arguments, b.arguments);
+    // chartdata.sort(orderingFunction);
 
     if (importedData[element].scale == "auto"){
         // we're getting the local min and max from each library
         let local_spread = [];
         for(let library of allLibraries){
+            
             let data = chartdata.filter(d => d.libraryName == library);
             local_spread.push(dataSpread(data.map(d => d.runTime)));
         }
@@ -121,8 +123,8 @@ for(let element in importedData){
 
             margin: { top: 40, right: 10, bottom: 100, left: 50 },
 
-            // yType: (importedData[element].scale == 'log')?d3.scaleLog:d3.scaleLinear ,
-            yType: d3.scaleLinear,
+            yType: (importedData[element].scale == 'log')?d3.scaleLog:d3.scaleLinear ,
+            // yType: d3.scaleLog,
 
             tooltipFontSize: 12,
 
@@ -181,33 +183,40 @@ codeSelector.id = "codeSelector";
 
 // by default we display two libraries's code
 let elementsToDisplay = [];
-elementsToDisplay.push(allLibraries[0]);
-elementsToDisplay.push(allLibraries[1]);
-handleClickToPrintCode(elementsToDisplay);
+try{
+    elementsToDisplay.push(allLibraries[0]);
+    elementsToDisplay.push(allLibraries[1]);
+    handleClickToPrintCode(elementsToDisplay);
 
-for(let library of allLibraries){
-    let button = document.createElement("button");
-    button.type = "button";
-    button.id = library + "-button";
-    button.innerHTML = library;
-    
-    // we manage the click on the button
-    // if the element is already in the list we remove it
-    // if the element is not in the list we add it
-    // we can only have two elements in the list
-    button.onclick = function(){
-        if(elementsToDisplay.includes(library)){
-            elementsToDisplay.splice(elementsToDisplay.indexOf(library), 1);
-        }else{
-            elementsToDisplay.push(library);
+    for(let library of allLibraries){
+        let button = document.createElement("button");
+        button.type = "button";
+        button.id = library + "-button";
+        button.innerHTML = library;        
+        // we manage the click on the button
+        // if the element is already in the list we remove it
+        // if the element is not in the list we add it
+        // we can only have two elements in the list
+        button.onclick = function(){
+            if(elementsToDisplay.includes(library)){
+                elementsToDisplay.splice(elementsToDisplay.indexOf(library), 1);
+            }else{
+                elementsToDisplay.push(library);
+            }
+            if(elementsToDisplay.length > 2){
+                elementsToDisplay.shift();
+            }
+            handleClickToPrintCode(elementsToDisplay);
         }
-        if(elementsToDisplay.length > 2){
-            elementsToDisplay.shift();
-        }
-        handleClickToPrintCode(elementsToDisplay);
+            
+        codeSelector.appendChild(button);
     }
-        
-    codeSelector.appendChild(button);
+}catch(e){
+    console.log("No data imported")
+    console.log(e);
+    
+    let code_menu = document.getElementById("code-menu");
+    code_menu.style.display = "none";
 }
 
 
