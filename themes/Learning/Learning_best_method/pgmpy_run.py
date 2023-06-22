@@ -5,8 +5,9 @@ from pgmpy.readwrite import BIFWriter, BIFReader
 import os
 import sys
 
-import warnings 
-warnings.filterwarnings('ignore')
+import warnings
+
+warnings.filterwarnings("ignore")
 
 currentdir = os.path.dirname(os.path.realpath(__file__))
 
@@ -25,4 +26,6 @@ best_model = BayesianModel(best_model.edges())
 best_model.fit(samples, estimator=BayesianEstimator, prior_type="K2")
 
 # Save the model
-best_model.save(f"{currentdir}/data/pgmpy_learned_{sys.argv[1]}_alarm.bif",filetype="bif")
+best_model.save(
+    f"{currentdir}/data/pgmpy_learned_{sys.argv[1]}_alarm.bif", filetype="bif"
+)

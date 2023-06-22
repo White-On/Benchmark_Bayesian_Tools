@@ -17,4 +17,4 @@ learnDag = learner.learnDAG()
 bnlearned = learner.learnParameters(learnDag)
 
 # Save the model
-gum.saveBN(bnlearned,f"{currentdir}/data/pyAgrum_learned_{sys.argv[1]}_alarm.bif")
+gum.saveBN(bnlearned, f"{currentdir}/data/pyAgrum_learned_{sys.argv[1]}_alarm.bif")

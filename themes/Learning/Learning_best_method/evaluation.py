@@ -2,6 +2,7 @@ import pyAgrum as gum
 import pyAgrum.lib.bn_vs_bn as gcm
 import os
 
+
 def evaluateFscore(filenameBif, libraryName, arg):
     """Evaluate the Fscore of a learned BN"""
     curentdir = os.path.dirname(os.path.realpath(__file__))
@@ -13,9 +14,10 @@ def evaluateFscore(filenameBif, libraryName, arg):
         return None
     bnlearn = gum.loadBN(filenameBnLearned)
 
-    cmp=gcm.GraphicalBNComparator(bn,bnlearn)
+    cmp = gcm.GraphicalBNComparator(bn, bnlearn)
 
     return cmp.scores()["fscore"]
+
 
 def evaluateRecall(filenameBif, libraryName, arg):
     """Evaluate the Recall of a learned BN"""
@@ -28,12 +30,13 @@ def evaluateRecall(filenameBif, libraryName, arg):
         return None
     bnlearn = gum.loadBN(filenameBnLearned)
 
-    cmp=gcm.GraphicalBNComparator(bn,bnlearn)
+    cmp = gcm.GraphicalBNComparator(bn, bnlearn)
 
     return cmp.scores()["recall"]
 
+
 def evaluatePrecision(filenameBif, libraryName, arg):
-    ""
+    """"""
     curentdir = os.path.dirname(os.path.realpath(__file__))
     bn = gum.loadBN(f"{curentdir}/data/{filenameBif}")
 
@@ -43,6 +46,6 @@ def evaluatePrecision(filenameBif, libraryName, arg):
         return None
     bnlearn = gum.loadBN(filenameBnLearned)
 
-    cmp=gcm.GraphicalBNComparator(bn,bnlearn)
+    cmp = gcm.GraphicalBNComparator(bn, bnlearn)
 
     return cmp.scores()["precision"]

@@ -14,4 +14,3 @@ samples = read_csv(f"{currentdir}/data/sample_{sys.argv[1]}_alarm.csv", sep=",")
 
 # Save the model
 BIFWriter(bn).write_bif(f"{currentdir}/data/outContext.bif")
-

@@ -9,8 +9,8 @@ currentdir = os.path.dirname(os.path.realpath(__file__))
 true_model = bn.import_DAG(f"{currentdir}/data/alarm.bif")
 
 # Load the data
-df = pd.read_csv(f"{currentdir}/data/sample_{sys.argv[1]}_alarm.csv")  
+df = pd.read_csv(f"{currentdir}/data/sample_{sys.argv[1]}_alarm.csv")
 
-model_learned = bn.structure_learning.fit(df, methodtype="hc",scoretype="bic")
+model_learned = bn.structure_learning.fit(df, methodtype="hc", scoretype="bic")
 
 bn.save(model_learned, f"{currentdir}/data/bnlearn_learned_{sys.argv[1]}_alarm.bif")
