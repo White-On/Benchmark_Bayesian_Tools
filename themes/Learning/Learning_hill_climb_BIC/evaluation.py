@@ -17,6 +17,7 @@ def evaluateFscore(filenameBif, libraryName, arg):
 
     return cmp.scores()["fscore"]
 
+
 def evaluateRecall(filenameBif, libraryName, arg):
     """Evaluate the Recall of a learned BN"""
     curentdir = os.path.dirname(os.path.realpath(__file__))
