@@ -3,7 +3,8 @@ export function GroupedBarChart(data,{
     categories = ([, categories]) => categories,  // given d in data, returns the (temporal) y-value
     inerClass = ([, , inerClass]) => inerClass, // given d in data, returns the (categorical) z-value
 
-    title = "Grouped Bar Chart",
+    title = "",
+    defined, // for gaps in data
 
     width,
     height,
@@ -32,7 +33,9 @@ export function GroupedBarChart(data,{
 
     activationFunction = null,
 
-    displayLegend = true,
+    titleFontSize = 16,
+
+    displayLegend = true, // show a legend?
 
     yType = d3.scaleLinear, // "linear" or "log"
 
@@ -44,7 +47,10 @@ export function GroupedBarChart(data,{
 
 //  we want to draw the bars from the highest to the lowest value
 //  this wait we wont have issue with the labels
-    const indices = [...Values.keys()].sort((a, b) => Values[b] - Values[a]);
+    let indices = [...Values.keys()].sort((a, b) => Values[b] - Values[a]);
+    if (defined === undefined) defined = (d, i) => !isNaN(Values[i]);
+    const D = d3.map(indices, defined); 
+    indices = indices.filter(i => D[i]);
 
     const I = d3.range(Values.length);
 
@@ -74,7 +80,7 @@ export function GroupedBarChart(data,{
         .domain(InerClass)
         .rangeRound([0, xScaleCategory.bandwidth()]);
   
-    const yMinMaxValue = d3.extent(Values);
+    const yMinMaxValue = d3.extent(Values.filter((d) => !isNaN(d)));
 
     // CAUTION: if the min value is 0, the log scale will not work
 
@@ -82,6 +88,7 @@ export function GroupedBarChart(data,{
     let yScale;
     if (yType == d3.scaleLog) {
         yDomain = [yMinMaxValue[0] <= 0 ? 0.0001 : yMinMaxValue[0], yMinMaxValue[1]];
+        // yDomain = [0.0001, yMinMaxValue[1]];
         yScale = d3.scaleLog(yDomain, yRange)
     }
     else {
@@ -187,14 +194,13 @@ export function GroupedBarChart(data,{
     // add the title to the chart.
     svg.append("text")
         .attr("x", width / 2)
-        .attr("y", 10 + tooltipFontSize)
+        .attr("y", 10 + titleFontSize/2)
         .attr("text-anchor", "middle")
         .attr("fill", "currentColor")
-        .attr("font-size", tooltipFontSize)
+        .attr("font-size", titleFontSize)
         .text(title);
 
 
-    
     const swatches = svg.append("g")
         .attr("font-family", "sans-serif")
         .attr("font-size", legendFontSize)
@@ -205,20 +211,21 @@ export function GroupedBarChart(data,{
         .attr("transform", (z, i) => `translate(0,${i * legendColorBoxSize[1] + i * legendColorBoxGap })`)
         .on("click", handleClick) // Add click event listener
         .style("cursor", "pointer");
-      
-      swatches.append("rect")
+        
+        swatches.append("rect")
         .attr("x", xLegend)
         .attr("y", yLegend )
         .attr("width", legendColorBoxSize[0])
         .attr("height", legendColorBoxSize[1])
         .attr("fill", color);
-      
-      swatches.append("text")
+        
+        swatches.append("text")
         .attr("x", xLegend + legendColorBoxSize[0] + legendColorBoxGap)
         .attr("y", yLegend + legendColorBoxSize[1]/2 - legendFontSize/2)
         .attr("dy", "1em")
         .text(z => z);
-      
+    
+
 
     let activeElement = [];
     let lastTwoElementSelected = [];
