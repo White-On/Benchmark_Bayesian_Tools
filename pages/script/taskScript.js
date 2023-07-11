@@ -2,6 +2,7 @@ import {LineChart} from './dynamicPlot.js';
 import {Histogram} from './histogram.js';
 import {GroupedBarChart} from './groupedBarChart.js';
 import {ViolonsChart} from './violonsChart.js';
+import {ComplexeLineChart} from './complexePlot.js';
 
 function dataSpread(data){
     let min = Math.min.apply(Math, data)
@@ -34,20 +35,20 @@ let width = htmlComponent.getBoundingClientRect().width;
 // let height = window.innerHeight * 0.5;
 let height = 500;
 
-let possibleplot = {"line": LineChart, "histo": Histogram, "groupedBar": GroupedBarChart, "violons": ViolonsChart};
+let possibleplot = {"line": ComplexeLineChart, "histo": Histogram, "groupedBar": GroupedBarChart, "violons": ViolonsChart};
 
 const timeBackgroundColor = "#ffffaa";
 const evaluationBackgroundcolor = "#aaffff";
 // const defaultBackgroundcolor = "#aaffff";
 
 let chartList = [];
-let titleList = [];
+let labelList = [];
 let allLibraries;
 
 for(let element in importedData){
     let chart;
     let chartdata = importedData[element].data;
-    titleList.push(importedData[element].title);
+    labelList.push(importedData[element].label);
     
     console.log(chartdata);
     // console.log(importedData[element]);
@@ -68,13 +69,13 @@ for(let element in importedData){
         // if the arguments are numbers we sort the data by the arguments
         let orderingFunction = (a, b) => d3.ascending(a.arguments, b.arguments);
         chartdata.sort(orderingFunction);
-        console.log("arguments are numbers");
+        // console.log("arguments are numbers");
     }
     else{
         // if the arguments are not numbers we sort the data by the arguments
         let orderingFunction = (a, b) => d3.ascending(a.runTime, b.runTime);
         chartdata.sort(orderingFunction);
-        console.log("arguments are not numbers");
+        // console.log("arguments are not numbers");
     }
 
     // let orderingFunction = (a, b) => d3.ascending(a.arguments, b.arguments);
@@ -86,11 +87,15 @@ for(let element in importedData){
         for(let library of allLibraries){
             
             let data = chartdata.filter(d => d.libraryName == library);
+            // we remove the eventual strings from the data -> error in the data
+            data = data.filter(d => typeof d.runTime === "number");
             local_spread.push(dataSpread(data.map(d => d.runTime)));
         }
+        
         // we remove the eventual 0 from the local spread -> error in the data
         local_spread = local_spread.filter(d => d != 0);
-        let global_spread = dataSpread(chartdata.map(d => d.runTime));
+        let data = chartdata.filter(d => typeof d.runTime === "number");
+        let global_spread = dataSpread(data.map(d => d.runTime));
         // default scale is linear
         importedData[element].scale = 'linear'
         // factor of comparison between the local spread and the global spread
@@ -109,6 +114,7 @@ for(let element in importedData){
             values: d => d.runTime,
             categories: d => d.arguments,
             inerClass: d => d.libraryName,
+            std: d => d.std,
 
             width: width,
             height: height,
@@ -120,6 +126,7 @@ for(let element in importedData){
 
             labelFontSize: 12,
             titleFontSize: 16,
+            title: importedData[element].title,
 
             margin: { top: 40, right: 10, bottom: 100, left: 50 },
 
@@ -140,7 +147,7 @@ for(let element in importedData){
 }
 
 
-for(let title of titleList){
+for(let title of labelList){
     let option = document.createElement("option");
     option.value = title;
     option.text = title;
@@ -168,7 +175,7 @@ dropdown.onchange = function(){
     for(let chart of chartList){
         chart.style.display = "none";
     }
-    chartList[titleList.indexOf(dropdown.value)].style.display = "block";
+    chartList[labelList.indexOf(dropdown.value)].style.display = "block";
     if (dropdown.value == "Runtime"){
         htmlComponent.style.backgroundColor = timeBackgroundColor;
     }else {
@@ -232,6 +239,7 @@ function handleClickToPrintCode(elementsToDisplay) {
     }
 }
 
+// NAVIGATION BAR
 // document.body.innerHTML += code["pgmpy"]
 
 //we want to make the navActive class active on the library page

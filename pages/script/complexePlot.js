@@ -1,7 +1,8 @@
-export  function LineChart(data, {
+export function ComplexeLineChart(data, {
     values = ([value]) => value, // given d in data, returns the (quantitative) x-value
     categories = ([, categories]) => categories,  // given d in data, returns the (temporal) y-value
     inerClass = ([, , inerClass]) => inerClass, // given d in data, returns the (categorical) z-value
+    std = ([, , , std]) => std, // given d in data, returns the (categorical) z-value
 
     title = "", // title of the chart
     titleFontSize = 20, // font size of the title
@@ -63,6 +64,7 @@ export  function LineChart(data, {
     const X = d3.map(data, categories);
     const Y = d3.map(data, values);
     const Z = d3.map(data, inerClass);
+    const W = d3.map(data, std);
     const O = d3.map(data, d => d);
     if (defined === undefined) defined = (d, i) => !isNaN(X[i]) && !isNaN(Y[i]);
     const D = d3.map(data, defined);
@@ -119,6 +121,14 @@ export  function LineChart(data, {
         .curve(curve)
         .x(i => xScale(X[i]))
         .y(i => yScale(Y[i]));
+    
+    const stdAreaLine = d3.area()
+        .defined(i => D[i])
+        .curve(curve)
+        .x(i => xScale(X[i]))
+        .y0(i => yScale(Y[i] - W[i]))
+        .y1(i => yScale(Y[i] + W[i]));
+
 
     // Construct a new SVG. this is the main container for the chart.
     const svg = d3.create("svg")
@@ -203,11 +213,32 @@ export  function LineChart(data, {
         .selectAll("circle")
         .data(I)
         .join("circle")
+        .filter(i => D[i])
         .attr("cx", (I) => xScale(X[I]))
         .attr("cy", (I) => yScale(Y[I]))
         .attr("r", circlesRadius)
         .attr("fill", typeof color === "function" ? (i) => color(Z[i]) : null);
 
+    // add the area of the standard deviation to the chart.
+    const stdArea = svg.append("g")
+        .attr("fill", "none")
+        .attr("stroke", typeof color === "string" ? color : null)
+        .attr("stroke-linecap", strokeLinecap)
+        .attr("stroke-linejoin", strokeLinejoin)
+        .attr("stroke-width", strokeWidth)
+        .attr("stroke-opacity", strokeOpacity)
+        .selectAll("path")
+        .data(d3.group(I, i => Z[i]))
+        .join("path")
+        .style("mix-blend-mode", mixBlendMode)
+        // strocked area
+        // .attr("stroke", typeof color === "function" ? ([z]) => color(z) : null)
+        // .attr('stroke-dasharray', '5,5')
+        // .attr('stroke-opacity', .3)
+        .attr('fill', typeof color === "function" ? ([z]) => color(z) : null)
+        .attr("fill-opacity", .3)
+        .attr("d", ([, I]) => stdAreaLine(I));
+    
     // add the line to the chart.
     const path = svg.append("g")
         .attr("fill", "none")
@@ -234,21 +265,24 @@ export  function LineChart(data, {
         .attr("display", "none");
 
     dot.append("circle")
-        .attr("r", tooltipCircleRadius);
-
-    dot.append("path")
-        .attr("fill", "white")
-        .attr("stroke", "black")
-        .attr("stroke-width", 2)
-        .attr("d", `M${-tooltipBoxSize[0] / 2  },5H-5l5,-5l5,5H${tooltipBoxSize[0] / 2 }v${tooltipBoxSize[1]}h-${tooltipBoxSize[0]}z`)
-        .attr("transform", `translate(0,${tooltipTopMargin})`);
+        .attr("r", tooltipCircleRadius)
+        .call(dot => dot.append("title"));
+            // .text(i => [X[i], `${Y[i]} sec`].join("\n")));
     
-    dot.append("text")
-        .attr("font-family", "sans-serif")
-        .attr("font-size", tooltipFontSize)
-        .attr("fill", "black")
-        .attr("text-anchor", "middle")
-        .attr("y", tooltipBoxSize[1]/2 + tooltipFontSize/2 + tooltipTopMargin + 5);
+
+    // dot.append("path")
+    //     .attr("fill", "white")
+    //     .attr("stroke", "black")
+    //     .attr("stroke-width", 2)
+    //     .attr("d", `M${-tooltipBoxSize[0] / 2  },5H-5l5,-5l5,5H${tooltipBoxSize[0] / 2 }v${tooltipBoxSize[1]}h-${tooltipBoxSize[0]}z`)
+    //     .attr("transform", `translate(0,${tooltipTopMargin})`);
+    
+    // dot.append("text")
+    //     .attr("font-family", "sans-serif")
+    //     .attr("font-size", tooltipFontSize)
+    //     .attr("fill", "black")
+    //     .attr("text-anchor", "middle")
+    //     .attr("y", tooltipBoxSize[1]/2 + tooltipFontSize/2 + tooltipTopMargin + 5);
 
 
     function swatches() {
@@ -292,11 +326,18 @@ export  function LineChart(data, {
         
         path.style("stroke", ([z]) => Z[i] === z ? null : "#ddd").filter(([z]) => Z[i] === z).raise();
         path.style("stroke-width", ([z]) => Z[i] === z ? circlesRadius : null).filter(([z]) => Z[i] === z).raise();
+        stdArea.style("fill", ([z]) => Z[i] === z ? null : "#ddd").filter(([z]) => Z[i] === z).raise();
         dot.attr("transform", `translate(${xScale(X[i])},${yScale(Y[i])})`);
         // dot.style("fill", color(Z[i]));
         dot.style("fill", typeof color === "string" ? color : color(Z[i]));
         circles.selectAll('circle').style("fill", "#ddd");
-        if (Z) dot.select("text").text(Y[i].toFixed(2));
+        // if (Z) dot.select("text").text(Y[i].toFixed(2));
+        if (Z) dot.select("title").text(
+            [`${xLabel} : ${xFormat(X[i])}`, 
+            `${yLabel} : ${Y[i].toFixed(4)}`,
+            `σ : ${W[i].toFixed(4)}`].join("\n")
+        );
+
         svg.property("value", O[i]).dispatch("input", {bubbles: true});
     }
 
@@ -306,8 +347,10 @@ export  function LineChart(data, {
     }
 
     function pointerleft() {
+        // reset the chart.
         circles.selectAll('circle').style("fill", null);
         path.style("mix-blend-mode", mixBlendMode).style("stroke", null).style("stroke-width", null);
+        stdArea.style("fill", null);
         dot.attr("display", "none");
         svg.node().value = null;
         svg.dispatch("input", {bubbles: true});
