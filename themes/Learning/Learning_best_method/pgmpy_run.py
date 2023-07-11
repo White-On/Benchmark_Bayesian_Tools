@@ -16,7 +16,7 @@ samples = read_csv(f"{currentdir}/data/sample_{sys.argv[1]}_alarm.csv", sep=",")
 
 # estimate structure
 est = PC(samples)
-skel, seperating_sets = est.build_skeleton(significance_level=0.01)
+skel, seperating_sets = est.build_skeleton(significance_level=0.01, show_progress=False)
 
 pdag = est.skeleton_to_pdag(skel, seperating_sets)
 
