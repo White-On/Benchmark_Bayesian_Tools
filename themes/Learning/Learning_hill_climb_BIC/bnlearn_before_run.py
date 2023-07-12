@@ -9,4 +9,4 @@ currentdir = os.path.dirname(os.path.realpath(__file__))
 true_model = bn.import_DAG(f"{currentdir}/data/alarm.bif")
 
 
-bn.save(true_model, f"{currentdir}/data/bnlearn_learned_{sys.argv[1]}_alarm.bif")
+# bn.save(true_model, f"{currentdir}/data/bnlearn_learned_{sys.argv[1]}_alarm.bif")
