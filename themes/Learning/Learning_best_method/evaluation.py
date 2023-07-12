@@ -20,7 +20,7 @@ def evaluateFscore(filenameBif, libraryName, arg):
         # we're adding the missing variables to the Bayesian Network that has less variables
         print('missing variables')
         min_size = min(len(bn_original_names),len(bn_learned_names))
-        bn_min = bn_original if min_size == len(bn_original_names else bn_learned
+        bn_min = bn_original if min_size == len(bn_original_names) else bn_learned
         bn_max = bn_original if min_size == len(bn_learned_names) else bn_learned
         
         for var in bn_max.names():
@@ -50,7 +50,7 @@ def evaluateRecall(filenameBif, libraryName, arg):
         # we're adding the missing variables to the Bayesian Network that has less variables
         print('missing variables')
         min_size = min(len(bn_original_names),len(bn_learned_names))
-        bn_min = bn_original if min_size == len(bn_original_names else bn_learned
+        bn_min = bn_original if min_size == len(bn_original_names) else bn_learned
         bn_max = bn_original if min_size == len(bn_learned_names) else bn_learned
         
         for var in bn_max.names():
@@ -80,7 +80,7 @@ def evaluatePrecision(filenameBif, libraryName, arg):
         # we're adding the missing variables to the Bayesian Network that has less variables
         print('missing variables')
         min_size = min(len(bn_original_names),len(bn_learned_names))
-        bn_min = bn_original if min_size == len(bn_original_names else bn_learned
+        bn_min = bn_original if min_size == len(bn_original_names) else bn_learned
         bn_max = bn_original if min_size == len(bn_learned_names) else bn_learned
         
         for var in bn_max.names():
