@@ -5,10 +5,10 @@ import os
 import sys
 
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
+current_dir = os.path.dirname(os.path.realpath(__file__))
 
 # Load the BN to compare properly time of learning
-true_model = bn.import_DAG(f"{current_dir}/data/micro_child.bif", verbose=False)
+true_model = bn.import_DAG(f"{current_dir}/data/micro_child.bif")
 
 # Load the data
 df = pd.read_csv(f"{current_dir}/data/sample_{sys.argv[1]}_micro_child.csv")
