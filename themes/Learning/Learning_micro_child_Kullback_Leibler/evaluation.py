@@ -113,7 +113,7 @@ def evaluateKullback_Leibler(filenameBif, libraryName, arg):
 
     return gum.ExactBNdistance(bn_original, bn_learned).compute()['klPQ']
 
-def evaluateKullback_Leibler(filenameBif, libraryName, arg):
+def evaluatePQerror(filenameBif, libraryName, arg):
     curentdir = os.path.dirname(os.path.realpath(__file__))
     bn_original = gum.loadBN(f"{curentdir}/data/{filenameBif}")
 
