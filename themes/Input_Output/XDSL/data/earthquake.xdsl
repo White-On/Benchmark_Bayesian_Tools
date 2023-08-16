@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!-- This network was created by pyAgrum 1.9.0 for any purpose you want -->
+<smile version="1.0" id="data\earthquake.bif">
+
+  <nodes>
+    <cpt id="Earthquake">
+      <state id="True" />
+      <state id="False" />
+      <probabilities>0.02 0.98</probabilities>
+    </cpt>
+    <cpt id="Burglary">
+      <state id="True" />
+      <state id="False" />
+      <probabilities>0.01 0.99</probabilities>
+    </cpt>
+    <cpt id="Alarm">
+      <state id="True" />
+      <state id="False" />
+      <parents>Burglary Earthquake</parents>
+      <probabilities>0.95 0.05 0.29 0.71 0.94 0.06 0.001 0.999</probabilities>
+    </cpt>
+    <cpt id="MaryCalls">
+      <state id="True" />
+      <state id="False" />
+      <parents>Alarm</parents>
+      <probabilities>0.7 0.3 0.01 0.99</probabilities>
+    </cpt>
+    <cpt id="JohnCalls">
+      <state id="True" />
+      <state id="False" />
+      <parents>Alarm</parents>
+      <probabilities>0.9 0.1 0.05 0.95</probabilities>
+    </cpt>
+  </nodes>
+
+  <extensions>
+    <genie version="1.0" app="aGrUM 1.9.0" name="data\earthquake.bif">
+      <node id="Earthquake">
+        <name>Earthquake</name>
+      </node>
+      <node id="Burglary">
+        <name>Burglary</name>
+      </node>
+      <node id="Alarm">
+        <name>Alarm</name>
+      </node>
+      <node id="MaryCalls">
+        <name>MaryCalls</name>
+      </node>
+      <node id="JohnCalls">
+        <name>JohnCalls</name>
+      </node>
+    </genie>
+  </extensions>
+
+</smile>

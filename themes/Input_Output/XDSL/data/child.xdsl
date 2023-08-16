@@ -1,0 +1,212 @@
+<?xml version="1.0" ?>
+<!-- This network was created by pyAgrum 1.9.0 for any purpose you want -->
+<smile version="1.0" id="data\child.bif">
+
+  <nodes>
+    <cpt id="BirthAsphyxia">
+      <state id="yes" />
+      <state id="no" />
+      <probabilities>0.1 0.9</probabilities>
+    </cpt>
+    <cpt id="Disease">
+      <state id="PFC" />
+      <state id="TGA" />
+      <state id="Fallot" />
+      <state id="PAIVS" />
+      <state id="TAPVD" />
+      <state id="Lung" />
+      <parents>BirthAsphyxia</parents>
+      <probabilities>0.2 0.3 0.25 0.15 0.05 0.05 0.0306122 0.336735 0.295918 0.234694 0.0510204 0.0510204</probabilities>
+    </cpt>
+    <cpt id="LungFlow">
+      <state id="Normal" />
+      <state id="Low" />
+      <state id="High" />
+      <parents>Disease</parents>
+      <probabilities>0.3 0.65 0.05 0.2 0.05 0.75 0.15 0.8 0.05 0.1 0.85 0.05 0.3 0.1 0.6 0.7 0.1 0.2</probabilities>
+    </cpt>
+    <cpt id="DuctFlow">
+      <state id="Lt_to_Rt" />
+      <state id="None" />
+      <state id="Rt_to_Lt" />
+      <parents>Disease</parents>
+      <probabilities>0.15 0.05 0.8 0.1 0.8 0.1 0.8 0.2 0 1 0 0 0.33 0.33 0.34 0.2 0.4 0.4</probabilities>
+    </cpt>
+    <cpt id="Sick">
+      <state id="yes" />
+      <state id="no" />
+      <parents>Disease</parents>
+      <probabilities>0.4 0.6 0.3 0.7 0.2 0.8 0.3 0.7 0.7 0.3 0.7 0.3</probabilities>
+    </cpt>
+    <cpt id="Age">
+      <state id="0_3_days" />
+      <state id="4_10_days" />
+      <state id="11_30_days" />
+      <parents>Disease Sick</parents>
+      <probabilities>0.95 0.03 0.02 0.8 0.15 0.05 0.7 0.15 0.15 0.8 0.15 0.05 0.8 0.15 0.05 0.9 0.08 0.02 0.85 0.1 0.05 0.7 0.2 0.1 0.25 0.25 0.5 0.8 0.15 0.05 0.7 0.2 0.1 0.8 0.15 0.05</probabilities>
+    </cpt>
+    <cpt id="LungParench">
+      <state id="Normal" />
+      <state id="Congested" />
+      <state id="Abnormal" />
+      <parents>Disease</parents>
+      <probabilities>0.6 0.1 0.3 0.8 0.05 0.15 0.8 0.05 0.15 0.8 0.05 0.15 0.1 0.6 0.3 0.03 0.25 0.72</probabilities>
+    </cpt>
+    <cpt id="Grunting">
+      <state id="yes" />
+      <state id="no" />
+      <parents>LungParench Sick</parents>
+      <probabilities>0.2 0.8 0.4 0.6 0.8 0.2 0.05 0.95 0.2 0.8 0.6 0.4</probabilities>
+    </cpt>
+    <cpt id="GruntingReport">
+      <state id="yes" />
+      <state id="no" />
+      <parents>Grunting</parents>
+      <probabilities>0.8 0.2 0.1 0.9</probabilities>
+    </cpt>
+    <cpt id="ChestXray">
+      <state id="Normal" />
+      <state id="Oligaemic" />
+      <state id="Plethoric" />
+      <state id="Grd_Glass" />
+      <state id="AsyPatch" />
+      <parents>LungParench LungFlow</parents>
+      <probabilities>0.9 0.03 0.03 0.01 0.03 0.05 0.02 0.15 0.7 0.08 0.05 0.05 0.05 0.05 0.8 0.14 0.8 0.02 0.02 0.02 0.05 0.22 0.08 0.5 0.15 0.05 0.15 0.05 0.05 0.7 0.15 0.01 0.79 0.04 0.01 0.05 0.02 0.4 0.4 0.13 0.24 0.33 0.03 0.34 0.06</probabilities>
+    </cpt>
+    <cpt id="XrayReport">
+      <state id="Normal" />
+      <state id="Oligaemic" />
+      <state id="Plethoric" />
+      <state id="Grd_Glass" />
+      <state id="AsyPatchy" />
+      <parents>ChestXray</parents>
+      <probabilities>0.8 0.06 0.06 0.02 0.06 0.1 0.8 0.02 0.02 0.06 0.1 0.02 0.8 0.02 0.06 0.08 0.02 0.1 0.6 0.2 0.08 0.02 0.1 0.1 0.7</probabilities>
+    </cpt>
+    <cpt id="CO2">
+      <state id="Normal" />
+      <state id="Low" />
+      <state id="High" />
+      <parents>LungParench</parents>
+      <probabilities>0.8 0.1 0.1 0.65 0.05 0.3 0.45 0.05 0.5</probabilities>
+    </cpt>
+    <cpt id="CO2Report">
+      <state id="_7.5" />
+      <state id="_7.5_" />
+      <parents>CO2</parents>
+      <probabilities>0.9 0.1 0.9 0.1 0.1 0.9</probabilities>
+    </cpt>
+    <cpt id="LVH">
+      <state id="yes" />
+      <state id="no" />
+      <parents>Disease</parents>
+      <probabilities>0.1 0.9 0.1 0.9 0.1 0.9 0.9 0.1 0.05 0.95 0.1 0.9</probabilities>
+    </cpt>
+    <cpt id="LVHreport">
+      <state id="yes" />
+      <state id="no" />
+      <parents>LVH</parents>
+      <probabilities>0.9 0.1 0.05 0.95</probabilities>
+    </cpt>
+    <cpt id="CardiacMixing">
+      <state id="None" />
+      <state id="Mild" />
+      <state id="Complete" />
+      <state id="Transp." />
+      <parents>Disease</parents>
+      <probabilities>0.4 0.43 0.15 0.02 0.02 0.09 0.09 0.8 0.02 0.16 0.8 0.02 0.01 0.02 0.95 0.02 0.01 0.03 0.95 0.01 0.4 0.53 0.05 0.02</probabilities>
+    </cpt>
+    <cpt id="HypoxiaInO2">
+      <state id="Mild" />
+      <state id="Moderate" />
+      <state id="Severe" />
+      <parents>CardiacMixing LungParench</parents>
+      <probabilities>0.93 0.05 0.02 0.1 0.8 0.1 0.1 0.7 0.2 0.02 0.18 0.8 0.15 0.8 0.05 0.1 0.75 0.15 0.05 0.65 0.3 0.1 0.3 0.6 0.7 0.2 0.1 0.1 0.65 0.25 0.1 0.5 0.4 0.02 0.18 0.8</probabilities>
+    </cpt>
+    <cpt id="RUQO2">
+      <state id="_5" />
+      <state id="5_12" />
+      <state id="12_" />
+      <parents>HypoxiaInO2</parents>
+      <probabilities>0.1 0.3 0.6 0.3 0.6 0.1 0.5 0.4 0.1</probabilities>
+    </cpt>
+    <cpt id="HypDistrib">
+      <state id="Equal" />
+      <state id="Unequal" />
+      <parents>DuctFlow CardiacMixing</parents>
+      <probabilities>0.95 0.05 0.95 0.05 0.05 0.95 0.95 0.05 0.95 0.05 0.5 0.5 0.95 0.05 0.95 0.05 0.95 0.05 0.95 0.05 0.95 0.05 0.5 0.5</probabilities>
+    </cpt>
+    <cpt id="LowerBodyO2">
+      <state id="_5" />
+      <state id="5_12" />
+      <state id="12_" />
+      <parents>HypDistrib HypoxiaInO2</parents>
+      <probabilities>0.1 0.3 0.6 0.4 0.5 0.1 0.3 0.6 0.1 0.5 0.45 0.05 0.5 0.4 0.1 0.6 0.35 0.05</probabilities>
+    </cpt>
+  </nodes>
+
+  <extensions>
+    <genie version="1.0" app="aGrUM 1.9.0" name="data\child.bif">
+      <node id="BirthAsphyxia">
+        <name>BirthAsphyxia</name>
+      </node>
+      <node id="Disease">
+        <name>Disease</name>
+      </node>
+      <node id="LungFlow">
+        <name>LungFlow</name>
+      </node>
+      <node id="DuctFlow">
+        <name>DuctFlow</name>
+      </node>
+      <node id="Sick">
+        <name>Sick</name>
+      </node>
+      <node id="Age">
+        <name>Age</name>
+      </node>
+      <node id="LungParench">
+        <name>LungParench</name>
+      </node>
+      <node id="Grunting">
+        <name>Grunting</name>
+      </node>
+      <node id="GruntingReport">
+        <name>GruntingReport</name>
+      </node>
+      <node id="ChestXray">
+        <name>ChestXray</name>
+      </node>
+      <node id="XrayReport">
+        <name>XrayReport</name>
+      </node>
+      <node id="CO2">
+        <name>CO2</name>
+      </node>
+      <node id="CO2Report">
+        <name>CO2Report</name>
+      </node>
+      <node id="LVH">
+        <name>LVH</name>
+      </node>
+      <node id="LVHreport">
+        <name>LVHreport</name>
+      </node>
+      <node id="CardiacMixing">
+        <name>CardiacMixing</name>
+      </node>
+      <node id="HypoxiaInO2">
+        <name>HypoxiaInO2</name>
+      </node>
+      <node id="RUQO2">
+        <name>RUQO2</name>
+      </node>
+      <node id="HypDistrib">
+        <name>HypDistrib</name>
+      </node>
+      <node id="LowerBodyO2">
+        <name>LowerBodyO2</name>
+      </node>
+    </genie>
+  </extensions>
+
+</smile>

@@ -1,0 +1,120 @@
+class data\child.bif {
+  labels(yes, no) BirthAsphyxia  {[0.1, 0.9]};
+
+  labels(Equal, Unequal) HypDistrib dependson DuctFlow, CardiacMixing  {[
+    0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.05, 0.5, 0.95, 0.5, 
+    0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.95, 0.5, 0.05, 0.5
+  ]};
+
+  labels(Mild, Moderate, Severe) HypoxiaInO2 dependson CardiacMixing, LungParench  {[
+    0.93, 0.15, 0.7, 0.1, 0.1, 0.1, 0.1, 0.05, 0.1, 0.02, 0.1, 0.02, 
+    0.05, 0.8, 0.2, 0.8, 0.75, 0.65, 0.7, 0.65, 0.5, 0.18, 0.3, 0.18, 
+    0.02, 0.05, 0.1, 0.1, 0.15, 0.25, 0.2, 0.3, 0.4, 0.8, 0.6, 0.8
+  ]};
+
+  labels(Normal, Low, High) CO2 dependson LungParench  {[
+    0.8, 0.65, 0.45, 
+    0.1, 0.05, 0.05, 
+    0.1, 0.3, 0.5
+  ]};
+
+  labels(Normal, Oligaemic, Plethoric, Grd_Glass, AsyPatch) ChestXray dependson LungParench, LungFlow  {[
+    0.9, 0.14, 0.15, 0.05, 0.05, 0.05, 0.05, 0.05, 0.24, 
+    0.03, 0.8, 0.01, 0.02, 0.22, 0.02, 0.05, 0.15, 0.33, 
+    0.03, 0.02, 0.79, 0.15, 0.08, 0.4, 0.05, 0.05, 0.03, 
+    0.01, 0.02, 0.04, 0.7, 0.5, 0.4, 0.05, 0.05, 0.34, 
+    0.03, 0.02, 0.01, 0.08, 0.15, 0.13, 0.8, 0.7, 0.06
+  ]};
+
+  labels(yes, no) Grunting dependson LungParench, Sick  {[
+    0.2, 0.05, 0.4, 0.2, 0.8, 0.6, 
+    0.8, 0.95, 0.6, 0.8, 0.2, 0.4
+  ]};
+
+  labels(yes, no) LVHreport dependson LVH  {[
+    0.9, 0.05, 
+    0.1, 0.95
+  ]};
+
+  labels(_5, 5_12, 12_) LowerBodyO2 dependson HypDistrib, HypoxiaInO2  {[
+    0.1, 0.3, 0.5, 0.4, 0.5, 0.6, 
+    0.3, 0.6, 0.4, 0.5, 0.45, 0.35, 
+    0.6, 0.1, 0.1, 0.1, 0.05, 0.05
+  ]};
+
+  labels(_5, 5_12, 12_) RUQO2 dependson HypoxiaInO2  {[
+    0.1, 0.3, 0.5, 
+    0.3, 0.6, 0.4, 
+    0.6, 0.1, 0.1
+  ]};
+
+  labels(_7.5, _7.5_) CO2Report dependson CO2  {[
+    0.9, 0.9, 0.1, 
+    0.1, 0.1, 0.9
+  ]};
+
+  labels(Normal, Oligaemic, Plethoric, Grd_Glass, AsyPatchy) XrayReport dependson ChestXray  {[
+    0.8, 0.1, 0.1, 0.08, 0.08, 
+    0.06, 0.8, 0.02, 0.02, 0.02, 
+    0.06, 0.02, 0.8, 0.1, 0.1, 
+    0.02, 0.02, 0.02, 0.6, 0.1, 
+    0.06, 0.06, 0.06, 0.2, 0.7
+  ]};
+
+  labels(PFC, TGA, Fallot, PAIVS, TAPVD, Lung) Disease dependson BirthAsphyxia  {[
+    0.2, 0.0306122, 
+    0.3, 0.336735, 
+    0.25, 0.295918, 
+    0.15, 0.234694, 
+    0.05, 0.0510204, 
+    0.05, 0.0510204
+  ]};
+
+  labels(yes, no) GruntingReport dependson Grunting  {[
+    0.8, 0.1, 
+    0.2, 0.9
+  ]};
+
+  labels(0_3_days, 4_10_days, 11_30_days) Age dependson Disease, Sick  {[
+    0.95, 0.85, 0.8, 0.7, 0.7, 0.25, 0.8, 0.8, 0.8, 0.7, 0.9, 0.8, 
+    0.03, 0.1, 0.15, 0.2, 0.15, 0.25, 0.15, 0.15, 0.15, 0.2, 0.08, 0.15, 
+    0.02, 0.05, 0.05, 0.1, 0.15, 0.5, 0.05, 0.05, 0.05, 0.1, 0.02, 0.05
+  ]};
+
+  labels(yes, no) LVH dependson Disease  {[
+    0.1, 0.1, 0.1, 0.9, 0.05, 0.1, 
+    0.9, 0.9, 0.9, 0.1, 0.95, 0.9
+  ]};
+
+  labels(Lt_to_Rt, None, Rt_to_Lt) DuctFlow dependson Disease  {[
+    0.15, 0.1, 0.8, 1, 0.33, 0.2, 
+    0.05, 0.8, 0.2, 0, 0.33, 0.4, 
+    0.8, 0.1, 0, 0, 0.34, 0.4
+  ]};
+
+  labels(None, Mild, Complete, Transp.) CardiacMixing dependson Disease  {[
+    0.4, 0.02, 0.02, 0.01, 0.01, 0.4, 
+    0.43, 0.09, 0.16, 0.02, 0.03, 0.53, 
+    0.15, 0.09, 0.8, 0.95, 0.95, 0.05, 
+    0.02, 0.8, 0.02, 0.02, 0.01, 0.02
+  ]};
+
+  labels(Normal, Congested, Abnormal) LungParench dependson Disease  {[
+    0.6, 0.8, 0.8, 0.8, 0.1, 0.03, 
+    0.1, 0.05, 0.05, 0.05, 0.6, 0.25, 
+    0.3, 0.15, 0.15, 0.15, 0.3, 0.72
+  ]};
+
+  labels(Normal, Low, High) LungFlow dependson Disease  {[
+    0.3, 0.2, 0.15, 0.1, 0.3, 0.7, 
+    0.65, 0.05, 0.8, 0.85, 0.1, 0.1, 
+    0.05, 0.75, 0.05, 0.05, 0.6, 0.2
+  ]};
+
+  labels(yes, no) Sick dependson Disease  {[
+    0.4, 0.3, 0.2, 0.3, 0.7, 0.7, 
+    0.6, 0.7, 0.8, 0.7, 0.3, 0.3
+  ]};
+
+}
+

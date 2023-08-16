@@ -1,0 +1,37 @@
+class data\asia.bif {
+  labels(yes, no) asia  {[0.01, 0.99]};
+
+  labels(yes, no) tub dependson asia  {[
+    0.05, 0.01, 
+    0.95, 0.99
+  ]};
+
+  labels(yes, no) smoke  {[0.5, 0.5]};
+
+  labels(yes, no) lung dependson smoke  {[
+    0.1, 0.01, 
+    0.9, 0.99
+  ]};
+
+  labels(yes, no) bronc dependson smoke  {[
+    0.6, 0.3, 
+    0.4, 0.7
+  ]};
+
+  labels(yes, no) either dependson lung, tub  {[
+    1, 1, 1, 0, 
+    0, 0, 0, 1
+  ]};
+
+  labels(yes, no) xray dependson either  {[
+    0.98, 0.05, 
+    0.02, 0.95
+  ]};
+
+  labels(yes, no) dysp dependson bronc, either  {[
+    0.9, 0.8, 0.7, 0.1, 
+    0.1, 0.2, 0.3, 0.9
+  ]};
+
+}
+

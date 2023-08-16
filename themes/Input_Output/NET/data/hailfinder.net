@@ -1,0 +1,1636 @@
+
+net {
+  name = data\hailfinder.bif;
+  software = "aGrUM 1.9.0";
+  node_size = (50 50);
+}
+
+node N0_7muVerMo {
+   states = (StrongUp WeakUp Neutral Down );
+   label = "N0_7muVerMo";
+   ID = "N0_7muVerMo";
+}
+
+node SubjVertMo {
+   states = (StronUp WeakUp Neutral Down );
+   label = "SubjVertMo";
+   ID = "SubjVertMo";
+}
+
+node QGVertMotion {
+   states = (StrongUp WeakUp Neutral Down );
+   label = "QGVertMotion";
+   ID = "QGVertMotion";
+}
+
+node CombVerMo {
+   states = (StrongUp WeakUp Neutral Down );
+   label = "CombVerMo";
+   ID = "CombVerMo";
+}
+
+node AreaMeso_ALS {
+   states = (StrongUp WeakUp Neutral Down );
+   label = "AreaMeso_ALS";
+   ID = "AreaMeso_ALS";
+}
+
+node SatContMoist {
+   states = (VeryWet Wet Neutral Dry );
+   label = "SatContMoist";
+   ID = "SatContMoist";
+}
+
+node RaoContMoist {
+   states = (VeryWet Wet Neutral Dry );
+   label = "RaoContMoist";
+   ID = "RaoContMoist";
+}
+
+node CombMoisture {
+   states = (VeryWet Wet Neutral Dry );
+   label = "CombMoisture";
+   ID = "CombMoisture";
+}
+
+node AreaMoDryAir {
+   states = (VeryWet Wet Neutral Dry );
+   label = "AreaMoDryAir";
+   ID = "AreaMoDryAir";
+}
+
+node VISCloudCov {
+   states = (Cloudy PC Clear );
+   label = "VISCloudCov";
+   ID = "VISCloudCov";
+}
+
+node IRCloudCover {
+   states = (Cloudy PC Clear );
+   label = "IRCloudCover";
+   ID = "IRCloudCover";
+}
+
+node CombClouds {
+   states = (Cloudy PC Clear );
+   label = "CombClouds";
+   ID = "CombClouds";
+}
+
+node CldShadeOth {
+   states = (Cloudy PC Clear );
+   label = "CldShadeOth";
+   ID = "CldShadeOth";
+}
+
+node AMInstabMt {
+   states = (None Weak Strong );
+   label = "AMInstabMt";
+   ID = "AMInstabMt";
+}
+
+node InsInMt {
+   states = (None Weak Strong );
+   label = "InsInMt";
+   ID = "InsInMt";
+}
+
+node WndHodograph {
+   states = (DCVZFavor StrongWest Westerly Other );
+   label = "WndHodograph";
+   ID = "WndHodograph";
+}
+
+node OutflowFrMt {
+   states = (None Weak Strong );
+   label = "OutflowFrMt";
+   ID = "OutflowFrMt";
+}
+
+node MorningBound {
+   states = (None Weak Strong );
+   label = "MorningBound";
+   ID = "MorningBound";
+}
+
+node Boundaries {
+   states = (None Weak Strong );
+   label = "Boundaries";
+   ID = "Boundaries";
+}
+
+node CldShadeConv {
+   states = (None Some Marked );
+   label = "CldShadeConv";
+   ID = "CldShadeConv";
+}
+
+node CompPlFcst {
+   states = (IncCapDecIns LittleChange DecCapIncIns );
+   label = "CompPlFcst";
+   ID = "CompPlFcst";
+}
+
+node CapChange {
+   states = (Decreasing LittleChange Increasing );
+   label = "CapChange";
+   ID = "CapChange";
+}
+
+node LoLevMoistAd {
+   states = (StrongPos WeakPos Neutral Negative );
+   label = "LoLevMoistAd";
+   ID = "LoLevMoistAd";
+}
+
+node InsChange {
+   states = (Decreasing LittleChange Increasing );
+   label = "InsChange";
+   ID = "InsChange";
+}
+
+node MountainFcst {
+   states = (XNIL SIG SVR );
+   label = "MountainFcst";
+   ID = "MountainFcst";
+}
+
+node Date {
+   states = (May15_Jun14 Jun15_Jul1 Jul2_Jul15 Jul16_Aug10 Aug11_Aug20 Aug20_Sep15 );
+   label = "Date";
+   ID = "Date";
+}
+
+node Scenario {
+   states = (A B C D E F G H I J K );
+   label = "Scenario";
+   ID = "Scenario";
+}
+
+node ScenRelAMCIN {
+   states = (AB CThruK );
+   label = "ScenRelAMCIN";
+   ID = "ScenRelAMCIN";
+}
+
+node MorningCIN {
+   states = (None PartInhibit Stifling TotalInhibit );
+   label = "MorningCIN";
+   ID = "MorningCIN";
+}
+
+node AMCINInScen {
+   states = (LessThanAve Average MoreThanAve );
+   label = "AMCINInScen";
+   ID = "AMCINInScen";
+}
+
+node CapInScen {
+   states = (LessThanAve Average MoreThanAve );
+   label = "CapInScen";
+   ID = "CapInScen";
+}
+
+node ScenRelAMIns {
+   states = (ABI CDEJ F G H K );
+   label = "ScenRelAMIns";
+   ID = "ScenRelAMIns";
+}
+
+node LIfr12ZDENSd {
+   states = (LIGt0 N1GtLIGt_4 N5GtLIGt_8 LILt_8 );
+   label = "LIfr12ZDENSd";
+   ID = "LIfr12ZDENSd";
+}
+
+node AMDewptCalPl {
+   states = (Instability Neutral Stability );
+   label = "AMDewptCalPl";
+   ID = "AMDewptCalPl";
+}
+
+node AMInsWliScen {
+   states = (LessUnstable Average MoreUnstable );
+   label = "AMInsWliScen";
+   ID = "AMInsWliScen";
+}
+
+node InsSclInScen {
+   states = (LessUnstable Average MoreUnstable );
+   label = "InsSclInScen";
+   ID = "InsSclInScen";
+}
+
+node ScenRel3_4 {
+   states = (ACEFK B D GJ HI );
+   label = "ScenRel3_4";
+   ID = "ScenRel3_4";
+}
+
+node LatestCIN {
+   states = (None PartInhibit Stifling TotalInhibit );
+   label = "LatestCIN";
+   ID = "LatestCIN";
+}
+
+node LLIW {
+   states = (Unfavorable Weak Moderate Strong );
+   label = "LLIW";
+   ID = "LLIW";
+}
+
+node CurPropConv {
+   states = (None Slight Moderate Strong );
+   label = "CurPropConv";
+   ID = "CurPropConv";
+}
+
+node ScnRelPlFcst {
+   states = (A B C D E F G H I J K );
+   label = "ScnRelPlFcst";
+   ID = "ScnRelPlFcst";
+}
+
+node PlainsFcst {
+   states = (XNIL SIG SVR );
+   label = "PlainsFcst";
+   ID = "PlainsFcst";
+}
+
+node N34StarFcst {
+   states = (XNIL SIG SVR );
+   label = "N34StarFcst";
+   ID = "N34StarFcst";
+}
+
+node R5Fcst {
+   states = (XNIL SIG SVR );
+   label = "R5Fcst";
+   ID = "R5Fcst";
+}
+
+node Dewpoints {
+   states = (LowEvrywhere LowAtStation LowSHighN LowNHighS LowMtsHighPl HighEvrywher Other );
+   label = "Dewpoints";
+   ID = "Dewpoints";
+}
+
+node LowLLapse {
+   states = (CloseToDryAd Steep ModerateOrLe Stable );
+   label = "LowLLapse";
+   ID = "LowLLapse";
+}
+
+node MeanRH {
+   states = (VeryMoist Average Dry );
+   label = "MeanRH";
+   ID = "MeanRH";
+}
+
+node MidLLapse {
+   states = (CloseToDryAd Steep ModerateOrLe );
+   label = "MidLLapse";
+   ID = "MidLLapse";
+}
+
+node MvmtFeatures {
+   states = (StrongFront MarkedUpper OtherRapid NoMajor );
+   label = "MvmtFeatures";
+   ID = "MvmtFeatures";
+}
+
+node RHRatio {
+   states = (MoistMDryL DryMMoistL Other );
+   label = "RHRatio";
+   ID = "RHRatio";
+}
+
+node SfcWndShfDis {
+   states = (DenvCyclone E_W_N E_W_S MovingFtorOt DryLine None Other );
+   label = "SfcWndShfDis";
+   ID = "SfcWndShfDis";
+}
+
+node SynForcng {
+   states = (SigNegative NegToPos SigPositive PosToNeg LittleChange );
+   label = "SynForcng";
+   ID = "SynForcng";
+}
+
+node TempDis {
+   states = (QStationary Moving None Other );
+   label = "TempDis";
+   ID = "TempDis";
+}
+
+node WindAloft {
+   states = (LV SWQuad NWQuad AllElse );
+   label = "WindAloft";
+   ID = "WindAloft";
+}
+
+node WindFieldMt {
+   states = (Westerly LVorOther );
+   label = "WindFieldMt";
+   ID = "WindFieldMt";
+}
+
+node WindFieldPln {
+   states = (LV DenvCyclone LongAnticyc E_NE SEQuad WidespdDnsl );
+   label = "WindFieldPln";
+   ID = "WindFieldPln";
+}
+
+potential (N0_7muVerMo) {
+   data = (  0.25 0.25 0.25 0.25);
+}
+
+potential (SubjVertMo) {
+   data = (  0.15 0.15 0.5 0.2);
+}
+
+potential (QGVertMotion) {
+   data = (  0.15 0.15 0.5 0.2);
+}
+
+potential ( CombVerMo | N0_7muVerMo   SubjVertMo   QGVertMotion   ) {
+   data = 
+   ((((   1   0   0   0)   % QGVertMotion=StrongUp   SubjVertMo=StronUp   N0_7muVerMo=StrongUp   
+   (   0.9   0.1   0   0)   % QGVertMotion=WeakUp   SubjVertMo=StronUp   N0_7muVerMo=StrongUp   
+   (   0.7   0.2   0.1   0)   % QGVertMotion=Neutral   SubjVertMo=StronUp   N0_7muVerMo=StrongUp   
+   (   0.2   0.5   0.2   0.1))   % QGVertMotion=Down   SubjVertMo=StronUp   N0_7muVerMo=StrongUp   
+   ((   0.9   0.1   0   0)   % QGVertMotion=StrongUp   SubjVertMo=WeakUp   N0_7muVerMo=StrongUp   
+   (   0.7   0.3   0   0)   % QGVertMotion=WeakUp   SubjVertMo=WeakUp   N0_7muVerMo=StrongUp   
+   (   0.15   0.7   0.15   0)   % QGVertMotion=Neutral   SubjVertMo=WeakUp   N0_7muVerMo=StrongUp   
+   (   0.1   0.35   0.45   0.1))   % QGVertMotion=Down   SubjVertMo=WeakUp   N0_7muVerMo=StrongUp   
+   ((   0.7   0.2   0.1   0)   % QGVertMotion=StrongUp   SubjVertMo=Neutral   N0_7muVerMo=StrongUp   
+   (   0.15   0.7   0.15   0)   % QGVertMotion=WeakUp   SubjVertMo=Neutral   N0_7muVerMo=StrongUp   
+   (   0.2   0.6   0.2   0)   % QGVertMotion=Neutral   SubjVertMo=Neutral   N0_7muVerMo=StrongUp   
+   (   0.1   0.2   0.6   0.1))   % QGVertMotion=Down   SubjVertMo=Neutral   N0_7muVerMo=StrongUp   
+   ((   0.2   0.5   0.2   0.1)   % QGVertMotion=StrongUp   SubjVertMo=Down   N0_7muVerMo=StrongUp   
+   (   0.1   0.35   0.45   0.1)   % QGVertMotion=WeakUp   SubjVertMo=Down   N0_7muVerMo=StrongUp   
+   (   0.1   0.2   0.6   0.1)   % QGVertMotion=Neutral   SubjVertMo=Down   N0_7muVerMo=StrongUp   
+   (   0.1   0.1   0.2   0.6)))   % QGVertMotion=Down   SubjVertMo=Down   N0_7muVerMo=StrongUp   
+   (((   0.9   0.1   0   0)   % QGVertMotion=StrongUp   SubjVertMo=StronUp   N0_7muVerMo=WeakUp   
+   (   0.7   0.3   0   0)   % QGVertMotion=WeakUp   SubjVertMo=StronUp   N0_7muVerMo=WeakUp   
+   (   0.15   0.7   0.15   0)   % QGVertMotion=Neutral   SubjVertMo=StronUp   N0_7muVerMo=WeakUp   
+   (   0.1   0.35   0.45   0.1))   % QGVertMotion=Down   SubjVertMo=StronUp   N0_7muVerMo=WeakUp   
+   ((   0.7   0.3   0   0)   % QGVertMotion=StrongUp   SubjVertMo=WeakUp   N0_7muVerMo=WeakUp   
+   (   0   1   0   0)   % QGVertMotion=WeakUp   SubjVertMo=WeakUp   N0_7muVerMo=WeakUp   
+   (   0   0.7   0.3   0)   % QGVertMotion=Neutral   SubjVertMo=WeakUp   N0_7muVerMo=WeakUp   
+   (   0   0.2   0.7   0.1))   % QGVertMotion=Down   SubjVertMo=WeakUp   N0_7muVerMo=WeakUp   
+   ((   0.15   0.7   0.15   0)   % QGVertMotion=StrongUp   SubjVertMo=Neutral   N0_7muVerMo=WeakUp   
+   (   0   0.7   0.3   0)   % QGVertMotion=WeakUp   SubjVertMo=Neutral   N0_7muVerMo=WeakUp   
+   (   0   0.3   0.7   0)   % QGVertMotion=Neutral   SubjVertMo=Neutral   N0_7muVerMo=WeakUp   
+   (   0   0.15   0.5   0.35))   % QGVertMotion=Down   SubjVertMo=Neutral   N0_7muVerMo=WeakUp   
+   ((   0.1   0.35   0.45   0.1)   % QGVertMotion=StrongUp   SubjVertMo=Down   N0_7muVerMo=WeakUp   
+   (   0   0.2   0.7   0.1)   % QGVertMotion=WeakUp   SubjVertMo=Down   N0_7muVerMo=WeakUp   
+   (   0   0.15   0.5   0.35)   % QGVertMotion=Neutral   SubjVertMo=Down   N0_7muVerMo=WeakUp   
+   (   0   0.1   0.2   0.7)))   % QGVertMotion=Down   SubjVertMo=Down   N0_7muVerMo=WeakUp   
+   (((   0.7   0.2   0.1   0)   % QGVertMotion=StrongUp   SubjVertMo=StronUp   N0_7muVerMo=Neutral   
+   (   0.15   0.7   0.15   0)   % QGVertMotion=WeakUp   SubjVertMo=StronUp   N0_7muVerMo=Neutral   
+   (   0.2   0.6   0.2   0)   % QGVertMotion=Neutral   SubjVertMo=StronUp   N0_7muVerMo=Neutral   
+   (   0.1   0.2   0.6   0.1))   % QGVertMotion=Down   SubjVertMo=StronUp   N0_7muVerMo=Neutral   
+   ((   0.15   0.7   0.15   0)   % QGVertMotion=StrongUp   SubjVertMo=WeakUp   N0_7muVerMo=Neutral   
+   (   0   0.7   0.3   0)   % QGVertMotion=WeakUp   SubjVertMo=WeakUp   N0_7muVerMo=Neutral   
+   (   0   0.3   0.7   0)   % QGVertMotion=Neutral   SubjVertMo=WeakUp   N0_7muVerMo=Neutral   
+   (   0   0.15   0.5   0.35))   % QGVertMotion=Down   SubjVertMo=WeakUp   N0_7muVerMo=Neutral   
+   ((   0.2   0.6   0.2   0)   % QGVertMotion=StrongUp   SubjVertMo=Neutral   N0_7muVerMo=Neutral   
+   (   0   0.3   0.7   0)   % QGVertMotion=WeakUp   SubjVertMo=Neutral   N0_7muVerMo=Neutral   
+   (   0   0   1   0)   % QGVertMotion=Neutral   SubjVertMo=Neutral   N0_7muVerMo=Neutral   
+   (   0   0   0.7   0.3))   % QGVertMotion=Down   SubjVertMo=Neutral   N0_7muVerMo=Neutral   
+   ((   0.1   0.2   0.6   0.1)   % QGVertMotion=StrongUp   SubjVertMo=Down   N0_7muVerMo=Neutral   
+   (   0   0.15   0.5   0.35)   % QGVertMotion=WeakUp   SubjVertMo=Down   N0_7muVerMo=Neutral   
+   (   0   0   0.7   0.3)   % QGVertMotion=Neutral   SubjVertMo=Down   N0_7muVerMo=Neutral   
+   (   0   0   0.3   0.7)))   % QGVertMotion=Down   SubjVertMo=Down   N0_7muVerMo=Neutral   
+   (((   0.2   0.5   0.2   0.1)   % QGVertMotion=StrongUp   SubjVertMo=StronUp   N0_7muVerMo=Down   
+   (   0.1   0.35   0.45   0.1)   % QGVertMotion=WeakUp   SubjVertMo=StronUp   N0_7muVerMo=Down   
+   (   0.1   0.2   0.6   0.1)   % QGVertMotion=Neutral   SubjVertMo=StronUp   N0_7muVerMo=Down   
+   (   0.1   0.1   0.2   0.6))   % QGVertMotion=Down   SubjVertMo=StronUp   N0_7muVerMo=Down   
+   ((   0.1   0.35   0.45   0.1)   % QGVertMotion=StrongUp   SubjVertMo=WeakUp   N0_7muVerMo=Down   
+   (   0   0.2   0.7   0.1)   % QGVertMotion=WeakUp   SubjVertMo=WeakUp   N0_7muVerMo=Down   
+   (   0   0.15   0.5   0.35)   % QGVertMotion=Neutral   SubjVertMo=WeakUp   N0_7muVerMo=Down   
+   (   0   0.1   0.2   0.7))   % QGVertMotion=Down   SubjVertMo=WeakUp   N0_7muVerMo=Down   
+   ((   0.1   0.2   0.6   0.1)   % QGVertMotion=StrongUp   SubjVertMo=Neutral   N0_7muVerMo=Down   
+   (   0   0.15   0.5   0.35)   % QGVertMotion=WeakUp   SubjVertMo=Neutral   N0_7muVerMo=Down   
+   (   0   0   0.7   0.3)   % QGVertMotion=Neutral   SubjVertMo=Neutral   N0_7muVerMo=Down   
+   (   0   0   0.3   0.7))   % QGVertMotion=Down   SubjVertMo=Neutral   N0_7muVerMo=Down   
+   ((   0.1   0.1   0.2   0.6)   % QGVertMotion=StrongUp   SubjVertMo=Down   N0_7muVerMo=Down   
+   (   0   0.1   0.2   0.7)   % QGVertMotion=WeakUp   SubjVertMo=Down   N0_7muVerMo=Down   
+   (   0   0   0.3   0.7)   % QGVertMotion=Neutral   SubjVertMo=Down   N0_7muVerMo=Down   
+   (   0   0   0   1))));   % QGVertMotion=Down   SubjVertMo=Down   N0_7muVerMo=Down   
+}
+
+potential ( AreaMeso_ALS | CombVerMo   ) {
+   data = 
+   ((   1   0   0   0)   % CombVerMo=StrongUp   
+   (   0   1   0   0)   % CombVerMo=WeakUp   
+   (   0   0   1   0)   % CombVerMo=Neutral   
+   (   0   0   0   1));   % CombVerMo=Down   
+}
+
+potential (SatContMoist) {
+   data = (  0.15 0.2 0.4 0.25);
+}
+
+potential (RaoContMoist) {
+   data = (  0.15 0.2 0.4 0.25);
+}
+
+potential ( CombMoisture | SatContMoist   RaoContMoist   ) {
+   data = 
+   (((   0.9   0.1   0   0)   % RaoContMoist=VeryWet   SatContMoist=VeryWet   
+   (   0.6   0.35   0.05   0)   % RaoContMoist=Wet   SatContMoist=VeryWet   
+   (   0.3   0.5   0.2   0)   % RaoContMoist=Neutral   SatContMoist=VeryWet   
+   (   0.25   0.35   0.25   0.15))   % RaoContMoist=Dry   SatContMoist=VeryWet   
+   ((   0.55   0.4   0.05   0)   % RaoContMoist=VeryWet   SatContMoist=Wet   
+   (   0.15   0.6   0.2   0.05)   % RaoContMoist=Wet   SatContMoist=Wet   
+   (   0.05   0.4   0.45   0.1)   % RaoContMoist=Neutral   SatContMoist=Wet   
+   (   0.1   0.3   0.3   0.3))   % RaoContMoist=Dry   SatContMoist=Wet   
+   ((   0.25   0.3   0.35   0.1)   % RaoContMoist=VeryWet   SatContMoist=Neutral   
+   (   0.1   0.35   0.5   0.05)   % RaoContMoist=Wet   SatContMoist=Neutral   
+   (   0   0.15   0.7   0.15)   % RaoContMoist=Neutral   SatContMoist=Neutral   
+   (   0   0.1   0.4   0.5))   % RaoContMoist=Dry   SatContMoist=Neutral   
+   ((   0.25   0.25   0.25   0.25)   % RaoContMoist=VeryWet   SatContMoist=Dry   
+   (   0.25   0.25   0.25   0.25)   % RaoContMoist=Wet   SatContMoist=Dry   
+   (   0.25   0.25   0.25   0.25)   % RaoContMoist=Neutral   SatContMoist=Dry   
+   (   0.25   0.25   0.25   0.25)));   % RaoContMoist=Dry   SatContMoist=Dry   
+}
+
+potential ( AreaMoDryAir | AreaMeso_ALS   CombMoisture   ) {
+   data = 
+   (((   0.99   0.01   0   0)   % CombMoisture=VeryWet   AreaMeso_ALS=StrongUp   
+   (   0.7   0.29   0.01   0)   % CombMoisture=Wet   AreaMeso_ALS=StrongUp   
+   (   0.2   0.55   0.24   0.01)   % CombMoisture=Neutral   AreaMeso_ALS=StrongUp   
+   (   0   0.25   0.55   0.2))   % CombMoisture=Dry   AreaMeso_ALS=StrongUp   
+   ((   0.8   0.2   0   0)   % CombMoisture=VeryWet   AreaMeso_ALS=WeakUp   
+   (   0.35   0.55   0.1   0)   % CombMoisture=Wet   AreaMeso_ALS=WeakUp   
+   (   0.01   0.39   0.55   0.05)   % CombMoisture=Neutral   AreaMeso_ALS=WeakUp   
+   (   0   0.02   0.43   0.55))   % CombMoisture=Dry   AreaMeso_ALS=WeakUp   
+   ((   0.7   0.29   0.01   0)   % CombMoisture=VeryWet   AreaMeso_ALS=Neutral   
+   (   0.2   0.6   0.2   0)   % CombMoisture=Wet   AreaMeso_ALS=Neutral   
+   (   0.01   0.09   0.8   0.1)   % CombMoisture=Neutral   AreaMeso_ALS=Neutral   
+   (   0   0   0.3   0.7))   % CombMoisture=Dry   AreaMeso_ALS=Neutral   
+   ((   0.2   0.74   0.06   0)   % CombMoisture=VeryWet   AreaMeso_ALS=Down   
+   (   0.05   0.4   0.45   0.1)   % CombMoisture=Wet   AreaMeso_ALS=Down   
+   (   0   0.05   0.5   0.45)   % CombMoisture=Neutral   AreaMeso_ALS=Down   
+   (   0   0   0.01   0.99)));   % CombMoisture=Dry   AreaMeso_ALS=Down   
+}
+
+potential (VISCloudCov) {
+   data = (  0.1 0.5 0.4);
+}
+
+potential (IRCloudCover) {
+   data = (  0.15 0.45 0.4);
+}
+
+potential ( CombClouds | VISCloudCov   IRCloudCover   ) {
+   data = 
+   (((   0.95   0.04   0.01)   % IRCloudCover=Cloudy   VISCloudCov=Cloudy   
+   (   0.85   0.13   0.02)   % IRCloudCover=PC   VISCloudCov=Cloudy   
+   (   0.8   0.1   0.1))   % IRCloudCover=Clear   VISCloudCov=Cloudy   
+   ((   0.45   0.52   0.03)   % IRCloudCover=Cloudy   VISCloudCov=PC   
+   (   0.1   0.8   0.1)   % IRCloudCover=PC   VISCloudCov=PC   
+   (   0.05   0.45   0.5))   % IRCloudCover=Clear   VISCloudCov=PC   
+   ((   0.1   0.4   0.5)   % IRCloudCover=Cloudy   VISCloudCov=Clear   
+   (   0.02   0.28   0.7)   % IRCloudCover=PC   VISCloudCov=Clear   
+   (   0   0.02   0.98)));   % IRCloudCover=Clear   VISCloudCov=Clear   
+}
+
+potential ( CldShadeOth | AreaMoDryAir   AreaMeso_ALS   CombClouds   ) {
+   data = 
+   ((((   1   0   0)   % CombClouds=Cloudy   AreaMeso_ALS=StrongUp   AreaMoDryAir=VeryWet   
+   (   0.85   0.15   0)   % CombClouds=PC   AreaMeso_ALS=StrongUp   AreaMoDryAir=VeryWet   
+   (   0.25   0.35   0.4))   % CombClouds=Clear   AreaMeso_ALS=StrongUp   AreaMoDryAir=VeryWet   
+   ((   0.95   0.05   0)   % CombClouds=Cloudy   AreaMeso_ALS=WeakUp   AreaMoDryAir=VeryWet   
+   (   0.4   0.55   0.05)   % CombClouds=PC   AreaMeso_ALS=WeakUp   AreaMoDryAir=VeryWet   
+   (   0.05   0.45   0.5))   % CombClouds=Clear   AreaMeso_ALS=WeakUp   AreaMoDryAir=VeryWet   
+   ((   0.93   0.07   0)   % CombClouds=Cloudy   AreaMeso_ALS=Neutral   AreaMoDryAir=VeryWet   
+   (   0.2   0.78   0.02)   % CombClouds=PC   AreaMeso_ALS=Neutral   AreaMoDryAir=VeryWet   
+   (   0.01   0.29   0.7))   % CombClouds=Clear   AreaMeso_ALS=Neutral   AreaMoDryAir=VeryWet   
+   ((   0.74   0.25   0.01)   % CombClouds=Cloudy   AreaMeso_ALS=Down   AreaMoDryAir=VeryWet   
+   (   0   0.5   0.5)   % CombClouds=PC   AreaMeso_ALS=Down   AreaMoDryAir=VeryWet   
+   (   0   0.1   0.9)))   % CombClouds=Clear   AreaMeso_ALS=Down   AreaMoDryAir=VeryWet   
+   (((   0.92   0.08   0)   % CombClouds=Cloudy   AreaMeso_ALS=StrongUp   AreaMoDryAir=Wet   
+   (   0.7   0.29   0.01)   % CombClouds=PC   AreaMeso_ALS=StrongUp   AreaMoDryAir=Wet   
+   (   0.15   0.4   0.45))   % CombClouds=Clear   AreaMeso_ALS=StrongUp   AreaMoDryAir=Wet   
+   ((   0.9   0.09   0.01)   % CombClouds=Cloudy   AreaMeso_ALS=WeakUp   AreaMoDryAir=Wet   
+   (   0.25   0.6   0.15)   % CombClouds=PC   AreaMeso_ALS=WeakUp   AreaMoDryAir=Wet   
+   (   0.01   0.3   0.69))   % CombClouds=Clear   AreaMeso_ALS=WeakUp   AreaMoDryAir=Wet   
+   ((   0.8   0.2   0)   % CombClouds=Cloudy   AreaMeso_ALS=Neutral   AreaMoDryAir=Wet   
+   (   0.01   0.89   0.1)   % CombClouds=PC   AreaMeso_ALS=Neutral   AreaMoDryAir=Wet   
+   (   0   0.1   0.9))   % CombClouds=Clear   AreaMeso_ALS=Neutral   AreaMoDryAir=Wet   
+   ((   0.65   0.34   0.01)   % CombClouds=Cloudy   AreaMeso_ALS=Down   AreaMoDryAir=Wet   
+   (   0   0.4   0.6)   % CombClouds=PC   AreaMeso_ALS=Down   AreaMoDryAir=Wet   
+   (   0   0.02   0.98)))   % CombClouds=Clear   AreaMeso_ALS=Down   AreaMoDryAir=Wet   
+   (((   0.88   0.12   0)   % CombClouds=Cloudy   AreaMeso_ALS=StrongUp   AreaMoDryAir=Neutral   
+   (   0.4   0.5   0.1)   % CombClouds=PC   AreaMeso_ALS=StrongUp   AreaMoDryAir=Neutral   
+   (   0.1   0.4   0.5))   % CombClouds=Clear   AreaMeso_ALS=StrongUp   AreaMoDryAir=Neutral   
+   ((   0.85   0.15   0)   % CombClouds=Cloudy   AreaMeso_ALS=WeakUp   AreaMoDryAir=Neutral   
+   (   0.15   0.75   0.1)   % CombClouds=PC   AreaMeso_ALS=WeakUp   AreaMoDryAir=Neutral   
+   (   0   0.2   0.8))   % CombClouds=Clear   AreaMeso_ALS=WeakUp   AreaMoDryAir=Neutral   
+   ((   0.8   0.18   0.02)   % CombClouds=Cloudy   AreaMeso_ALS=Neutral   AreaMoDryAir=Neutral   
+   (   0.03   0.85   0.12)   % CombClouds=PC   AreaMeso_ALS=Neutral   AreaMoDryAir=Neutral   
+   (   0   0.05   0.95))   % CombClouds=Clear   AreaMeso_ALS=Neutral   AreaMoDryAir=Neutral   
+   ((   0.5   0.48   0.02)   % CombClouds=Cloudy   AreaMeso_ALS=Down   AreaMoDryAir=Neutral   
+   (   0.01   0.74   0.25)   % CombClouds=PC   AreaMeso_ALS=Down   AreaMoDryAir=Neutral   
+   (   0   0.01   0.99)))   % CombClouds=Clear   AreaMeso_ALS=Down   AreaMoDryAir=Neutral   
+   (((   0.85   0.14   0.01)   % CombClouds=Cloudy   AreaMeso_ALS=StrongUp   AreaMoDryAir=Dry   
+   (   0.55   0.43   0.02)   % CombClouds=PC   AreaMeso_ALS=StrongUp   AreaMoDryAir=Dry   
+   (   0.1   0.25   0.65))   % CombClouds=Clear   AreaMeso_ALS=StrongUp   AreaMoDryAir=Dry   
+   ((   0.6   0.39   0.01)   % CombClouds=Cloudy   AreaMeso_ALS=WeakUp   AreaMoDryAir=Dry   
+   (   0.01   0.9   0.09)   % CombClouds=PC   AreaMeso_ALS=WeakUp   AreaMoDryAir=Dry   
+   (   0   0.15   0.85))   % CombClouds=Clear   AreaMeso_ALS=WeakUp   AreaMoDryAir=Dry   
+   ((   0.78   0.2   0.02)   % CombClouds=Cloudy   AreaMeso_ALS=Neutral   AreaMoDryAir=Dry   
+   (   0.01   0.74   0.25)   % CombClouds=PC   AreaMeso_ALS=Neutral   AreaMoDryAir=Dry   
+   (   0   0.04   0.96))   % CombClouds=Clear   AreaMeso_ALS=Neutral   AreaMoDryAir=Dry   
+   ((   0.42   0.55   0.03)   % CombClouds=Cloudy   AreaMeso_ALS=Down   AreaMoDryAir=Dry   
+   (   0.05   0.65   0.3)   % CombClouds=PC   AreaMeso_ALS=Down   AreaMoDryAir=Dry   
+   (   0   0   1))));   % CombClouds=Clear   AreaMeso_ALS=Down   AreaMoDryAir=Dry   
+}
+
+potential (AMInstabMt) {
+   data = (  0.333333 0.333333 0.333334);
+}
+
+potential ( InsInMt | CldShadeOth   AMInstabMt   ) {
+   data = 
+   (((   0.9   0.1   0)   % AMInstabMt=None   CldShadeOth=Cloudy   
+   (   0.01   0.4   0.59)   % AMInstabMt=Weak   CldShadeOth=Cloudy   
+   (   0   0.05   0.95))   % AMInstabMt=Strong   CldShadeOth=Cloudy   
+   ((   0.6   0.39   0.01)   % AMInstabMt=None   CldShadeOth=PC   
+   (   0   0.4   0.6)   % AMInstabMt=Weak   CldShadeOth=PC   
+   (   0   0   1))   % AMInstabMt=Strong   CldShadeOth=PC   
+   ((   0.5   0.35   0.15)   % AMInstabMt=None   CldShadeOth=Clear   
+   (   0   0.15   0.85)   % AMInstabMt=Weak   CldShadeOth=Clear   
+   (   0   0   1)));   % AMInstabMt=Strong   CldShadeOth=Clear   
+}
+
+potential (WndHodograph) {
+   data = (  0.3 0.25 0.25 0.2);
+}
+
+potential ( OutflowFrMt | InsInMt   WndHodograph   ) {
+   data = 
+   (((   1   0   0)   % WndHodograph=DCVZFavor   InsInMt=None   
+   (   1   0   0)   % WndHodograph=StrongWest   InsInMt=None   
+   (   1   0   0)   % WndHodograph=Westerly   InsInMt=None   
+   (   1   0   0))   % WndHodograph=Other   InsInMt=None   
+   ((   0.5   0.4   0.1)   % WndHodograph=DCVZFavor   InsInMt=Weak   
+   (   0.15   0.4   0.45)   % WndHodograph=StrongWest   InsInMt=Weak   
+   (   0.35   0.6   0.05)   % WndHodograph=Westerly   InsInMt=Weak   
+   (   0.8   0.19   0.01))   % WndHodograph=Other   InsInMt=Weak   
+   ((   0.05   0.45   0.5)   % WndHodograph=DCVZFavor   InsInMt=Strong   
+   (   0.01   0.15   0.84)   % WndHodograph=StrongWest   InsInMt=Strong   
+   (   0.1   0.25   0.65)   % WndHodograph=Westerly   InsInMt=Strong   
+   (   0.6   0.3   0.1)));   % WndHodograph=Other   InsInMt=Strong   
+}
+
+potential (MorningBound) {
+   data = (  0.5 0.35 0.15);
+}
+
+potential ( Boundaries | OutflowFrMt   WndHodograph   MorningBound   ) {
+   data = 
+   ((((   0.5   0.48   0.02)   % MorningBound=None   WndHodograph=DCVZFavor   OutflowFrMt=None   
+   (   0.3   0.5   0.2)   % MorningBound=Weak   WndHodograph=DCVZFavor   OutflowFrMt=None   
+   (   0.1   0.25   0.65))   % MorningBound=Strong   WndHodograph=DCVZFavor   OutflowFrMt=None   
+   ((   0.75   0.22   0.03)   % MorningBound=None   WndHodograph=StrongWest   OutflowFrMt=None   
+   (   0.45   0.45   0.1)   % MorningBound=Weak   WndHodograph=StrongWest   OutflowFrMt=None   
+   (   0.25   0.4   0.35))   % MorningBound=Strong   WndHodograph=StrongWest   OutflowFrMt=None   
+   ((   0.8   0.18   0.02)   % MorningBound=None   WndHodograph=Westerly   OutflowFrMt=None   
+   (   0.35   0.5   0.15)   % MorningBound=Weak   WndHodograph=Westerly   OutflowFrMt=None   
+   (   0.25   0.35   0.4))   % MorningBound=Strong   WndHodograph=Westerly   OutflowFrMt=None   
+   ((   0.7   0.28   0.02)   % MorningBound=None   WndHodograph=Other   OutflowFrMt=None   
+   (   0.25   0.6   0.15)   % MorningBound=Weak   WndHodograph=Other   OutflowFrMt=None   
+   (   0.05   0.35   0.6)))   % MorningBound=Strong   WndHodograph=Other   OutflowFrMt=None   
+   (((   0.3   0.63   0.07)   % MorningBound=None   WndHodograph=DCVZFavor   OutflowFrMt=Weak   
+   (   0.1   0.5   0.4)   % MorningBound=Weak   WndHodograph=DCVZFavor   OutflowFrMt=Weak   
+   (   0.05   0.2   0.75))   % MorningBound=Strong   WndHodograph=DCVZFavor   OutflowFrMt=Weak   
+   ((   0.15   0.7   0.15)   % MorningBound=None   WndHodograph=StrongWest   OutflowFrMt=Weak   
+   (   0.1   0.75   0.15)   % MorningBound=Weak   WndHodograph=StrongWest   OutflowFrMt=Weak   
+   (   0.05   0.5   0.45))   % MorningBound=Strong   WndHodograph=StrongWest   OutflowFrMt=Weak   
+   ((   0.15   0.7   0.15)   % MorningBound=None   WndHodograph=Westerly   OutflowFrMt=Weak   
+   (   0.05   0.8   0.15)   % MorningBound=Weak   WndHodograph=Westerly   OutflowFrMt=Weak   
+   (   0.05   0.45   0.5))   % MorningBound=Strong   WndHodograph=Westerly   OutflowFrMt=Weak   
+   ((   0.4   0.55   0.05)   % MorningBound=None   WndHodograph=Other   OutflowFrMt=Weak   
+   (   0.2   0.65   0.15)   % MorningBound=Weak   WndHodograph=Other   OutflowFrMt=Weak   
+   (   0.05   0.3   0.65)))   % MorningBound=Strong   WndHodograph=Other   OutflowFrMt=Weak   
+   (((   0   0.55   0.45)   % MorningBound=None   WndHodograph=DCVZFavor   OutflowFrMt=Strong   
+   (   0   0.4   0.6)   % MorningBound=Weak   WndHodograph=DCVZFavor   OutflowFrMt=Strong   
+   (   0   0.15   0.85))   % MorningBound=Strong   WndHodograph=DCVZFavor   OutflowFrMt=Strong   
+   ((   0   0.5   0.5)   % MorningBound=None   WndHodograph=StrongWest   OutflowFrMt=Strong   
+   (   0   0.4   0.6)   % MorningBound=Weak   WndHodograph=StrongWest   OutflowFrMt=Strong   
+   (   0   0.2   0.8))   % MorningBound=Strong   WndHodograph=StrongWest   OutflowFrMt=Strong   
+   ((   0   0.7   0.3)   % MorningBound=None   WndHodograph=Westerly   OutflowFrMt=Strong   
+   (   0   0.5   0.5)   % MorningBound=Weak   WndHodograph=Westerly   OutflowFrMt=Strong   
+   (   0   0.2   0.8))   % MorningBound=Strong   WndHodograph=Westerly   OutflowFrMt=Strong   
+   ((   0.02   0.73   0.25)   % MorningBound=None   WndHodograph=Other   OutflowFrMt=Strong   
+   (   0.01   0.5   0.49)   % MorningBound=Weak   WndHodograph=Other   OutflowFrMt=Strong   
+   (   0.01   0.2   0.79))));   % MorningBound=Strong   WndHodograph=Other   OutflowFrMt=Strong   
+}
+
+potential ( CldShadeConv | InsInMt   WndHodograph   ) {
+   data = 
+   (((   1   0   0)   % WndHodograph=DCVZFavor   InsInMt=None   
+   (   1   0   0)   % WndHodograph=StrongWest   InsInMt=None   
+   (   1   0   0)   % WndHodograph=Westerly   InsInMt=None   
+   (   1   0   0))   % WndHodograph=Other   InsInMt=None   
+   ((   0.3   0.6   0.1)   % WndHodograph=DCVZFavor   InsInMt=Weak   
+   (   0.2   0.7   0.1)   % WndHodograph=StrongWest   InsInMt=Weak   
+   (   0.5   0.46   0.04)   % WndHodograph=Westerly   InsInMt=Weak   
+   (   0.8   0.19   0.01))   % WndHodograph=Other   InsInMt=Weak   
+   ((   0   0.3   0.7)   % WndHodograph=DCVZFavor   InsInMt=Strong   
+   (   0   0.2   0.8)   % WndHodograph=StrongWest   InsInMt=Strong   
+   (   0.1   0.5   0.4)   % WndHodograph=Westerly   InsInMt=Strong   
+   (   0.5   0.38   0.12)));   % WndHodograph=Other   InsInMt=Strong   
+}
+
+potential ( CompPlFcst | Boundaries   CldShadeConv   AreaMeso_ALS   CldShadeOth   ) {
+   data = 
+   (((((   0.4   0.35   0.25)   % CldShadeOth=Cloudy   AreaMeso_ALS=StrongUp   CldShadeConv=None   Boundaries=None   
+   (   0.1   0.35   0.55)   % CldShadeOth=PC   AreaMeso_ALS=StrongUp   CldShadeConv=None   Boundaries=None   
+   (   0.05   0.3   0.65))   % CldShadeOth=Clear   AreaMeso_ALS=StrongUp   CldShadeConv=None   Boundaries=None   
+   ((   0.6   0.25   0.15)   % CldShadeOth=Cloudy   AreaMeso_ALS=WeakUp   CldShadeConv=None   Boundaries=None   
+   (   0.4   0.3   0.3)   % CldShadeOth=PC   AreaMeso_ALS=WeakUp   CldShadeConv=None   Boundaries=None   
+   (   0.2   0.5   0.3))   % CldShadeOth=Clear   AreaMeso_ALS=WeakUp   CldShadeConv=None   Boundaries=None   
+   ((   0.6   0.35   0.05)   % CldShadeOth=Cloudy   AreaMeso_ALS=Neutral   CldShadeConv=None   Boundaries=None   
+   (   0.45   0.4   0.15)   % CldShadeOth=PC   AreaMeso_ALS=Neutral   CldShadeConv=None   Boundaries=None   
+   (   0.25   0.45   0.3))   % CldShadeOth=Clear   AreaMeso_ALS=Neutral   CldShadeConv=None   Boundaries=None   
+   ((   0.7   0.27   0.03)   % CldShadeOth=Cloudy   AreaMeso_ALS=Down   CldShadeConv=None   Boundaries=None   
+   (   0.65   0.3   0.05)   % CldShadeOth=PC   AreaMeso_ALS=Down   CldShadeConv=None   Boundaries=None   
+   (   0.6   0.35   0.05)))   % CldShadeOth=Clear   AreaMeso_ALS=Down   CldShadeConv=None   Boundaries=None   
+   (((   0.4   0.35   0.25)   % CldShadeOth=Cloudy   AreaMeso_ALS=StrongUp   CldShadeConv=Some   Boundaries=None   
+   (   0.25   0.3   0.45)   % CldShadeOth=PC   AreaMeso_ALS=StrongUp   CldShadeConv=Some   Boundaries=None   
+   (   0.15   0.35   0.5))   % CldShadeOth=Clear   AreaMeso_ALS=StrongUp   CldShadeConv=Some   Boundaries=None   
+   ((   0.65   0.25   0.1)   % CldShadeOth=Cloudy   AreaMeso_ALS=WeakUp   CldShadeConv=Some   Boundaries=None   
+   (   0.45   0.3   0.25)   % CldShadeOth=PC   AreaMeso_ALS=WeakUp   CldShadeConv=Some   Boundaries=None   
+   (   0.25   0.5   0.25))   % CldShadeOth=Clear   AreaMeso_ALS=WeakUp   CldShadeConv=Some   Boundaries=None   
+   ((   0.65   0.3   0.05)   % CldShadeOth=Cloudy   AreaMeso_ALS=Neutral   CldShadeConv=Some   Boundaries=None   
+   (   0.5   0.4   0.1)   % CldShadeOth=PC   AreaMeso_ALS=Neutral   CldShadeConv=Some   Boundaries=None   
+   (   0.3   0.45   0.25))   % CldShadeOth=Clear   AreaMeso_ALS=Neutral   CldShadeConv=Some   Boundaries=None   
+   ((   0.75   0.23   0.02)   % CldShadeOth=Cloudy   AreaMeso_ALS=Down   CldShadeConv=Some   Boundaries=None   
+   (   0.7   0.26   0.04)   % CldShadeOth=PC   AreaMeso_ALS=Down   CldShadeConv=Some   Boundaries=None   
+   (   0.65   0.32   0.03)))   % CldShadeOth=Clear   AreaMeso_ALS=Down   CldShadeConv=Some   Boundaries=None   
+   (((   0.45   0.3   0.25)   % CldShadeOth=Cloudy   AreaMeso_ALS=StrongUp   CldShadeConv=Marked   Boundaries=None   
+   (   0.4   0.3   0.3)   % CldShadeOth=PC   AreaMeso_ALS=StrongUp   CldShadeConv=Marked   Boundaries=None   
+   (   0.35   0.3   0.35))   % CldShadeOth=Clear   AreaMeso_ALS=StrongUp   CldShadeConv=Marked   Boundaries=None   
+   ((   0.7   0.22   0.08)   % CldShadeOth=Cloudy   AreaMeso_ALS=WeakUp   CldShadeConv=Marked   Boundaries=None   
+   (   0.55   0.3   0.15)   % CldShadeOth=PC   AreaMeso_ALS=WeakUp   CldShadeConv=Marked   Boundaries=None   
+   (   0.4   0.45   0.15))   % CldShadeOth=Clear   AreaMeso_ALS=WeakUp   CldShadeConv=Marked   Boundaries=None   
+   ((   0.7   0.27   0.03)   % CldShadeOth=Cloudy   AreaMeso_ALS=Neutral   CldShadeConv=Marked   Boundaries=None   
+   (   0.6   0.3   0.1)   % CldShadeOth=PC   AreaMeso_ALS=Neutral   CldShadeConv=Marked   Boundaries=None   
+   (   0.55   0.33   0.12))   % CldShadeOth=Clear   AreaMeso_ALS=Neutral   CldShadeConv=Marked   Boundaries=None   
+   ((   0.85   0.14   0.01)   % CldShadeOth=Cloudy   AreaMeso_ALS=Down   CldShadeConv=Marked   Boundaries=None   
+   (   0.8   0.17   0.03)   % CldShadeOth=PC   AreaMeso_ALS=Down   CldShadeConv=Marked   Boundaries=None   
+   (   0.75   0.23   0.02))))   % CldShadeOth=Clear   AreaMeso_ALS=Down   CldShadeConv=Marked   Boundaries=None   
+   ((((   0.35   0.35   0.3)   % CldShadeOth=Cloudy   AreaMeso_ALS=StrongUp   CldShadeConv=None   Boundaries=Weak   
+   (   0.05   0.35   0.6)   % CldShadeOth=PC   AreaMeso_ALS=StrongUp   CldShadeConv=None   Boundaries=Weak   
+   (   0.03   0.25   0.72))   % CldShadeOth=Clear   AreaMeso_ALS=StrongUp   CldShadeConv=None   Boundaries=Weak   
+   ((   0.5   0.25   0.25)   % CldShadeOth=Cloudy   AreaMeso_ALS=WeakUp   CldShadeConv=None   Boundaries=Weak   
+   (   0.3   0.35   0.35)   % CldShadeOth=PC   AreaMeso_ALS=WeakUp   CldShadeConv=None   Boundaries=Weak   
+   (   0.15   0.45   0.4))   % CldShadeOth=Clear   AreaMeso_ALS=WeakUp   CldShadeConv=None   Boundaries=Weak   
+   ((   0.55   0.3   0.15)   % CldShadeOth=Cloudy   AreaMeso_ALS=Neutral   CldShadeConv=None   Boundaries=Weak   
+   (   0.4   0.4   0.2)   % CldShadeOth=PC   AreaMeso_ALS=Neutral   CldShadeConv=None   Boundaries=Weak   
+   (   0.2   0.4   0.4))   % CldShadeOth=Clear   AreaMeso_ALS=Neutral   CldShadeConv=None   Boundaries=Weak   
+   ((   0.6   0.35   0.05)   % CldShadeOth=Cloudy   AreaMeso_ALS=Down   CldShadeConv=None   Boundaries=Weak   
+   (   0.6   0.3   0.1)   % CldShadeOth=PC   AreaMeso_ALS=Down   CldShadeConv=None   Boundaries=Weak   
+   (   0.55   0.33   0.12)))   % CldShadeOth=Clear   AreaMeso_ALS=Down   CldShadeConv=None   Boundaries=Weak   
+   (((   0.35   0.35   0.3)   % CldShadeOth=Cloudy   AreaMeso_ALS=StrongUp   CldShadeConv=Some   Boundaries=Weak   
+   (   0.1   0.35   0.55)   % CldShadeOth=PC   AreaMeso_ALS=StrongUp   CldShadeConv=Some   Boundaries=Weak   
+   (   0.05   0.3   0.65))   % CldShadeOth=Clear   AreaMeso_ALS=StrongUp   CldShadeConv=Some   Boundaries=Weak   
+   ((   0.55   0.25   0.2)   % CldShadeOth=Cloudy   AreaMeso_ALS=WeakUp   CldShadeConv=Some   Boundaries=Weak   
+   (   0.35   0.35   0.3)   % CldShadeOth=PC   AreaMeso_ALS=WeakUp   CldShadeConv=Some   Boundaries=Weak   
+   (   0.2   0.5   0.3))   % CldShadeOth=Clear   AreaMeso_ALS=WeakUp   CldShadeConv=Some   Boundaries=Weak   
+   ((   0.6   0.3   0.1)   % CldShadeOth=Cloudy   AreaMeso_ALS=Neutral   CldShadeConv=Some   Boundaries=Weak   
+   (   0.45   0.4   0.15)   % CldShadeOth=PC   AreaMeso_ALS=Neutral   CldShadeConv=Some   Boundaries=Weak   
+   (   0.25   0.5   0.25))   % CldShadeOth=Clear   AreaMeso_ALS=Neutral   CldShadeConv=Some   Boundaries=Weak   
+   ((   0.65   0.3   0.05)   % CldShadeOth=Cloudy   AreaMeso_ALS=Down   CldShadeConv=Some   Boundaries=Weak   
+   (   0.65   0.3   0.05)   % CldShadeOth=PC   AreaMeso_ALS=Down   CldShadeConv=Some   Boundaries=Weak   
+   (   0.6   0.35   0.05)))   % CldShadeOth=Clear   AreaMeso_ALS=Down   CldShadeConv=Some   Boundaries=Weak   
+   (((   0.4   0.35   0.25)   % CldShadeOth=Cloudy   AreaMeso_ALS=StrongUp   CldShadeConv=Marked   Boundaries=Weak   
+   (   0.25   0.4   0.35)   % CldShadeOth=PC   AreaMeso_ALS=StrongUp   CldShadeConv=Marked   Boundaries=Weak   
+   (   0.2   0.4   0.4))   % CldShadeOth=Clear   AreaMeso_ALS=StrongUp   CldShadeConv=Marked   Boundaries=Weak   
+   ((   0.65   0.25   0.1)   % CldShadeOth=Cloudy   AreaMeso_ALS=WeakUp   CldShadeConv=Marked   Boundaries=Weak   
+   (   0.45   0.35   0.2)   % CldShadeOth=PC   AreaMeso_ALS=WeakUp   CldShadeConv=Marked   Boundaries=Weak   
+   (   0.3   0.5   0.2))   % CldShadeOth=Clear   AreaMeso_ALS=WeakUp   CldShadeConv=Marked   Boundaries=Weak   
+   ((   0.65   0.3   0.05)   % CldShadeOth=Cloudy   AreaMeso_ALS=Neutral   CldShadeConv=Marked   Boundaries=Weak   
+   (   0.55   0.3   0.15)   % CldShadeOth=PC   AreaMeso_ALS=Neutral   CldShadeConv=Marked   Boundaries=Weak   
+   (   0.5   0.3   0.2))   % CldShadeOth=Clear   AreaMeso_ALS=Neutral   CldShadeConv=Marked   Boundaries=Weak   
+   ((   0.78   0.18   0.04)   % CldShadeOth=Cloudy   AreaMeso_ALS=Down   CldShadeConv=Marked   Boundaries=Weak   
+   (   0.75   0.2   0.05)   % CldShadeOth=PC   AreaMeso_ALS=Down   CldShadeConv=Marked   Boundaries=Weak   
+   (   0.7   0.25   0.05))))   % CldShadeOth=Clear   AreaMeso_ALS=Down   CldShadeConv=Marked   Boundaries=Weak   
+   ((((   0.3   0.3   0.4)   % CldShadeOth=Cloudy   AreaMeso_ALS=StrongUp   CldShadeConv=None   Boundaries=Strong   
+   (   0.01   0.25   0.74)   % CldShadeOth=PC   AreaMeso_ALS=StrongUp   CldShadeConv=None   Boundaries=Strong   
+   (   0.01   0.2   0.79))   % CldShadeOth=Clear   AreaMeso_ALS=StrongUp   CldShadeConv=None   Boundaries=Strong   
+   ((   0.35   0.25   0.4)   % CldShadeOth=Cloudy   AreaMeso_ALS=WeakUp   CldShadeConv=None   Boundaries=Strong   
+   (   0.15   0.4   0.45)   % CldShadeOth=PC   AreaMeso_ALS=WeakUp   CldShadeConv=None   Boundaries=Strong   
+   (   0.1   0.35   0.55))   % CldShadeOth=Clear   AreaMeso_ALS=WeakUp   CldShadeConv=None   Boundaries=Strong   
+   ((   0.45   0.3   0.25)   % CldShadeOth=Cloudy   AreaMeso_ALS=Neutral   CldShadeConv=None   Boundaries=Strong   
+   (   0.3   0.4   0.3)   % CldShadeOth=PC   AreaMeso_ALS=Neutral   CldShadeConv=None   Boundaries=Strong   
+   (   0.15   0.4   0.45))   % CldShadeOth=Clear   AreaMeso_ALS=Neutral   CldShadeConv=None   Boundaries=Strong   
+   ((   0.5   0.35   0.15)   % CldShadeOth=Cloudy   AreaMeso_ALS=Down   CldShadeConv=None   Boundaries=Strong   
+   (   0.48   0.32   0.2)   % CldShadeOth=PC   AreaMeso_ALS=Down   CldShadeConv=None   Boundaries=Strong   
+   (   0.45   0.35   0.2)))   % CldShadeOth=Clear   AreaMeso_ALS=Down   CldShadeConv=None   Boundaries=Strong   
+   (((   0.3   0.3   0.4)   % CldShadeOth=Cloudy   AreaMeso_ALS=StrongUp   CldShadeConv=Some   Boundaries=Strong   
+   (   0.05   0.6   0.35)   % CldShadeOth=PC   AreaMeso_ALS=StrongUp   CldShadeConv=Some   Boundaries=Strong   
+   (   0.04   0.27   0.69))   % CldShadeOth=Clear   AreaMeso_ALS=StrongUp   CldShadeConv=Some   Boundaries=Strong   
+   ((   0.4   0.25   0.35)   % CldShadeOth=Cloudy   AreaMeso_ALS=WeakUp   CldShadeConv=Some   Boundaries=Strong   
+   (   0.2   0.4   0.4)   % CldShadeOth=PC   AreaMeso_ALS=WeakUp   CldShadeConv=Some   Boundaries=Strong   
+   (   0.12   0.43   0.45))   % CldShadeOth=Clear   AreaMeso_ALS=WeakUp   CldShadeConv=Some   Boundaries=Strong   
+   ((   0.5   0.3   0.2)   % CldShadeOth=Cloudy   AreaMeso_ALS=Neutral   CldShadeConv=Some   Boundaries=Strong   
+   (   0.35   0.4   0.25)   % CldShadeOth=PC   AreaMeso_ALS=Neutral   CldShadeConv=Some   Boundaries=Strong   
+   (   0.2   0.45   0.35))   % CldShadeOth=Clear   AreaMeso_ALS=Neutral   CldShadeConv=Some   Boundaries=Strong   
+   ((   0.55   0.35   0.1)   % CldShadeOth=Cloudy   AreaMeso_ALS=Down   CldShadeConv=Some   Boundaries=Strong   
+   (   0.55   0.3   0.15)   % CldShadeOth=PC   AreaMeso_ALS=Down   CldShadeConv=Some   Boundaries=Strong   
+   (   0.5   0.4   0.1)))   % CldShadeOth=Clear   AreaMeso_ALS=Down   CldShadeConv=Some   Boundaries=Strong   
+   (((   0.3   0.35   0.35)   % CldShadeOth=Cloudy   AreaMeso_ALS=StrongUp   CldShadeConv=Marked   Boundaries=Strong   
+   (   0.15   0.35   0.5)   % CldShadeOth=PC   AreaMeso_ALS=StrongUp   CldShadeConv=Marked   Boundaries=Strong   
+   (   0.13   0.35   0.52))   % CldShadeOth=Clear   AreaMeso_ALS=StrongUp   CldShadeConv=Marked   Boundaries=Strong   
+   ((   0.5   0.25   0.25)   % CldShadeOth=Cloudy   AreaMeso_ALS=WeakUp   CldShadeConv=Marked   Boundaries=Strong   
+   (   0.35   0.35   0.3)   % CldShadeOth=PC   AreaMeso_ALS=WeakUp   CldShadeConv=Marked   Boundaries=Strong   
+   (   0.2   0.45   0.35))   % CldShadeOth=Clear   AreaMeso_ALS=WeakUp   CldShadeConv=Marked   Boundaries=Strong   
+   ((   0.55   0.35   0.1)   % CldShadeOth=Cloudy   AreaMeso_ALS=Neutral   CldShadeConv=Marked   Boundaries=Strong   
+   (   0.45   0.35   0.2)   % CldShadeOth=PC   AreaMeso_ALS=Neutral   CldShadeConv=Marked   Boundaries=Strong   
+   (   0.4   0.35   0.25))   % CldShadeOth=Clear   AreaMeso_ALS=Neutral   CldShadeConv=Marked   Boundaries=Strong   
+   ((   0.7   0.24   0.06)   % CldShadeOth=Cloudy   AreaMeso_ALS=Down   CldShadeConv=Marked   Boundaries=Strong   
+   (   0.65   0.28   0.07)   % CldShadeOth=PC   AreaMeso_ALS=Down   CldShadeConv=Marked   Boundaries=Strong   
+   (   0.6   0.3   0.1)))));   % CldShadeOth=Clear   AreaMeso_ALS=Down   CldShadeConv=Marked   Boundaries=Strong   
+}
+
+potential ( CapChange | CompPlFcst   ) {
+   data = 
+   ((   0   0   1)   % CompPlFcst=IncCapDecIns   
+   (   0   1   0)   % CompPlFcst=LittleChange   
+   (   1   0   0));   % CompPlFcst=DecCapIncIns   
+}
+
+potential (LoLevMoistAd) {
+   data = (  0.12 0.28 0.3 0.3);
+}
+
+potential ( InsChange | LoLevMoistAd   CompPlFcst   ) {
+   data = 
+   (((   0   0.05   0.95)   % CompPlFcst=IncCapDecIns   LoLevMoistAd=StrongPos   
+   (   0   0.12   0.88)   % CompPlFcst=LittleChange   LoLevMoistAd=StrongPos   
+   (   0.05   0.15   0.8))   % CompPlFcst=DecCapIncIns   LoLevMoistAd=StrongPos   
+   ((   0.05   0.15   0.8)   % CompPlFcst=IncCapDecIns   LoLevMoistAd=WeakPos   
+   (   0.1   0.4   0.5)   % CompPlFcst=LittleChange   LoLevMoistAd=WeakPos   
+   (   0.25   0.5   0.25))   % CompPlFcst=DecCapIncIns   LoLevMoistAd=WeakPos   
+   ((   0.15   0.5   0.35)   % CompPlFcst=IncCapDecIns   LoLevMoistAd=Neutral   
+   (   0.2   0.6   0.2)   % CompPlFcst=LittleChange   LoLevMoistAd=Neutral   
+   (   0.35   0.5   0.15))   % CompPlFcst=DecCapIncIns   LoLevMoistAd=Neutral   
+   ((   0.5   0.4   0.1)   % CompPlFcst=IncCapDecIns   LoLevMoistAd=Negative   
+   (   0.8   0.16   0.04)   % CompPlFcst=LittleChange   LoLevMoistAd=Negative   
+   (   0.9   0.09   0.01)));   % CompPlFcst=DecCapIncIns   LoLevMoistAd=Negative   
+}
+
+potential ( MountainFcst | InsInMt   ) {
+   data = 
+   ((   1   0   0)   % InsInMt=None   
+   (   0.48   0.5   0.02)   % InsInMt=Weak   
+   (   0.2   0.5   0.3));   % InsInMt=Strong   
+}
+
+potential (Date) {
+   data = (  0.254098 0.131148 0.106557 0.213115 0.07377 0.221312);
+}
+
+potential ( Scenario | Date   ) {
+   data = 
+   ((   0.1   0.16   0.1   0.08   0.08   0.01   0.08   0.1   0.09   0.03   0.17)   % Date=May15_Jun14   
+   (   0.05   0.16   0.09   0.09   0.12   0.02   0.13   0.06   0.07   0.11   0.1)   % Date=Jun15_Jul1   
+   (   0.04   0.13   0.1   0.08   0.15   0.03   0.14   0.04   0.06   0.15   0.08)   % Date=Jul2_Jul15   
+   (   0.04   0.13   0.09   0.07   0.2   0.08   0.06   0.05   0.07   0.13   0.08)   % Date=Jul16_Aug10   
+   (   0.04   0.11   0.1   0.07   0.17   0.05   0.1   0.05   0.07   0.14   0.1)   % Date=Aug11_Aug20   
+   (   0.05   0.11   0.1   0.08   0.11   0.02   0.11   0.06   0.08   0.11   0.17));   % Date=Aug20_Sep15   
+}
+
+potential ( ScenRelAMCIN | Scenario   ) {
+   data = 
+   ((   1   0)   % Scenario=A   
+   (   1   0)   % Scenario=B   
+   (   0   1)   % Scenario=C   
+   (   0   1)   % Scenario=D   
+   (   0   1)   % Scenario=E   
+   (   0   1)   % Scenario=F   
+   (   0   1)   % Scenario=G   
+   (   0   1)   % Scenario=H   
+   (   0   1)   % Scenario=I   
+   (   0   1)   % Scenario=J   
+   (   0   1));   % Scenario=K   
+}
+
+potential (MorningCIN) {
+   data = (  0.15 0.57 0.2 0.08);
+}
+
+potential ( AMCINInScen | ScenRelAMCIN   MorningCIN   ) {
+   data = 
+   (((   1   0   0)   % MorningCIN=None   ScenRelAMCIN=AB   
+   (   0.6   0.37   0.03)   % MorningCIN=PartInhibit   ScenRelAMCIN=AB   
+   (   0.25   0.45   0.3)   % MorningCIN=Stifling   ScenRelAMCIN=AB   
+   (   0   0.1   0.9))   % MorningCIN=TotalInhibit   ScenRelAMCIN=AB   
+   ((   0.75   0.25   0)   % MorningCIN=None   ScenRelAMCIN=CThruK   
+   (   0.3   0.6   0.1)   % MorningCIN=PartInhibit   ScenRelAMCIN=CThruK   
+   (   0.01   0.4   0.59)   % MorningCIN=Stifling   ScenRelAMCIN=CThruK   
+   (   0   0.03   0.97)));   % MorningCIN=TotalInhibit   ScenRelAMCIN=CThruK   
+}
+
+potential ( CapInScen | AMCINInScen   CapChange   ) {
+   data = 
+   (((   1   0   0)   % CapChange=Decreasing   AMCINInScen=LessThanAve   
+   (   0.98   0.02   0)   % CapChange=LittleChange   AMCINInScen=LessThanAve   
+   (   0.35   0.35   0.3))   % CapChange=Increasing   AMCINInScen=LessThanAve   
+   ((   0.75   0.25   0)   % CapChange=Decreasing   AMCINInScen=Average   
+   (   0.03   0.94   0.03)   % CapChange=LittleChange   AMCINInScen=Average   
+   (   0   0.25   0.75))   % CapChange=Increasing   AMCINInScen=Average   
+   ((   0.3   0.35   0.35)   % CapChange=Decreasing   AMCINInScen=MoreThanAve   
+   (   0   0.02   0.98)   % CapChange=LittleChange   AMCINInScen=MoreThanAve   
+   (   0   0   1)));   % CapChange=Increasing   AMCINInScen=MoreThanAve   
+}
+
+potential ( ScenRelAMIns | Scenario   ) {
+   data = 
+   ((   1   0   0   0   0   0)   % Scenario=A   
+   (   1   0   0   0   0   0)   % Scenario=B   
+   (   0   1   0   0   0   0)   % Scenario=C   
+   (   0   1   0   0   0   0)   % Scenario=D   
+   (   0   1   0   0   0   0)   % Scenario=E   
+   (   0   0   1   0   0   0)   % Scenario=F   
+   (   0   0   0   1   0   0)   % Scenario=G   
+   (   0   0   0   0   1   0)   % Scenario=H   
+   (   1   0   0   0   0   0)   % Scenario=I   
+   (   0   1   0   0   0   0)   % Scenario=J   
+   (   0   0   0   0   0   1));   % Scenario=K   
+}
+
+potential (LIfr12ZDENSd) {
+   data = (  0.1 0.52 0.3 0.08);
+}
+
+potential (AMDewptCalPl) {
+   data = (  0.3 0.25 0.45);
+}
+
+potential ( AMInsWliScen | ScenRelAMIns   LIfr12ZDENSd   AMDewptCalPl   ) {
+   data = 
+   ((((   0.6   0.3   0.1)   % AMDewptCalPl=Instability   LIfr12ZDENSd=LIGt0   ScenRelAMIns=ABI   
+   (   0.85   0.13   0.02)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=LIGt0   ScenRelAMIns=ABI   
+   (   0.95   0.04   0.01))   % AMDewptCalPl=Stability   LIfr12ZDENSd=LIGt0   ScenRelAMIns=ABI   
+   ((   0.3   0.3   0.4)   % AMDewptCalPl=Instability   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=ABI   
+   (   0.5   0.3   0.2)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=ABI   
+   (   0.75   0.2   0.05))   % AMDewptCalPl=Stability   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=ABI   
+   ((   0.06   0.21   0.73)   % AMDewptCalPl=Instability   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=ABI   
+   (   0.2   0.4   0.4)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=ABI   
+   (   0.5   0.4   0.1))   % AMDewptCalPl=Stability   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=ABI   
+   ((   0.01   0.04   0.95)   % AMDewptCalPl=Instability   LIfr12ZDENSd=LILt_8   ScenRelAMIns=ABI   
+   (   0.05   0.2   0.75)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=LILt_8   ScenRelAMIns=ABI   
+   (   0.35   0.35   0.3)))   % AMDewptCalPl=Stability   LIfr12ZDENSd=LILt_8   ScenRelAMIns=ABI   
+   (((   0.4   0.3   0.3)   % AMDewptCalPl=Instability   LIfr12ZDENSd=LIGt0   ScenRelAMIns=CDEJ   
+   (   0.7   0.2   0.1)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=LIGt0   ScenRelAMIns=CDEJ   
+   (   0.9   0.08   0.02))   % AMDewptCalPl=Stability   LIfr12ZDENSd=LIGt0   ScenRelAMIns=CDEJ   
+   ((   0.15   0.3   0.55)   % AMDewptCalPl=Instability   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=CDEJ   
+   (   0.25   0.5   0.25)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=CDEJ   
+   (   0.6   0.3   0.1))   % AMDewptCalPl=Stability   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=CDEJ   
+   ((   0.03   0.17   0.8)   % AMDewptCalPl=Instability   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=CDEJ   
+   (   0.2   0.3   0.5)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=CDEJ   
+   (   0.45   0.4   0.15))   % AMDewptCalPl=Stability   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=CDEJ   
+   ((   0.01   0.04   0.95)   % AMDewptCalPl=Instability   LIfr12ZDENSd=LILt_8   ScenRelAMIns=CDEJ   
+   (   0.05   0.18   0.77)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=LILt_8   ScenRelAMIns=CDEJ   
+   (   0.25   0.4   0.35)))   % AMDewptCalPl=Stability   LIfr12ZDENSd=LILt_8   ScenRelAMIns=CDEJ   
+   (((   0.35   0.35   0.3)   % AMDewptCalPl=Instability   LIfr12ZDENSd=LIGt0   ScenRelAMIns=F   
+   (   0.55   0.4   0.05)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=LIGt0   ScenRelAMIns=F   
+   (   0.85   0.13   0.02))   % AMDewptCalPl=Stability   LIfr12ZDENSd=LIGt0   ScenRelAMIns=F   
+   ((   0.07   0.38   0.55)   % AMDewptCalPl=Instability   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=F   
+   (   0.2   0.6   0.2)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=F   
+   (   0.5   0.43   0.07))   % AMDewptCalPl=Stability   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=F   
+   ((   0   0.05   0.95)   % AMDewptCalPl=Instability   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=F   
+   (   0.05   0.35   0.6)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=F   
+   (   0.25   0.5   0.25))   % AMDewptCalPl=Stability   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=F   
+   ((   0   0.02   0.98)   % AMDewptCalPl=Instability   LIfr12ZDENSd=LILt_8   ScenRelAMIns=F   
+   (   0   0.05   0.95)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=LILt_8   ScenRelAMIns=F   
+   (   0.04   0.16   0.8)))   % AMDewptCalPl=Stability   LIfr12ZDENSd=LILt_8   ScenRelAMIns=F   
+   (((   0.3   0.4   0.3)   % AMDewptCalPl=Instability   LIfr12ZDENSd=LIGt0   ScenRelAMIns=G   
+   (   0.5   0.3   0.2)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=LIGt0   ScenRelAMIns=G   
+   (   0.75   0.2   0.05))   % AMDewptCalPl=Stability   LIfr12ZDENSd=LIGt0   ScenRelAMIns=G   
+   ((   0.15   0.35   0.5)   % AMDewptCalPl=Instability   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=G   
+   (   0.2   0.6   0.2)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=G   
+   (   0.15   0.7   0.15))   % AMDewptCalPl=Stability   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=G   
+   ((   0.07   0.23   0.7)   % AMDewptCalPl=Instability   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=G   
+   (   0.13   0.47   0.4)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=G   
+   (   0.1   0.75   0.15))   % AMDewptCalPl=Stability   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=G   
+   ((   0.02   0.18   0.8)   % AMDewptCalPl=Instability   LIfr12ZDENSd=LILt_8   ScenRelAMIns=G   
+   (   0.04   0.26   0.7)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=LILt_8   ScenRelAMIns=G   
+   (   0.07   0.3   0.63)))   % AMDewptCalPl=Stability   LIfr12ZDENSd=LILt_8   ScenRelAMIns=G   
+   (((   0.35   0.45   0.2)   % AMDewptCalPl=Instability   LIfr12ZDENSd=LIGt0   ScenRelAMIns=H   
+   (   0.4   0.5   0.1)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=LIGt0   ScenRelAMIns=H   
+   (   0.58   0.4   0.02))   % AMDewptCalPl=Stability   LIfr12ZDENSd=LIGt0   ScenRelAMIns=H   
+   ((   0.1   0.25   0.65)   % AMDewptCalPl=Instability   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=H   
+   (   0.15   0.45   0.4)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=H   
+   (   0.4   0.45   0.15))   % AMDewptCalPl=Stability   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=H   
+   ((   0.02   0.18   0.8)   % AMDewptCalPl=Instability   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=H   
+   (   0.05   0.25   0.7)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=H   
+   (   0.15   0.35   0.5))   % AMDewptCalPl=Stability   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=H   
+   ((   0.01   0.09   0.9)   % AMDewptCalPl=Instability   LIfr12ZDENSd=LILt_8   ScenRelAMIns=H   
+   (   0.03   0.17   0.8)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=LILt_8   ScenRelAMIns=H   
+   (   0.08   0.32   0.6)))   % AMDewptCalPl=Stability   LIfr12ZDENSd=LILt_8   ScenRelAMIns=H   
+   (((   0.3   0.55   0.15)   % AMDewptCalPl=Instability   LIfr12ZDENSd=LIGt0   ScenRelAMIns=K   
+   (   0.4   0.5   0.1)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=LIGt0   ScenRelAMIns=K   
+   (   0.5   0.43   0.07))   % AMDewptCalPl=Stability   LIfr12ZDENSd=LIGt0   ScenRelAMIns=K   
+   ((   0.1   0.35   0.55)   % AMDewptCalPl=Instability   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=K   
+   (   0.25   0.5   0.25)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=K   
+   (   0.3   0.5   0.2))   % AMDewptCalPl=Stability   LIfr12ZDENSd=N1GtLIGt_4   ScenRelAMIns=K   
+   ((   0.05   0.22   0.73)   % AMDewptCalPl=Instability   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=K   
+   (   0.1   0.35   0.55)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=K   
+   (   0.15   0.35   0.5))   % AMDewptCalPl=Stability   LIfr12ZDENSd=N5GtLIGt_8   ScenRelAMIns=K   
+   ((   0.02   0.1   0.88)   % AMDewptCalPl=Instability   LIfr12ZDENSd=LILt_8   ScenRelAMIns=K   
+   (   0.04   0.16   0.8)   % AMDewptCalPl=Neutral   LIfr12ZDENSd=LILt_8   ScenRelAMIns=K   
+   (   0.1   0.25   0.65))));   % AMDewptCalPl=Stability   LIfr12ZDENSd=LILt_8   ScenRelAMIns=K   
+}
+
+potential ( InsSclInScen | AMInsWliScen   InsChange   ) {
+   data = 
+   (((   1   0   0)   % InsChange=Decreasing   AMInsWliScen=LessUnstable   
+   (   0.9   0.1   0)   % InsChange=LittleChange   AMInsWliScen=LessUnstable   
+   (   0.4   0.35   0.25))   % InsChange=Increasing   AMInsWliScen=LessUnstable   
+   ((   0.6   0.4   0)   % InsChange=Decreasing   AMInsWliScen=Average   
+   (   0.15   0.7   0.15)   % InsChange=LittleChange   AMInsWliScen=Average   
+   (   0   0.4   0.6))   % InsChange=Increasing   AMInsWliScen=Average   
+   ((   0.25   0.35   0.4)   % InsChange=Decreasing   AMInsWliScen=MoreUnstable   
+   (   0   0.1   0.9)   % InsChange=LittleChange   AMInsWliScen=MoreUnstable   
+   (   0   0   1)));   % InsChange=Increasing   AMInsWliScen=MoreUnstable   
+}
+
+potential ( ScenRel3_4 | Scenario   ) {
+   data = 
+   ((   1   0   0   0   0)   % Scenario=A   
+   (   0   1   0   0   0)   % Scenario=B   
+   (   1   0   0   0   0)   % Scenario=C   
+   (   0   0   1   0   0)   % Scenario=D   
+   (   1   0   0   0   0)   % Scenario=E   
+   (   1   0   0   0   0)   % Scenario=F   
+   (   0   0   0   1   0)   % Scenario=G   
+   (   0   0   0   0   1)   % Scenario=H   
+   (   0   0   0   0   1)   % Scenario=I   
+   (   0   0   0   1   0)   % Scenario=J   
+   (   1   0   0   0   0));   % Scenario=K   
+}
+
+potential (LatestCIN) {
+   data = (  0.4 0.4 0.15 0.05);
+}
+
+potential (LLIW) {
+   data = (  0.12 0.32 0.38 0.18);
+}
+
+potential ( CurPropConv | LatestCIN   LLIW   ) {
+   data = 
+   (((   0.7   0.28   0.02   0)   % LLIW=Unfavorable   LatestCIN=None   
+   (   0.1   0.5   0.3   0.1)   % LLIW=Weak   LatestCIN=None   
+   (   0.01   0.14   0.35   0.5)   % LLIW=Moderate   LatestCIN=None   
+   (   0   0.02   0.18   0.8))   % LLIW=Strong   LatestCIN=None   
+   ((   0.9   0.09   0.01   0)   % LLIW=Unfavorable   LatestCIN=PartInhibit   
+   (   0.65   0.25   0.09   0.01)   % LLIW=Weak   LatestCIN=PartInhibit   
+   (   0.25   0.35   0.3   0.1)   % LLIW=Moderate   LatestCIN=PartInhibit   
+   (   0.01   0.15   0.33   0.51))   % LLIW=Strong   LatestCIN=PartInhibit   
+   ((   0.95   0.05   0   0)   % LLIW=Unfavorable   LatestCIN=Stifling   
+   (   0.75   0.23   0.02   0)   % LLIW=Weak   LatestCIN=Stifling   
+   (   0.4   0.4   0.18   0.02)   % LLIW=Moderate   LatestCIN=Stifling   
+   (   0.2   0.3   0.35   0.15))   % LLIW=Strong   LatestCIN=Stifling   
+   ((   1   0   0   0)   % LLIW=Unfavorable   LatestCIN=TotalInhibit   
+   (   0.95   0.05   0   0)   % LLIW=Weak   LatestCIN=TotalInhibit   
+   (   0.75   0.2   0.05   0)   % LLIW=Moderate   LatestCIN=TotalInhibit   
+   (   0.5   0.35   0.1   0.05)));   % LLIW=Strong   LatestCIN=TotalInhibit   
+}
+
+potential ( ScnRelPlFcst | Scenario   ) {
+   data = 
+   ((   1   0   0   0   0   0   0   0   0   0   0)   % Scenario=A   
+   (   0   1   0   0   0   0   0   0   0   0   0)   % Scenario=B   
+   (   0   0   1   0   0   0   0   0   0   0   0)   % Scenario=C   
+   (   0   0   0   1   0   0   0   0   0   0   0)   % Scenario=D   
+   (   0   0   0   0   1   0   0   0   0   0   0)   % Scenario=E   
+   (   0   0   0   0   0   1   0   0   0   0   0)   % Scenario=F   
+   (   0   0   0   0   0   0   1   0   0   0   0)   % Scenario=G   
+   (   0   0   0   0   0   0   0   1   0   0   0)   % Scenario=H   
+   (   0   0   0   0   0   0   0   0   1   0   0)   % Scenario=I   
+   (   0   0   0   0   0   0   0   0   0   1   0)   % Scenario=J   
+   (   0   0   0   0   0   0   0   0   0   0   1));   % Scenario=K   
+}
+
+potential ( PlainsFcst | CurPropConv   InsSclInScen   CapInScen   ScnRelPlFcst   ) {
+   data = 
+   (((((   0.75   0.2   0.05)   % ScnRelPlFcst=A   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.75   0.2   0.05)   % ScnRelPlFcst=B   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.9   0.08   0.02)   % ScnRelPlFcst=C   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.9   0.06   0.04)   % ScnRelPlFcst=D   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.88   0.1   0.02)   % ScnRelPlFcst=E   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.92   0.08   0)   % ScnRelPlFcst=F   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.85   0.13   0.02)   % ScnRelPlFcst=G   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   1   0   0)   % ScnRelPlFcst=H   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.9   0.08   0.02)   % ScnRelPlFcst=I   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.9   0.08   0.02)   % ScnRelPlFcst=J   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.95   0.04   0.01))   % ScnRelPlFcst=K   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   ((   0.75   0.2   0.05)   % ScnRelPlFcst=A   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.65   0.3   0.05)   % ScnRelPlFcst=B   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.9   0.08   0.02)   % ScnRelPlFcst=C   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.91   0.05   0.04)   % ScnRelPlFcst=D   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.85   0.13   0.02)   % ScnRelPlFcst=E   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.9   0.1   0)   % ScnRelPlFcst=F   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.84   0.12   0.04)   % ScnRelPlFcst=G   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.99   0.01   0)   % ScnRelPlFcst=H   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.88   0.1   0.02)   % ScnRelPlFcst=I   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.92   0.06   0.02)   % ScnRelPlFcst=J   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.96   0.03   0.01))   % ScnRelPlFcst=K   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=None   
+   ((   0.75   0.2   0.05)   % ScnRelPlFcst=A   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.75   0.2   0.05)   % ScnRelPlFcst=B   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.95   0.04   0.01)   % ScnRelPlFcst=C   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.93   0.04   0.03)   % ScnRelPlFcst=D   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.92   0.06   0.02)   % ScnRelPlFcst=E   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.87   0.13   0)   % ScnRelPlFcst=F   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.9   0.06   0.04)   % ScnRelPlFcst=G   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.98   0.02   0)   % ScnRelPlFcst=H   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.92   0.06   0.02)   % ScnRelPlFcst=I   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.95   0.04   0.01)   % ScnRelPlFcst=J   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (   0.97   0.02   0.01)))   % ScnRelPlFcst=K   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=None   
+   (((   0.5   0.3   0.2)   % ScnRelPlFcst=A   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.6   0.3   0.1)   % ScnRelPlFcst=B   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.8   0.14   0.06)   % ScnRelPlFcst=C   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.85   0.09   0.06)   % ScnRelPlFcst=D   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.85   0.1   0.05)   % ScnRelPlFcst=E   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.88   0.11   0.01)   % ScnRelPlFcst=F   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.8   0.17   0.03)   % ScnRelPlFcst=G   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.92   0.06   0.02)   % ScnRelPlFcst=H   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.8   0.12   0.08)   % ScnRelPlFcst=I   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.75   0.22   0.03)   % ScnRelPlFcst=J   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.9   0.08   0.02))   % ScnRelPlFcst=K   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=None   
+   ((   0.35   0.3   0.35)   % ScnRelPlFcst=A   CapInScen=Average   InsSclInScen=Average   CurPropConv=None   
+   (   0.55   0.3   0.15)   % ScnRelPlFcst=B   CapInScen=Average   InsSclInScen=Average   CurPropConv=None   
+   (   0.82   0.13   0.05)   % ScnRelPlFcst=C   CapInScen=Average   InsSclInScen=Average   CurPropConv=None   
+   (   0.82   0.1   0.08)   % ScnRelPlFcst=D   CapInScen=Average   InsSclInScen=Average   CurPropConv=None   
+   (   0.75   0.18   0.07)   % ScnRelPlFcst=E   CapInScen=Average   InsSclInScen=Average   CurPropConv=None   
+   (   0.88   0.11   0.01)   % ScnRelPlFcst=F   CapInScen=Average   InsSclInScen=Average   CurPropConv=None   
+   (   0.75   0.2   0.05)   % ScnRelPlFcst=G   CapInScen=Average   InsSclInScen=Average   CurPropConv=None   
+   (   0.9   0.07   0.03)   % ScnRelPlFcst=H   CapInScen=Average   InsSclInScen=Average   CurPropConv=None   
+   (   0.7   0.2   0.1)   % ScnRelPlFcst=I   CapInScen=Average   InsSclInScen=Average   CurPropConv=None   
+   (   0.8   0.15   0.05)   % ScnRelPlFcst=J   CapInScen=Average   InsSclInScen=Average   CurPropConv=None   
+   (   0.9   0.08   0.02))   % ScnRelPlFcst=K   CapInScen=Average   InsSclInScen=Average   CurPropConv=None   
+   ((   0.5   0.2   0.3)   % ScnRelPlFcst=A   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.6   0.25   0.15)   % ScnRelPlFcst=B   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.85   0.1   0.05)   % ScnRelPlFcst=C   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.85   0.07   0.08)   % ScnRelPlFcst=D   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.75   0.15   0.1)   % ScnRelPlFcst=E   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.85   0.14   0.01)   % ScnRelPlFcst=F   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.75   0.2   0.05)   % ScnRelPlFcst=G   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.94   0.05   0.01)   % ScnRelPlFcst=H   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.65   0.22   0.13)   % ScnRelPlFcst=I   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.83   0.1   0.07)   % ScnRelPlFcst=J   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=None   
+   (   0.93   0.06   0.01)))   % ScnRelPlFcst=K   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=None   
+   (((   0.35   0.2   0.45)   % ScnRelPlFcst=A   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.45   0.35   0.2)   % ScnRelPlFcst=B   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.8   0.1   0.1)   % ScnRelPlFcst=C   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.72   0.14   0.14)   % ScnRelPlFcst=D   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.78   0.15   0.07)   % ScnRelPlFcst=E   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.86   0.12   0.02)   % ScnRelPlFcst=F   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.65   0.25   0.1)   % ScnRelPlFcst=G   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.85   0.1   0.05)   % ScnRelPlFcst=H   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.65   0.2   0.15)   % ScnRelPlFcst=I   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.72   0.2   0.08)   % ScnRelPlFcst=J   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.85   0.1   0.05))   % ScnRelPlFcst=K   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   ((   0.25   0.15   0.6)   % ScnRelPlFcst=A   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.45   0.35   0.2)   % ScnRelPlFcst=B   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.65   0.2   0.15)   % ScnRelPlFcst=C   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.55   0.2   0.25)   % ScnRelPlFcst=D   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.55   0.25   0.2)   % ScnRelPlFcst=E   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.81   0.17   0.02)   % ScnRelPlFcst=F   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.6   0.28   0.12)   % ScnRelPlFcst=G   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.8   0.13   0.07)   % ScnRelPlFcst=H   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.6   0.2   0.2)   % ScnRelPlFcst=I   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.75   0.15   0.1)   % ScnRelPlFcst=J   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.88   0.08   0.04))   % ScnRelPlFcst=K   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=None   
+   ((   0.4   0.08   0.52)   % ScnRelPlFcst=A   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.45   0.25   0.3)   % ScnRelPlFcst=B   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.75   0.1   0.15)   % ScnRelPlFcst=C   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.65   0.15   0.2)   % ScnRelPlFcst=D   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.52   0.25   0.23)   % ScnRelPlFcst=E   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.82   0.16   0.02)   % ScnRelPlFcst=F   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.65   0.27   0.08)   % ScnRelPlFcst=G   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.85   0.09   0.06)   % ScnRelPlFcst=H   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.5   0.2   0.3)   % ScnRelPlFcst=I   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.77   0.1   0.13)   % ScnRelPlFcst=J   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   (   0.9   0.07   0.03))))   % ScnRelPlFcst=K   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=None   
+   ((((   0.7   0.25   0.05)   % ScnRelPlFcst=A   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.6   0.33   0.07)   % ScnRelPlFcst=B   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.82   0.13   0.05)   % ScnRelPlFcst=C   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.85   0.1   0.05)   % ScnRelPlFcst=D   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.82   0.15   0.03)   % ScnRelPlFcst=E   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.85   0.14   0.01)   % ScnRelPlFcst=F   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.8   0.17   0.03)   % ScnRelPlFcst=G   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.97   0.02   0.01)   % ScnRelPlFcst=H   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.88   0.1   0.02)   % ScnRelPlFcst=I   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.86   0.1   0.04)   % ScnRelPlFcst=J   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.88   0.1   0.02))   % ScnRelPlFcst=K   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   ((   0.65   0.25   0.1)   % ScnRelPlFcst=A   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.58   0.32   0.1)   % ScnRelPlFcst=B   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.8   0.15   0.05)   % ScnRelPlFcst=C   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.85   0.1   0.05)   % ScnRelPlFcst=D   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.8   0.16   0.04)   % ScnRelPlFcst=E   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.83   0.16   0.01)   % ScnRelPlFcst=F   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.77   0.17   0.06)   % ScnRelPlFcst=G   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.93   0.06   0.01)   % ScnRelPlFcst=H   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.85   0.12   0.03)   % ScnRelPlFcst=I   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.85   0.1   0.05)   % ScnRelPlFcst=J   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.9   0.08   0.02))   % ScnRelPlFcst=K   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   ((   0.6   0.3   0.1)   % ScnRelPlFcst=A   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.65   0.28   0.07)   % ScnRelPlFcst=B   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.9   0.08   0.02)   % ScnRelPlFcst=C   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.85   0.1   0.05)   % ScnRelPlFcst=D   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.82   0.13   0.05)   % ScnRelPlFcst=E   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.8   0.19   0.01)   % ScnRelPlFcst=F   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.8   0.13   0.07)   % ScnRelPlFcst=G   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.91   0.08   0.01)   % ScnRelPlFcst=H   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.85   0.12   0.03)   % ScnRelPlFcst=I   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.9   0.08   0.02)   % ScnRelPlFcst=J   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (   0.93   0.06   0.01)))   % ScnRelPlFcst=K   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Slight   
+   (((   0.3   0.4   0.3)   % ScnRelPlFcst=A   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.55   0.34   0.11)   % ScnRelPlFcst=B   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.7   0.2   0.1)   % ScnRelPlFcst=C   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.75   0.15   0.1)   % ScnRelPlFcst=D   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.62   0.28   0.1)   % ScnRelPlFcst=E   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.85   0.14   0.01)   % ScnRelPlFcst=F   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.75   0.2   0.05)   % ScnRelPlFcst=G   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.82   0.14   0.04)   % ScnRelPlFcst=H   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.6   0.25   0.15)   % ScnRelPlFcst=I   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.68   0.22   0.1)   % ScnRelPlFcst=J   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.82   0.15   0.03))   % ScnRelPlFcst=K   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   ((   0.28   0.37   0.35)   % ScnRelPlFcst=A   CapInScen=Average   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.48   0.35   0.17)   % ScnRelPlFcst=B   CapInScen=Average   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.7   0.2   0.1)   % ScnRelPlFcst=C   CapInScen=Average   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.7   0.17   0.13)   % ScnRelPlFcst=D   CapInScen=Average   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.6   0.29   0.11)   % ScnRelPlFcst=E   CapInScen=Average   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.82   0.16   0.02)   % ScnRelPlFcst=F   CapInScen=Average   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.63   0.3   0.07)   % ScnRelPlFcst=G   CapInScen=Average   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.8   0.15   0.05)   % ScnRelPlFcst=H   CapInScen=Average   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.5   0.3   0.2)   % ScnRelPlFcst=I   CapInScen=Average   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.7   0.2   0.1)   % ScnRelPlFcst=J   CapInScen=Average   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.8   0.16   0.04))   % ScnRelPlFcst=K   CapInScen=Average   InsSclInScen=Average   CurPropConv=Slight   
+   ((   0.4   0.28   0.32)   % ScnRelPlFcst=A   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.5   0.25   0.25)   % ScnRelPlFcst=B   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.72   0.18   0.1)   % ScnRelPlFcst=C   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.65   0.2   0.15)   % ScnRelPlFcst=D   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.55   0.3   0.15)   % ScnRelPlFcst=E   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.78   0.2   0.02)   % ScnRelPlFcst=F   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.55   0.35   0.1)   % ScnRelPlFcst=G   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.85   0.12   0.03)   % ScnRelPlFcst=H   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.45   0.3   0.25)   % ScnRelPlFcst=I   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.73   0.15   0.12)   % ScnRelPlFcst=J   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (   0.85   0.12   0.03)))   % ScnRelPlFcst=K   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Slight   
+   (((   0.3   0.25   0.45)   % ScnRelPlFcst=A   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.4   0.36   0.24)   % ScnRelPlFcst=B   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.65   0.2   0.15)   % ScnRelPlFcst=C   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.6   0.2   0.2)   % ScnRelPlFcst=D   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.6   0.28   0.12)   % ScnRelPlFcst=E   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.83   0.14   0.03)   % ScnRelPlFcst=F   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.45   0.4   0.15)   % ScnRelPlFcst=G   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.7   0.18   0.12)   % ScnRelPlFcst=H   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.55   0.25   0.2)   % ScnRelPlFcst=I   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.6   0.25   0.15)   % ScnRelPlFcst=J   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.72   0.2   0.08))   % ScnRelPlFcst=K   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   ((   0.22   0.17   0.61)   % ScnRelPlFcst=A   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.35   0.37   0.28)   % ScnRelPlFcst=B   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.45   0.3   0.25)   % ScnRelPlFcst=C   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.45   0.25   0.3)   % ScnRelPlFcst=D   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.48   0.29   0.23)   % ScnRelPlFcst=E   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.72   0.25   0.03)   % ScnRelPlFcst=F   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.43   0.4   0.17)   % ScnRelPlFcst=G   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.68   0.2   0.12)   % ScnRelPlFcst=H   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.35   0.3   0.35)   % ScnRelPlFcst=I   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.6   0.2   0.2)   % ScnRelPlFcst=J   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.74   0.16   0.1))   % ScnRelPlFcst=K   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   ((   0.27   0.1   0.63)   % ScnRelPlFcst=A   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.35   0.3   0.35)   % ScnRelPlFcst=B   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.55   0.22   0.23)   % ScnRelPlFcst=C   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.45   0.25   0.3)   % ScnRelPlFcst=D   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.42   0.3   0.28)   % ScnRelPlFcst=E   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.74   0.22   0.04)   % ScnRelPlFcst=F   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.45   0.4   0.15)   % ScnRelPlFcst=G   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.77   0.13   0.1)   % ScnRelPlFcst=H   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.3   0.25   0.45)   % ScnRelPlFcst=I   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.68   0.15   0.17)   % ScnRelPlFcst=J   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   (   0.75   0.15   0.1))))   % ScnRelPlFcst=K   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Slight   
+   ((((   0.5   0.4   0.1)   % ScnRelPlFcst=A   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.45   0.42   0.13)   % ScnRelPlFcst=B   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.75   0.18   0.07)   % ScnRelPlFcst=C   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.75   0.15   0.1)   % ScnRelPlFcst=D   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.72   0.22   0.06)   % ScnRelPlFcst=E   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.78   0.21   0.01)   % ScnRelPlFcst=F   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.66   0.27   0.07)   % ScnRelPlFcst=G   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.88   0.1   0.02)   % ScnRelPlFcst=H   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.7   0.22   0.08)   % ScnRelPlFcst=I   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.78   0.16   0.06)   % ScnRelPlFcst=J   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.8   0.16   0.04))   % ScnRelPlFcst=K   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   ((   0.45   0.35   0.2)   % ScnRelPlFcst=A   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.45   0.35   0.2)   % ScnRelPlFcst=B   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.7   0.2   0.1)   % ScnRelPlFcst=C   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.72   0.17   0.11)   % ScnRelPlFcst=D   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.7   0.22   0.08)   % ScnRelPlFcst=E   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.75   0.24   0.01)   % ScnRelPlFcst=F   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.62   0.3   0.08)   % ScnRelPlFcst=G   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.85   0.12   0.03)   % ScnRelPlFcst=H   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.75   0.15   0.1)   % ScnRelPlFcst=I   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.76   0.17   0.07)   % ScnRelPlFcst=J   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.8   0.16   0.04))   % ScnRelPlFcst=K   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   ((   0.35   0.4   0.25)   % ScnRelPlFcst=A   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.45   0.4   0.15)   % ScnRelPlFcst=B   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.75   0.19   0.06)   % ScnRelPlFcst=C   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.7   0.2   0.1)   % ScnRelPlFcst=D   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.6   0.3   0.1)   % ScnRelPlFcst=E   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.72   0.27   0.01)   % ScnRelPlFcst=F   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.6   0.3   0.1)   % ScnRelPlFcst=G   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.8   0.16   0.04)   % ScnRelPlFcst=H   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.75   0.17   0.08)   % ScnRelPlFcst=I   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.75   0.2   0.05)   % ScnRelPlFcst=J   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (   0.88   0.1   0.02)))   % ScnRelPlFcst=K   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Moderate   
+   (((   0.2   0.45   0.35)   % ScnRelPlFcst=A   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.4   0.4   0.2)   % ScnRelPlFcst=B   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.7   0.2   0.1)   % ScnRelPlFcst=C   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.65   0.22   0.13)   % ScnRelPlFcst=D   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.5   0.34   0.16)   % ScnRelPlFcst=E   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.74   0.24   0.02)   % ScnRelPlFcst=F   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.6   0.3   0.1)   % ScnRelPlFcst=G   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.67   0.24   0.09)   % ScnRelPlFcst=H   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.35   0.4   0.25)   % ScnRelPlFcst=I   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.6   0.25   0.15)   % ScnRelPlFcst=J   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.75   0.2   0.05))   % ScnRelPlFcst=K   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   ((   0.23   0.4   0.37)   % ScnRelPlFcst=A   CapInScen=Average   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.38   0.35   0.27)   % ScnRelPlFcst=B   CapInScen=Average   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.58   0.25   0.17)   % ScnRelPlFcst=C   CapInScen=Average   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.55   0.25   0.2)   % ScnRelPlFcst=D   CapInScen=Average   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.53   0.32   0.15)   % ScnRelPlFcst=E   CapInScen=Average   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.73   0.25   0.02)   % ScnRelPlFcst=F   CapInScen=Average   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.35   0.53   0.12)   % ScnRelPlFcst=G   CapInScen=Average   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.65   0.24   0.11)   % ScnRelPlFcst=H   CapInScen=Average   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.3   0.4   0.3)   % ScnRelPlFcst=I   CapInScen=Average   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.6   0.24   0.16)   % ScnRelPlFcst=J   CapInScen=Average   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.68   0.24   0.08))   % ScnRelPlFcst=K   CapInScen=Average   InsSclInScen=Average   CurPropConv=Moderate   
+   ((   0.3   0.34   0.36)   % ScnRelPlFcst=A   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.35   0.35   0.3)   % ScnRelPlFcst=B   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.55   0.25   0.2)   % ScnRelPlFcst=C   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.5   0.27   0.23)   % ScnRelPlFcst=D   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.4   0.38   0.22)   % ScnRelPlFcst=E   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.7   0.28   0.02)   % ScnRelPlFcst=F   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.35   0.5   0.15)   % ScnRelPlFcst=G   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.6   0.25   0.15)   % ScnRelPlFcst=H   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.35   0.35   0.3)   % ScnRelPlFcst=I   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.62   0.22   0.16)   % ScnRelPlFcst=J   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (   0.7   0.22   0.08)))   % ScnRelPlFcst=K   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Moderate   
+   (((   0.25   0.28   0.47)   % ScnRelPlFcst=A   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.3   0.38   0.32)   % ScnRelPlFcst=B   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.45   0.3   0.25)   % ScnRelPlFcst=C   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.5   0.25   0.25)   % ScnRelPlFcst=D   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.4   0.35   0.25)   % ScnRelPlFcst=E   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.72   0.24   0.04)   % ScnRelPlFcst=F   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.25   0.57   0.18)   % ScnRelPlFcst=G   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.57   0.28   0.15)   % ScnRelPlFcst=H   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.25   0.35   0.4)   % ScnRelPlFcst=I   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.48   0.26   0.26)   % ScnRelPlFcst=J   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.6   0.26   0.14))   % ScnRelPlFcst=K   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   ((   0.19   0.18   0.63)   % ScnRelPlFcst=A   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.25   0.4   0.35)   % ScnRelPlFcst=B   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.35   0.3   0.35)   % ScnRelPlFcst=C   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.35   0.3   0.35)   % ScnRelPlFcst=D   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.35   0.35   0.3)   % ScnRelPlFcst=E   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.65   0.3   0.05)   % ScnRelPlFcst=F   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.22   0.58   0.2)   % ScnRelPlFcst=G   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.45   0.35   0.2)   % ScnRelPlFcst=H   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.25   0.34   0.41)   % ScnRelPlFcst=I   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.48   0.26   0.26)   % ScnRelPlFcst=J   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.58   0.25   0.17))   % ScnRelPlFcst=K   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   ((   0.15   0.16   0.69)   % ScnRelPlFcst=A   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.25   0.3   0.45)   % ScnRelPlFcst=B   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.4   0.3   0.3)   % ScnRelPlFcst=C   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.3   0.3   0.4)   % ScnRelPlFcst=D   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.25   0.4   0.35)   % ScnRelPlFcst=E   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.6   0.34   0.06)   % ScnRelPlFcst=F   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.18   0.62   0.2)   % ScnRelPlFcst=G   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.47   0.3   0.23)   % ScnRelPlFcst=H   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.25   0.3   0.45)   % ScnRelPlFcst=I   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.5   0.22   0.28)   % ScnRelPlFcst=J   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   (   0.5   0.27   0.23))))   % ScnRelPlFcst=K   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Moderate   
+   ((((   0.4   0.45   0.15)   % ScnRelPlFcst=A   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.35   0.45   0.2)   % ScnRelPlFcst=B   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.6   0.27   0.13)   % ScnRelPlFcst=C   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.6   0.22   0.18)   % ScnRelPlFcst=D   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.55   0.32   0.13)   % ScnRelPlFcst=E   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.69   0.29   0.02)   % ScnRelPlFcst=F   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.54   0.36   0.1)   % ScnRelPlFcst=G   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.75   0.2   0.05)   % ScnRelPlFcst=H   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.55   0.3   0.15)   % ScnRelPlFcst=I   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.7   0.22   0.08)   % ScnRelPlFcst=J   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.7   0.25   0.05))   % ScnRelPlFcst=K   CapInScen=LessThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   ((   0.35   0.4   0.25)   % ScnRelPlFcst=A   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.35   0.4   0.25)   % ScnRelPlFcst=B   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.55   0.3   0.15)   % ScnRelPlFcst=C   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.55   0.27   0.18)   % ScnRelPlFcst=D   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.5   0.35   0.15)   % ScnRelPlFcst=E   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.65   0.33   0.02)   % ScnRelPlFcst=F   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.38   0.5   0.12)   % ScnRelPlFcst=G   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.7   0.24   0.06)   % ScnRelPlFcst=H   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.65   0.2   0.15)   % ScnRelPlFcst=I   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.67   0.23   0.1)   % ScnRelPlFcst=J   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.7   0.25   0.05))   % ScnRelPlFcst=K   CapInScen=Average   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   ((   0.2   0.45   0.35)   % ScnRelPlFcst=A   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.3   0.45   0.25)   % ScnRelPlFcst=B   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.55   0.3   0.15)   % ScnRelPlFcst=C   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.5   0.3   0.2)   % ScnRelPlFcst=D   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.45   0.38   0.17)   % ScnRelPlFcst=E   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.6   0.38   0.02)   % ScnRelPlFcst=F   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.28   0.57   0.15)   % ScnRelPlFcst=G   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.65   0.28   0.07)   % ScnRelPlFcst=H   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.63   0.25   0.12)   % ScnRelPlFcst=I   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.62   0.28   0.1)   % ScnRelPlFcst=J   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (   0.8   0.17   0.03)))   % ScnRelPlFcst=K   CapInScen=MoreThanAve   InsSclInScen=LessUnstable   CurPropConv=Strong   
+   (((   0.16   0.47   0.37)   % ScnRelPlFcst=A   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.3   0.45   0.25)   % ScnRelPlFcst=B   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.45   0.32   0.23)   % ScnRelPlFcst=C   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.52   0.26   0.22)   % ScnRelPlFcst=D   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.35   0.45   0.2)   % ScnRelPlFcst=E   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.65   0.32   0.03)   % ScnRelPlFcst=F   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.48   0.39   0.13)   % ScnRelPlFcst=G   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.58   0.3   0.12)   % ScnRelPlFcst=H   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.25   0.45   0.3)   % ScnRelPlFcst=I   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.5   0.28   0.22)   % ScnRelPlFcst=J   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.65   0.27   0.08))   % ScnRelPlFcst=K   CapInScen=LessThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   ((   0.18   0.45   0.37)   % ScnRelPlFcst=A   CapInScen=Average   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.3   0.35   0.35)   % ScnRelPlFcst=B   CapInScen=Average   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.45   0.3   0.25)   % ScnRelPlFcst=C   CapInScen=Average   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.45   0.3   0.25)   % ScnRelPlFcst=D   CapInScen=Average   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.35   0.43   0.22)   % ScnRelPlFcst=E   CapInScen=Average   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.62   0.35   0.03)   % ScnRelPlFcst=F   CapInScen=Average   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.2   0.65   0.15)   % ScnRelPlFcst=G   CapInScen=Average   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.52   0.33   0.15)   % ScnRelPlFcst=H   CapInScen=Average   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.23   0.42   0.35)   % ScnRelPlFcst=I   CapInScen=Average   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.47   0.3   0.23)   % ScnRelPlFcst=J   CapInScen=Average   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.55   0.3   0.15))   % ScnRelPlFcst=K   CapInScen=Average   InsSclInScen=Average   CurPropConv=Strong   
+   ((   0.23   0.4   0.37)   % ScnRelPlFcst=A   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.25   0.4   0.35)   % ScnRelPlFcst=B   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.4   0.3   0.3)   % ScnRelPlFcst=C   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.4   0.3   0.3)   % ScnRelPlFcst=D   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.3   0.45   0.25)   % ScnRelPlFcst=E   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.57   0.4   0.03)   % ScnRelPlFcst=F   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.15   0.65   0.2)   % ScnRelPlFcst=G   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.5   0.33   0.17)   % ScnRelPlFcst=H   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.25   0.36   0.39)   % ScnRelPlFcst=I   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.5   0.28   0.22)   % ScnRelPlFcst=J   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (   0.55   0.3   0.15)))   % ScnRelPlFcst=K   CapInScen=MoreThanAve   InsSclInScen=Average   CurPropConv=Strong   
+   (((   0.18   0.3   0.52)   % ScnRelPlFcst=A   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.2   0.4   0.4)   % ScnRelPlFcst=B   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.3   0.3   0.4)   % ScnRelPlFcst=C   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.4   0.3   0.3)   % ScnRelPlFcst=D   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.25   0.48   0.27)   % ScnRelPlFcst=E   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.63   0.32   0.05)   % ScnRelPlFcst=F   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.15   0.63   0.22)   % ScnRelPlFcst=G   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.4   0.38   0.22)   % ScnRelPlFcst=H   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.2   0.37   0.43)   % ScnRelPlFcst=I   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.3   0.35   0.35)   % ScnRelPlFcst=J   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.5   0.32   0.18))   % ScnRelPlFcst=K   CapInScen=LessThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   ((   0.15   0.2   0.65)   % ScnRelPlFcst=A   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.18   0.4   0.42)   % ScnRelPlFcst=B   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.25   0.35   0.4)   % ScnRelPlFcst=C   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.25   0.35   0.4)   % ScnRelPlFcst=D   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.25   0.42   0.33)   % ScnRelPlFcst=E   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.58   0.36   0.06)   % ScnRelPlFcst=F   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.13   0.62   0.25)   % ScnRelPlFcst=G   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.3   0.45   0.25)   % ScnRelPlFcst=H   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.22   0.35   0.43)   % ScnRelPlFcst=I   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.35   0.32   0.33)   % ScnRelPlFcst=J   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.5   0.3   0.2))   % ScnRelPlFcst=K   CapInScen=Average   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   ((   0.1   0.2   0.7)   % ScnRelPlFcst=A   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.2   0.3   0.5)   % ScnRelPlFcst=B   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.2   0.4   0.4)   % ScnRelPlFcst=C   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.23   0.3   0.47)   % ScnRelPlFcst=D   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.15   0.45   0.4)   % ScnRelPlFcst=E   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.5   0.42   0.08)   % ScnRelPlFcst=F   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.1   0.65   0.25)   % ScnRelPlFcst=G   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.28   0.4   0.32)   % ScnRelPlFcst=H   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.2   0.32   0.48)   % ScnRelPlFcst=I   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.3   0.28   0.42)   % ScnRelPlFcst=J   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+   (   0.38   0.32   0.3)))));   % ScnRelPlFcst=K   CapInScen=MoreThanAve   InsSclInScen=MoreUnstable   CurPropConv=Strong   
+}
+
+potential ( N34StarFcst | ScenRel3_4   PlainsFcst   ) {
+   data = 
+   (((   0.94   0.05   0.01)   % PlainsFcst=XNIL   ScenRel3_4=ACEFK   
+   (   0.06   0.89   0.05)   % PlainsFcst=SIG   ScenRel3_4=ACEFK   
+   (   0.01   0.05   0.94))   % PlainsFcst=SVR   ScenRel3_4=ACEFK   
+   ((   0.98   0.02   0)   % PlainsFcst=XNIL   ScenRel3_4=B   
+   (   0.04   0.94   0.02)   % PlainsFcst=SIG   ScenRel3_4=B   
+   (   0   0.03   0.97))   % PlainsFcst=SVR   ScenRel3_4=B   
+   ((   0.92   0.06   0.02)   % PlainsFcst=XNIL   ScenRel3_4=D   
+   (   0.01   0.89   0.1)   % PlainsFcst=SIG   ScenRel3_4=D   
+   (   0   0.01   0.99))   % PlainsFcst=SVR   ScenRel3_4=D   
+   ((   0.92   0.06   0.02)   % PlainsFcst=XNIL   ScenRel3_4=GJ   
+   (   0.03   0.92   0.05)   % PlainsFcst=SIG   ScenRel3_4=GJ   
+   (   0.01   0.04   0.95))   % PlainsFcst=SVR   ScenRel3_4=GJ   
+   ((   0.99   0.01   0)   % PlainsFcst=XNIL   ScenRel3_4=HI   
+   (   0.09   0.9   0.01)   % PlainsFcst=SIG   ScenRel3_4=HI   
+   (   0.03   0.12   0.85)));   % PlainsFcst=SVR   ScenRel3_4=HI   
+}
+
+potential ( R5Fcst | MountainFcst   N34StarFcst   ) {
+   data = 
+   (((   1   0   0)   % N34StarFcst=XNIL   MountainFcst=XNIL   
+   (   0   1   0)   % N34StarFcst=SIG   MountainFcst=XNIL   
+   (   0   0   1))   % N34StarFcst=SVR   MountainFcst=XNIL   
+   ((   0   1   0)   % N34StarFcst=XNIL   MountainFcst=SIG   
+   (   0   1   0)   % N34StarFcst=SIG   MountainFcst=SIG   
+   (   0   0   1))   % N34StarFcst=SVR   MountainFcst=SIG   
+   ((   0   0   1)   % N34StarFcst=XNIL   MountainFcst=SVR   
+   (   0   0   1)   % N34StarFcst=SIG   MountainFcst=SVR   
+   (   0   0   1)));   % N34StarFcst=SVR   MountainFcst=SVR   
+}
+
+potential ( Dewpoints | Scenario   ) {
+   data = 
+   ((   0.04   0.05   0.15   0.05   0.19   0.3   0.22)   % Scenario=A   
+   (   0.05   0.07   0.15   0.1   0.3   0.27   0.06)   % Scenario=B   
+   (   0.4   0.25   0   0.15   0.05   0.02   0.13)   % Scenario=C   
+   (   0.13   0.22   0.18   0.07   0.34   0.03   0.03)   % Scenario=D   
+   (   0.15   0.2   0.2   0.18   0.11   0.11   0.05)   % Scenario=E   
+   (   0   0   0   0   0   0.98   0.02)   % Scenario=F   
+   (   0.5   0.27   0.15   0.02   0.02   0   0.04)   % Scenario=G   
+   (   0   0.02   0.1   0.05   0.5   0.2   0.13)   % Scenario=H   
+   (   0   0.02   0.7   0   0.2   0.04   0.04)   % Scenario=I   
+   (   0.1   0.45   0.1   0.05   0.26   0.02   0.02)   % Scenario=J   
+   (   0.1   0.1   0.1   0.2   0.05   0.1   0.35));   % Scenario=K   
+}
+
+potential ( LowLLapse | Scenario   ) {
+   data = 
+   ((   0.04   0.25   0.35   0.36)   % Scenario=A   
+   (   0.07   0.31   0.31   0.31)   % Scenario=B   
+   (   0.35   0.47   0.14   0.04)   % Scenario=C   
+   (   0.4   0.4   0.13   0.07)   % Scenario=D   
+   (   0.45   0.35   0.15   0.05)   % Scenario=E   
+   (   0.01   0.35   0.45   0.19)   % Scenario=F   
+   (   0.78   0.19   0.03   0)   % Scenario=G   
+   (   0   0.02   0.33   0.65)   % Scenario=H   
+   (   0.22   0.4   0.3   0.08)   % Scenario=I   
+   (   0.13   0.4   0.35   0.12)   % Scenario=J   
+   (   0.09   0.4   0.33   0.18));   % Scenario=K   
+}
+
+potential ( MeanRH | Scenario   ) {
+   data = 
+   ((   0.33   0.5   0.17)   % Scenario=A   
+   (   0.4   0.4   0.2)   % Scenario=B   
+   (   0.05   0.45   0.5)   % Scenario=C   
+   (   0.1   0.5   0.4)   % Scenario=D   
+   (   0.05   0.65   0.3)   % Scenario=E   
+   (   1   0   0)   % Scenario=F   
+   (   0   0.07   0.93)   % Scenario=G   
+   (   0.4   0.55   0.05)   % Scenario=H   
+   (   0.2   0.45   0.35)   % Scenario=I   
+   (   0.05   0.55   0.4)   % Scenario=J   
+   (   0.2   0.4   0.4));   % Scenario=K   
+}
+
+potential ( MidLLapse | Scenario   ) {
+   data = 
+   ((   0.25   0.55   0.2)   % Scenario=A   
+   (   0.25   0.5   0.25)   % Scenario=B   
+   (   0.4   0.38   0.22)   % Scenario=C   
+   (   0.43   0.37   0.2)   % Scenario=D   
+   (   0.02   0.38   0.6)   % Scenario=E   
+   (   0   0.1   0.9)   % Scenario=F   
+   (   0.84   0.16   0)   % Scenario=G   
+   (   0.25   0.31   0.44)   % Scenario=H   
+   (   0.41   0.29   0.3)   % Scenario=I   
+   (   0.23   0.42   0.35)   % Scenario=J   
+   (   0.16   0.28   0.56));   % Scenario=K   
+}
+
+potential ( MvmtFeatures | Scenario   ) {
+   data = 
+   ((   0.25   0.55   0.2   0)   % Scenario=A   
+   (   0.05   0.1   0.1   0.75)   % Scenario=B   
+   (   0.1   0.3   0.3   0.3)   % Scenario=C   
+   (   0.18   0.38   0.34   0.1)   % Scenario=D   
+   (   0.02   0.02   0.26   0.7)   % Scenario=E   
+   (   0.05   0.07   0.05   0.83)   % Scenario=F   
+   (   0.1   0.25   0.15   0.5)   % Scenario=G   
+   (   0   0.6   0.1   0.3)   % Scenario=H   
+   (   0.2   0.1   0.2   0.5)   % Scenario=I   
+   (   0.04   0   0.04   0.92)   % Scenario=J   
+   (   0.5   0.35   0.09   0.06));   % Scenario=K   
+}
+
+potential ( RHRatio | Scenario   ) {
+   data = 
+   ((   0.05   0.5   0.45)   % Scenario=A   
+   (   0.1   0.5   0.4)   % Scenario=B   
+   (   0.4   0.15   0.45)   % Scenario=C   
+   (   0.2   0.45   0.35)   % Scenario=D   
+   (   0.8   0.05   0.15)   % Scenario=E   
+   (   0   0   1)   % Scenario=F   
+   (   0.6   0   0.4)   % Scenario=G   
+   (   0   0.7   0.3)   % Scenario=H   
+   (   0.1   0.7   0.2)   % Scenario=I   
+   (   0.4   0.4   0.2)   % Scenario=J   
+   (   0.15   0.45   0.4));   % Scenario=K   
+}
+
+potential ( SfcWndShfDis | Scenario   ) {
+   data = 
+   ((   0.65   0.05   0.1   0.08   0.04   0.07   0.01)   % Scenario=A   
+   (   0.65   0.05   0.1   0.1   0.02   0.07   0.01)   % Scenario=B   
+   (   0   0.65   0.2   0.02   0.06   0.05   0.02)   % Scenario=C   
+   (   0.12   0.02   0.02   0.02   0.45   0.27   0.1)   % Scenario=D   
+   (   0.06   0.14   0.04   0.04   0.25   0.4   0.07)   % Scenario=E   
+   (   0.1   0.1   0.1   0.02   0   0.56   0.12)   % Scenario=F   
+   (   0.02   0.05   0.05   0   0.35   0.33   0.2)   % Scenario=G   
+   (   0.01   0.1   0.15   0.4   0   0.23   0.11)   % Scenario=H   
+   (   0.02   0.1   0.5   0.3   0.01   0.02   0.05)   % Scenario=I   
+   (   0.06   0.08   0.04   0.02   0.6   0.14   0.06)   % Scenario=J   
+   (   0.05   0.13   0.05   0.39   0.13   0.15   0.1));   % Scenario=K   
+}
+
+potential ( SynForcng | Scenario   ) {
+   data = 
+   ((   0.35   0.25   0   0.35   0.05)   % Scenario=A   
+   (   0.06   0.1   0.06   0.3   0.48)   % Scenario=B   
+   (   0.1   0.27   0.4   0.08   0.15)   % Scenario=C   
+   (   0.35   0.2   0.1   0.25   0.1)   % Scenario=D   
+   (   0.15   0.15   0.1   0.15   0.45)   % Scenario=E   
+   (   0.15   0.1   0.05   0.15   0.55)   % Scenario=F   
+   (   0.15   0.1   0.1   0.25   0.4)   % Scenario=G   
+   (   0.25   0.25   0.25   0.15   0.1)   % Scenario=H   
+   (   0.25   0.2   0.15   0.2   0.2)   % Scenario=I   
+   (   0.01   0.05   0.01   0.05   0.88)   % Scenario=J   
+   (   0.2   0.2   0.35   0.15   0.1));   % Scenario=K   
+}
+
+potential ( TempDis | Scenario   ) {
+   data = 
+   ((   0.13   0.15   0.1   0.62)   % Scenario=A   
+   (   0.15   0.15   0.25   0.45)   % Scenario=B   
+   (   0.12   0.1   0.35   0.43)   % Scenario=C   
+   (   0.1   0.15   0.4   0.35)   % Scenario=D   
+   (   0.04   0.04   0.82   0.1)   % Scenario=E   
+   (   0.05   0.12   0.75   0.08)   % Scenario=F   
+   (   0.03   0.03   0.84   0.1)   % Scenario=G   
+   (   0.05   0.4   0.5   0.05)   % Scenario=H   
+   (   0.8   0.19   0   0.01)   % Scenario=I   
+   (   0.1   0.05   0.4   0.45)   % Scenario=J   
+   (   0.2   0.3   0.3   0.2));   % Scenario=K   
+}
+
+potential ( WindAloft | Scenario   ) {
+   data = 
+   ((   0   0.95   0.01   0.04)   % Scenario=A   
+   (   0.2   0.3   0.2   0.3)   % Scenario=B   
+   (   0.05   0.09   0.59   0.27)   % Scenario=C   
+   (   0.03   0.32   0.42   0.23)   % Scenario=D   
+   (   0.07   0.66   0.02   0.25)   % Scenario=E   
+   (   0.5   0   0   0.5)   % Scenario=F   
+   (   0.25   0.3   0.25   0.2)   % Scenario=G   
+   (   0.2   0.14   0.43   0.23)   % Scenario=H   
+   (   0.2   0.41   0.1   0.29)   % Scenario=I   
+   (   0.96   0   0   0.04)   % Scenario=J   
+   (   0.03   0.08   0.33   0.56));   % Scenario=K   
+}
+
+potential ( WindFieldMt | Scenario   ) {
+   data = 
+   ((   0.8   0.2)   % Scenario=A   
+   (   0.35   0.65)   % Scenario=B   
+   (   0.75   0.25)   % Scenario=C   
+   (   0.7   0.3)   % Scenario=D   
+   (   0.65   0.35)   % Scenario=E   
+   (   0.15   0.85)   % Scenario=F   
+   (   0.7   0.3)   % Scenario=G   
+   (   0.3   0.7)   % Scenario=H   
+   (   0.5   0.5)   % Scenario=I   
+   (   0.01   0.99)   % Scenario=J   
+   (   0.7   0.3));   % Scenario=K   
+}
+
+potential ( WindFieldPln | Scenario   ) {
+   data = 
+   ((   0.05   0.6   0.02   0.1   0.23   0)   % Scenario=A   
+   (   0.08   0.6   0.02   0.1   0.2   0)   % Scenario=B   
+   (   0.1   0   0.75   0   0   0.15)   % Scenario=C   
+   (   0.1   0.15   0.2   0.05   0.3   0.2)   % Scenario=D   
+   (   0.43   0.1   0.15   0.06   0.06   0.2)   % Scenario=E   
+   (   0.6   0.07   0.01   0.12   0.2   0)   % Scenario=F   
+   (   0.25   0.01   0.3   0.01   0.03   0.4)   % Scenario=G   
+   (   0.04   0.02   0.04   0.8   0.1   0)   % Scenario=H   
+   (   0.2   0.3   0.05   0.37   0.07   0.01)   % Scenario=I   
+   (   0.6   0.08   0.07   0.03   0.2   0.02)   % Scenario=J   
+   (   0.1   0.05   0.1   0.05   0.2   0.5));   % Scenario=K   
+}
+
+

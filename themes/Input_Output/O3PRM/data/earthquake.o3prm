@@ -1,0 +1,22 @@
+class data\earthquake.bif {
+  labels(True, False) Burglary  {[0.01, 0.99]};
+
+  labels(True, False) Earthquake  {[0.02, 0.98]};
+
+  labels(True, False) Alarm dependson Burglary, Earthquake  {[
+    0.95, 0.94, 0.29, 0.001, 
+    0.05, 0.06, 0.71, 0.999
+  ]};
+
+  labels(True, False) JohnCalls dependson Alarm  {[
+    0.9, 0.05, 
+    0.1, 0.95
+  ]};
+
+  labels(True, False) MaryCalls dependson Alarm  {[
+    0.7, 0.01, 
+    0.3, 0.99
+  ]};
+
+}
+
