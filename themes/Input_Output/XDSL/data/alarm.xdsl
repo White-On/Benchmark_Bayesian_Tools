@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!-- This network was created by pyAgrum 1.9.0 for any purpose you want -->
-<smile version="1.0" id="data\alarm.bif">
+<smile version="1.0" id="Alarm">
 
   <nodes>
     <cpt id="MINVOLSET">
@@ -247,7 +247,7 @@
   </nodes>
 
   <extensions>
-    <genie version="1.0" app="aGrUM 1.9.0" name="data\alarm.bif">
+    <genie version="1.0" app="aGrUM 1.9.0" name="Alarm">
       <node id="MINVOLSET">
         <name>MINVOLSET</name>
       </node>

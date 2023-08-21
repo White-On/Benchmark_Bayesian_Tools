@@ -1,4 +1,4 @@
-class data\child.bif {
+class Child {
   labels(yes, no) BirthAsphyxia  {[0.1, 0.9]};
 
   labels(Equal, Unequal) HypDistrib dependson DuctFlow, CardiacMixing  {[

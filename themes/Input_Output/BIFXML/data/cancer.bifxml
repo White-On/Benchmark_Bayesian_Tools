@@ -2,13 +2,13 @@
 
 <BIF VERSION="0.3">
 <NETWORK>
-<NAME>data\cancer.bif</NAME>
+<NAME>Cancer</NAME>
 <PROPERTY>software aGrUM</PROPERTY>
 
 <!-- Variables -->
 <VARIABLE TYPE="nature">
 	<NAME>Pollution</NAME>
-	<PROPERTY>desc</PROPERTY>
+	<PROPERTY></PROPERTY>
 	<OUTCOME>low</OUTCOME>
 	<OUTCOME>high</OUTCOME>
 </VARIABLE>

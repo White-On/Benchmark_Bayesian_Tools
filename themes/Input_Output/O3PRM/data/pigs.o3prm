@@ -1,4 +1,4 @@
-class data\pigs.bif {
+class Pigs {
   labels(0, 1, 2) p630400490  {[0.25, 0.5, 0.25]};
 
   labels(0, 1, 2) p48124091 dependson p82265990, p630400490  {[

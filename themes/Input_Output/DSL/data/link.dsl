@@ -1,4 +1,4 @@
-net data\link.bif
+net Link
 {
 // property softwar aGrUM 1.9.0
 

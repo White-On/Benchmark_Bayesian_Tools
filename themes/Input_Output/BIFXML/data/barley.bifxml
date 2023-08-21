@@ -2,13 +2,13 @@
 
 <BIF VERSION="0.3">
 <NETWORK>
-<NAME>data\barley.bif</NAME>
+<NAME>Barley</NAME>
 <PROPERTY>software aGrUM</PROPERTY>
 
 <!-- Variables -->
 <VARIABLE TYPE="nature">
 	<NAME>jordtype</NAME>
-	<PROPERTY></PROPERTY>
+	<PROPERTY>desc</PROPERTY>
 	<OUTCOME>Jb_1_</OUTCOME>
 	<OUTCOME>JB_2</OUTCOME>
 	<OUTCOME>JB_3</OUTCOME>

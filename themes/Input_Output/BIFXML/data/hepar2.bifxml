@@ -2,13 +2,13 @@
 
 <BIF VERSION="0.3">
 <NETWORK>
-<NAME>data\hepar2.bif</NAME>
+<NAME>Hepar2</NAME>
 <PROPERTY>software aGrUM</PROPERTY>
 
 <!-- Variables -->
 <VARIABLE TYPE="nature">
 	<NAME>alcoholism</NAME>
-	<PROPERTY>desc</PROPERTY>
+	<PROPERTY></PROPERTY>
 	<OUTCOME>present</OUTCOME>
 	<OUTCOME>absent</OUTCOME>
 </VARIABLE>

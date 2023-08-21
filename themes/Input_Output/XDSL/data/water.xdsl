@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!-- This network was created by pyAgrum 1.9.0 for any purpose you want -->
-<smile version="1.0" id="data\water.bif">
+<smile version="1.0" id="Water">
 
   <nodes>
     <cpt id="CNON_12_00">
@@ -242,7 +242,7 @@
   </nodes>
 
   <extensions>
-    <genie version="1.0" app="aGrUM 1.9.0" name="data\water.bif">
+    <genie version="1.0" app="aGrUM 1.9.0" name="Water">
       <node id="CNON_12_00">
         <name>CNON_12_00</name>
       </node>

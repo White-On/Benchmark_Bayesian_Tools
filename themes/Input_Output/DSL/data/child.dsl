@@ -1,4 +1,4 @@
-net data\child.bif
+net Child
 {
 // property softwar aGrUM 1.9.0
 

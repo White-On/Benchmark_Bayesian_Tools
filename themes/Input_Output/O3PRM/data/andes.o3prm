@@ -1,4 +1,4 @@
-class data\andes.bif {
+class Andes {
   labels(false, true) GOAL_2  {[0.02, 0.98]};
 
   labels(false, true) SNode_3  {[0.02, 0.98]};

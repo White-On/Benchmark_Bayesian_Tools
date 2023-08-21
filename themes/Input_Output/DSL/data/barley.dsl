@@ -1,4 +1,4 @@
-net data\barley.bif
+net Barley
 {
 // property softwar aGrUM 1.9.0
 

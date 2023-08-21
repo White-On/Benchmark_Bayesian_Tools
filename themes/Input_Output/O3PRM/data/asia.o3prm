@@ -1,4 +1,4 @@
-class data\asia.bif {
+class Asia {
   labels(yes, no) asia  {[0.01, 0.99]};
 
   labels(yes, no) tub dependson asia  {[

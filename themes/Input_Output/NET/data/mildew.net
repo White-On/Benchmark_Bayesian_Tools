@@ -1,6 +1,6 @@
 
 net {
-  name = data\mildew.bif;
+  name = Mildew;
   software = "aGrUM 1.9.0";
   node_size = (50 50);
 }

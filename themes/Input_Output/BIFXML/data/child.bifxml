@@ -2,7 +2,7 @@
 
 <BIF VERSION="0.3">
 <NETWORK>
-<NAME>data\child.bif</NAME>
+<NAME>Child</NAME>
 <PROPERTY>software aGrUM</PROPERTY>
 
 <!-- Variables -->

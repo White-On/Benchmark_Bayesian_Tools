@@ -1,4 +1,4 @@
-class data\earthquake.bif {
+class Earthquake {
   labels(True, False) Burglary  {[0.01, 0.99]};
 
   labels(True, False) Earthquake  {[0.02, 0.98]};

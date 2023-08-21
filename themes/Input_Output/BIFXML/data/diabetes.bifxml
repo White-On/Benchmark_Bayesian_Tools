@@ -2,13 +2,13 @@
 
 <BIF VERSION="0.3">
 <NETWORK>
-<NAME>data\diabetes.bif</NAME>
+<NAME>Diabetes</NAME>
 <PROPERTY>software aGrUM</PROPERTY>
 
 <!-- Variables -->
 <VARIABLE TYPE="nature">
 	<NAME>cho_init</NAME>
-	<PROPERTY>desc</PROPERTY>
+	<PROPERTY></PROPERTY>
 	<OUTCOME>6_0mmol_kg</OUTCOME>
 	<OUTCOME>5_6mmol_kg</OUTCOME>
 	<OUTCOME>5_2mmol_kg</OUTCOME>

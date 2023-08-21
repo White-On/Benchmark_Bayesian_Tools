@@ -1,4 +1,4 @@
-net data\water.bif
+net Water
 {
 // property softwar aGrUM 1.9.0
 

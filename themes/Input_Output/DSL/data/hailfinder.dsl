@@ -1,4 +1,4 @@
-net data\hailfinder.bif
+net Hailfinder
 {
 // property softwar aGrUM 1.9.0
 

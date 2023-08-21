@@ -2,13 +2,13 @@
 
 <BIF VERSION="0.3">
 <NETWORK>
-<NAME>data\water.bif</NAME>
+<NAME>Water</NAME>
 <PROPERTY>software aGrUM</PROPERTY>
 
 <!-- Variables -->
 <VARIABLE TYPE="nature">
 	<NAME>C_NI_12_00</NAME>
-	<PROPERTY></PROPERTY>
+	<PROPERTY>desc</PROPERTY>
 	<OUTCOME>3</OUTCOME>
 	<OUTCOME>4</OUTCOME>
 	<OUTCOME>5</OUTCOME>

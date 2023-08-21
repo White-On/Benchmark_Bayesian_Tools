@@ -1,4 +1,4 @@
-net data\earthquake.bif
+net Earthquake
 {
 // property softwar aGrUM 1.9.0
 

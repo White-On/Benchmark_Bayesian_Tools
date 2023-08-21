@@ -1,4 +1,4 @@
-net data\insurance.bif
+net Insurance
 {
 // property softwar aGrUM 1.9.0
 

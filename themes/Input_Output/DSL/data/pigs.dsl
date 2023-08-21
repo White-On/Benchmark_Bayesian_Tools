@@ -1,4 +1,4 @@
-net data\pigs.bif
+net Pigs
 {
 // property softwar aGrUM 1.9.0
 

@@ -1,4 +1,4 @@
-net data\cancer.bif
+net Cancer
 {
 // property softwar aGrUM 1.9.0
 

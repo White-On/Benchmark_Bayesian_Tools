@@ -1,4 +1,4 @@
-net data\asia.bif
+net Asia
 {
 // property softwar aGrUM 1.9.0
 

@@ -2,7 +2,7 @@
 
 <BIF VERSION="0.3">
 <NETWORK>
-<NAME>data\pigs.bif</NAME>
+<NAME>Pigs</NAME>
 <PROPERTY>software aGrUM</PROPERTY>
 
 <!-- Variables -->

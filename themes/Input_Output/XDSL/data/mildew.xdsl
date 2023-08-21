@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!-- This network was created by pyAgrum 1.9.0 for any purpose you want -->
-<smile version="1.0" id="data\mildew.bif">
+<smile version="1.0" id="Mildew">
 
   <nodes>
     <cpt id="nedboer_3">
@@ -746,7 +746,7 @@
   </nodes>
 
   <extensions>
-    <genie version="1.0" app="aGrUM 1.9.0" name="data\mildew.bif">
+    <genie version="1.0" app="aGrUM 1.9.0" name="Mildew">
       <node id="nedboer_3">
         <name>nedboer_3</name>
       </node>

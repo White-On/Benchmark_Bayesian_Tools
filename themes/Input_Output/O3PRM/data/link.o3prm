@@ -1,4 +1,4 @@
-class data\link.bif {
+class Link {
   labels(a, n) D0_56_d_p dependson N56_d_g  {[
     1, 0, 0, 
     0, 1, 1

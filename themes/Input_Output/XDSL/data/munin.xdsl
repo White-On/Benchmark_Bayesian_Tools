@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!-- This network was created by pyAgrum 1.9.0 for any purpose you want -->
-<smile version="1.0" id="data\munin.bif">
+<smile version="1.0" id="Munin">
 
   <nodes>
     <cpt id="L_OTHER_ISCH_DIFSLOW">
@@ -9562,7 +9562,7 @@
   </nodes>
 
   <extensions>
-    <genie version="1.0" app="aGrUM 1.9.0" name="data\munin.bif">
+    <genie version="1.0" app="aGrUM 1.9.0" name="Munin">
       <node id="L_OTHER_ISCH_DIFSLOW">
         <name>L_OTHER_ISCH_DIFSLOW</name>
       </node>

@@ -1,6 +1,6 @@
 
 net {
-  name = data\cancer.bif;
+  name = Cancer;
   software = "aGrUM 1.9.0";
   node_size = (50 50);
 }

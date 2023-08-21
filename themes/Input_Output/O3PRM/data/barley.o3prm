@@ -1,4 +1,4 @@
-class data\barley.bif {
+class Barley {
   labels(Jb_1_, JB_2, JB_3, JB_4, JB_5, JB_6, Jb_7, JB_8, JB_9) jordtype  {[0.111111, 0.111111, 0.111111, 0.111111, 0.111111, 0.111111, 0.111111, 0.111111, 0.111111]};
 
   labels(state0, state1, state2, state3, state4) komm  {[0.2, 0.2, 0.2, 0.2, 0.2]};

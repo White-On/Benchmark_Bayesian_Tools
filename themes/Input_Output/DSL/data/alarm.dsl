@@ -1,4 +1,4 @@
-net data\alarm.bif
+net Alarm
 {
 // property softwar aGrUM 1.9.0
 

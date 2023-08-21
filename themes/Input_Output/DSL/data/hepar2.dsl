@@ -1,4 +1,4 @@
-net data\hepar2.bif
+net Hepar2
 {
 // property softwar aGrUM 1.9.0
 

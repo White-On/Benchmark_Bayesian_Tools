@@ -1,4 +1,4 @@
-class data\hepar2.bif {
+class Hepar2 {
   labels(present, absent) alcoholism  {[0.135908, 0.864092]};
 
   labels(present, absent) vh_amn  {[0.173104, 0.826896]};

@@ -1,4 +1,4 @@
-net data\munin.bif
+net Munin
 {
 // property softwar aGrUM 1.9.0
 

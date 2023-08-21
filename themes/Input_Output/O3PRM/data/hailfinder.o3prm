@@ -1,4 +1,4 @@
-class data\hailfinder.bif {
+class Hailfinder {
   labels(StrongUp, WeakUp, Neutral, Down) N0_7muVerMo  {[0.25, 0.25, 0.25, 0.25]};
 
   labels(StronUp, WeakUp, Neutral, Down) SubjVertMo  {[0.15, 0.15, 0.5, 0.2]};

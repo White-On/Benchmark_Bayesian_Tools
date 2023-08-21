@@ -2,13 +2,13 @@
 
 <BIF VERSION="0.3">
 <NETWORK>
-<NAME>data\hailfinder.bif</NAME>
+<NAME>Hailfinder</NAME>
 <PROPERTY>software aGrUM</PROPERTY>
 
 <!-- Variables -->
 <VARIABLE TYPE="nature">
 	<NAME>N0_7muVerMo</NAME>
-	<PROPERTY></PROPERTY>
+	<PROPERTY>desc</PROPERTY>
 	<OUTCOME>StrongUp</OUTCOME>
 	<OUTCOME>WeakUp</OUTCOME>
 	<OUTCOME>Neutral</OUTCOME>

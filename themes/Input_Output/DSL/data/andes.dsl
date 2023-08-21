@@ -1,4 +1,4 @@
-net data\andes.bif
+net Andes
 {
 // property softwar aGrUM 1.9.0
 

@@ -1,4 +1,4 @@
-net data\mildew.bif
+net Mildew
 {
 // property softwar aGrUM 1.9.0
 

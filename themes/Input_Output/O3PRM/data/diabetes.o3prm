@@ -1,4 +1,4 @@
-class data\diabetes.bif {
+class Diabetes {
   labels(6_0mmol_kg, 5_6mmol_kg, 5_2mmol_kg, 4_8mmol_kg, 4_4mmol_kg, 4_0mmol_kg, 3_6mmol_kg, 3_2mmol_kg, 2_8mmol_kg, 2_4mmol_kg, 2_0mmol_kg, 1_6mmol_kg, 1_2mmol_kg, 0_8mmol_kg, 0_4mmol_kg, 0_0mmol_kg) cho_init  {[0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.85]};
 
   labels(incr__1_41, normal_1_00, s_red__0_71, reduced_0_50, v_red__0_35) ins_sens  {[0.2, 0.2, 0.2, 0.2, 0.2]};

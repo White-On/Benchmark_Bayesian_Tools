@@ -2,13 +2,13 @@
 
 <BIF VERSION="0.3">
 <NETWORK>
-<NAME>data\andes.bif</NAME>
+<NAME>Andes</NAME>
 <PROPERTY>software aGrUM</PROPERTY>
 
 <!-- Variables -->
 <VARIABLE TYPE="nature">
 	<NAME>GOAL_2</NAME>
-	<PROPERTY>desc</PROPERTY>
+	<PROPERTY></PROPERTY>
 	<OUTCOME>false</OUTCOME>
 	<OUTCOME>true</OUTCOME>
 </VARIABLE>

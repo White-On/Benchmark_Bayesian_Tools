@@ -1,4 +1,4 @@
-class data\water.bif {
+class Water {
   labels(3, 4, 5, 6) C_NI_12_00  {[0.25, 0.25, 0.25, 0.25]};
 
   labels(20_MG_L, 30_MG_L, 40_MG_L) CKNI_12_00  {[0.333333, 0.333333, 0.333333]};

@@ -2,7 +2,7 @@
 
 <BIF VERSION="0.3">
 <NETWORK>
-<NAME>data\link.bif</NAME>
+<NAME>Link</NAME>
 <PROPERTY>software aGrUM</PROPERTY>
 
 <!-- Variables -->

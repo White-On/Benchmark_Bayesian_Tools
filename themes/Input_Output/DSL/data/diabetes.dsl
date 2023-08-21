@@ -1,4 +1,4 @@
-net data\diabetes.bif
+net Diabetes
 {
 // property softwar aGrUM 1.9.0
 

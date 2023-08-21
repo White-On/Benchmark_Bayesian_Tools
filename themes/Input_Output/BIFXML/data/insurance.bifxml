@@ -2,7 +2,7 @@
 
 <BIF VERSION="0.3">
 <NETWORK>
-<NAME>data\insurance.bif</NAME>
+<NAME>Insurance</NAME>
 <PROPERTY>software aGrUM</PROPERTY>
 
 <!-- Variables -->

@@ -1,6 +1,6 @@
 
 net {
-  name = data\water.bif;
+  name = Water;
   software = "aGrUM 1.9.0";
   node_size = (50 50);
 }
