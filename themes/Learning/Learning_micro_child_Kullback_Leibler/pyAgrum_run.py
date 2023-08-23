@@ -9,8 +9,8 @@ bn = gum.loadBN(f"{current_dir}/data/micro_child.bif")
 
 learner = gum.BNLearner(f"{current_dir}/data/sample_{sys.argv[1]}_micro_child.csv")
 learner.useMIIC()
-learner.useScoreBIC()
-learner.useSmoothingPrior(1.0)
+learner.useNMLCorrection()
+learner.useSmoothingPrior(0.1)
 learnDag = learner.learnDAG()
 
 # estimate CPDs

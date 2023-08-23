@@ -13,18 +13,18 @@ def evaluateFscore(filenameBif, libraryName, arg):
         return None
     bn_learned = gum.loadBN(filenameBnLearned)
 
-    # we're checking if both Bayesian Networks have the same variables
-    bn_original_names = bn_original.names()
-    bn_learned_names = bn_learned.names()
-    if set(bn_original_names) != set(bn_learned_names):
-        # we're adding the missing variables to the Bayesian Network that has less variables
-        min_size = min(len(bn_original_names),len(bn_learned_names))
-        bn_min = bn_original if min_size == len(bn_original_names) else bn_learned
-        bn_max = bn_original if min_size == len(bn_learned_names) else bn_learned
+    # # we're checking if both Bayesian Networks have the same variables
+    # bn_original_names = bn_original.names()
+    # bn_learned_names = bn_learned.names()
+    # if set(bn_original_names) != set(bn_learned_names):
+    #     # we're adding the missing variables to the Bayesian Network that has less variables
+    #     min_size = min(len(bn_original_names),len(bn_learned_names))
+    #     bn_min = bn_original if min_size == len(bn_original_names) else bn_learned
+    #     bn_max = bn_original if min_size == len(bn_learned_names) else bn_learned
         
-        for var in bn_max.names():
-            if var not in bn_min.names():
-                bn_min.add(gum.LabelizedVariable(var, var, bn_max.variable(var).labels()))
+    #     for var in bn_max.names():
+    #         if var not in bn_min.names():
+    #             bn_min.add(gum.LabelizedVariable(var, var, bn_max.variable(var).labels()))
 
     cmp = gcm.GraphicalBNComparator(bn_original, bn_learned)
 
@@ -42,18 +42,18 @@ def evaluateRecall(filenameBif, libraryName, arg):
         return None
     bn_learned = gum.loadBN(filenameBnLearned)
 
-    # we're checking if both Bayesian Networks have the same variables
-    bn_original_names = bn_original.names()
-    bn_learned_names = bn_learned.names()
-    if set(bn_original_names) != set(bn_learned_names):
-        # we're adding the missing variables to the Bayesian Network that has less variables
-        min_size = min(len(bn_original_names),len(bn_learned_names))
-        bn_min = bn_original if min_size == len(bn_original_names) else bn_learned
-        bn_max = bn_original if min_size == len(bn_learned_names) else bn_learned
+    # # we're checking if both Bayesian Networks have the same variables
+    # bn_original_names = bn_original.names()
+    # bn_learned_names = bn_learned.names()
+    # if set(bn_original_names) != set(bn_learned_names):
+    #     # we're adding the missing variables to the Bayesian Network that has less variables
+    #     min_size = min(len(bn_original_names),len(bn_learned_names))
+    #     bn_min = bn_original if min_size == len(bn_original_names) else bn_learned
+    #     bn_max = bn_original if min_size == len(bn_learned_names) else bn_learned
         
-        for var in bn_max.names():
-            if var not in bn_min.names():
-                bn_min.add(gum.LabelizedVariable(var, var, bn_max.variable(var).labels()))
+    #     for var in bn_max.names():
+    #         if var not in bn_min.names():
+    #             bn_min.add(gum.LabelizedVariable(var, var, bn_max.variable(var).labels()))
 
     cmp = gcm.GraphicalBNComparator(bn_original, bn_learned)
 
@@ -71,18 +71,18 @@ def evaluatePrecision(filenameBif, libraryName, arg):
         return None
     bn_learned = gum.loadBN(filenameBnLearned)
 
-    # we're checking if both Bayesian Networks have the same variables
-    bn_original_names = bn_original.names()
-    bn_learned_names = bn_learned.names()
-    if set(bn_original_names) != set(bn_learned_names):
-        # we're adding the missing variables to the Bayesian Network that has less variables
-        min_size = min(len(bn_original_names),len(bn_learned_names))
-        bn_min = bn_original if min_size == len(bn_original_names) else bn_learned
-        bn_max = bn_original if min_size == len(bn_learned_names) else bn_learned
+    # # we're checking if both Bayesian Networks have the same variables
+    # bn_original_names = bn_original.names()
+    # bn_learned_names = bn_learned.names()
+    # if set(bn_original_names) != set(bn_learned_names):
+    #     # we're adding the missing variables to the Bayesian Network that has less variables
+    #     min_size = min(len(bn_original_names),len(bn_learned_names))
+    #     bn_min = bn_original if min_size == len(bn_original_names) else bn_learned
+    #     bn_max = bn_original if min_size == len(bn_learned_names) else bn_learned
         
-        for var in bn_max.names():
-            if var not in bn_min.names():
-                bn_min.add(gum.LabelizedVariable(var, var, bn_max.variable(var).labels()))
+    #     for var in bn_max.names():
+    #         if var not in bn_min.names():
+    #             bn_min.add(gum.LabelizedVariable(var, var, bn_max.variable(var).labels()))
 
     cmp = gcm.GraphicalBNComparator(bn_original, bn_learned)
 

@@ -9,8 +9,7 @@ bn = gum.loadBN(f"{currentdir}/data/alarm.bif")
 
 learner = gum.BNLearner(f"{currentdir}/data/sample_{sys.argv[1]}_alarm.csv")
 learner.useMIIC()
-learner.useScoreBIC()
-learner.useSmoothingPrior(1.0)
+learner.useSmoothingPrior(0.1)
 learnDag = learner.learnDAG()
 
 # estimate CPDs
