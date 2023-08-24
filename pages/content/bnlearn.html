@@ -23,7 +23,7 @@
         <nav class="header-nav">
             <a href="../index.html"><b>Home</b></a>
             <a href="https://white-on.github.io/BenchSite/"><b>About</b></a>
-            <a href="../result.json" download="data.json"><b>Download</b></a>
+            <a href="../results.json" download="data.json"><b>Raw Data</b></a>
         </nav>
         <nav class="header-nav">
             <p id="link-description">You are invited to contribute through <br> a request on the GitHub page</p>
@@ -62,35 +62,47 @@
         <ul class="subMenu collapse">
             
                 <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Learning.html' id='Learning-nav'>Learning</a></button>
-                
-                <ul class="subMenu collapse">
-                    
-                        <a href='Learning_best_method.html' id='Learning_best_method-nav'>Learning best method</a>
-                    
-                        <a href='Learning_hill_climb_BIC.html' id='Learning_hill_climb_BIC-nav'>Learning hill climb BIC</a>
-                    
-                </ul>
-                </li>
-            
-                <li class="menu-item has-submenu">
                 <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Inference.html' id='Inference-nav'>Inference</a></button>
                 
                 <ul class="subMenu collapse">
                     
-                        <a href='Approx_Inference.html' id='Approx_Inference-nav'>Approx Inference</a>
+                        <a href='Best_Inference.html' id='Best_Inference-nav'>Best Inference</a>
                     
-                        <a href='Exact_Inference.html' id='Exact_Inference-nav'>Exact Inference</a>
+                        <a href='Variable_elimination.html' id='Variable_elimination-nav'>Variable elimination</a>
                     
                 </ul>
                 </li>
             
                 <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='BIF_manipulation.html' id='BIF_manipulation-nav'>BIF manipulation</a></button>
+                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Input_Output.html' id='Input_Output-nav'>Input Output</a></button>
                 
                 <ul class="subMenu collapse">
                     
-                        <a href='BIFReading.html' id='BIFReading-nav'>BIFReading</a>
+                        <a href='BIF.html' id='BIF-nav'>BIF</a>
+                    
+                        <a href='BIFXML.html' id='BIFXML-nav'>BIFXML</a>
+                    
+                        <a href='DSL.html' id='DSL-nav'>DSL</a>
+                    
+                        <a href='NET.html' id='NET-nav'>NET</a>
+                    
+                        <a href='UAI.html' id='UAI-nav'>UAI</a>
+                    
+                        <a href='XDSL.html' id='XDSL-nav'>XDSL</a>
+                    
+                </ul>
+                </li>
+            
+                <li class="menu-item has-submenu">
+                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Learning.html' id='Learning-nav'>Learning</a></button>
+                
+                <ul class="subMenu collapse">
+                    
+                        <a href='Learning_micro_child_Kullback_Leibler.html' id='Learning_micro_child_Kullback_Leibler-nav'>Learning micro child Kullback Leibler</a>
+                    
+                        <a href='Learning_structure_large_sampling.html' id='Learning_structure_large_sampling-nav'>Learning structure large sampling</a>
+                    
+                        <a href='Learning_structure_small_sampling.html' id='Learning_structure_small_sampling-nav'>Learning structure small sampling</a>
                     
                 </ul>
                 </li>
@@ -135,66 +147,119 @@
 
 <!-- Rank Bar  -->
 <div id="rank-bar">
-    <div id="rank-str">
+    <div id="rank-str" class="rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}">
         <div id="indication">
             <!--  Here we need the link for the global About Page -->
-            <a href="about.html#compare-explanation">
+            <a href="https://white-on.github.io/BenchSite/#explications">
                 <svg width="1000" height="50" viewBox="0,0,1000,50" style="max-width: 100%; height: auto;"><g transform="translate(0, 0)"><g transform="translate(0, 0)"><rect x="0" y="0" width="216" height="50" fill="#440154"></rect><rect x="216" y="0" width="54" height="50" fill="#2e6e8e"></rect><path d="M 214 0 L 268 25 L 214 50Z" fill="#440154"></path><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">first</text></g><g transform="translate(268, 0)"><rect x="0" y="0" width="216" height="50" fill="#2e6e8e"></rect><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">same 1</text></g></g><g transform="translate(0, 0)"><g transform="translate(500, 0)"><rect x="0" y="0" width="216" height="50" fill="#2e6e8e"></rect><rect x="216" y="0" width="54" height="50" fill="#4ac16d"></rect><path d="M 214 0 L 268 25 L 214 50Z" fill="#2e6e8e"></path><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">same 2</text></g><g transform="translate(768, 0)"><rect x="0" y="0" width="216" height="50" fill="#4ac16d"></rect><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">last</text></g></g></svg>
             </a>
         </div>
     </div>
-    <div>2023-07-10 16:34:59</div>
+    <div>2023-08-23 14:05:38</div>
 </div>
 <script type="module">
     import { rankBar } from "../script/rankBar.js";
-    // let cls = {"pyAgrum":0, "pgmpy":1, "bnlearn":2};
-    const cls = {'pyAgrum': 0, 'bnlearn': 1, 'pgmpy': 2}
-    // console.log(cls);
+    import { arrowRank } from "../script/arrowRank.js";
+    const rankBarElement = document.getElementsByClassName("rankBar")
+    
+    for(let element of rankBarElement){
+        let cls = element.dataset.bar.replaceAll("'", '"');
+        cls = JSON.parse(cls);
+        let librarySizeBox= 100;
+        let barSVG = rankBar(cls, {
+            width : (librarySizeBox* Object.keys(cls).length),
+            height : 25,
+            fontSize : 10,
+            gap : 5,
 
-    let chart = rankBar(cls, {
-        width : 400,
-        height : 25,
-        fontSize : 10,
-        gap : 5,
+            contentFolderPath : "./",
+        });
+        element.appendChild(barSVG);
+    }
+
+    const elements = document.getElementsByClassName("rank-arrow");
+    for (let element of elements) {
+        // console.log(element.dataset.rank);
+        let cls = element.dataset.rank.replaceAll("'", '"');
+        let libraryName = element.innerHTML;
+        element.innerHTML = "";
+        cls = JSON.parse(cls);
+        let arrow = arrowRank(cls, libraryName, {
+        width : 200,
+        height : 50,
 
         contentFolderPath : "./",
     });
-
-    document.getElementById("rank-str").appendChild(chart);
-</script><script defer  >const importedData = {'Learning_best_method': {'display': 'plot', 'status': 'Run', 'data': [{'arguments': 1000.0, 'resultElement': 19.915561146607313, 'libraryName': 'bnlearn'}, {'arguments': 1500.0, 'resultElement': 24.811061212482553, 'libraryName': 'bnlearn'}, {'arguments': 2000.0, 'resultElement': 29.87905479525216, 'libraryName': 'bnlearn'}, {'arguments': 2500.0, 'resultElement': 35.20944838346137, 'libraryName': 'bnlearn'}, {'arguments': 3000.0, 'resultElement': 39.63960822916124, 'libraryName': 'bnlearn'}, {'arguments': 3500.0, 'resultElement': 45.49737491190899, 'libraryName': 'bnlearn'}, {'arguments': 4000.0, 'resultElement': 49.73198630324226, 'libraryName': 'bnlearn'}, {'arguments': 4500.0, 'resultElement': 54.42727618782859, 'libraryName': 'bnlearn'}]}, 'Learning_hill_climb_BIC': {'display': 'plot', 'status': 'Run', 'data': [{'arguments': 1000.0, 'resultElement': 20.049776519532315, 'libraryName': 'bnlearn'}, {'arguments': 1500.0, 'resultElement': 24.81343160243705, 'libraryName': 'bnlearn'}, {'arguments': 2000.0, 'resultElement': 29.987087846908253, 'libraryName': 'bnlearn'}, {'arguments': 2500.0, 'resultElement': 34.8559982070777, 'libraryName': 'bnlearn'}, {'arguments': 3000.0, 'resultElement': 39.7977552448477, 'libraryName': 'bnlearn'}, {'arguments': 3500.0, 'resultElement': 46.43697874746673, 'libraryName': 'bnlearn'}, {'arguments': 4000.0, 'resultElement': 49.91936079709558, 'libraryName': 'bnlearn'}, {'arguments': 4500.0, 'resultElement': 54.508293003134895, 'libraryName': 'bnlearn'}]}, 'Approx_Inference': {'display': 'histo', 'status': 'NotRun', 'data': []}, 'Exact_Inference': {'display': 'histo', 'status': 'Error', 'data': []}, 'BIFReading': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'pigs.bif', 'resultElement': 0.053418300192182265, 'libraryName': 'bnlearn'}, {'arguments': 'water.bif', 'resultElement': 0.04015719909997036, 'libraryName': 'bnlearn'}, {'arguments': 'munin.bif', 'resultElement': 0.002775092434603721, 'libraryName': 'bnlearn'}, {'arguments': 'mildew.bif', 'resultElement': 0.010679059564912071, 'libraryName': 'bnlearn'}, {'arguments': 'earthquake.bif', 'resultElement': 0.12298623146489263, 'libraryName': 'bnlearn'}, {'arguments': 'diabetes.bif', 'resultElement': 0.01163684029597789, 'libraryName': 'bnlearn'}, {'arguments': 'child.bif', 'resultElement': 0.0418191947392188, 'libraryName': 'bnlearn'}, {'arguments': 'barley.bif', 'resultElement': 0.08101685393679266, 'libraryName': 'bnlearn'}, {'arguments': 'asia.bif', 'resultElement': 0.024253849619223427, 'libraryName': 'bnlearn'}, {'arguments': 'andes.bif', 'resultElement': 0.01803410390857607, 'libraryName': 'bnlearn'}]}};</script>
+        element.appendChild(arrow);
+    }
+</script><script defer  >const importedData = {'Best_Inference': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'cancer.bif', 'resultElement': 0.15864507400697717, 'libraryName': 'bnlearn'}, {'arguments': 'earthquake.bif', 'resultElement': 0.06275886850406726, 'libraryName': 'bnlearn'}, {'arguments': 'asia.bif', 'resultElement': 0.09429786329288035, 'libraryName': 'bnlearn'}, {'arguments': 'child.bif', 'resultElement': 0.1284268565731744, 'libraryName': 'bnlearn'}, {'arguments': 'insurance.bif', 'resultElement': 0.12608019093591719, 'libraryName': 'bnlearn'}, {'arguments': 'water.bif', 'resultElement': 0.20380962133115776, 'libraryName': 'bnlearn'}, {'arguments': 'mildew.bif', 'resultElement': 0.6794281245286887, 'libraryName': 'bnlearn'}, {'arguments': 'alarm.bif', 'resultElement': 0.2298558446628973, 'libraryName': 'bnlearn'}, {'arguments': 'barley.bif', 'resultElement': 0.9261209690400088, 'libraryName': 'bnlearn'}, {'arguments': 'hailfinder.bif', 'resultElement': 0.492730771501859, 'libraryName': 'bnlearn'}, {'arguments': 'hepar2.bif', 'resultElement': 0.6449766589406257, 'libraryName': 'bnlearn'}, {'arguments': 'andes.bif', 'resultElement': 8.333872768445872, 'libraryName': 'bnlearn'}, {'arguments': 'diabetes.bif', 'resultElement': 62.05206789309159, 'libraryName': 'bnlearn'}, {'arguments': 'pigs.bif', 'resultElement': 28.610019614182722, 'libraryName': 'bnlearn'}, {'arguments': 'link.bif', 'resultElement': 89.21804339667626, 'libraryName': 'bnlearn'}]}, 'BIF': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'cancer.bif', 'resultElement': 3.519594805780798, 'libraryName': 'bnlearn'}, {'arguments': 'earthquake.bif', 'resultElement': 3.692858517053537, 'libraryName': 'bnlearn'}, {'arguments': 'asia.bif', 'resultElement': 3.87525511928834, 'libraryName': 'bnlearn'}, {'arguments': 'child.bif', 'resultElement': 5.533477917003135, 'libraryName': 'bnlearn'}, {'arguments': 'insurance.bif', 'resultElement': 5.764225825085305, 'libraryName': 'bnlearn'}, {'arguments': 'water.bif', 'resultElement': 6.306172089030345, 'libraryName': 'bnlearn'}, {'arguments': 'mildew.bif', 'resultElement': 24.778718734974973, 'libraryName': 'bnlearn'}, {'arguments': 'alarm.bif', 'resultElement': 5.971721774122368, 'libraryName': 'bnlearn'}, {'arguments': 'barley.bif', 'resultElement': 10.7523791899827, 'libraryName': 'bnlearn'}, {'arguments': 'hailfinder.bif', 'resultElement': 6.157739228452556, 'libraryName': 'bnlearn'}, {'arguments': 'hepar2.bif', 'resultElement': 6.08593795929725, 'libraryName': 'bnlearn'}, {'arguments': 'andes.bif', 'resultElement': 6.435893563359666, 'libraryName': 'bnlearn'}, {'arguments': 'diabetes.bif', 'resultElement': 14.578662090779593, 'libraryName': 'bnlearn'}, {'arguments': 'pigs.bif', 'resultElement': 6.883181189652532, 'libraryName': 'bnlearn'}, {'arguments': 'link.bif', 'resultElement': 7.705212356173433, 'libraryName': 'bnlearn'}, {'arguments': 'munin.bif', 'resultElement': 10.822065002323749, 'libraryName': 'bnlearn'}]}, 'BIFXML': {'display': 'histo', 'status': 'NotRun', 'data': []}, 'DSL': {'display': 'histo', 'status': 'NotRun', 'data': []}, 'NET': {'display': 'histo', 'status': 'NotRun', 'data': []}, 'UAI': {'display': 'histo', 'status': 'NotRun', 'data': []}, 'XDSL': {'display': 'histo', 'status': 'NotRun', 'data': []}, 'Learning_micro_child_Kullback_Leibler': {'display': 'plot', 'status': 'Run', 'data': [{'arguments': 1000.0, 'resultElement': 1.3383731074475993, 'libraryName': 'bnlearn'}, {'arguments': 1500.0, 'resultElement': 1.202000768467163, 'libraryName': 'bnlearn'}, {'arguments': 2000.0, 'resultElement': 1.3192197997511055, 'libraryName': 'bnlearn'}, {'arguments': 2500.0, 'resultElement': 1.5049408122043435, 'libraryName': 'bnlearn'}, {'arguments': 3000.0, 'resultElement': 1.3881293951999396, 'libraryName': 'bnlearn'}, {'arguments': 3500.0, 'resultElement': 1.385681204420204, 'libraryName': 'bnlearn'}, {'arguments': 4000.0, 'resultElement': 1.4037678384920582, 'libraryName': 'bnlearn'}, {'arguments': 4500.0, 'resultElement': 1.4334977042938892, 'libraryName': 'bnlearn'}, {'arguments': 5000.0, 'resultElement': 1.5340027232111122, 'libraryName': 'bnlearn'}, {'arguments': 7500.0, 'resultElement': 1.603859607052679, 'libraryName': 'bnlearn'}, {'arguments': 10000.0, 'resultElement': 1.4734486556844786, 'libraryName': 'bnlearn'}, {'arguments': 20000.0, 'resultElement': 1.7994985401552792, 'libraryName': 'bnlearn'}, {'arguments': 30000.0, 'resultElement': 2.0069297913772366, 'libraryName': 'bnlearn'}, {'arguments': 40000.0, 'resultElement': 2.287762030842714, 'libraryName': 'bnlearn'}, {'arguments': 50000.0, 'resultElement': 2.586097993150664, 'libraryName': 'bnlearn'}]}, 'Learning_structure_large_sampling': {'display': 'plot', 'status': 'Run', 'data': [{'arguments': 5000.0, 'resultElement': 67.80904775694944, 'libraryName': 'bnlearn'}, {'arguments': 7500.0, 'resultElement': 96.06573783730467, 'libraryName': 'bnlearn'}, {'arguments': 10000.0, 'resultElement': 132.6389742254978, 'libraryName': 'bnlearn'}]}, 'Learning_structure_small_sampling': {'display': 'plot', 'status': 'Run', 'data': [{'arguments': 1000.0, 'resultElement': 20.879476679605432, 'libraryName': 'bnlearn'}, {'arguments': 1500.0, 'resultElement': 27.024286165367812, 'libraryName': 'bnlearn'}, {'arguments': 2000.0, 'resultElement': 33.29273220683293, 'libraryName': 'bnlearn'}, {'arguments': 2500.0, 'resultElement': 39.34095988527406, 'libraryName': 'bnlearn'}, {'arguments': 3000.0, 'resultElement': 43.966277415359706, 'libraryName': 'bnlearn'}, {'arguments': 3500.0, 'resultElement': 50.32002325495705, 'libraryName': 'bnlearn'}, {'arguments': 4000.0, 'resultElement': 55.039843089839756, 'libraryName': 'bnlearn'}, {'arguments': 4500.0, 'resultElement': 62.06420904960638, 'libraryName': 'bnlearn'}, {'arguments': 5000.0, 'resultElement': 67.02914109965786, 'libraryName': 'bnlearn'}]}, 'Variable_elimination': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'cancer.bif', 'resultElement': 0.07740917360211412, 'libraryName': 'bnlearn'}, {'arguments': 'earthquake.bif', 'resultElement': 0.1331306261640663, 'libraryName': 'bnlearn'}, {'arguments': 'asia.bif', 'resultElement': 0.10784481312011679, 'libraryName': 'bnlearn'}, {'arguments': 'child.bif', 'resultElement': 0.18264515114830185, 'libraryName': 'bnlearn'}, {'arguments': 'insurance.bif', 'resultElement': 0.1393078760965417, 'libraryName': 'bnlearn'}, {'arguments': 'water.bif', 'resultElement': 0.3792393643084913, 'libraryName': 'bnlearn'}, {'arguments': 'mildew.bif', 'resultElement': 0.5663220904676244, 'libraryName': 'bnlearn'}, {'arguments': 'alarm.bif', 'resultElement': 0.2791286130705228, 'libraryName': 'bnlearn'}, {'arguments': 'barley.bif', 'resultElement': 0.9025210172791654, 'libraryName': 'bnlearn'}, {'arguments': 'hailfinder.bif', 'resultElement': 0.495934158951665, 'libraryName': 'bnlearn'}, {'arguments': 'hepar2.bif', 'resultElement': 0.616981370956637, 'libraryName': 'bnlearn'}, {'arguments': 'andes.bif', 'resultElement': 8.099371934270797, 'libraryName': 'bnlearn'}, {'arguments': 'diabetes.bif', 'resultElement': 61.95240764816602, 'libraryName': 'bnlearn'}, {'arguments': 'pigs.bif', 'resultElement': 28.67529632616788, 'libraryName': 'bnlearn'}, {'arguments': 'link.bif', 'resultElement': 86.87401141505688, 'libraryName': 'bnlearn'}]}};</script>
 <script defer type='module' src ='../script/libraryScript.js'></script>
 
 <!-- Target main component -->
 <div class="title">
     <img src='../assets\question.svg' alt='bnlearn' width='50' height='50'><h1 id="entry-title">bnlearn</h1> 
 </div>
-<p class="description">bnlearn is a Python library for learning the structure and parameters of Bayesian networks from data. It offers various algorithms for structure learning, including constraint-based algorithms like PC, IC, and MMHC, and score-based algorithms like K2, BIC, and AIC. bnlearn also supports parameter learning using maximum likelihood estimation, Bayesian parameter estimation, and expectation maximization. The library is easy to use and comes with many built-in functions for data preprocessing, visualization, and model evaluation. It can work with data in various formats, including Pandas dataframes, numpy arrays, and CSV files. bnlearn also supports a wide range of Bayesian network formats, including those used by popular software like GeNIe, Hugin, and Netica. Overall, bnlearn is a powerful tool for Bayesian network analysis that can help researchers and practitioners in various fields, such as machine learning, data science, and decision making, to build accurate and reliable models from data.</p>
+<p class="description"><b>bnlearn</b> is for learning the graphical structure of Bayesian networks in Python! What benefits does bnlearn offer over other bayesian analysis implementations?
+<br>Build on top of the pgmpy library
+<br>Contains the most-wanted bayesian pipelines
+<br>Simple and intuitive
+<br>Focus on structure learning, parameter learning and inference.</p>
 
 <div class ="grid">
     
     <div class="card">
-        <a href="Learning_best_method.html"><h2>Learning best method</h2></a>
-        <div id="Learning_best_method"></div>
+        <a href="Best_Inference.html"><h2>Best Inference</h2></a>
+        <div id="Best_Inference"></div>
     </div>
     
     <div class="card">
-        <a href="Learning_hill_climb_BIC.html"><h2>Learning hill climb BIC</h2></a>
-        <div id="Learning_hill_climb_BIC"></div>
+        <a href="BIF.html"><h2>BIF</h2></a>
+        <div id="BIF"></div>
     </div>
     
     <div class="card">
-        <a href="Approx_Inference.html"><h2>Approx Inference</h2></a>
-        <div id="Approx_Inference"></div>
+        <a href="BIFXML.html"><h2>BIFXML</h2></a>
+        <div id="BIFXML"></div>
     </div>
     
     <div class="card">
-        <a href="Exact_Inference.html"><h2>Exact Inference</h2></a>
-        <div id="Exact_Inference"></div>
+        <a href="DSL.html"><h2>DSL</h2></a>
+        <div id="DSL"></div>
     </div>
     
     <div class="card">
-        <a href="BIFReading.html"><h2>BIFReading</h2></a>
-        <div id="BIFReading"></div>
+        <a href="NET.html"><h2>NET</h2></a>
+        <div id="NET"></div>
+    </div>
+    
+    <div class="card">
+        <a href="UAI.html"><h2>UAI</h2></a>
+        <div id="UAI"></div>
+    </div>
+    
+    <div class="card">
+        <a href="XDSL.html"><h2>XDSL</h2></a>
+        <div id="XDSL"></div>
+    </div>
+    
+    <div class="card">
+        <a href="Learning_micro_child_Kullback_Leibler.html"><h2>Learning micro child Kullback Leibler</h2></a>
+        <div id="Learning_micro_child_Kullback_Leibler"></div>
+    </div>
+    
+    <div class="card">
+        <a href="Learning_structure_large_sampling.html"><h2>Learning structure large sampling</h2></a>
+        <div id="Learning_structure_large_sampling"></div>
+    </div>
+    
+    <div class="card">
+        <a href="Learning_structure_small_sampling.html"><h2>Learning structure small sampling</h2></a>
+        <div id="Learning_structure_small_sampling"></div>
+    </div>
+    
+    <div class="card">
+        <a href="Variable_elimination.html"><h2>Variable elimination</h2></a>
+        <div id="Variable_elimination"></div>
     </div>
     
 </div><!-- Google tag (gtag.js) -->

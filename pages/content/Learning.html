@@ -23,7 +23,7 @@
         <nav class="header-nav">
             <a href="../index.html"><b>Home</b></a>
             <a href="https://white-on.github.io/BenchSite/"><b>About</b></a>
-            <a href="../result.json" download="data.json"><b>Download</b></a>
+            <a href="../results.json" download="data.json"><b>Raw Data</b></a>
         </nav>
         <nav class="header-nav">
             <p id="link-description">You are invited to contribute through <br> a request on the GitHub page</p>
@@ -62,35 +62,47 @@
         <ul class="subMenu collapse">
             
                 <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Learning.html' id='Learning-nav'>Learning</a></button>
-                
-                <ul class="subMenu collapse">
-                    
-                        <a href='Learning_best_method.html' id='Learning_best_method-nav'>Learning best method</a>
-                    
-                        <a href='Learning_hill_climb_BIC.html' id='Learning_hill_climb_BIC-nav'>Learning hill climb BIC</a>
-                    
-                </ul>
-                </li>
-            
-                <li class="menu-item has-submenu">
                 <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Inference.html' id='Inference-nav'>Inference</a></button>
                 
                 <ul class="subMenu collapse">
                     
-                        <a href='Approx_Inference.html' id='Approx_Inference-nav'>Approx Inference</a>
+                        <a href='Best_Inference.html' id='Best_Inference-nav'>Best Inference</a>
                     
-                        <a href='Exact_Inference.html' id='Exact_Inference-nav'>Exact Inference</a>
+                        <a href='Variable_elimination.html' id='Variable_elimination-nav'>Variable elimination</a>
                     
                 </ul>
                 </li>
             
                 <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='BIF_manipulation.html' id='BIF_manipulation-nav'>BIF manipulation</a></button>
+                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Input_Output.html' id='Input_Output-nav'>Input Output</a></button>
                 
                 <ul class="subMenu collapse">
                     
-                        <a href='BIFReading.html' id='BIFReading-nav'>BIFReading</a>
+                        <a href='BIF.html' id='BIF-nav'>BIF</a>
+                    
+                        <a href='BIFXML.html' id='BIFXML-nav'>BIFXML</a>
+                    
+                        <a href='DSL.html' id='DSL-nav'>DSL</a>
+                    
+                        <a href='NET.html' id='NET-nav'>NET</a>
+                    
+                        <a href='UAI.html' id='UAI-nav'>UAI</a>
+                    
+                        <a href='XDSL.html' id='XDSL-nav'>XDSL</a>
+                    
+                </ul>
+                </li>
+            
+                <li class="menu-item has-submenu">
+                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Learning.html' id='Learning-nav'>Learning</a></button>
+                
+                <ul class="subMenu collapse">
+                    
+                        <a href='Learning_micro_child_Kullback_Leibler.html' id='Learning_micro_child_Kullback_Leibler-nav'>Learning micro child Kullback Leibler</a>
+                    
+                        <a href='Learning_structure_large_sampling.html' id='Learning_structure_large_sampling-nav'>Learning structure large sampling</a>
+                    
+                        <a href='Learning_structure_small_sampling.html' id='Learning_structure_small_sampling-nav'>Learning structure small sampling</a>
                     
                 </ul>
                 </li>
@@ -135,40 +147,69 @@
 
 <!-- Rank Bar  -->
 <div id="rank-bar">
-    <div id="rank-str">
+    <div id="rank-str" class="rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}">
         <div id="indication">
             <!--  Here we need the link for the global About Page -->
-            <a href="about.html#compare-explanation">
+            <a href="https://white-on.github.io/BenchSite/#explications">
                 <svg width="1000" height="50" viewBox="0,0,1000,50" style="max-width: 100%; height: auto;"><g transform="translate(0, 0)"><g transform="translate(0, 0)"><rect x="0" y="0" width="216" height="50" fill="#440154"></rect><rect x="216" y="0" width="54" height="50" fill="#2e6e8e"></rect><path d="M 214 0 L 268 25 L 214 50Z" fill="#440154"></path><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">first</text></g><g transform="translate(268, 0)"><rect x="0" y="0" width="216" height="50" fill="#2e6e8e"></rect><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">same 1</text></g></g><g transform="translate(0, 0)"><g transform="translate(500, 0)"><rect x="0" y="0" width="216" height="50" fill="#2e6e8e"></rect><rect x="216" y="0" width="54" height="50" fill="#4ac16d"></rect><path d="M 214 0 L 268 25 L 214 50Z" fill="#2e6e8e"></path><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">same 2</text></g><g transform="translate(768, 0)"><rect x="0" y="0" width="216" height="50" fill="#4ac16d"></rect><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">last</text></g></g></svg>
             </a>
         </div>
     </div>
-    <div>2023-07-10 16:34:59</div>
+    <div>2023-08-23 14:05:38</div>
 </div>
 <script type="module">
     import { rankBar } from "../script/rankBar.js";
-    // let cls = {"pyAgrum":0, "pgmpy":1, "bnlearn":2};
-    const cls = {'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}
-    // console.log(cls);
+    import { arrowRank } from "../script/arrowRank.js";
+    const rankBarElement = document.getElementsByClassName("rankBar")
+    
+    for(let element of rankBarElement){
+        let cls = element.dataset.bar.replaceAll("'", '"');
+        cls = JSON.parse(cls);
+        let librarySizeBox= 100;
+        let barSVG = rankBar(cls, {
+            width : (librarySizeBox* Object.keys(cls).length),
+            height : 25,
+            fontSize : 10,
+            gap : 5,
 
-    let chart = rankBar(cls, {
-        width : 400,
-        height : 25,
-        fontSize : 10,
-        gap : 5,
+            contentFolderPath : "",
+        });
+        element.appendChild(barSVG);
+    }
+
+    const elements = document.getElementsByClassName("rank-arrow");
+    for (let element of elements) {
+        // console.log(element.dataset.rank);
+        let cls = element.dataset.rank.replaceAll("'", '"');
+        let libraryName = element.innerHTML;
+        element.innerHTML = "";
+        cls = JSON.parse(cls);
+        let arrow = arrowRank(cls, libraryName, {
+        width : 200,
+        height : 50,
 
         contentFolderPath : "",
     });
-
-    document.getElementById("rank-str").appendChild(chart);
+        element.appendChild(arrow);
+    }
 </script>
 <!-- Theme Main components -->
-<script defer  >const importedData = [{'taskName': 'Learning', 'libraryName': 'pyAgrum', 'results': 0}, {'taskName': 'Learning', 'libraryName': 'pgmpy', 'results': 1}, {'taskName': 'Learning', 'libraryName': 'bnlearn', 'results': 2}, {'taskName': 'Learning_best_method', 'libraryName': 'pyAgrum', 'results': 0}, {'taskName': 'Learning_best_method', 'libraryName': 'pgmpy', 'results': 1}, {'taskName': 'Learning_best_method', 'libraryName': 'bnlearn', 'results': 2}, {'taskName': 'Learning_hill_climb_BIC', 'libraryName': 'pyAgrum', 'results': 0}, {'taskName': 'Learning_hill_climb_BIC', 'libraryName': 'pgmpy', 'results': 1}, {'taskName': 'Learning_hill_climb_BIC', 'libraryName': 'bnlearn', 'results': 2}];</script>
+<script defer  >const importedData = [{'taskName': 'Learning', 'libraryName': 'pyAgrum', 'results': 0}, {'taskName': 'Learning', 'libraryName': 'pgmpy', 'results': 1}, {'taskName': 'Learning', 'libraryName': 'bnlearn', 'results': 2}, {'taskName': 'Learning_micro_child_Kullback_Leibler', 'libraryName': 'pyAgrum', 'results': 0}, {'taskName': 'Learning_micro_child_Kullback_Leibler', 'libraryName': 'bnlearn', 'results': 1}, {'taskName': 'Learning_micro_child_Kullback_Leibler', 'libraryName': 'pgmpy', 'results': 2}, {'taskName': 'Learning_structure_large_sampling', 'libraryName': 'pyAgrum', 'results': 0}, {'taskName': 'Learning_structure_large_sampling', 'libraryName': 'pgmpy', 'results': 1}, {'taskName': 'Learning_structure_large_sampling', 'libraryName': 'bnlearn', 'results': 2}, {'taskName': 'Learning_structure_small_sampling', 'libraryName': 'pyAgrum', 'results': 0}, {'taskName': 'Learning_structure_small_sampling', 'libraryName': 'pgmpy', 'results': 1}, {'taskName': 'Learning_structure_small_sampling', 'libraryName': 'bnlearn', 'results': 2}];</script>
 <script defer  >const themeName = 'Learning';</script>
 <script defer type='module' src ='../script/themeScript.js'></script>
 
 <h1 id="entry-title">Learning</h1>
-<h2>This theme is compose of <a href='Learning_best_method.html' >Learning best method</a>, <a href='Learning_hill_climb_BIC.html' >Learning hill climb BIC</a></h2><!-- Google tag (gtag.js) -->
+<h2>This theme is compose of <a href='Learning_micro_child_Kullback_Leibler.html' >Learning micro child Kullback Leibler</a>, <a href='Learning_structure_large_sampling.html' >Learning structure large sampling</a>, <a href='Learning_structure_small_sampling.html' >Learning structure small sampling</a></h2>
+<p>Learning a Bayesian Network is like reverse-engineering a puzzle. Instead of having all the pieces and trying to figure out the whole picture,
+you have the completed puzzle and you're trying to determine how the pieces fit together.
+<br>Imagine you have a completed puzzle, and you're not given the picture on the box. Your job is to carefully study the connections between the pieces and the patterns they form.
+By analyzing how the pieces interlock and the colors and shapes align, you start to piece together the rules that governed the puzzle's creation. You might discover that certain pieces
+are more likely to be neighbors, and some patterns repeat in specific ways.
+<br>In learning a Bayesian Network, you have data representing the relationships between variables and their probabilities. You're trying to deduce the underlying structure
+that generated this data. You observe how variables tend to co-occur, which ones influence others, and the patterns of dependencies. Through statistical methods and algorithms,
+you build a Bayesian Network that best represents these relationships, just as you would gradually recreate the puzzle's image based on the patterns you observe.
+<br>So, learning a Bayesian Network is about understanding the hidden rules that generated the observed data, much like figuring out a puzzle's image from the arrangement of its pieces.</p>
+<div id="main_container"></div><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
 <script>
   window.dataLayer = window.dataLayer || [];

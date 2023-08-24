@@ -23,7 +23,7 @@
         <nav class="header-nav">
             <a href="../index.html"><b>Home</b></a>
             <a href="https://white-on.github.io/BenchSite/"><b>About</b></a>
-            <a href="../result.json" download="data.json"><b>Download</b></a>
+            <a href="../results.json" download="data.json"><b>Raw Data</b></a>
         </nav>
         <nav class="header-nav">
             <p id="link-description">You are invited to contribute through <br> a request on the GitHub page</p>
@@ -62,35 +62,47 @@
         <ul class="subMenu collapse">
             
                 <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Learning.html' id='Learning-nav'>Learning</a></button>
-                
-                <ul class="subMenu collapse">
-                    
-                        <a href='Learning_best_method.html' id='Learning_best_method-nav'>Learning best method</a>
-                    
-                        <a href='Learning_hill_climb_BIC.html' id='Learning_hill_climb_BIC-nav'>Learning hill climb BIC</a>
-                    
-                </ul>
-                </li>
-            
-                <li class="menu-item has-submenu">
                 <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Inference.html' id='Inference-nav'>Inference</a></button>
                 
                 <ul class="subMenu collapse">
                     
-                        <a href='Approx_Inference.html' id='Approx_Inference-nav'>Approx Inference</a>
+                        <a href='Best_Inference.html' id='Best_Inference-nav'>Best Inference</a>
                     
-                        <a href='Exact_Inference.html' id='Exact_Inference-nav'>Exact Inference</a>
+                        <a href='Variable_elimination.html' id='Variable_elimination-nav'>Variable elimination</a>
                     
                 </ul>
                 </li>
             
                 <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='BIF_manipulation.html' id='BIF_manipulation-nav'>BIF manipulation</a></button>
+                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Input_Output.html' id='Input_Output-nav'>Input Output</a></button>
                 
                 <ul class="subMenu collapse">
                     
-                        <a href='BIFReading.html' id='BIFReading-nav'>BIFReading</a>
+                        <a href='BIF.html' id='BIF-nav'>BIF</a>
+                    
+                        <a href='BIFXML.html' id='BIFXML-nav'>BIFXML</a>
+                    
+                        <a href='DSL.html' id='DSL-nav'>DSL</a>
+                    
+                        <a href='NET.html' id='NET-nav'>NET</a>
+                    
+                        <a href='UAI.html' id='UAI-nav'>UAI</a>
+                    
+                        <a href='XDSL.html' id='XDSL-nav'>XDSL</a>
+                    
+                </ul>
+                </li>
+            
+                <li class="menu-item has-submenu">
+                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Learning.html' id='Learning-nav'>Learning</a></button>
+                
+                <ul class="subMenu collapse">
+                    
+                        <a href='Learning_micro_child_Kullback_Leibler.html' id='Learning_micro_child_Kullback_Leibler-nav'>Learning micro child Kullback Leibler</a>
+                    
+                        <a href='Learning_structure_large_sampling.html' id='Learning_structure_large_sampling-nav'>Learning structure large sampling</a>
+                    
+                        <a href='Learning_structure_small_sampling.html' id='Learning_structure_small_sampling-nav'>Learning structure small sampling</a>
                     
                 </ul>
                 </li>
@@ -135,34 +147,53 @@
 
 <!-- Rank Bar  -->
 <div id="rank-bar">
-    <div id="rank-str">
+    <div id="rank-str" class="rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}">
         <div id="indication">
             <!--  Here we need the link for the global About Page -->
-            <a href="about.html#compare-explanation">
+            <a href="https://white-on.github.io/BenchSite/#explications">
                 <svg width="1000" height="50" viewBox="0,0,1000,50" style="max-width: 100%; height: auto;"><g transform="translate(0, 0)"><g transform="translate(0, 0)"><rect x="0" y="0" width="216" height="50" fill="#440154"></rect><rect x="216" y="0" width="54" height="50" fill="#2e6e8e"></rect><path d="M 214 0 L 268 25 L 214 50Z" fill="#440154"></path><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">first</text></g><g transform="translate(268, 0)"><rect x="0" y="0" width="216" height="50" fill="#2e6e8e"></rect><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">same 1</text></g></g><g transform="translate(0, 0)"><g transform="translate(500, 0)"><rect x="0" y="0" width="216" height="50" fill="#2e6e8e"></rect><rect x="216" y="0" width="54" height="50" fill="#4ac16d"></rect><path d="M 214 0 L 268 25 L 214 50Z" fill="#2e6e8e"></path><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">same 2</text></g><g transform="translate(768, 0)"><rect x="0" y="0" width="216" height="50" fill="#4ac16d"></rect><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">last</text></g></g></svg>
             </a>
         </div>
     </div>
-    <div>2023-07-10 16:34:59</div>
+    <div>2023-08-23 14:05:38</div>
 </div>
 <script type="module">
     import { rankBar } from "../script/rankBar.js";
-    // let cls = {"pyAgrum":0, "pgmpy":1, "bnlearn":2};
-    const cls = {'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}
-    // console.log(cls);
+    import { arrowRank } from "../script/arrowRank.js";
+    const rankBarElement = document.getElementsByClassName("rankBar")
+    
+    for(let element of rankBarElement){
+        let cls = element.dataset.bar.replaceAll("'", '"');
+        cls = JSON.parse(cls);
+        let librarySizeBox= 100;
+        let barSVG = rankBar(cls, {
+            width : (librarySizeBox* Object.keys(cls).length),
+            height : 25,
+            fontSize : 10,
+            gap : 5,
 
-    let chart = rankBar(cls, {
-        width : 400,
-        height : 25,
-        fontSize : 10,
-        gap : 5,
+            contentFolderPath : "",
+        });
+        element.appendChild(barSVG);
+    }
+
+    const elements = document.getElementsByClassName("rank-arrow");
+    for (let element of elements) {
+        // console.log(element.dataset.rank);
+        let cls = element.dataset.rank.replaceAll("'", '"');
+        let libraryName = element.innerHTML;
+        element.innerHTML = "";
+        cls = JSON.parse(cls);
+        let arrow = arrowRank(cls, libraryName, {
+        width : 200,
+        height : 50,
 
         contentFolderPath : "",
     });
-
-    document.getElementById("rank-str").appendChild(chart);
-</script><script defer  >const importedData = {'runtime': {'data': [{'arguments': 'pigs.bif', 'runTime': 0.08761692631136005, 'libraryName': 'pgmpy', 'std': 0.1138773832701177}, {'arguments': 'water.bif', 'runTime': 'error', 'libraryName': 'pgmpy', 'std': 0.12072109258891084}, {'arguments': 'pathfinder.bif', 'runTime': 'error', 'libraryName': 'pgmpy', 'std': 'error'}, {'arguments': 'munin.bif', 'runTime': 0.2432754576050987, 'libraryName': 'pgmpy', 'std': 0.39173961653196}, {'arguments': 'mildew.bif', 'runTime': 0.10332093572166438, 'libraryName': 'pgmpy', 'std': 0.40750832592931374}, {'arguments': 'link.bif', 'runTime': 0.1920955391639533, 'libraryName': 'pgmpy', 'std': 0.19058573078574387}, {'arguments': 'insurance.bif', 'runTime': 'error', 'libraryName': 'pgmpy', 'std': 0.21337398630430313}, {'arguments': 'hepar2.bif', 'runTime': 0.01005008847763141, 'libraryName': 'pgmpy', 'std': 0.1685110045260152}, {'arguments': 'hailfinder.bif', 'runTime': 'error', 'libraryName': 'pgmpy', 'std': 0.20019993966497715}, {'arguments': 'earthquake.bif', 'runTime': 'error', 'libraryName': 'pgmpy', 'std': 0.3908783735051603}, {'arguments': 'diabetes.bif', 'runTime': 0.03593812855736663, 'libraryName': 'pgmpy', 'std': 0.3157615977312739}, {'arguments': 'child.bif', 'runTime': 0.027291367936413735, 'libraryName': 'pgmpy', 'std': 0.1690687578591428}, {'arguments': 'cancer.bif', 'runTime': 0.05895076447632164, 'libraryName': 'pgmpy', 'std': 0.1869827855294581}, {'arguments': 'barley.bif', 'runTime': 'error', 'libraryName': 'pgmpy', 'std': 0.22289557561279616}, {'arguments': 'asia.bif', 'runTime': 0.06826051375052582, 'libraryName': 'pgmpy', 'std': 0.19179720289970242}, {'arguments': 'andes.bif', 'runTime': 0.026611730029496055, 'libraryName': 'pgmpy', 'std': 0.13807472447118493}, {'arguments': 'alarm.bif', 'runTime': 0.007278266168820362, 'libraryName': 'pgmpy', 'std': 0.15198822001590095}, {'arguments': 'pigs.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'water.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'pathfinder.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'munin.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'mildew.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'link.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'insurance.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'hepar2.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'hailfinder.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'earthquake.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'diabetes.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'child.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'cancer.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'barley.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'asia.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'andes.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'alarm.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'pigs.bif', 'runTime': 'error', 'libraryName': 'pyAgrum', 'std': 0.015473572593153793}, {'arguments': 'water.bif', 'runTime': 0.0023339875236464045, 'libraryName': 'pyAgrum', 'std': 0.029638923816866836}, {'arguments': 'pathfinder.bif', 'runTime': 'error', 'libraryName': 'pyAgrum', 'std': 'error'}, {'arguments': 'munin.bif', 'runTime': 'error', 'libraryName': 'pyAgrum', 'std': 0.04681789698080207}, {'arguments': 'mildew.bif', 'runTime': 'error', 'libraryName': 'pyAgrum', 'std': 0.03030164319653524}, {'arguments': 'link.bif', 'runTime': 'error', 'libraryName': 'pyAgrum', 'std': 0.040357368794910725}, {'arguments': 'insurance.bif', 'runTime': 8.457745813454191e-05, 'libraryName': 'pyAgrum', 'std': 0.02565454779652777}, {'arguments': 'hepar2.bif', 'runTime': 'error', 'libraryName': 'pyAgrum', 'std': 0.01876784812088488}, {'arguments': 'hailfinder.bif', 'runTime': 0.006708263904632379, 'libraryName': 'pyAgrum', 'std': 0.021449440294523985}, {'arguments': 'earthquake.bif', 'runTime': 0.005938012114105125, 'libraryName': 'pyAgrum', 'std': 0.02513287746338137}, {'arguments': 'diabetes.bif', 'runTime': 0.0018781110411509871, 'libraryName': 'pyAgrum', 'std': 0.06677679457386348}, {'arguments': 'child.bif', 'runTime': 'error', 'libraryName': 'pyAgrum', 'std': 'error'}, {'arguments': 'cancer.bif', 'runTime': 0.0016999073171367247, 'libraryName': 'pyAgrum', 'std': 0.01770517087627151}, {'arguments': 'barley.bif', 'runTime': 'error', 'libraryName': 'pyAgrum', 'std': 0.041933461803037926}, {'arguments': 'asia.bif', 'runTime': 0.01280534901889041, 'libraryName': 'pyAgrum', 'std': 0.021434146140635036}, {'arguments': 'andes.bif', 'runTime': 'error', 'libraryName': 'pyAgrum', 'std': 0.027271058141050276}, {'arguments': 'alarm.bif', 'runTime': 'error', 'libraryName': 'pyAgrum', 'std': 0.015137834581329827}], 'display': 'groupedBar', 'label': 'Runtime', 'title': 'Inference time by Variable Elimination', 'XLabel': 'Files Infered On', 'YLabel': 'Time (s)', 'scale': 'auto'}};</script>
-<script defer  >const TaskName = 'Exact_Inference';</script>
+        element.appendChild(arrow);
+    }
+</script><script defer  >const importedData = {'runtime': {'data': [{'arguments': 'cancer.bif', 'runTime': 0.1614360633329178, 'libraryName': 'pgmpy', 'std': 0.17790805759077266}, {'arguments': 'earthquake.bif', 'runTime': 0.11113541247006505, 'libraryName': 'pgmpy', 'std': 0.18273711945722404}, {'arguments': 'asia.bif', 'runTime': 0.07131156631217649, 'libraryName': 'pgmpy', 'std': 0.10149675328081059}, {'arguments': 'child.bif', 'runTime': 0.09346022562024493, 'libraryName': 'pgmpy', 'std': 0.10255358979425587}, {'arguments': 'insurance.bif', 'runTime': 0.07739411878685155, 'libraryName': 'pgmpy', 'std': 0.11040024917552305}, {'arguments': 'water.bif', 'runTime': 0.10043086758907883, 'libraryName': 'pgmpy', 'std': 0.10424608387917343}, {'arguments': 'mildew.bif', 'runTime': 0.3768366743728519, 'libraryName': 'pgmpy', 'std': 0.7826784875556593}, {'arguments': 'alarm.bif', 'runTime': 0.22559247127479565, 'libraryName': 'pgmpy', 'std': 0.28391307356228973}, {'arguments': 'barley.bif', 'runTime': 0.46866638332642613, 'libraryName': 'pgmpy', 'std': 0.42422290637784976}, {'arguments': 'hailfinder.bif', 'runTime': 0.14180237715244293, 'libraryName': 'pgmpy', 'std': 0.22892487167741482}, {'arguments': 'hepar2.bif', 'runTime': 0.12098367157001048, 'libraryName': 'pgmpy', 'std': 0.10839256658809389}, {'arguments': 'andes.bif', 'runTime': 1.6120993666506063, 'libraryName': 'pgmpy', 'std': 0.16350673652043743}, {'arguments': 'diabetes.bif', 'runTime': 38.06984584740448, 'libraryName': 'pgmpy', 'std': 8.51817646304097}, {'arguments': 'pigs.bif', 'runTime': 0.3647591605444749, 'libraryName': 'pgmpy', 'std': 0.22074959225884416}, {'arguments': 'link.bif', 'runTime': 2.262949620373547, 'libraryName': 'pgmpy', 'std': 0.287574510450743}, {'arguments': 'munin.bif', 'runTime': 2.579818434198387, 'libraryName': 'pgmpy', 'std': 0.555626312596317}, {'arguments': 'cancer.bif', 'runTime': 0.15864507400697717, 'libraryName': 'bnlearn', 'std': 0.21155502879701132}, {'arguments': 'earthquake.bif', 'runTime': 0.06275886850406726, 'libraryName': 'bnlearn', 'std': 0.09954596328892612}, {'arguments': 'asia.bif', 'runTime': 0.09429786329288035, 'libraryName': 'bnlearn', 'std': 0.11763605570456287}, {'arguments': 'child.bif', 'runTime': 0.1284268565731744, 'libraryName': 'bnlearn', 'std': 0.12998989920583492}, {'arguments': 'insurance.bif', 'runTime': 0.12608019093591719, 'libraryName': 'bnlearn', 'std': 0.16032133677803193}, {'arguments': 'water.bif', 'runTime': 0.20380962133115776, 'libraryName': 'bnlearn', 'std': 0.12691420911282073}, {'arguments': 'mildew.bif', 'runTime': 0.6794281245286887, 'libraryName': 'bnlearn', 'std': 0.4438853929603914}, {'arguments': 'alarm.bif', 'runTime': 0.2298558446628973, 'libraryName': 'bnlearn', 'std': 0.26374081038214414}, {'arguments': 'barley.bif', 'runTime': 0.9261209690400088, 'libraryName': 'bnlearn', 'std': 0.2337497887719227}, {'arguments': 'hailfinder.bif', 'runTime': 0.492730771501859, 'libraryName': 'bnlearn', 'std': 0.2185916427328336}, {'arguments': 'hepar2.bif', 'runTime': 0.6449766589406257, 'libraryName': 'bnlearn', 'std': 0.17861277633372022}, {'arguments': 'andes.bif', 'runTime': 8.333872768445872, 'libraryName': 'bnlearn', 'std': 0.4871343647778997}, {'arguments': 'diabetes.bif', 'runTime': 62.05206789309159, 'libraryName': 'bnlearn', 'std': 5.063363947889269}, {'arguments': 'pigs.bif', 'runTime': 28.610019614182722, 'libraryName': 'bnlearn', 'std': 2.169540930203344}, {'arguments': 'link.bif', 'runTime': 89.21804339667626, 'libraryName': 'bnlearn', 'std': 4.9768231677099966}, {'arguments': 'munin.bif', 'runTime': 'error', 'libraryName': 'bnlearn', 'std': 'error'}, {'arguments': 'cancer.bif', 'runTime': 0.0038555280844370533, 'libraryName': 'pyAgrum', 'std': 0.0065163868324393534}, {'arguments': 'earthquake.bif', 'runTime': 0.004531614821155866, 'libraryName': 'pyAgrum', 'std': 0.005471532583564332}, {'arguments': 'asia.bif', 'runTime': 0.0022438059131925305, 'libraryName': 'pyAgrum', 'std': 0.002523915472920358}, {'arguments': 'child.bif', 'runTime': 0.005437372848577798, 'libraryName': 'pyAgrum', 'std': 0.004106917566557474}, {'arguments': 'insurance.bif', 'runTime': 0.014239219677013656, 'libraryName': 'pyAgrum', 'std': 0.005753575962913354}, {'arguments': 'water.bif', 'runTime': 0.7594841262713695, 'libraryName': 'pyAgrum', 'std': 0.1134029305836355}, {'arguments': 'mildew.bif', 'runTime': 0.26776763156522065, 'libraryName': 'pyAgrum', 'std': 0.026423997303967738}, {'arguments': 'alarm.bif', 'runTime': 0.010146092507056892, 'libraryName': 'pyAgrum', 'std': 0.00742297750231959}, {'arguments': 'barley.bif', 'runTime': 0.8933262710149089, 'libraryName': 'pyAgrum', 'std': 0.21844772420700762}, {'arguments': 'hailfinder.bif', 'runTime': 0.016350870616920293, 'libraryName': 'pyAgrum', 'std': 0.010033653366755208}, {'arguments': 'hepar2.bif', 'runTime': 0.022668285193108022, 'libraryName': 'pyAgrum', 'std': 0.009528752668681474}, {'arguments': 'andes.bif', 'runTime': 0.18855786176087955, 'libraryName': 'pyAgrum', 'std': 0.007721320019531312}, {'arguments': 'diabetes.bif', 'runTime': 0.3621450708402942, 'libraryName': 'pyAgrum', 'std': 0.05208988575811233}, {'arguments': 'pigs.bif', 'runTime': 0.16843974206130952, 'libraryName': 'pyAgrum', 'std': 0.013782292461652244}, {'arguments': 'link.bif', 'runTime': 50.72324518479096, 'libraryName': 'pyAgrum', 'std': 5.368771970428288}, {'arguments': 'munin.bif', 'runTime': 2.0079676810031137, 'libraryName': 'pyAgrum', 'std': 0.09023344198614708}], 'display': 'groupedBar', 'label': 'Runtime', 'title': 'Inference time by Variable Elimination', 'XLabel': 'Files Infered On', 'YLabel': 'Time (s)', 'scale': 'auto', 'timeout': '180'}};</script>
+<script defer  >const TaskName = 'Best_Inference';</script>
 <script defer  >const argDescription = 'Files Infered On';</script>
 <script defer  >const displayScale = 'linear';</script>
 <script defer type='module' src ='../script/taskScript.js'></script>
@@ -170,31 +201,13 @@
 
 <!-- Task Main Component -->
 <div class="main-content">
-    <h1 id="entry-title">Exact Inference</h1>
+    <h1 id="entry-title">Best Inference</h1>
     <!-- <div id="menu"></div> -->
     <div>
-        Exact inference in Bayesian networks refers to the process of computing the exact probability distribution over a set of variables given some evidence.
-This is done by using the joint probability distribution of the variables and applying the Bayes rule.
-The exact inference algorithm computes the posterior distribution by summing over all possible values of the unobserved variables.
-This can be computationally expensive for large networks, but it guarantees the correct result.
+        The Goal of the task is to compare, for each Targets the best inference algorithm. You can find the name of the function/algorithm used
+in the code used to generate the results.
         
-        <details>
-            <summary>More details</summary>
-            <div>
-                <div>
-                    Exact inference in Bayesian networks is used to compute the posterior distribution of a set of variables given some evidence.
-The posterior distribution is the probability distribution of the variables after taking into account the evidence.
-The evidence is represented by setting the observed variables to their observed values.
-The joint probability distribution is the product of the probability distributions of each variable given its parents in the network.
-The exact inference algorithm is guaranteed to give the correct result, but it can be computationally expensive for large networks.
-In practice, approximate inference algorithms are often used to compute the posterior distribution.
-These algorithms are faster than exact inference, but they may not give the exact result.
-                </div>
-                <div>
-                    
-                </div>
-            </div>
-        </details>
+
         
     </div>
 
@@ -218,7 +231,9 @@ These algorithms are faster than exact inference, but they may not give the exac
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 9</span>
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">10</span>
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">11</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">12</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f0dfaf">from</span> <span style="color: #dcdccc">pgmpy.readwrite</span> <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">BIFReader</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">14</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f0dfaf">from</span> <span style="color: #dcdccc">pgmpy.readwrite</span> <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">BIFReader</span>
 <span style="color: #f0dfaf">from</span> <span style="color: #dcdccc">pgmpy.inference</span> <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">VariableElimination</span>
 <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">os</span>
 <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">sys</span>
@@ -230,6 +245,8 @@ These algorithms are faster than exact inference, but they may not give the exac
 <span style="color: #dcdccc">model</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">reader</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">get_model</span><span style="color: #f0efd0">()</span>
 
 <span style="color: #dcdccc">infer</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">VariableElimination</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">model</span><span style="color: #f0efd0">)</span>
+<span style="color: #efdcbc">for</span> <span style="color: #dcdccc">node</span> <span style="color: #f0efd0">in</span> <span style="color: #dcdccc">model</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">nodes</span><span style="color: #f0efd0">():</span>
+    <span style="color: #dcdccc">infer</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">query</span><span style="color: #f0efd0">([</span><span style="color: #dcdccc">node</span><span style="color: #f0efd0">])</span>
 </pre></div></td></tr></table></div>
  </code> <code id='bnlearn'> <h2>bnlearn</h2> <div class="zenburn" style="background: #3f3f3f"><table class="zenburntable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -244,30 +261,36 @@ These algorithms are faster than exact inference, but they may not give the exac
 <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">bnlearn</span> <span style="color: #efdcbc">as</span> <span style="color: #dcdccc">bn</span>
 <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">sys</span>
 
-<span style="color: #7f9f7f; font-style: italic"># doest not work because the memory is not freed</span>
 <span style="color: #dcdccc">currentdir</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">os</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">path</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">dirname</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">os</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">path</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">realpath</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">__file__</span><span style="color: #f0efd0">))</span>
 
 <span style="color: #dcdccc">model</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">bn</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">import_DAG</span><span style="color: #f0efd0">(</span><span style="color: #cc9393">f&quot;</span><span style="color: #dca3a3; font-weight: bold">{</span><span style="color: #dcdccc">currentdir</span><span style="color: #dca3a3; font-weight: bold">}</span><span style="color: #cc9393">/data/</span><span style="color: #dca3a3; font-weight: bold">{</span><span style="color: #dcdccc">sys</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">argv</span><span style="color: #f0efd0">[</span><span style="color: #8cd0d3">1</span><span style="color: #f0efd0">]</span><span style="color: #dca3a3; font-weight: bold">}</span><span style="color: #cc9393">&quot;</span><span style="color: #f0efd0">,</span> <span style="color: #dcdccc">verbose</span><span style="color: #f0efd0">=</span><span style="color: #8cd0d3">0</span><span style="color: #f0efd0">)</span>
 
-<span style="color: #dcdccc">query</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">bn</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">inference</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">fit</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">model</span><span style="color: #f0efd0">,</span> <span style="color: #dcdccc">variables</span><span style="color: #f0efd0">=[],</span> <span style="color: #dcdccc">evidence</span><span style="color: #f0efd0">={},</span> <span style="color: #dcdccc">verbose</span><span style="color: #f0efd0">=</span><span style="color: #8cd0d3">0</span><span style="color: #f0efd0">)</span>
+<span style="color: #efdcbc">for</span> <span style="color: #dcdccc">node</span> <span style="color: #f0efd0">in</span> <span style="color: #dcdccc">model</span><span style="color: #f0efd0">[</span><span style="color: #cc9393">&quot;model&quot;</span><span style="color: #f0efd0">].</span><span style="color: #dcdccc">nodes</span><span style="color: #f0efd0">():</span>
+    <span style="color: #dcdccc">query</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">bn</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">inference</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">fit</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">model</span><span style="color: #f0efd0">,</span> <span style="color: #dcdccc">variables</span><span style="color: #f0efd0">=[</span><span style="color: #dcdccc">node</span><span style="color: #f0efd0">],</span> <span style="color: #dcdccc">evidence</span><span style="color: #f0efd0">={},</span> <span style="color: #dcdccc">verbose</span><span style="color: #f0efd0">=</span><span style="color: #8cd0d3">0</span><span style="color: #f0efd0">)</span>
 </pre></div></td></tr></table></div>
- </code> <code id='pyAgrum'> <h2>pyAgrum</h2> <div class="zenburn" style="background: #3f3f3f"><table class="zenburntable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">6</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">7</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">8</span>
-<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">pyAgrum</span> <span style="color: #efdcbc">as</span> <span style="color: #dcdccc">gum</span>
+ </code> <code id='pyAgrum'> <h2>pyAgrum</h2> <div class="zenburn" style="background: #3f3f3f"><table class="zenburntable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: #5d6262; background-color: #353535; padding-left: 5px; padding-right: 5px;">12</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">pyAgrum</span> <span style="color: #efdcbc">as</span> <span style="color: #dcdccc">gum</span>
 <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">os</span>
 <span style="color: #f0dfaf">import</span> <span style="color: #dcdccc">sys</span>
 
 <span style="color: #dcdccc">currentdir</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">os</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">path</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">dirname</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">os</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">path</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">realpath</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">__file__</span><span style="color: #f0efd0">))</span>
 
 <span style="color: #dcdccc">bn</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">gum</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">loadBN</span><span style="color: #f0efd0">(</span><span style="color: #cc9393">f&quot;</span><span style="color: #dca3a3; font-weight: bold">{</span><span style="color: #dcdccc">currentdir</span><span style="color: #dca3a3; font-weight: bold">}</span><span style="color: #cc9393">/data/</span><span style="color: #dca3a3; font-weight: bold">{</span><span style="color: #dcdccc">sys</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">argv</span><span style="color: #f0efd0">[</span><span style="color: #8cd0d3">1</span><span style="color: #f0efd0">]</span><span style="color: #dca3a3; font-weight: bold">}</span><span style="color: #cc9393">&quot;</span><span style="color: #f0efd0">)</span>
-<span style="color: #dcdccc">ie</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">gum</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">VariableElimination</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">bn</span><span style="color: #f0efd0">)</span>
+<span style="color: #dcdccc">ie</span> <span style="color: #f0efd0">=</span> <span style="color: #dcdccc">gum</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">LazyPropagation</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">bn</span><span style="color: #f0efd0">)</span>
 <span style="color: #dcdccc">ie</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">makeInference</span><span style="color: #f0efd0">()</span>
+
+<span style="color: #efdcbc">for</span> <span style="color: #dcdccc">node</span> <span style="color: #f0efd0">in</span> <span style="color: #dcdccc">bn</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">names</span><span style="color: #f0efd0">():</span>
+    <span style="color: #dcdccc">ie</span><span style="color: #f0efd0">.</span><span style="color: #dcdccc">posterior</span><span style="color: #f0efd0">(</span><span style="color: #dcdccc">node</span><span style="color: #f0efd0">)</span>
 </pre></div></td></tr></table></div>
  </code></div>
         </div>

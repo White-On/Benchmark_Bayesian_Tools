@@ -23,7 +23,7 @@
         <nav class="header-nav">
             <a href="../index.html"><b>Home</b></a>
             <a href="https://white-on.github.io/BenchSite/"><b>About</b></a>
-            <a href="../result.json" download="data.json"><b>Download</b></a>
+            <a href="../results.json" download="data.json"><b>Raw Data</b></a>
         </nav>
         <nav class="header-nav">
             <p id="link-description">You are invited to contribute through <br> a request on the GitHub page</p>
@@ -62,35 +62,47 @@
         <ul class="subMenu collapse">
             
                 <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Learning.html' id='Learning-nav'>Learning</a></button>
-                
-                <ul class="subMenu collapse">
-                    
-                        <a href='Learning_best_method.html' id='Learning_best_method-nav'>Learning best method</a>
-                    
-                        <a href='Learning_hill_climb_BIC.html' id='Learning_hill_climb_BIC-nav'>Learning hill climb BIC</a>
-                    
-                </ul>
-                </li>
-            
-                <li class="menu-item has-submenu">
                 <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Inference.html' id='Inference-nav'>Inference</a></button>
                 
                 <ul class="subMenu collapse">
                     
-                        <a href='Approx_Inference.html' id='Approx_Inference-nav'>Approx Inference</a>
+                        <a href='Best_Inference.html' id='Best_Inference-nav'>Best Inference</a>
                     
-                        <a href='Exact_Inference.html' id='Exact_Inference-nav'>Exact Inference</a>
+                        <a href='Variable_elimination.html' id='Variable_elimination-nav'>Variable elimination</a>
                     
                 </ul>
                 </li>
             
                 <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='BIF_manipulation.html' id='BIF_manipulation-nav'>BIF manipulation</a></button>
+                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Input_Output.html' id='Input_Output-nav'>Input Output</a></button>
                 
                 <ul class="subMenu collapse">
                     
-                        <a href='BIFReading.html' id='BIFReading-nav'>BIFReading</a>
+                        <a href='BIF.html' id='BIF-nav'>BIF</a>
+                    
+                        <a href='BIFXML.html' id='BIFXML-nav'>BIFXML</a>
+                    
+                        <a href='DSL.html' id='DSL-nav'>DSL</a>
+                    
+                        <a href='NET.html' id='NET-nav'>NET</a>
+                    
+                        <a href='UAI.html' id='UAI-nav'>UAI</a>
+                    
+                        <a href='XDSL.html' id='XDSL-nav'>XDSL</a>
+                    
+                </ul>
+                </li>
+            
+                <li class="menu-item has-submenu">
+                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Learning.html' id='Learning-nav'>Learning</a></button>
+                
+                <ul class="subMenu collapse">
+                    
+                        <a href='Learning_micro_child_Kullback_Leibler.html' id='Learning_micro_child_Kullback_Leibler-nav'>Learning micro child Kullback Leibler</a>
+                    
+                        <a href='Learning_structure_large_sampling.html' id='Learning_structure_large_sampling-nav'>Learning structure large sampling</a>
+                    
+                        <a href='Learning_structure_small_sampling.html' id='Learning_structure_small_sampling-nav'>Learning structure small sampling</a>
                     
                 </ul>
                 </li>
@@ -135,40 +147,64 @@
 
 <!-- Rank Bar  -->
 <div id="rank-bar">
-    <div id="rank-str">
+    <div id="rank-str" class="rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}">
         <div id="indication">
             <!--  Here we need the link for the global About Page -->
-            <a href="about.html#compare-explanation">
+            <a href="https://white-on.github.io/BenchSite/#explications">
                 <svg width="1000" height="50" viewBox="0,0,1000,50" style="max-width: 100%; height: auto;"><g transform="translate(0, 0)"><g transform="translate(0, 0)"><rect x="0" y="0" width="216" height="50" fill="#440154"></rect><rect x="216" y="0" width="54" height="50" fill="#2e6e8e"></rect><path d="M 214 0 L 268 25 L 214 50Z" fill="#440154"></path><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">first</text></g><g transform="translate(268, 0)"><rect x="0" y="0" width="216" height="50" fill="#2e6e8e"></rect><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">same 1</text></g></g><g transform="translate(0, 0)"><g transform="translate(500, 0)"><rect x="0" y="0" width="216" height="50" fill="#2e6e8e"></rect><rect x="216" y="0" width="54" height="50" fill="#4ac16d"></rect><path d="M 214 0 L 268 25 L 214 50Z" fill="#2e6e8e"></path><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">same 2</text></g><g transform="translate(768, 0)"><rect x="0" y="0" width="216" height="50" fill="#4ac16d"></rect><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">last</text></g></g></svg>
             </a>
         </div>
     </div>
-    <div>2023-07-10 16:34:59</div>
+    <div>2023-08-23 14:05:38</div>
 </div>
 <script type="module">
     import { rankBar } from "../script/rankBar.js";
-    // let cls = {"pyAgrum":0, "pgmpy":1, "bnlearn":2};
-    const cls = {'bnlearn': 0, 'pyAgrum': 1, 'pgmpy': 2}
-    // console.log(cls);
+    import { arrowRank } from "../script/arrowRank.js";
+    const rankBarElement = document.getElementsByClassName("rankBar")
+    
+    for(let element of rankBarElement){
+        let cls = element.dataset.bar.replaceAll("'", '"');
+        cls = JSON.parse(cls);
+        let librarySizeBox= 100;
+        let barSVG = rankBar(cls, {
+            width : (librarySizeBox* Object.keys(cls).length),
+            height : 25,
+            fontSize : 10,
+            gap : 5,
 
-    let chart = rankBar(cls, {
-        width : 400,
-        height : 25,
-        fontSize : 10,
-        gap : 5,
+            contentFolderPath : "",
+        });
+        element.appendChild(barSVG);
+    }
+
+    const elements = document.getElementsByClassName("rank-arrow");
+    for (let element of elements) {
+        // console.log(element.dataset.rank);
+        let cls = element.dataset.rank.replaceAll("'", '"');
+        let libraryName = element.innerHTML;
+        element.innerHTML = "";
+        cls = JSON.parse(cls);
+        let arrow = arrowRank(cls, libraryName, {
+        width : 200,
+        height : 50,
 
         contentFolderPath : "",
     });
-
-    document.getElementById("rank-str").appendChild(chart);
+        element.appendChild(arrow);
+    }
 </script>
 <!-- Theme Main components -->
-<script defer  >const importedData = [{'taskName': 'BIF_manipulation', 'libraryName': 'bnlearn', 'results': 0}, {'taskName': 'BIF_manipulation', 'libraryName': 'pyAgrum', 'results': 1}, {'taskName': 'BIF_manipulation', 'libraryName': 'pgmpy', 'results': 2}, {'taskName': 'BIFReading', 'libraryName': 'bnlearn', 'results': 0}, {'taskName': 'BIFReading', 'libraryName': 'pyAgrum', 'results': 1}, {'taskName': 'BIFReading', 'libraryName': 'pgmpy', 'results': 2}];</script>
-<script defer  >const themeName = 'BIF_manipulation';</script>
+<script defer  >const importedData = [{'taskName': 'Input_Output', 'libraryName': 'pyAgrum', 'results': 0}, {'taskName': 'Input_Output', 'libraryName': 'pgmpy', 'results': 1}, {'taskName': 'Input_Output', 'libraryName': 'bnlearn', 'results': 2}, {'taskName': 'BIF', 'libraryName': 'pyAgrum', 'results': 0}, {'taskName': 'BIF', 'libraryName': 'pgmpy', 'results': 1}, {'taskName': 'BIF', 'libraryName': 'bnlearn', 'results': 2}, {'taskName': 'BIFXML', 'libraryName': 'pyAgrum', 'results': 0}, {'taskName': 'BIFXML', 'libraryName': 'pgmpy', 'results': 1}, {'taskName': 'BIFXML', 'libraryName': 'bnlearn', 'results': 2}, {'taskName': 'DSL', 'libraryName': 'pyAgrum', 'results': 0}, {'taskName': 'DSL', 'libraryName': 'pgmpy', 'results': 1}, {'taskName': 'DSL', 'libraryName': 'bnlearn', 'results': 1}, {'taskName': 'NET', 'libraryName': 'pyAgrum', 'results': 0}, {'taskName': 'NET', 'libraryName': 'pgmpy', 'results': 1}, {'taskName': 'NET', 'libraryName': 'bnlearn', 'results': 1}, {'taskName': 'UAI', 'libraryName': 'pyAgrum', 'results': 0}, {'taskName': 'UAI', 'libraryName': 'pgmpy', 'results': 1}, {'taskName': 'UAI', 'libraryName': 'bnlearn', 'results': 1}, {'taskName': 'XDSL', 'libraryName': 'pyAgrum', 'results': 0}, {'taskName': 'XDSL', 'libraryName': 'pgmpy', 'results': 1}, {'taskName': 'XDSL', 'libraryName': 'bnlearn', 'results': 1}];</script>
+<script defer  >const themeName = 'Input_Output';</script>
 <script defer type='module' src ='../script/themeScript.js'></script>
 
-<h1 id="entry-title">BIF manipulation</h1>
-<h2>This theme is compose of <a href='BIFReading.html' >BIFReading</a></h2><!-- Google tag (gtag.js) -->
+<h1 id="entry-title">Input Output</h1>
+<h2>This theme is compose of <a href='BIF.html' >BIF</a>, <a href='BIFXML.html' >BIFXML</a>, <a href='DSL.html' >DSL</a>, <a href='NET.html' >NET</a>, <a href='UAI.html' >UAI</a>, <a href='XDSL.html' >XDSL</a></h2>
+<p>The Input/Output task involves reading and writing Bayesian Network files.
+<br><br>Bayesian Network files are used to store the structure and parameters of a Bayesian Network.
+<br><br>They can be used to save a Bayesian Network for later use, or to share a Bayesian Network with others.
+<br><br>They can also be used to import a Bayesian Network into another program, such as a Bayesian Network editor or a Bayesian Network inference engine.</p>
+<div id="main_container"></div><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
 <script>
   window.dataLayer = window.dataLayer || [];

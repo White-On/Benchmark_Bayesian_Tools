@@ -9,6 +9,7 @@ function dataSpread(data){
     let max = Math.max.apply(Math, data)
     return max - min;
 }
+
 // to get the Task Name that we want to plot we have 3 options:
 
 // 1. get the task name from an element in the html page
@@ -37,8 +38,8 @@ let height = 500;
 
 let possibleplot = {"line": ComplexeLineChart, "histo": Histogram, "groupedBar": GroupedBarChart, "violons": ViolonsChart};
 
-const timeBackgroundColor = "#ffffaa";
-const evaluationBackgroundcolor = "#aaffff";
+const timeBackgroundColor = "#aaffff";
+const evaluationBackgroundcolor = "#ffffaa";
 // const defaultBackgroundcolor = "#aaffff";
 
 let chartList = [];
@@ -50,7 +51,7 @@ for(let element in importedData){
     let chartdata = importedData[element].data;
     labelList.push(importedData[element].label);
     
-    console.log(chartdata);
+    // console.log(chartdata);
     // console.log(importedData[element]);
     if (chartdata.length == 0){
         chart = document.createElement("p");
@@ -64,6 +65,11 @@ for(let element in importedData){
         allLibraries = chartdata.map(d => d.libraryName);
         allLibraries = [...new Set(allLibraries)];
     }
+
+    // we attribute a color to each library as a function of the number of libraries
+    let colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+    colorScale.domain(allLibraries);
+
     // check if the arguments are numbers or not to sort the data if needed
     if(typeof chartdata[0].arguments === "number"){
         // if the arguments are numbers we sort the data by the arguments
@@ -73,8 +79,13 @@ for(let element in importedData){
     }
     else{
         // if the arguments are not numbers we sort the data by the arguments
-        let orderingFunction = (a, b) => d3.ascending(a.runTime, b.runTime);
-        chartdata.sort(orderingFunction);
+        // before sorting we need to create a dict with the error values removed
+        // and then we sort the data and then fuse the data with the error values
+        // let data = chartdata.filter(d => typeof d.runTime === "number");
+        // let dataError = chartdata.filter(d => typeof d.runTime !== "number");
+        // let orderingFunction = (a, b) => d3.ascending(a.runTime, b.runTime);
+        // data.sort(orderingFunction);
+        // chartdata = data.concat(dataError);
         // console.log("arguments are not numbers");
     }
 
@@ -93,7 +104,7 @@ for(let element in importedData){
         }
         
         // we remove the eventual 0 from the local spread -> error in the data
-        local_spread = local_spread.filter(d => d != 0);
+        local_spread = local_spread.filter(d => d > 0);
         let data = chartdata.filter(d => typeof d.runTime === "number");
         let global_spread = dataSpread(data.map(d => d.runTime));
         // default scale is linear
@@ -110,6 +121,7 @@ for(let element in importedData){
     }
 
     try{
+        console.log(chartdata)
         chart = possibleplot[importedData[element].display](chartdata, {
             values: d => d.runTime,
             categories: d => d.arguments,
@@ -134,12 +146,15 @@ for(let element in importedData){
             // yType: d3.scaleLog,
 
             tooltipFontSize: 12,
+            timeout : importedData[element].timeout,
+
+            color : d => colorScale(d),
 
         });
 
         chartList.push(chart);
     } catch(e){
-        console.log(e);
+        // console.log(e);
         chart = document.createElement("p");
         chart.innerHTML = "Error Occured in the display of the chart 😥";
         chartList.push(chart);
@@ -147,13 +162,19 @@ for(let element in importedData){
 }
 
 
-for(let title of labelList){
-    let option = document.createElement("option");
-    option.value = title;
-    option.text = title;
-    dropdown.appendChild(option);
+if (labelList.length == 1){
+    dropdown = document.createElement("div");
+    dropdown.id = "chartSelector";
+    dropdown.innerHTML = labelList[0];
 }
-
+else{
+    for(let title of labelList){
+        let option = document.createElement("option");
+        option.value = title;
+        option.text = title;
+        dropdown.appendChild(option);
+    }
+}
 htmlComponent.appendChild(dropdown);
 
 for(let chart of chartList){

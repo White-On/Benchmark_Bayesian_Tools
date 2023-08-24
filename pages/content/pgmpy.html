@@ -23,7 +23,7 @@
         <nav class="header-nav">
             <a href="../index.html"><b>Home</b></a>
             <a href="https://white-on.github.io/BenchSite/"><b>About</b></a>
-            <a href="../result.json" download="data.json"><b>Download</b></a>
+            <a href="../results.json" download="data.json"><b>Raw Data</b></a>
         </nav>
         <nav class="header-nav">
             <p id="link-description">You are invited to contribute through <br> a request on the GitHub page</p>
@@ -62,35 +62,47 @@
         <ul class="subMenu collapse">
             
                 <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Learning.html' id='Learning-nav'>Learning</a></button>
-                
-                <ul class="subMenu collapse">
-                    
-                        <a href='Learning_best_method.html' id='Learning_best_method-nav'>Learning best method</a>
-                    
-                        <a href='Learning_hill_climb_BIC.html' id='Learning_hill_climb_BIC-nav'>Learning hill climb BIC</a>
-                    
-                </ul>
-                </li>
-            
-                <li class="menu-item has-submenu">
                 <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Inference.html' id='Inference-nav'>Inference</a></button>
                 
                 <ul class="subMenu collapse">
                     
-                        <a href='Approx_Inference.html' id='Approx_Inference-nav'>Approx Inference</a>
+                        <a href='Best_Inference.html' id='Best_Inference-nav'>Best Inference</a>
                     
-                        <a href='Exact_Inference.html' id='Exact_Inference-nav'>Exact Inference</a>
+                        <a href='Variable_elimination.html' id='Variable_elimination-nav'>Variable elimination</a>
                     
                 </ul>
                 </li>
             
                 <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='BIF_manipulation.html' id='BIF_manipulation-nav'>BIF manipulation</a></button>
+                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Input_Output.html' id='Input_Output-nav'>Input Output</a></button>
                 
                 <ul class="subMenu collapse">
                     
-                        <a href='BIFReading.html' id='BIFReading-nav'>BIFReading</a>
+                        <a href='BIF.html' id='BIF-nav'>BIF</a>
+                    
+                        <a href='BIFXML.html' id='BIFXML-nav'>BIFXML</a>
+                    
+                        <a href='DSL.html' id='DSL-nav'>DSL</a>
+                    
+                        <a href='NET.html' id='NET-nav'>NET</a>
+                    
+                        <a href='UAI.html' id='UAI-nav'>UAI</a>
+                    
+                        <a href='XDSL.html' id='XDSL-nav'>XDSL</a>
+                    
+                </ul>
+                </li>
+            
+                <li class="menu-item has-submenu">
+                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Learning.html' id='Learning-nav'>Learning</a></button>
+                
+                <ul class="subMenu collapse">
+                    
+                        <a href='Learning_micro_child_Kullback_Leibler.html' id='Learning_micro_child_Kullback_Leibler-nav'>Learning micro child Kullback Leibler</a>
+                    
+                        <a href='Learning_structure_large_sampling.html' id='Learning_structure_large_sampling-nav'>Learning structure large sampling</a>
+                    
+                        <a href='Learning_structure_small_sampling.html' id='Learning_structure_small_sampling-nav'>Learning structure small sampling</a>
                     
                 </ul>
                 </li>
@@ -135,66 +147,116 @@
 
 <!-- Rank Bar  -->
 <div id="rank-bar">
-    <div id="rank-str">
+    <div id="rank-str" class="rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}">
         <div id="indication">
             <!--  Here we need the link for the global About Page -->
-            <a href="about.html#compare-explanation">
+            <a href="https://white-on.github.io/BenchSite/#explications">
                 <svg width="1000" height="50" viewBox="0,0,1000,50" style="max-width: 100%; height: auto;"><g transform="translate(0, 0)"><g transform="translate(0, 0)"><rect x="0" y="0" width="216" height="50" fill="#440154"></rect><rect x="216" y="0" width="54" height="50" fill="#2e6e8e"></rect><path d="M 214 0 L 268 25 L 214 50Z" fill="#440154"></path><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">first</text></g><g transform="translate(268, 0)"><rect x="0" y="0" width="216" height="50" fill="#2e6e8e"></rect><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">same 1</text></g></g><g transform="translate(0, 0)"><g transform="translate(500, 0)"><rect x="0" y="0" width="216" height="50" fill="#2e6e8e"></rect><rect x="216" y="0" width="54" height="50" fill="#4ac16d"></rect><path d="M 214 0 L 268 25 L 214 50Z" fill="#2e6e8e"></path><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">same 2</text></g><g transform="translate(768, 0)"><rect x="0" y="0" width="216" height="50" fill="#4ac16d"></rect><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">last</text></g></g></svg>
             </a>
         </div>
     </div>
-    <div>2023-07-10 16:34:59</div>
+    <div>2023-08-23 14:05:38</div>
 </div>
 <script type="module">
     import { rankBar } from "../script/rankBar.js";
-    // let cls = {"pyAgrum":0, "pgmpy":1, "bnlearn":2};
-    const cls = {'pyAgrum': 0, 'bnlearn': 1, 'pgmpy': 2}
-    // console.log(cls);
+    import { arrowRank } from "../script/arrowRank.js";
+    const rankBarElement = document.getElementsByClassName("rankBar")
+    
+    for(let element of rankBarElement){
+        let cls = element.dataset.bar.replaceAll("'", '"');
+        cls = JSON.parse(cls);
+        let librarySizeBox= 100;
+        let barSVG = rankBar(cls, {
+            width : (librarySizeBox* Object.keys(cls).length),
+            height : 25,
+            fontSize : 10,
+            gap : 5,
 
-    let chart = rankBar(cls, {
-        width : 400,
-        height : 25,
-        fontSize : 10,
-        gap : 5,
+            contentFolderPath : "./",
+        });
+        element.appendChild(barSVG);
+    }
+
+    const elements = document.getElementsByClassName("rank-arrow");
+    for (let element of elements) {
+        // console.log(element.dataset.rank);
+        let cls = element.dataset.rank.replaceAll("'", '"');
+        let libraryName = element.innerHTML;
+        element.innerHTML = "";
+        cls = JSON.parse(cls);
+        let arrow = arrowRank(cls, libraryName, {
+        width : 200,
+        height : 50,
 
         contentFolderPath : "./",
     });
-
-    document.getElementById("rank-str").appendChild(chart);
-</script><script defer  >const importedData = {'Learning_best_method': {'display': 'plot', 'status': 'Run', 'data': [{'arguments': 1000.0, 'resultElement': 16.202019098553468, 'libraryName': 'pgmpy'}, {'arguments': 1500.0, 'resultElement': 21.48919109790586, 'libraryName': 'pgmpy'}, {'arguments': 2000.0, 'resultElement': 25.784419255373493, 'libraryName': 'pgmpy'}, {'arguments': 2500.0, 'resultElement': 29.67424145467918, 'libraryName': 'pgmpy'}, {'arguments': 3000.0, 'resultElement': 31.79834144890386, 'libraryName': 'pgmpy'}, {'arguments': 3500.0, 'resultElement': 35.001842463596, 'libraryName': 'pgmpy'}, {'arguments': 4000.0, 'resultElement': 38.45624701800989, 'libraryName': 'pgmpy'}, {'arguments': 4500.0, 'resultElement': 38.02909667266067, 'libraryName': 'pgmpy'}, {'arguments': 5000.0, 'resultElement': 42.30441017258404, 'libraryName': 'pgmpy'}, {'arguments': 7500.0, 'resultElement': 45.86663350426931, 'libraryName': 'pgmpy'}, {'arguments': 10000.0, 'resultElement': 50.830070765689015, 'libraryName': 'pgmpy'}]}, 'Learning_hill_climb_BIC': {'display': 'plot', 'status': 'Run', 'data': [{'arguments': 1000.0, 'resultElement': 13.667633371020202, 'libraryName': 'pgmpy'}, {'arguments': 1500.0, 'resultElement': 18.75874358807535, 'libraryName': 'pgmpy'}, {'arguments': 2000.0, 'resultElement': 24.383076503368404, 'libraryName': 'pgmpy'}, {'arguments': 2500.0, 'resultElement': 28.417320578203846, 'libraryName': 'pgmpy'}, {'arguments': 3000.0, 'resultElement': 33.60328024588913, 'libraryName': 'pgmpy'}, {'arguments': 3500.0, 'resultElement': 38.79268977653313, 'libraryName': 'pgmpy'}, {'arguments': 4000.0, 'resultElement': 42.658619464355674, 'libraryName': 'pgmpy'}, {'arguments': 4500.0, 'resultElement': 47.4473712722344, 'libraryName': 'pgmpy'}, {'arguments': 5000.0, 'resultElement': 51.02761535593309, 'libraryName': 'pgmpy'}]}, 'Approx_Inference': {'display': 'histo', 'status': 'NotRun', 'data': []}, 'Exact_Inference': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'pigs.bif', 'resultElement': 0.08761692631136005, 'libraryName': 'pgmpy'}, {'arguments': 'munin.bif', 'resultElement': 0.2432754576050987, 'libraryName': 'pgmpy'}, {'arguments': 'mildew.bif', 'resultElement': 0.10332093572166438, 'libraryName': 'pgmpy'}, {'arguments': 'link.bif', 'resultElement': 0.1920955391639533, 'libraryName': 'pgmpy'}, {'arguments': 'hepar2.bif', 'resultElement': 0.01005008847763141, 'libraryName': 'pgmpy'}, {'arguments': 'diabetes.bif', 'resultElement': 0.03593812855736663, 'libraryName': 'pgmpy'}, {'arguments': 'child.bif', 'resultElement': 0.027291367936413735, 'libraryName': 'pgmpy'}, {'arguments': 'cancer.bif', 'resultElement': 0.05895076447632164, 'libraryName': 'pgmpy'}, {'arguments': 'asia.bif', 'resultElement': 0.06826051375052582, 'libraryName': 'pgmpy'}, {'arguments': 'andes.bif', 'resultElement': 0.026611730029496055, 'libraryName': 'pgmpy'}, {'arguments': 'alarm.bif', 'resultElement': 0.007278266168820362, 'libraryName': 'pgmpy'}]}, 'BIFReading': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'pigs.bif', 'resultElement': 6.2457147124611465, 'libraryName': 'pgmpy'}, {'arguments': 'water.bif', 'resultElement': 5.983374077923751, 'libraryName': 'pgmpy'}, {'arguments': 'munin.bif', 'resultElement': 8.284820055783106, 'libraryName': 'pgmpy'}, {'arguments': 'mildew.bif', 'resultElement': 18.262209640738245, 'libraryName': 'pgmpy'}, {'arguments': 'link.bif', 'resultElement': 6.747937426320277, 'libraryName': 'pgmpy'}, {'arguments': 'insurance.bif', 'resultElement': 5.7358479226822965, 'libraryName': 'pgmpy'}, {'arguments': 'hepar2.bif', 'resultElement': 5.856368526040266, 'libraryName': 'pgmpy'}, {'arguments': 'hailfinder.bif', 'resultElement': 5.761678369094928, 'libraryName': 'pgmpy'}, {'arguments': 'earthquake.bif', 'resultElement': 3.4460448632404828, 'libraryName': 'pgmpy'}, {'arguments': 'diabetes.bif', 'resultElement': 12.504979299245557, 'libraryName': 'pgmpy'}, {'arguments': 'child.bif', 'resultElement': 5.353856948010313, 'libraryName': 'pgmpy'}, {'arguments': 'cancer.bif', 'resultElement': 3.463474624149967, 'libraryName': 'pgmpy'}, {'arguments': 'barley.bif', 'resultElement': 8.756143686148183, 'libraryName': 'pgmpy'}, {'arguments': 'asia.bif', 'resultElement': 3.6570614086425244, 'libraryName': 'pgmpy'}, {'arguments': 'andes.bif', 'resultElement': 6.045206884717724, 'libraryName': 'pgmpy'}, {'arguments': 'alarm.bif', 'resultElement': 5.714386133380079, 'libraryName': 'pgmpy'}]}};</script>
+        element.appendChild(arrow);
+    }
+</script><script defer  >const importedData = {'Best_Inference': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'cancer.bif', 'resultElement': 0.1614360633329178, 'libraryName': 'pgmpy'}, {'arguments': 'earthquake.bif', 'resultElement': 0.11113541247006505, 'libraryName': 'pgmpy'}, {'arguments': 'asia.bif', 'resultElement': 0.07131156631217649, 'libraryName': 'pgmpy'}, {'arguments': 'child.bif', 'resultElement': 0.09346022562024493, 'libraryName': 'pgmpy'}, {'arguments': 'insurance.bif', 'resultElement': 0.07739411878685155, 'libraryName': 'pgmpy'}, {'arguments': 'water.bif', 'resultElement': 0.10043086758907883, 'libraryName': 'pgmpy'}, {'arguments': 'mildew.bif', 'resultElement': 0.3768366743728519, 'libraryName': 'pgmpy'}, {'arguments': 'alarm.bif', 'resultElement': 0.22559247127479565, 'libraryName': 'pgmpy'}, {'arguments': 'barley.bif', 'resultElement': 0.46866638332642613, 'libraryName': 'pgmpy'}, {'arguments': 'hailfinder.bif', 'resultElement': 0.14180237715244293, 'libraryName': 'pgmpy'}, {'arguments': 'hepar2.bif', 'resultElement': 0.12098367157001048, 'libraryName': 'pgmpy'}, {'arguments': 'andes.bif', 'resultElement': 1.6120993666506063, 'libraryName': 'pgmpy'}, {'arguments': 'diabetes.bif', 'resultElement': 38.06984584740448, 'libraryName': 'pgmpy'}, {'arguments': 'pigs.bif', 'resultElement': 0.3647591605444749, 'libraryName': 'pgmpy'}, {'arguments': 'link.bif', 'resultElement': 2.262949620373547, 'libraryName': 'pgmpy'}, {'arguments': 'munin.bif', 'resultElement': 2.579818434198387, 'libraryName': 'pgmpy'}]}, 'BIF': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'cancer.bif', 'resultElement': 3.5707667644213266, 'libraryName': 'pgmpy'}, {'arguments': 'earthquake.bif', 'resultElement': 3.561797564383596, 'libraryName': 'pgmpy'}, {'arguments': 'asia.bif', 'resultElement': 3.992313853542631, 'libraryName': 'pgmpy'}, {'arguments': 'child.bif', 'resultElement': 5.522869445732795, 'libraryName': 'pgmpy'}, {'arguments': 'insurance.bif', 'resultElement': 5.778178959114787, 'libraryName': 'pgmpy'}, {'arguments': 'water.bif', 'resultElement': 6.147021178815824, 'libraryName': 'pgmpy'}, {'arguments': 'mildew.bif', 'resultElement': 24.50466832180973, 'libraryName': 'pgmpy'}, {'arguments': 'alarm.bif', 'resultElement': 5.923715285452393, 'libraryName': 'pgmpy'}, {'arguments': 'barley.bif', 'resultElement': 10.496267088727715, 'libraryName': 'pgmpy'}, {'arguments': 'hailfinder.bif', 'resultElement': 6.029469635570422, 'libraryName': 'pgmpy'}, {'arguments': 'hepar2.bif', 'resultElement': 5.913576652024251, 'libraryName': 'pgmpy'}, {'arguments': 'andes.bif', 'resultElement': 6.233214724692516, 'libraryName': 'pgmpy'}, {'arguments': 'diabetes.bif', 'resultElement': 12.760677377266498, 'libraryName': 'pgmpy'}, {'arguments': 'pigs.bif', 'resultElement': 6.585251639131457, 'libraryName': 'pgmpy'}, {'arguments': 'link.bif', 'resultElement': 6.925460146274418, 'libraryName': 'pgmpy'}, {'arguments': 'munin.bif', 'resultElement': 9.129857032521008, 'libraryName': 'pgmpy'}]}, 'BIFXML': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'cancer.bifxml', 'resultElement': 0.029770627688616515, 'libraryName': 'pgmpy'}, {'arguments': 'earthquake.bifxml', 'resultElement': 0.025011590403504664, 'libraryName': 'pgmpy'}, {'arguments': 'asia.bifxml', 'resultElement': 0.022336366286935902, 'libraryName': 'pgmpy'}, {'arguments': 'child.bifxml', 'resultElement': 0.023915009622896707, 'libraryName': 'pgmpy'}, {'arguments': 'insurance.bifxml', 'resultElement': 0.022040103932904693, 'libraryName': 'pgmpy'}, {'arguments': 'water.bifxml', 'resultElement': 0.010618429807697732, 'libraryName': 'pgmpy'}, {'arguments': 'mildew.bifxml', 'resultElement': 0.10837292455310622, 'libraryName': 'pgmpy'}, {'arguments': 'alarm.bifxml', 'resultElement': 0.025642561786559718, 'libraryName': 'pgmpy'}, {'arguments': 'barley.bifxml', 'resultElement': 0.05492351268026977, 'libraryName': 'pgmpy'}, {'arguments': 'hailfinder.bifxml', 'resultElement': 0.038915210382516184, 'libraryName': 'pgmpy'}, {'arguments': 'hepar2.bifxml', 'resultElement': 0.02805492837925752, 'libraryName': 'pgmpy'}, {'arguments': 'andes.bifxml', 'resultElement': 0.01836487619510541, 'libraryName': 'pgmpy'}, {'arguments': 'diabetes.bifxml', 'resultElement': 0.10859321405993154, 'libraryName': 'pgmpy'}, {'arguments': 'pigs.bifxml', 'resultElement': 0.018109990975509086, 'libraryName': 'pgmpy'}, {'arguments': 'link.bifxml', 'resultElement': 0.026877721037964025, 'libraryName': 'pgmpy'}, {'arguments': 'munin.bifxml', 'resultElement': 0.09647439774765322, 'libraryName': 'pgmpy'}]}, 'DSL': {'display': 'histo', 'status': 'NotRun', 'data': []}, 'NET': {'display': 'histo', 'status': 'NotRun', 'data': []}, 'UAI': {'display': 'histo', 'status': 'Error', 'data': []}, 'XDSL': {'display': 'histo', 'status': 'NotRun', 'data': []}, 'Learning_micro_child_Kullback_Leibler': {'display': 'plot', 'status': 'Run', 'data': [{'arguments': 1000.0, 'resultElement': 11.899769015610218, 'libraryName': 'pgmpy'}, {'arguments': 1500.0, 'resultElement': 22.085588252792757, 'libraryName': 'pgmpy'}, {'arguments': 2000.0, 'resultElement': 23.39200100399709, 'libraryName': 'pgmpy'}, {'arguments': 2500.0, 'resultElement': 24.742382893144775, 'libraryName': 'pgmpy'}, {'arguments': 3000.0, 'resultElement': 26.364905990815412, 'libraryName': 'pgmpy'}, {'arguments': 3500.0, 'resultElement': 27.900984912062995, 'libraryName': 'pgmpy'}, {'arguments': 4000.0, 'resultElement': 27.730460995109752, 'libraryName': 'pgmpy'}, {'arguments': 4500.0, 'resultElement': 28.403231843180645, 'libraryName': 'pgmpy'}, {'arguments': 5000.0, 'resultElement': 29.830706356597755, 'libraryName': 'pgmpy'}, {'arguments': 7500.0, 'resultElement': 31.701892263217207, 'libraryName': 'pgmpy'}, {'arguments': 10000.0, 'resultElement': 33.11652229951384, 'libraryName': 'pgmpy'}, {'arguments': 20000.0, 'resultElement': 35.3562493956803, 'libraryName': 'pgmpy'}, {'arguments': 30000.0, 'resultElement': 41.219173764965184, 'libraryName': 'pgmpy'}, {'arguments': 40000.0, 'resultElement': 40.01925853546709, 'libraryName': 'pgmpy'}, {'arguments': 50000.0, 'resultElement': 41.022510682387896, 'libraryName': 'pgmpy'}]}, 'Learning_structure_large_sampling': {'display': 'plot', 'status': 'Run', 'data': [{'arguments': 5000.0, 'resultElement': 41.15889178068292, 'libraryName': 'pgmpy'}, {'arguments': 7500.0, 'resultElement': 52.72475368374338, 'libraryName': 'pgmpy'}, {'arguments': 10000.0, 'resultElement': 59.146755938107766, 'libraryName': 'pgmpy'}, {'arguments': 20000.0, 'resultElement': 77.47032069647685, 'libraryName': 'pgmpy'}, {'arguments': 40000.0, 'resultElement': 134.6090890862979, 'libraryName': 'pgmpy'}, {'arguments': 50000.0, 'resultElement': 158.2025369531475, 'libraryName': 'pgmpy'}]}, 'Learning_structure_small_sampling': {'display': 'plot', 'status': 'Run', 'data': [{'arguments': 1000.0, 'resultElement': 20.726209878300626, 'libraryName': 'pgmpy'}, {'arguments': 1500.0, 'resultElement': 25.483089570499335, 'libraryName': 'pgmpy'}, {'arguments': 2000.0, 'resultElement': 29.12917250650935, 'libraryName': 'pgmpy'}, {'arguments': 2500.0, 'resultElement': 32.84497307729907, 'libraryName': 'pgmpy'}, {'arguments': 3000.0, 'resultElement': 38.32825660883364, 'libraryName': 'pgmpy'}, {'arguments': 3500.0, 'resultElement': 40.62225673817606, 'libraryName': 'pgmpy'}, {'arguments': 4000.0, 'resultElement': 43.088695035432465, 'libraryName': 'pgmpy'}, {'arguments': 4500.0, 'resultElement': 41.57805611358278, 'libraryName': 'pgmpy'}, {'arguments': 5000.0, 'resultElement': 41.26447412261041, 'libraryName': 'pgmpy'}]}, 'Variable_elimination': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'cancer.bif', 'resultElement': 0.0907048861583074, 'libraryName': 'pgmpy'}, {'arguments': 'earthquake.bif', 'resultElement': 0.1278339590434606, 'libraryName': 'pgmpy'}, {'arguments': 'asia.bif', 'resultElement': 0.09242301706280559, 'libraryName': 'pgmpy'}, {'arguments': 'child.bif', 'resultElement': 0.04795441853807617, 'libraryName': 'pgmpy'}, {'arguments': 'insurance.bif', 'resultElement': 0.09261151825481405, 'libraryName': 'pgmpy'}, {'arguments': 'water.bif', 'resultElement': 0.22932739960824453, 'libraryName': 'pgmpy'}, {'arguments': 'mildew.bif', 'resultElement': 0.2884678244627391, 'libraryName': 'pgmpy'}, {'arguments': 'alarm.bif', 'resultElement': 0.05798181230022261, 'libraryName': 'pgmpy'}, {'arguments': 'barley.bif', 'resultElement': 0.3658559893180306, 'libraryName': 'pgmpy'}, {'arguments': 'hailfinder.bif', 'resultElement': 0.1319117364510273, 'libraryName': 'pgmpy'}, {'arguments': 'hepar2.bif', 'resultElement': 0.16729146762496483, 'libraryName': 'pgmpy'}, {'arguments': 'andes.bif', 'resultElement': 1.7207378519233316, 'libraryName': 'pgmpy'}, {'arguments': 'diabetes.bif', 'resultElement': 44.12210300102985, 'libraryName': 'pgmpy'}, {'arguments': 'pigs.bif', 'resultElement': 0.37648848215273273, 'libraryName': 'pgmpy'}, {'arguments': 'link.bif', 'resultElement': 2.318691966822371, 'libraryName': 'pgmpy'}, {'arguments': 'munin.bif', 'resultElement': 2.4921053021680564, 'libraryName': 'pgmpy'}]}};</script>
 <script defer type='module' src ='../script/libraryScript.js'></script>
 
 <!-- Target main component -->
 <div class="title">
     <img src='../assets\pgmpy.png' alt='pgmpy' width='50' height='50'><h1 id="entry-title">pgmpy</h1> 
 </div>
-<p class="description">PGMpy is a Python library for working with Probabilistic Graphical Models (PGMs), which are graphical representations of probability distributions that allow for efficient computation of complex probability functions over many random variables. PGMs can be used to model a wide variety of domains, such as natural language processing, computer vision, bioinformatics, and social network analysis. PGMpy provides a set of classes for defining and manipulating different types of PGMs, including Bayesian Networks, Markov Networks, and Factor Graphs. It includes a variety of algorithms for performing inference and learning in PGMs, including exact inference, approximate inference, and parameter estimation. PGMpy also provides tools for visualization and evaluation of PGMs. PGMpy is an open-source library that is actively maintained and developed by a community of contributors. It has been extensively used in research and industry, and is considered one of the most popular libraries for PGMs in the Python ecosystem.</p>
+<p class="description"><b>pgmpy</b> is a pure python implementation for Bayesian Networks with a focus on modularity and extensibility.
+Implementations of various alogrithms for Structure Learning, Parameter Estimation, Approximate (Sampling Based) and Exact inference, and Causal Inference are available.</p>
 
 <div class ="grid">
     
     <div class="card">
-        <a href="Learning_best_method.html"><h2>Learning best method</h2></a>
-        <div id="Learning_best_method"></div>
+        <a href="Best_Inference.html"><h2>Best Inference</h2></a>
+        <div id="Best_Inference"></div>
     </div>
     
     <div class="card">
-        <a href="Learning_hill_climb_BIC.html"><h2>Learning hill climb BIC</h2></a>
-        <div id="Learning_hill_climb_BIC"></div>
+        <a href="BIF.html"><h2>BIF</h2></a>
+        <div id="BIF"></div>
     </div>
     
     <div class="card">
-        <a href="Approx_Inference.html"><h2>Approx Inference</h2></a>
-        <div id="Approx_Inference"></div>
+        <a href="BIFXML.html"><h2>BIFXML</h2></a>
+        <div id="BIFXML"></div>
     </div>
     
     <div class="card">
-        <a href="Exact_Inference.html"><h2>Exact Inference</h2></a>
-        <div id="Exact_Inference"></div>
+        <a href="DSL.html"><h2>DSL</h2></a>
+        <div id="DSL"></div>
     </div>
     
     <div class="card">
-        <a href="BIFReading.html"><h2>BIFReading</h2></a>
-        <div id="BIFReading"></div>
+        <a href="NET.html"><h2>NET</h2></a>
+        <div id="NET"></div>
+    </div>
+    
+    <div class="card">
+        <a href="UAI.html"><h2>UAI</h2></a>
+        <div id="UAI"></div>
+    </div>
+    
+    <div class="card">
+        <a href="XDSL.html"><h2>XDSL</h2></a>
+        <div id="XDSL"></div>
+    </div>
+    
+    <div class="card">
+        <a href="Learning_micro_child_Kullback_Leibler.html"><h2>Learning micro child Kullback Leibler</h2></a>
+        <div id="Learning_micro_child_Kullback_Leibler"></div>
+    </div>
+    
+    <div class="card">
+        <a href="Learning_structure_large_sampling.html"><h2>Learning structure large sampling</h2></a>
+        <div id="Learning_structure_large_sampling"></div>
+    </div>
+    
+    <div class="card">
+        <a href="Learning_structure_small_sampling.html"><h2>Learning structure small sampling</h2></a>
+        <div id="Learning_structure_small_sampling"></div>
+    </div>
+    
+    <div class="card">
+        <a href="Variable_elimination.html"><h2>Variable elimination</h2></a>
+        <div id="Variable_elimination"></div>
     </div>
     
 </div><!-- Google tag (gtag.js) -->

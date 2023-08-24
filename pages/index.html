@@ -23,7 +23,7 @@
         <nav class="header-nav">
             <a href="index.html"><b>Home</b></a>
             <a href="https://white-on.github.io/BenchSite/"><b>About</b></a>
-            <a href="result.json" download="data.json"><b>Download</b></a>
+            <a href="results.json" download="data.json"><b>Raw Data</b></a>
         </nav>
         <nav class="header-nav">
             <p id="link-description">You are invited to contribute through <br> a request on the GitHub page</p>
@@ -62,35 +62,47 @@
         <ul class="subMenu collapse">
             
                 <li class="menu-item has-submenu">
-                <button type="button"><img src="assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='content/Learning.html' id='Learning-nav'>Learning</a></button>
-                
-                <ul class="subMenu collapse">
-                    
-                        <a href='content/Learning_best_method.html' id='Learning_best_method-nav'>Learning best method</a>
-                    
-                        <a href='content/Learning_hill_climb_BIC.html' id='Learning_hill_climb_BIC-nav'>Learning hill climb BIC</a>
-                    
-                </ul>
-                </li>
-            
-                <li class="menu-item has-submenu">
                 <button type="button"><img src="assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='content/Inference.html' id='Inference-nav'>Inference</a></button>
                 
                 <ul class="subMenu collapse">
                     
-                        <a href='content/Approx_Inference.html' id='Approx_Inference-nav'>Approx Inference</a>
+                        <a href='content/Best_Inference.html' id='Best_Inference-nav'>Best Inference</a>
                     
-                        <a href='content/Exact_Inference.html' id='Exact_Inference-nav'>Exact Inference</a>
+                        <a href='content/Variable_elimination.html' id='Variable_elimination-nav'>Variable elimination</a>
                     
                 </ul>
                 </li>
             
                 <li class="menu-item has-submenu">
-                <button type="button"><img src="assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='content/BIF_manipulation.html' id='BIF_manipulation-nav'>BIF manipulation</a></button>
+                <button type="button"><img src="assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='content/Input_Output.html' id='Input_Output-nav'>Input Output</a></button>
                 
                 <ul class="subMenu collapse">
                     
-                        <a href='content/BIFReading.html' id='BIFReading-nav'>BIFReading</a>
+                        <a href='content/BIF.html' id='BIF-nav'>BIF</a>
+                    
+                        <a href='content/BIFXML.html' id='BIFXML-nav'>BIFXML</a>
+                    
+                        <a href='content/DSL.html' id='DSL-nav'>DSL</a>
+                    
+                        <a href='content/NET.html' id='NET-nav'>NET</a>
+                    
+                        <a href='content/UAI.html' id='UAI-nav'>UAI</a>
+                    
+                        <a href='content/XDSL.html' id='XDSL-nav'>XDSL</a>
+                    
+                </ul>
+                </li>
+            
+                <li class="menu-item has-submenu">
+                <button type="button"><img src="assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='content/Learning.html' id='Learning-nav'>Learning</a></button>
+                
+                <ul class="subMenu collapse">
+                    
+                        <a href='content/Learning_micro_child_Kullback_Leibler.html' id='Learning_micro_child_Kullback_Leibler-nav'>Learning micro child Kullback Leibler</a>
+                    
+                        <a href='content/Learning_structure_large_sampling.html' id='Learning_structure_large_sampling-nav'>Learning structure large sampling</a>
+                    
+                        <a href='content/Learning_structure_small_sampling.html' id='Learning_structure_small_sampling-nav'>Learning structure small sampling</a>
                     
                 </ul>
                 </li>
@@ -135,38 +147,57 @@
 
 <!-- Rank Bar  -->
 <div id="rank-bar">
-    <div id="rank-str">
+    <div id="rank-str" class="rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}">
         <div id="indication">
             <!--  Here we need the link for the global About Page -->
-            <a href="about.html#compare-explanation">
+            <a href="https://white-on.github.io/BenchSite/#explications">
                 <svg width="1000" height="50" viewBox="0,0,1000,50" style="max-width: 100%; height: auto;"><g transform="translate(0, 0)"><g transform="translate(0, 0)"><rect x="0" y="0" width="216" height="50" fill="#440154"></rect><rect x="216" y="0" width="54" height="50" fill="#2e6e8e"></rect><path d="M 214 0 L 268 25 L 214 50Z" fill="#440154"></path><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">first</text></g><g transform="translate(268, 0)"><rect x="0" y="0" width="216" height="50" fill="#2e6e8e"></rect><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">same 1</text></g></g><g transform="translate(0, 0)"><g transform="translate(500, 0)"><rect x="0" y="0" width="216" height="50" fill="#2e6e8e"></rect><rect x="216" y="0" width="54" height="50" fill="#4ac16d"></rect><path d="M 214 0 L 268 25 L 214 50Z" fill="#2e6e8e"></path><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">same 2</text></g><g transform="translate(768, 0)"><rect x="0" y="0" width="216" height="50" fill="#4ac16d"></rect><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">last</text></g></g></svg>
             </a>
         </div>
     </div>
-    <div>2023-07-10 16:34:59</div>
+    <div>2023-08-23 14:05:38</div>
 </div>
 <script type="module">
     import { rankBar } from "./script/rankBar.js";
-    // let cls = {"pyAgrum":0, "pgmpy":1, "bnlearn":2};
-    const cls = {'pyAgrum': 0, 'bnlearn': 1, 'pgmpy': 2}
-    // console.log(cls);
+    import { arrowRank } from "./script/arrowRank.js";
+    const rankBarElement = document.getElementsByClassName("rankBar")
+    
+    for(let element of rankBarElement){
+        let cls = element.dataset.bar.replaceAll("'", '"');
+        cls = JSON.parse(cls);
+        let librarySizeBox= 100;
+        let barSVG = rankBar(cls, {
+            width : (librarySizeBox* Object.keys(cls).length),
+            height : 25,
+            fontSize : 10,
+            gap : 5,
 
-    let chart = rankBar(cls, {
-        width : 400,
-        height : 25,
-        fontSize : 10,
-        gap : 5,
+            contentFolderPath : "content/",
+        });
+        element.appendChild(barSVG);
+    }
+
+    const elements = document.getElementsByClassName("rank-arrow");
+    for (let element of elements) {
+        // console.log(element.dataset.rank);
+        let cls = element.dataset.rank.replaceAll("'", '"');
+        let libraryName = element.innerHTML;
+        element.innerHTML = "";
+        cls = JSON.parse(cls);
+        let arrow = arrowRank(cls, libraryName, {
+        width : 200,
+        height : 50,
 
         contentFolderPath : "content/",
     });
-
-    document.getElementById("rank-str").appendChild(chart);
+        element.appendChild(arrow);
+    }
 </script><div id='main-container'>
 <!-- Presentation of the website-->
 <div class="card">
     <h1>Welcome to GenBenSite</h1>
     <p>This website is a benchmark tool to help you compare, study and decide which tools are the most adapted to your task. You are currently to the main page where you can have a quick overview of each Library and their capability compare to each other</p>
-</div><div class ='card'><h1>Machine Info</h1><ul><li>machine os : Windows</li><li>machine os version : 10</li><li>machine os architecture : ('64bit', 'WindowsPE')</li><li>machine processor : Intel64 Family 6 Model 94 Stepping 3, GenuineIntel</li><li>machine processor count : 4</li><li>machine memory : 7.9G</li><li>machine python version : 3.10.4</li><li>execution date : 2023-07-10 16:34:59</li></ul></div><div id='global-rank' class='card'>                                <h1>Library</h1>                                <p>Here is the ranking of the best library for each task.</p>                            <div class='grid'><div class='global-card'><p><a href='content/pyAgrum.html' >pyAgrum</a></p></div><div class='global-card'><p><a href='content/bnlearn.html' >bnlearn</a></p></div><div class='global-card'><p><a href='content/pgmpy.html' >pgmpy</a></p></div></div>                            </div><div id='theme-rank' class='card'>            <h1>Library Per Theme</h1>            <p>Here is the ranking of the best library for each theme.</p>                <div class="grid"><div class='theme-card'><h2><a href='content/BIF_manipulation.html' >BIF manipulation</a></h2><p>(made of <b><a href='content/BIFReading.html' >BIFReading</a>)</b></p><p><b><a href='content/bnlearn.html' >bnlearn</a></b></p></div><div class='theme-card'><h2><a href='content/Inference.html' >Inference</a></h2><p>(made of <b><a href='content/Approx_Inference.html' >Approx Inference</a>, <a href='content/Exact_Inference.html' >Exact Inference</a>)</b></p><p><b><a href='content/pyAgrum.html' >pyAgrum</a></b></p></div><div class='theme-card'><h2><a href='content/Learning.html' >Learning</a></h2><p>(made of <b><a href='content/Learning_best_method.html' >Learning best method</a>, <a href='content/Learning_hill_climb_BIC.html' >Learning hill climb BIC</a>)</b></p><p><b><a href='content/pyAgrum.html' >pyAgrum</a></b></p></div></div></div><div id='task-rank' class='card'><h1> Library Per Task</h1><div class="grid"><div class='task-card'><h2><a href='content/Learning_best_method.html' >Learning best method</a></h2><p><a href='content/pyAgrum.html' >pyAgrum</a><p></div><div class='task-card'><h2><a href='content/Learning_hill_climb_BIC.html' >Learning hill climb BIC</a></h2><p><a href='content/pyAgrum.html' >pyAgrum</a><p></div><div class='task-card'><h2><a href='content/Approx_Inference.html' >Approx Inference</a></h2><p><a href='content/pyAgrum.html' >pyAgrum</a><p></div><div class='task-card'><h2><a href='content/Exact_Inference.html' >Exact Inference</a></h2><p><a href='content/pyAgrum.html' >pyAgrum</a><p></div><div class='task-card'><h2><a href='content/BIFReading.html' >BIFReading</a></h2><p><a href='content/bnlearn.html' >bnlearn</a><p></div></div></div><!-- Google tag (gtag.js) -->
+</div><div class ='card' id='machine_info'><h1>Machine Informations</h1><ul><li>OS : <b>Windows</b></li><li>OS VERSION : <b>10</b></li><li>OS ARCHITECTURE : <b>('64bit', 'WindowsPE')</b></li><li>PROCESSOR : <b>Intel64 Family 6 Model 94 Stepping 3, GenuineIntel</b></li><li>PROCESSOR COUNT : <b>4</b></li><li>MEMORY : <b>7.9G</b></li><li>PYTHON VERSION : <b>3.10.4</b></li><li>DATE : <b>2023-08-23 14:05:38</b></li></ul></div><div id='global-rank' class='card'>                                <h1>Libraries</h1>                                <p>Current order for all libraries with all tasks take into account</p>                            <div class='grid'><div class="global-card rank-arrow" data-rank="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}">pyAgrum</div><div class="global-card rank-arrow" data-rank="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}">pgmpy</div><div class="global-card rank-arrow" data-rank="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}">bnlearn</div></div>                            </div><div id='theme-rank' class='card'>            <h1>Per Theme</h1>            <p>The best libraries for each theme</p>                <div class="grid"><div class='theme-card'><h2><a href='content/Inference.html' >Inference</a></h2><p>(<a href='content/Best_Inference.html' >Best Inference</a>, <a href='content/Variable_elimination.html' >Variable elimination</a>)</p><p class="rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}"></p></div><div class='theme-card'><h2><a href='content/Input_Output.html' >Input Output</a></h2><p>(<a href='content/BIF.html' >BIF</a>, <a href='content/BIFXML.html' >BIFXML</a>, <a href='content/DSL.html' >DSL</a>, <a href='content/NET.html' >NET</a>, <a href='content/UAI.html' >UAI</a>, <a href='content/XDSL.html' >XDSL</a>)</p><p class="rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}"></p></div><div class='theme-card'><h2><a href='content/Learning.html' >Learning</a></h2><p>(<a href='content/Learning_micro_child_Kullback_Leibler.html' >Learning micro child Kullback Leibler</a>, <a href='content/Learning_structure_large_sampling.html' >Learning structure large sampling</a>, <a href='content/Learning_structure_small_sampling.html' >Learning structure small sampling</a>)</p><p class="rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}"></p></div></div></div><div id='task-rank' class='card'><h1>Per Task</h1><div class="grid"><div class="task-card rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}"><h2><a href='content/Best_Inference.html' >Best Inference</a></h2></div><div class="task-card rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}"><h2><a href='content/BIF.html' >BIF</a></h2></div><div class="task-card rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}"><h2><a href='content/BIFXML.html' >BIFXML</a></h2></div><div class="task-card rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 1}"><h2><a href='content/DSL.html' >DSL</a></h2></div><div class="task-card rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 1}"><h2><a href='content/NET.html' >NET</a></h2></div><div class="task-card rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 1}"><h2><a href='content/UAI.html' >UAI</a></h2></div><div class="task-card rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 1}"><h2><a href='content/XDSL.html' >XDSL</a></h2></div><div class="task-card rankBar" data-bar="{'pyAgrum': 0, 'bnlearn': 1, 'pgmpy': 2}"><h2><a href='content/Learning_micro_child_Kullback_Leibler.html' >Learning micro child Kullback Leibler</a></h2></div><div class="task-card rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}"><h2><a href='content/Learning_structure_large_sampling.html' >Learning structure large sampling</a></h2></div><div class="task-card rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}"><h2><a href='content/Learning_structure_small_sampling.html' >Learning structure small sampling</a></h2></div><div class="task-card rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}"><h2><a href='content/Variable_elimination.html' >Variable elimination</a></h2></div></div></div><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
 <script>
   window.dataLayer = window.dataLayer || [];

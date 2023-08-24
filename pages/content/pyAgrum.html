@@ -23,7 +23,7 @@
         <nav class="header-nav">
             <a href="../index.html"><b>Home</b></a>
             <a href="https://white-on.github.io/BenchSite/"><b>About</b></a>
-            <a href="../result.json" download="data.json"><b>Download</b></a>
+            <a href="../results.json" download="data.json"><b>Raw Data</b></a>
         </nav>
         <nav class="header-nav">
             <p id="link-description">You are invited to contribute through <br> a request on the GitHub page</p>
@@ -62,35 +62,47 @@
         <ul class="subMenu collapse">
             
                 <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Learning.html' id='Learning-nav'>Learning</a></button>
-                
-                <ul class="subMenu collapse">
-                    
-                        <a href='Learning_best_method.html' id='Learning_best_method-nav'>Learning best method</a>
-                    
-                        <a href='Learning_hill_climb_BIC.html' id='Learning_hill_climb_BIC-nav'>Learning hill climb BIC</a>
-                    
-                </ul>
-                </li>
-            
-                <li class="menu-item has-submenu">
                 <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Inference.html' id='Inference-nav'>Inference</a></button>
                 
                 <ul class="subMenu collapse">
                     
-                        <a href='Approx_Inference.html' id='Approx_Inference-nav'>Approx Inference</a>
+                        <a href='Best_Inference.html' id='Best_Inference-nav'>Best Inference</a>
                     
-                        <a href='Exact_Inference.html' id='Exact_Inference-nav'>Exact Inference</a>
+                        <a href='Variable_elimination.html' id='Variable_elimination-nav'>Variable elimination</a>
                     
                 </ul>
                 </li>
             
                 <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='BIF_manipulation.html' id='BIF_manipulation-nav'>BIF manipulation</a></button>
+                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Input_Output.html' id='Input_Output-nav'>Input Output</a></button>
                 
                 <ul class="subMenu collapse">
                     
-                        <a href='BIFReading.html' id='BIFReading-nav'>BIFReading</a>
+                        <a href='BIF.html' id='BIF-nav'>BIF</a>
+                    
+                        <a href='BIFXML.html' id='BIFXML-nav'>BIFXML</a>
+                    
+                        <a href='DSL.html' id='DSL-nav'>DSL</a>
+                    
+                        <a href='NET.html' id='NET-nav'>NET</a>
+                    
+                        <a href='UAI.html' id='UAI-nav'>UAI</a>
+                    
+                        <a href='XDSL.html' id='XDSL-nav'>XDSL</a>
+                    
+                </ul>
+                </li>
+            
+                <li class="menu-item has-submenu">
+                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Learning.html' id='Learning-nav'>Learning</a></button>
+                
+                <ul class="subMenu collapse">
+                    
+                        <a href='Learning_micro_child_Kullback_Leibler.html' id='Learning_micro_child_Kullback_Leibler-nav'>Learning micro child Kullback Leibler</a>
+                    
+                        <a href='Learning_structure_large_sampling.html' id='Learning_structure_large_sampling-nav'>Learning structure large sampling</a>
+                    
+                        <a href='Learning_structure_small_sampling.html' id='Learning_structure_small_sampling-nav'>Learning structure small sampling</a>
                     
                 </ul>
                 </li>
@@ -135,66 +147,118 @@
 
 <!-- Rank Bar  -->
 <div id="rank-bar">
-    <div id="rank-str">
+    <div id="rank-str" class="rankBar" data-bar="{'pyAgrum': 0, 'pgmpy': 1, 'bnlearn': 2}">
         <div id="indication">
             <!--  Here we need the link for the global About Page -->
-            <a href="about.html#compare-explanation">
+            <a href="https://white-on.github.io/BenchSite/#explications">
                 <svg width="1000" height="50" viewBox="0,0,1000,50" style="max-width: 100%; height: auto;"><g transform="translate(0, 0)"><g transform="translate(0, 0)"><rect x="0" y="0" width="216" height="50" fill="#440154"></rect><rect x="216" y="0" width="54" height="50" fill="#2e6e8e"></rect><path d="M 214 0 L 268 25 L 214 50Z" fill="#440154"></path><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">first</text></g><g transform="translate(268, 0)"><rect x="0" y="0" width="216" height="50" fill="#2e6e8e"></rect><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">same 1</text></g></g><g transform="translate(0, 0)"><g transform="translate(500, 0)"><rect x="0" y="0" width="216" height="50" fill="#2e6e8e"></rect><rect x="216" y="0" width="54" height="50" fill="#4ac16d"></rect><path d="M 214 0 L 268 25 L 214 50Z" fill="#2e6e8e"></path><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">same 2</text></g><g transform="translate(768, 0)"><rect x="0" y="0" width="216" height="50" fill="#4ac16d"></rect><text x="107.14285714285714" y="25" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="400" fill="white">last</text></g></g></svg>
             </a>
         </div>
     </div>
-    <div>2023-07-10 16:34:59</div>
+    <div>2023-08-23 14:05:38</div>
 </div>
 <script type="module">
     import { rankBar } from "../script/rankBar.js";
-    // let cls = {"pyAgrum":0, "pgmpy":1, "bnlearn":2};
-    const cls = {'pyAgrum': 0, 'bnlearn': 1, 'pgmpy': 2}
-    // console.log(cls);
+    import { arrowRank } from "../script/arrowRank.js";
+    const rankBarElement = document.getElementsByClassName("rankBar")
+    
+    for(let element of rankBarElement){
+        let cls = element.dataset.bar.replaceAll("'", '"');
+        cls = JSON.parse(cls);
+        let librarySizeBox= 100;
+        let barSVG = rankBar(cls, {
+            width : (librarySizeBox* Object.keys(cls).length),
+            height : 25,
+            fontSize : 10,
+            gap : 5,
 
-    let chart = rankBar(cls, {
-        width : 400,
-        height : 25,
-        fontSize : 10,
-        gap : 5,
+            contentFolderPath : "./",
+        });
+        element.appendChild(barSVG);
+    }
+
+    const elements = document.getElementsByClassName("rank-arrow");
+    for (let element of elements) {
+        // console.log(element.dataset.rank);
+        let cls = element.dataset.rank.replaceAll("'", '"');
+        let libraryName = element.innerHTML;
+        element.innerHTML = "";
+        cls = JSON.parse(cls);
+        let arrow = arrowRank(cls, libraryName, {
+        width : 200,
+        height : 50,
 
         contentFolderPath : "./",
     });
-
-    document.getElementById("rank-str").appendChild(chart);
-</script><script defer  >const importedData = {'Learning_best_method': {'display': 'plot', 'status': 'Run', 'data': [{'arguments': 1000.0, 'resultElement': 0.3209552471331942, 'libraryName': 'pyAgrum'}, {'arguments': 1500.0, 'resultElement': 0.35203347260054824, 'libraryName': 'pyAgrum'}, {'arguments': 2000.0, 'resultElement': 0.3969476166336487, 'libraryName': 'pyAgrum'}, {'arguments': 2500.0, 'resultElement': 0.428790587427405, 'libraryName': 'pyAgrum'}, {'arguments': 3000.0, 'resultElement': 0.45524428588881466, 'libraryName': 'pyAgrum'}, {'arguments': 3500.0, 'resultElement': 0.4985419851921809, 'libraryName': 'pyAgrum'}, {'arguments': 4000.0, 'resultElement': 0.5611945715888093, 'libraryName': 'pyAgrum'}, {'arguments': 4500.0, 'resultElement': 0.6112785896790834, 'libraryName': 'pyAgrum'}, {'arguments': 5000.0, 'resultElement': 0.6388548996377116, 'libraryName': 'pyAgrum'}, {'arguments': 7500.0, 'resultElement': 0.8543503564045144, 'libraryName': 'pyAgrum'}, {'arguments': 10000.0, 'resultElement': 1.04300744094265, 'libraryName': 'pyAgrum'}]}, 'Learning_hill_climb_BIC': {'display': 'plot', 'status': 'Run', 'data': [{'arguments': 1000.0, 'resultElement': 0.08103481365833431, 'libraryName': 'pyAgrum'}, {'arguments': 1500.0, 'resultElement': 0.09023743695191418, 'libraryName': 'pyAgrum'}, {'arguments': 2000.0, 'resultElement': 0.09459647311208148, 'libraryName': 'pyAgrum'}, {'arguments': 2500.0, 'resultElement': 0.12267582985805348, 'libraryName': 'pyAgrum'}, {'arguments': 3000.0, 'resultElement': 0.1292811979074031, 'libraryName': 'pyAgrum'}, {'arguments': 3500.0, 'resultElement': 0.13065289158839732, 'libraryName': 'pyAgrum'}, {'arguments': 4000.0, 'resultElement': 0.11482279631309211, 'libraryName': 'pyAgrum'}, {'arguments': 4500.0, 'resultElement': 0.14591640272798637, 'libraryName': 'pyAgrum'}, {'arguments': 5000.0, 'resultElement': 0.15417698563154167, 'libraryName': 'pyAgrum'}, {'arguments': 7500.0, 'resultElement': 0.20929685576508442, 'libraryName': 'pyAgrum'}, {'arguments': 10000.0, 'resultElement': 0.2650588689915215, 'libraryName': 'pyAgrum'}]}, 'Approx_Inference': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'pigs.bif', 'resultElement': 8.078413059546923, 'libraryName': 'pyAgrum'}, {'arguments': 'water.bif', 'resultElement': 0.10880941344657913, 'libraryName': 'pyAgrum'}, {'arguments': 'munin.bif', 'resultElement': 44.09911242228312, 'libraryName': 'pyAgrum'}, {'arguments': 'mildew.bif', 'resultElement': 0.12133060826454312, 'libraryName': 'pyAgrum'}, {'arguments': 'link.bif', 'resultElement': 21.13574523498149, 'libraryName': 'pyAgrum'}, {'arguments': 'insurance.bif', 'resultElement': 0.07760656906369452, 'libraryName': 'pyAgrum'}, {'arguments': 'hepar2.bif', 'resultElement': 0.30780283466447145, 'libraryName': 'pyAgrum'}, {'arguments': 'hailfinder.bif', 'resultElement': 0.20249666349263862, 'libraryName': 'pyAgrum'}, {'arguments': 'diabetes.bif', 'resultElement': 7.380841295409482, 'libraryName': 'pyAgrum'}, {'arguments': 'cancer.bif', 'resultElement': 0.007356334380650272, 'libraryName': 'pyAgrum'}, {'arguments': 'barley.bif', 'resultElement': 0.20202876986392462, 'libraryName': 'pyAgrum'}, {'arguments': 'asia.bif', 'resultElement': 0.027931414156531293, 'libraryName': 'pyAgrum'}, {'arguments': 'andes.bif', 'resultElement': 2.2331170307394737, 'libraryName': 'pyAgrum'}, {'arguments': 'alarm.bif', 'resultElement': 0.09227386726221691, 'libraryName': 'pyAgrum'}]}, 'Exact_Inference': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'water.bif', 'resultElement': 0.0023339875236464045, 'libraryName': 'pyAgrum'}, {'arguments': 'insurance.bif', 'resultElement': 8.457745813454191e-05, 'libraryName': 'pyAgrum'}, {'arguments': 'hailfinder.bif', 'resultElement': 0.006708263904632379, 'libraryName': 'pyAgrum'}, {'arguments': 'earthquake.bif', 'resultElement': 0.005938012114105125, 'libraryName': 'pyAgrum'}, {'arguments': 'diabetes.bif', 'resultElement': 0.0018781110411509871, 'libraryName': 'pyAgrum'}, {'arguments': 'cancer.bif', 'resultElement': 0.0016999073171367247, 'libraryName': 'pyAgrum'}, {'arguments': 'asia.bif', 'resultElement': 0.01280534901889041, 'libraryName': 'pyAgrum'}]}, 'BIFReading': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'pigs.bif', 'resultElement': 0.030574072695647676, 'libraryName': 'pyAgrum'}, {'arguments': 'water.bif', 'resultElement': 0.027095438466252137, 'libraryName': 'pyAgrum'}, {'arguments': 'munin.bif', 'resultElement': 0.2206369559862651, 'libraryName': 'pyAgrum'}, {'arguments': 'mildew.bif', 'resultElement': 0.719482264345667, 'libraryName': 'pyAgrum'}, {'arguments': 'link.bif', 'resultElement': 0.08815600530942902, 'libraryName': 'pyAgrum'}, {'arguments': 'insurance.bif', 'resultElement': 0.020573554929190625, 'libraryName': 'pyAgrum'}, {'arguments': 'hepar2.bif', 'resultElement': 0.021902195042154442, 'libraryName': 'pyAgrum'}, {'arguments': 'hailfinder.bif', 'resultElement': 0.01830627742068221, 'libraryName': 'pyAgrum'}, {'arguments': 'diabetes.bif', 'resultElement': 0.7506997880603498, 'libraryName': 'pyAgrum'}, {'arguments': 'cancer.bif', 'resultElement': 0.006778793118428439, 'libraryName': 'pyAgrum'}, {'arguments': 'barley.bif', 'resultElement': 0.2974089090324317, 'libraryName': 'pyAgrum'}, {'arguments': 'asia.bif', 'resultElement': 0.002409156586509198, 'libraryName': 'pyAgrum'}, {'arguments': 'andes.bif', 'resultElement': 0.0015505449652361374, 'libraryName': 'pyAgrum'}, {'arguments': 'alarm.bif', 'resultElement': 0.0023718475131317973, 'libraryName': 'pyAgrum'}]}};</script>
+        element.appendChild(arrow);
+    }
+</script><script defer  >const importedData = {'Best_Inference': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'cancer.bif', 'resultElement': 0.0038555280844370533, 'libraryName': 'pyAgrum'}, {'arguments': 'earthquake.bif', 'resultElement': 0.004531614821155866, 'libraryName': 'pyAgrum'}, {'arguments': 'asia.bif', 'resultElement': 0.0022438059131925305, 'libraryName': 'pyAgrum'}, {'arguments': 'child.bif', 'resultElement': 0.005437372848577798, 'libraryName': 'pyAgrum'}, {'arguments': 'insurance.bif', 'resultElement': 0.014239219677013656, 'libraryName': 'pyAgrum'}, {'arguments': 'water.bif', 'resultElement': 0.7594841262713695, 'libraryName': 'pyAgrum'}, {'arguments': 'mildew.bif', 'resultElement': 0.26776763156522065, 'libraryName': 'pyAgrum'}, {'arguments': 'alarm.bif', 'resultElement': 0.010146092507056892, 'libraryName': 'pyAgrum'}, {'arguments': 'barley.bif', 'resultElement': 0.8933262710149089, 'libraryName': 'pyAgrum'}, {'arguments': 'hailfinder.bif', 'resultElement': 0.016350870616920293, 'libraryName': 'pyAgrum'}, {'arguments': 'hepar2.bif', 'resultElement': 0.022668285193108022, 'libraryName': 'pyAgrum'}, {'arguments': 'andes.bif', 'resultElement': 0.18855786176087955, 'libraryName': 'pyAgrum'}, {'arguments': 'diabetes.bif', 'resultElement': 0.3621450708402942, 'libraryName': 'pyAgrum'}, {'arguments': 'pigs.bif', 'resultElement': 0.16843974206130952, 'libraryName': 'pyAgrum'}, {'arguments': 'link.bif', 'resultElement': 50.72324518479096, 'libraryName': 'pyAgrum'}, {'arguments': 'munin.bif', 'resultElement': 2.0079676810031137, 'libraryName': 'pyAgrum'}]}, 'BIF': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'cancer.bif', 'resultElement': 0.0003157695687065522, 'libraryName': 'pyAgrum'}, {'arguments': 'earthquake.bif', 'resultElement': 0.002335758146146933, 'libraryName': 'pyAgrum'}, {'arguments': 'asia.bif', 'resultElement': 0.0010347941073278585, 'libraryName': 'pyAgrum'}, {'arguments': 'child.bif', 'resultElement': 0.0028220338952417174, 'libraryName': 'pyAgrum'}, {'arguments': 'insurance.bif', 'resultElement': 0.003359440146200359, 'libraryName': 'pyAgrum'}, {'arguments': 'water.bif', 'resultElement': 0.027373535558581352, 'libraryName': 'pyAgrum'}, {'arguments': 'mildew.bif', 'resultElement': 0.47968974441755563, 'libraryName': 'pyAgrum'}, {'arguments': 'alarm.bif', 'resultElement': 0.0027303918949638808, 'libraryName': 'pyAgrum'}, {'arguments': 'barley.bif', 'resultElement': 0.2068098004674539, 'libraryName': 'pyAgrum'}, {'arguments': 'hailfinder.bif', 'resultElement': 0.010956173801484207, 'libraryName': 'pyAgrum'}, {'arguments': 'hepar2.bif', 'resultElement': 0.007694159881398082, 'libraryName': 'pyAgrum'}, {'arguments': 'andes.bif', 'resultElement': 0.010567151941359043, 'libraryName': 'pyAgrum'}, {'arguments': 'diabetes.bif', 'resultElement': 0.521808806535167, 'libraryName': 'pyAgrum'}, {'arguments': 'pigs.bif', 'resultElement': 0.026330497309875984, 'libraryName': 'pyAgrum'}, {'arguments': 'link.bif', 'resultElement': 0.059852951167461775, 'libraryName': 'pyAgrum'}, {'arguments': 'munin.bif', 'resultElement': 0.1507465031075602, 'libraryName': 'pyAgrum'}]}, 'BIFXML': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'cancer.bifxml', 'resultElement': 0.0015485635680456955, 'libraryName': 'pyAgrum'}, {'arguments': 'earthquake.bifxml', 'resultElement': 0.004449304754349092, 'libraryName': 'pyAgrum'}, {'arguments': 'asia.bifxml', 'resultElement': 0.0037904810726642605, 'libraryName': 'pyAgrum'}, {'arguments': 'child.bifxml', 'resultElement': 0.002886957856019338, 'libraryName': 'pyAgrum'}, {'arguments': 'insurance.bifxml', 'resultElement': 0.0021387365203971664, 'libraryName': 'pyAgrum'}, {'arguments': 'water.bifxml', 'resultElement': 0.010784385221389433, 'libraryName': 'pyAgrum'}, {'arguments': 'mildew.bifxml', 'resultElement': 0.12920583978605768, 'libraryName': 'pyAgrum'}, {'arguments': 'alarm.bifxml', 'resultElement': 0.001961346641741693, 'libraryName': 'pyAgrum'}, {'arguments': 'barley.bifxml', 'resultElement': 0.07206001691520214, 'libraryName': 'pyAgrum'}, {'arguments': 'hailfinder.bifxml', 'resultElement': 0.00553929942989101, 'libraryName': 'pyAgrum'}, {'arguments': 'hepar2.bifxml', 'resultElement': 0.006593409371934832, 'libraryName': 'pyAgrum'}, {'arguments': 'andes.bifxml', 'resultElement': 0.006214944596464436, 'libraryName': 'pyAgrum'}, {'arguments': 'diabetes.bifxml', 'resultElement': 0.15070164564531296, 'libraryName': 'pyAgrum'}, {'arguments': 'pigs.bifxml', 'resultElement': 0.015928828055225313, 'libraryName': 'pyAgrum'}, {'arguments': 'link.bifxml', 'resultElement': 0.018707042976344623, 'libraryName': 'pyAgrum'}, {'arguments': 'munin.bifxml', 'resultElement': 0.06034364077883462, 'libraryName': 'pyAgrum'}]}, 'DSL': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'cancer.dsl', 'resultElement': 0.002278426655257742, 'libraryName': 'pyAgrum'}, {'arguments': 'earthquake.dsl', 'resultElement': 0.0019674645810077588, 'libraryName': 'pyAgrum'}, {'arguments': 'asia.dsl', 'resultElement': 0.004050089060515166, 'libraryName': 'pyAgrum'}, {'arguments': 'child.dsl', 'resultElement': 0.0021228302151585616, 'libraryName': 'pyAgrum'}, {'arguments': 'insurance.dsl', 'resultElement': 0.002574837459810078, 'libraryName': 'pyAgrum'}, {'arguments': 'water.dsl', 'resultElement': 0.01003110115279754, 'libraryName': 'pyAgrum'}, {'arguments': 'mildew.dsl', 'resultElement': 0.2737213409661005, 'libraryName': 'pyAgrum'}, {'arguments': 'alarm.dsl', 'resultElement': 0.001795976440546413, 'libraryName': 'pyAgrum'}, {'arguments': 'barley.dsl', 'resultElement': 0.12940681209632507, 'libraryName': 'pyAgrum'}, {'arguments': 'hailfinder.dsl', 'resultElement': 0.0028741955547283093, 'libraryName': 'pyAgrum'}, {'arguments': 'hepar2.dsl', 'resultElement': 0.004467331342337033, 'libraryName': 'pyAgrum'}, {'arguments': 'andes.dsl', 'resultElement': 0.009015742781137428, 'libraryName': 'pyAgrum'}, {'arguments': 'diabetes.dsl', 'resultElement': 0.2779610359187548, 'libraryName': 'pyAgrum'}, {'arguments': 'pigs.dsl', 'resultElement': 0.012048901164655882, 'libraryName': 'pyAgrum'}, {'arguments': 'link.dsl', 'resultElement': 0.02063193026172618, 'libraryName': 'pyAgrum'}, {'arguments': 'munin.dsl', 'resultElement': 0.08673530669572453, 'libraryName': 'pyAgrum'}]}, 'NET': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'cancer.net', 'resultElement': 0.0016600678282479445, 'libraryName': 'pyAgrum'}, {'arguments': 'earthquake.net', 'resultElement': 0.0018751380481446783, 'libraryName': 'pyAgrum'}, {'arguments': 'asia.net', 'resultElement': 0.007932474960448842, 'libraryName': 'pyAgrum'}, {'arguments': 'child.net', 'resultElement': 0.007295565891514221, 'libraryName': 'pyAgrum'}, {'arguments': 'insurance.net', 'resultElement': 0.0019849025343234338, 'libraryName': 'pyAgrum'}, {'arguments': 'water.net', 'resultElement': 0.01316840195270876, 'libraryName': 'pyAgrum'}, {'arguments': 'alarm.net', 'resultElement': 0.0059261679841205485, 'libraryName': 'pyAgrum'}, {'arguments': 'barley.net', 'resultElement': 0.1451158398995176, 'libraryName': 'pyAgrum'}, {'arguments': 'hailfinder.net', 'resultElement': 0.006462847288511694, 'libraryName': 'pyAgrum'}, {'arguments': 'hepar2.net', 'resultElement': 0.010360272008677325, 'libraryName': 'pyAgrum'}, {'arguments': 'andes.net', 'resultElement': 0.005796732529376944, 'libraryName': 'pyAgrum'}, {'arguments': 'diabetes.net', 'resultElement': 0.3204582224134356, 'libraryName': 'pyAgrum'}, {'arguments': 'pigs.net', 'resultElement': 0.01943949603649477, 'libraryName': 'pyAgrum'}, {'arguments': 'link.net', 'resultElement': 0.03348834938233097, 'libraryName': 'pyAgrum'}, {'arguments': 'munin.net', 'resultElement': 0.10520174847139667, 'libraryName': 'pyAgrum'}]}, 'UAI': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'cancer.uai', 'resultElement': 0.0038880936057617264, 'libraryName': 'pyAgrum'}, {'arguments': 'earthquake.uai', 'resultElement': 0.012876885858674844, 'libraryName': 'pyAgrum'}, {'arguments': 'asia.uai', 'resultElement': 0.006930785673670471, 'libraryName': 'pyAgrum'}, {'arguments': 'child.uai', 'resultElement': 0.007800520496815444, 'libraryName': 'pyAgrum'}, {'arguments': 'insurance.uai', 'resultElement': 0.0069187592477848135, 'libraryName': 'pyAgrum'}, {'arguments': 'water.uai', 'resultElement': 0.009287712185705703, 'libraryName': 'pyAgrum'}, {'arguments': 'mildew.uai', 'resultElement': 0.2655273440759629, 'libraryName': 'pyAgrum'}, {'arguments': 'alarm.uai', 'resultElement': 0.008475320318775873, 'libraryName': 'pyAgrum'}, {'arguments': 'barley.uai', 'resultElement': 0.12122907027757417, 'libraryName': 'pyAgrum'}, {'arguments': 'hailfinder.uai', 'resultElement': 0.005597086203781268, 'libraryName': 'pyAgrum'}, {'arguments': 'hepar2.uai', 'resultElement': 0.005793954447098077, 'libraryName': 'pyAgrum'}, {'arguments': 'andes.uai', 'resultElement': 0.005427024824855228, 'libraryName': 'pyAgrum'}, {'arguments': 'diabetes.uai', 'resultElement': 0.24145781043140838, 'libraryName': 'pyAgrum'}, {'arguments': 'pigs.uai', 'resultElement': 0.014344948104272282, 'libraryName': 'pyAgrum'}, {'arguments': 'link.uai', 'resultElement': 0.022176785140732926, 'libraryName': 'pyAgrum'}, {'arguments': 'munin.uai', 'resultElement': 0.06987158965785056, 'libraryName': 'pyAgrum'}]}, 'XDSL': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'cancer.xdsl', 'resultElement': 0.015115491326401631, 'libraryName': 'pyAgrum'}, {'arguments': 'earthquake.xdsl', 'resultElement': 0.011506248826595645, 'libraryName': 'pyAgrum'}, {'arguments': 'asia.xdsl', 'resultElement': 0.0076859064655999355, 'libraryName': 'pyAgrum'}, {'arguments': 'child.xdsl', 'resultElement': 0.013959971454242865, 'libraryName': 'pyAgrum'}, {'arguments': 'insurance.xdsl', 'resultElement': 0.00747381187795351, 'libraryName': 'pyAgrum'}, {'arguments': 'water.xdsl', 'resultElement': 0.02130025078443189, 'libraryName': 'pyAgrum'}, {'arguments': 'mildew.xdsl', 'resultElement': 0.09848362440243363, 'libraryName': 'pyAgrum'}, {'arguments': 'alarm.xdsl', 'resultElement': 0.01779190980438143, 'libraryName': 'pyAgrum'}, {'arguments': 'barley.xdsl', 'resultElement': 0.05862872632375608, 'libraryName': 'pyAgrum'}, {'arguments': 'hailfinder.xdsl', 'resultElement': 0.01129122804806878, 'libraryName': 'pyAgrum'}, {'arguments': 'hepar2.xdsl', 'resultElement': 0.007384514094206196, 'libraryName': 'pyAgrum'}, {'arguments': 'andes.xdsl', 'resultElement': 0.020394561830100914, 'libraryName': 'pyAgrum'}, {'arguments': 'diabetes.xdsl', 'resultElement': 0.12288688165911783, 'libraryName': 'pyAgrum'}, {'arguments': 'pigs.xdsl', 'resultElement': 0.02518481416217983, 'libraryName': 'pyAgrum'}, {'arguments': 'link.xdsl', 'resultElement': 0.03116774198499819, 'libraryName': 'pyAgrum'}, {'arguments': 'munin.xdsl', 'resultElement': 0.07107578660361469, 'libraryName': 'pyAgrum'}]}, 'Learning_micro_child_Kullback_Leibler': {'display': 'plot', 'status': 'Run', 'data': [{'arguments': 1000.0, 'resultElement': 0.03988404343426227, 'libraryName': 'pyAgrum'}, {'arguments': 1500.0, 'resultElement': 0.051579490692044296, 'libraryName': 'pyAgrum'}, {'arguments': 2000.0, 'resultElement': 0.08786701182058702, 'libraryName': 'pyAgrum'}, {'arguments': 2500.0, 'resultElement': 0.08688547369092703, 'libraryName': 'pyAgrum'}, {'arguments': 3000.0, 'resultElement': 0.07566178112756461, 'libraryName': 'pyAgrum'}, {'arguments': 3500.0, 'resultElement': 0.08138456292605649, 'libraryName': 'pyAgrum'}, {'arguments': 4000.0, 'resultElement': 0.09043771164336552, 'libraryName': 'pyAgrum'}, {'arguments': 4500.0, 'resultElement': 0.0906653330118085, 'libraryName': 'pyAgrum'}, {'arguments': 5000.0, 'resultElement': 0.08419293366993467, 'libraryName': 'pyAgrum'}, {'arguments': 7500.0, 'resultElement': 0.1018763567165782, 'libraryName': 'pyAgrum'}, {'arguments': 10000.0, 'resultElement': 0.1222333579401796, 'libraryName': 'pyAgrum'}, {'arguments': 20000.0, 'resultElement': 0.14248336133702347, 'libraryName': 'pyAgrum'}, {'arguments': 30000.0, 'resultElement': 0.17857406051674238, 'libraryName': 'pyAgrum'}, {'arguments': 40000.0, 'resultElement': 0.23537452441329756, 'libraryName': 'pyAgrum'}, {'arguments': 50000.0, 'resultElement': 0.2397288317248846, 'libraryName': 'pyAgrum'}]}, 'Learning_structure_large_sampling': {'display': 'plot', 'status': 'Run', 'data': [{'arguments': 5000.0, 'resultElement': 0.562863401719369, 'libraryName': 'pyAgrum'}, {'arguments': 7500.0, 'resultElement': 0.6844855874854451, 'libraryName': 'pyAgrum'}, {'arguments': 10000.0, 'resultElement': 0.8351029629120603, 'libraryName': 'pyAgrum'}, {'arguments': 20000.0, 'resultElement': 1.326615959056653, 'libraryName': 'pyAgrum'}, {'arguments': 30000.0, 'resultElement': 1.6816038488953684, 'libraryName': 'pyAgrum'}, {'arguments': 40000.0, 'resultElement': 1.9320915487284462, 'libraryName': 'pyAgrum'}, {'arguments': 50000.0, 'resultElement': 2.389566692717684, 'libraryName': 'pyAgrum'}, {'arguments': 60000.0, 'resultElement': 2.936058108578436, 'libraryName': 'pyAgrum'}, {'arguments': 70000.0, 'resultElement': 3.820070229431925, 'libraryName': 'pyAgrum'}, {'arguments': 80000.0, 'resultElement': 4.782687470239277, 'libraryName': 'pyAgrum'}, {'arguments': 90000.0, 'resultElement': 7.316175015138772, 'libraryName': 'pyAgrum'}, {'arguments': 100000.0, 'resultElement': 8.865975623911558, 'libraryName': 'pyAgrum'}]}, 'Learning_structure_small_sampling': {'display': 'plot', 'status': 'Run', 'data': [{'arguments': 1000.0, 'resultElement': 0.2217850184145694, 'libraryName': 'pyAgrum'}, {'arguments': 1500.0, 'resultElement': 0.2515834419755265, 'libraryName': 'pyAgrum'}, {'arguments': 2000.0, 'resultElement': 0.3076343830519666, 'libraryName': 'pyAgrum'}, {'arguments': 2500.0, 'resultElement': 0.3259478577335055, 'libraryName': 'pyAgrum'}, {'arguments': 3000.0, 'resultElement': 0.3571951262031992, 'libraryName': 'pyAgrum'}, {'arguments': 3500.0, 'resultElement': 0.3899160259558509, 'libraryName': 'pyAgrum'}, {'arguments': 4000.0, 'resultElement': 0.4411251556981976, 'libraryName': 'pyAgrum'}, {'arguments': 4500.0, 'resultElement': 0.5111209608536834, 'libraryName': 'pyAgrum'}, {'arguments': 5000.0, 'resultElement': 0.550268831779249, 'libraryName': 'pyAgrum'}]}, 'Variable_elimination': {'display': 'histo', 'status': 'Run', 'data': [{'arguments': 'cancer.bif', 'resultElement': 0.01144548714409272, 'libraryName': 'pyAgrum'}, {'arguments': 'earthquake.bif', 'resultElement': 0.013215857522810499, 'libraryName': 'pyAgrum'}, {'arguments': 'asia.bif', 'resultElement': 0.015075618704780934, 'libraryName': 'pyAgrum'}, {'arguments': 'child.bif', 'resultElement': 0.012553353719972073, 'libraryName': 'pyAgrum'}, {'arguments': 'insurance.bif', 'resultElement': 0.01614956991318613, 'libraryName': 'pyAgrum'}, {'arguments': 'water.bif', 'resultElement': 0.04497059302714964, 'libraryName': 'pyAgrum'}, {'arguments': 'mildew.bif', 'resultElement': 0.3426828688243404, 'libraryName': 'pyAgrum'}, {'arguments': 'alarm.bif', 'resultElement': 0.015955691995099185, 'libraryName': 'pyAgrum'}, {'arguments': 'barley.bif', 'resultElement': 0.3153981768603747, 'libraryName': 'pyAgrum'}, {'arguments': 'hailfinder.bif', 'resultElement': 0.04464784514332811, 'libraryName': 'pyAgrum'}, {'arguments': 'hepar2.bif', 'resultElement': 0.03907989836161335, 'libraryName': 'pyAgrum'}, {'arguments': 'andes.bif', 'resultElement': 0.6637073522045588, 'libraryName': 'pyAgrum'}, {'arguments': 'diabetes.bif', 'resultElement': 12.476393105268167, 'libraryName': 'pyAgrum'}, {'arguments': 'pigs.bif', 'resultElement': 0.23969227428703258, 'libraryName': 'pyAgrum'}, {'arguments': 'link.bif', 'resultElement': 1.2661067977314815, 'libraryName': 'pyAgrum'}, {'arguments': 'munin.bif', 'resultElement': 1.3127611501452823, 'libraryName': 'pyAgrum'}]}};</script>
 <script defer type='module' src ='../script/libraryScript.js'></script>
 
 <!-- Target main component -->
 <div class="title">
     <img src='../assets\pyAgrum.png' alt='pyAgrum' width='50' height='50'><h1 id="entry-title">pyAgrum</h1> 
 </div>
-<p class="description">pyAgrum is a scientific C++ and Python library dedicated to Bayesian networks (BN) and other Probabilistic Graphical Models. Based on the C++ aGrUM library, it provides a high-level interface to the C++ part of aGrUM allowing to create, manage and perform efficient computations with Bayesian networks and others probabilistic graphical models : Markov random fields (MRF), influence diagrams (ID) and LIMIDs, credal networks (CN), dynamic BN (dBN), probabilistic relational models (PRM).</p>
+<p class="description">pyAgrum is a scientific C++ and Python library dedicated to Bayesian networks (BN) and other Probabilistic Graphical Models.
+Based on the C++ aGrUM library, it provides a high-level interface to the C++ part of aGrUM allowing to create, manage and perform efficient
+computations with Bayesian networks and others probabilistic graphical models :
+<br>Markov random fields (MRF), influence diagrams (ID) and LIMIDs, credal networks (CN), dynamic BN (dBN), probabilistic relational models (PRM).</p>
 
 <div class ="grid">
     
     <div class="card">
-        <a href="Learning_best_method.html"><h2>Learning best method</h2></a>
-        <div id="Learning_best_method"></div>
+        <a href="Best_Inference.html"><h2>Best Inference</h2></a>
+        <div id="Best_Inference"></div>
     </div>
     
     <div class="card">
-        <a href="Learning_hill_climb_BIC.html"><h2>Learning hill climb BIC</h2></a>
-        <div id="Learning_hill_climb_BIC"></div>
+        <a href="BIF.html"><h2>BIF</h2></a>
+        <div id="BIF"></div>
     </div>
     
     <div class="card">
-        <a href="Approx_Inference.html"><h2>Approx Inference</h2></a>
-        <div id="Approx_Inference"></div>
+        <a href="BIFXML.html"><h2>BIFXML</h2></a>
+        <div id="BIFXML"></div>
     </div>
     
     <div class="card">
-        <a href="Exact_Inference.html"><h2>Exact Inference</h2></a>
-        <div id="Exact_Inference"></div>
+        <a href="DSL.html"><h2>DSL</h2></a>
+        <div id="DSL"></div>
     </div>
     
     <div class="card">
-        <a href="BIFReading.html"><h2>BIFReading</h2></a>
-        <div id="BIFReading"></div>
+        <a href="NET.html"><h2>NET</h2></a>
+        <div id="NET"></div>
+    </div>
+    
+    <div class="card">
+        <a href="UAI.html"><h2>UAI</h2></a>
+        <div id="UAI"></div>
+    </div>
+    
+    <div class="card">
+        <a href="XDSL.html"><h2>XDSL</h2></a>
+        <div id="XDSL"></div>
+    </div>
+    
+    <div class="card">
+        <a href="Learning_micro_child_Kullback_Leibler.html"><h2>Learning micro child Kullback Leibler</h2></a>
+        <div id="Learning_micro_child_Kullback_Leibler"></div>
+    </div>
+    
+    <div class="card">
+        <a href="Learning_structure_large_sampling.html"><h2>Learning structure large sampling</h2></a>
+        <div id="Learning_structure_large_sampling"></div>
+    </div>
+    
+    <div class="card">
+        <a href="Learning_structure_small_sampling.html"><h2>Learning structure small sampling</h2></a>
+        <div id="Learning_structure_small_sampling"></div>
+    </div>
+    
+    <div class="card">
+        <a href="Variable_elimination.html"><h2>Variable elimination</h2></a>
+        <div id="Variable_elimination"></div>
     </div>
     
 </div><!-- Google tag (gtag.js) -->
