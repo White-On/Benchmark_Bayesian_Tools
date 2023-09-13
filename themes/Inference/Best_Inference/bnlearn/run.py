@@ -1,10 +1,10 @@
-import os
 import bnlearn as bn
 import sys
+from pathlib import Path
 
-currentdir = os.path.dirname(os.path.realpath(__file__))
+data_path = Path(__file__).parent / "data"
 
-model = bn.import_DAG(f"{currentdir}/data/{sys.argv[1]}", verbose=0)
+model = bn.import_DAG(f"{data_path}/{sys.argv[1]}", verbose=0)
 
 for node in model["model"].nodes():
     query = bn.inference.fit(model, variables=[node], evidence={}, verbose=0)

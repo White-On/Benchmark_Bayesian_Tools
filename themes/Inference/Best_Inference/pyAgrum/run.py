@@ -1,10 +1,10 @@
 import pyAgrum as gum
-import os
 import sys
+from pathlib import Path
 
-currentdir = os.path.dirname(os.path.realpath(__file__))
+data_path = Path(__file__).parent / "data"
 
-bn = gum.loadBN(f"{currentdir}/data/{sys.argv[1]}")
+bn = gum.loadBN(f"{data_path}/{sys.argv[1]}")
 ie = gum.LazyPropagation(bn)
 ie.makeInference()
 

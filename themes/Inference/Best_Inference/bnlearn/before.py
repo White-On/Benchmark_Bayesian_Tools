@@ -1,7 +1,7 @@
-import os
+from pathlib import Path
 import bnlearn as bn
 import sys
 
-currentdir = os.path.dirname(os.path.realpath(__file__))
+data_path = Path(__file__).parent / "data"
 
-model = bn.import_DAG(f"{currentdir}/data/{sys.argv[1]}", verbose=0)
+model = bn.import_DAG(f"{data_path}/{sys.argv[1]}", verbose=0)

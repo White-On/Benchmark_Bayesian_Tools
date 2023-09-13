@@ -1,10 +1,11 @@
 import pyAgrum as gum
-import os
 import sys
 
-currentdir = os.path.dirname(os.path.realpath(__file__))
+from pathlib import Path
 
-bn = gum.loadBN(f"{currentdir}/data/{sys.argv[1]}")
+data_path = Path(__file__).parent / "data"
+
+bn = gum.loadBN(f"{data_path}/{sys.argv[1]}")
 ie = gum.VariableElimination(bn)
 ie.makeInference()
 
