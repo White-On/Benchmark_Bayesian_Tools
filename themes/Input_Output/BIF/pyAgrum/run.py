@@ -1,7 +1,7 @@
 import sys
 import pyAgrum as gum
-import os
+from pathlib import Path
 
-currentdir = os.path.dirname(os.path.realpath(__file__))
+data_path = Path(__file__).parents[1] / "data" / f'{sys.argv[1]}'
 
-bn = gum.loadBN(f"{currentdir}/data/{sys.argv[1]}")
+bn = gum.loadBN(data_path.__str__())

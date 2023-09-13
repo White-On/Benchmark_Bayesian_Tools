@@ -1,7 +1,7 @@
 from pgmpy.readwrite import UAIReader
 import sys
-import os
+from pathlib import Path
 
-currentdir = os.path.dirname(os.path.realpath(__file__))
+data_path = Path(__file__).parents[1] / "data" / f'{sys.argv[1]}'
 
-reader = UAIReader(f"{currentdir}/data/{sys.argv[1]}")
+reader = UAIReader(data_path.__str__())
