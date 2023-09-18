@@ -1,3 +1,10 @@
+Imagine you have two different probability distributions, let's call them P and Q, and you want to know how much information you'd lose if you used Q to approximate P.
+    <br><br>Here's how it works:    
+    <br><br><b>1. Measuring Difference</b>: KL divergence calculates the difference between the two distributions for each possible event. It's like comparing how likely each puzzle piece is in one puzzle versus another.
+    <br><br><b>2. Information Loss</b>: For each event, you calculate the difference in the probabilities assigned by P and Q. If P and Q agree, the difference is small. If they differ a lot, the difference is large. This quantifies the amount of information lost when approximating P with Q.
+    <br><br><b>3. Summing Up</b>: You sum up these differences for all events, which gives you an overall measure of how much information you lose when using Q to represent P.
+    <br><br>KL divergence is not a symmetric measure. In other words, the KL divergence from P to Q might be different from the KL divergence from Q to P. This reflects the fact that changing the order of the distributions can give different results.
+
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="360pt" height="162pt" viewBox="0.00 0.00 360.00 162.49">
 <g id="graph0" class="graph" transform="scale(0.624954 0.624954) rotate(0) translate(4 256)">
 <title>G</title>
