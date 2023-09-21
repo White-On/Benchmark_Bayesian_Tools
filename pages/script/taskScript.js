@@ -1,4 +1,3 @@
-import {LineChart} from './dynamicPlot.js';
 import {Histogram} from './histogram.js';
 import {GroupedBarChart} from './groupedBarChart.js';
 import {ViolonsChart} from './violonsChart.js';
@@ -143,7 +142,7 @@ for(let element in importedData){
             margin: { top: 40, right: 10, bottom: 100, left: 50 },
 
             yType: (importedData[element].scale == 'log')?d3.scaleLog:d3.scaleLinear ,
-            // yType: d3.scaleLog,
+            // yType: d3.scaleLinear,
 
             tooltipFontSize: 12,
             timeout : importedData[element].timeout,

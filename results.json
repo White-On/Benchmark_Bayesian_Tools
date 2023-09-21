@@ -3632,7 +3632,7 @@
                 }
             }
         },
-        "Variable_elimination": {
+        "Variable_Elimination": {
             "theme": "Inference",
             "results": {
                 "cancer.bif": {
@@ -6983,7 +6983,7 @@
                 }
             }
         },
-        "Variable_elimination": {
+        "Variable_Elimination": {
             "theme": "Inference",
             "results": {
                 "cancer.bif": {
@@ -12014,7 +12014,7 @@
                 }
             }
         },
-        "Variable_elimination": {
+        "Variable_Elimination": {
             "theme": "Inference",
             "results": {
                 "cancer.bif": {
