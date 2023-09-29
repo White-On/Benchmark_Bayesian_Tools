@@ -33,7 +33,8 @@
             </a>
             
         </nav>
-    </header><!-- Navigation Bar -->
+    </header>
+<!-- Navigation Bar -->
 
 <nav id = "leftNavBar">
     <ul>
@@ -49,57 +50,57 @@
             
         </ul>
         </li>
-        <li class="menu-item has-submenu">
+        <!-- <li class="menu-item has-submenu">
         <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow">Theme</button>
-        <ul class="subMenu collapse">
+        <ul class="subMenu collapse"> -->
+        
+            <li class="menu-item has-submenu">
+            <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><img src="../assets/clipboard-list.svg" class="theme-icon"><a href='Inference.html' id='Inference-nav'>Inference</a></button>
             
-                <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Inference.html' id='Inference-nav'>Inference</a></button>
+            <ul class="subMenu collapse">
                 
-                <ul class="subMenu collapse">
-                    
-                        <a href='Best_Inference.html' id='Best_Inference-nav'>Best Inference</a>
-                    
-                        <a href='Variable_Elimination.html' id='Variable_Elimination-nav'>Variable Elimination Inference</a>
-                    
-                </ul>
-                </li>
-            
-                <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Input_Output.html' id='Input_Output-nav'>Input/Output of Bayesian Networks</a></button>
+                    <a href='Best_Inference.html' id='Best_Inference-nav'>Best Inference</a>
                 
-                <ul class="subMenu collapse">
-                    
-                        <a href='BIF.html' id='BIF-nav'>Reading time of file in BIF format</a>
-                    
-                        <a href='BIFXML.html' id='BIFXML-nav'>Reading time of file in BIFXML format</a>
-                    
-                        <a href='DSL.html' id='DSL-nav'>Reading time of file in DSL format</a>
-                    
-                        <a href='NET.html' id='NET-nav'>Reading time of file in NET format</a>
-                    
-                        <a href='UAI.html' id='UAI-nav'>Reading time of file in UAI format</a>
-                    
-                        <a href='XDSL.html' id='XDSL-nav'>Reading time of file in XDSL format</a>
-                    
-                </ul>
-                </li>
-            
-                <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Learning.html' id='Learning-nav'>Learning Structured Probabilistic Models</a></button>
+                    <a href='Variable_Elimination.html' id='Variable_Elimination-nav'>Variable Elimination Inference</a>
                 
-                <ul class="subMenu collapse">
-                    
-                        <a href='Learning_micro_child_Kullback_Leibler.html' id='Learning_micro_child_Kullback_Leibler-nav'>Learning micro child Kullback Leibler</a>
-                    
-                        <a href='Learning_structure_large_sampling.html' id='Learning_structure_large_sampling-nav'>Learning structure large sampling</a>
-                    
-                        <a href='Learning_structure_small_sampling.html' id='Learning_structure_small_sampling-nav'>Learning structure small sampling</a>
-                    
-                </ul>
-                </li>
+            </ul>
+            </li>
+        
+            <li class="menu-item has-submenu">
+            <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><img src="../assets/clipboard-list.svg" class="theme-icon"><a href='Input_Output.html' id='Input_Output-nav'>Input/Output of Bayesian Networks</a></button>
             
-        </ul>
+            <ul class="subMenu collapse">
+                
+                    <a href='BIF.html' id='BIF-nav'>Reading time of file in BIF format</a>
+                
+                    <a href='BIFXML.html' id='BIFXML-nav'>Reading time of file in BIFXML format</a>
+                
+                    <a href='DSL.html' id='DSL-nav'>Reading time of file in DSL format</a>
+                
+                    <a href='NET.html' id='NET-nav'>Reading time of file in NET format</a>
+                
+                    <a href='UAI.html' id='UAI-nav'>Reading time of file in UAI format</a>
+                
+                    <a href='XDSL.html' id='XDSL-nav'>Reading time of file in XDSL format</a>
+                
+            </ul>
+            </li>
+        
+            <li class="menu-item has-submenu">
+            <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><img src="../assets/clipboard-list.svg" class="theme-icon"><a href='Learning.html' id='Learning-nav'>Learning Structured Probabilistic Models</a></button>
+            
+            <ul class="subMenu collapse">
+                
+                    <a href='Learning_micro_child_Kullback_Leibler.html' id='Learning_micro_child_Kullback_Leibler-nav'>Learning micro child Kullback Leibler</a>
+                
+                    <a href='Learning_structure_large_sampling.html' id='Learning_structure_large_sampling-nav'>Learning structure large sampling</a>
+                
+                    <a href='Learning_structure_small_sampling.html' id='Learning_structure_small_sampling-nav'>Learning structure small sampling</a>
+                
+            </ul>
+            </li>
+        
+        <!-- </ul> -->
     </ul>
 </nav>
 
@@ -147,7 +148,7 @@
             </a>
         </div>
     </div>
-    <div>2023-09-21 17:21:06</div>
+    <div>2023-09-29 20:04:33</div>
 </div>
 <script type="module">
     import { rankBar } from "../script/rankBar.js";
@@ -193,31 +194,33 @@
 
 <!-- Task Main Component -->
 <div class="main-content">
-    <h1 id="entry-title">Variable Elimination Inference</h1>
-    <!-- <div id="menu"></div> -->
-    <div>
-        Think of a Variable Elimination as a smart way to answer questions about the puzzle (Bayesian Network) without having to look at the entire picture (full joint distribution) at once.
+    <div class="task_content">
+        <h1 id="entry-title">Variable Elimination Inference</h1>
+        <!-- <div id="menu"></div> -->
+        <div>
+            Think of a Variable Elimination as a smart way to answer questions about the puzzle (Bayesian Network) without having to look at the entire picture (full joint distribution) at once.
 <br><br>In essence, Variable Elimination is a systematic way to navigate the Bayesian Network, leveraging the conditional independence relationships, and perform computations efficiently. 
 It's like solving a puzzle by working on small sections at a time, asking neighboring sections for help, and gradually piecing together the final result.
-        
-        <details>
-            <summary>More details</summary>
-            <div>
+            
+            <details>
+                <summary>More details</summary>
                 <div>
-                    <b>1. Starting Point</b>: You're given a question like "What's the probability of event A happening given evidence E?" This is like asking about a specific piece of the puzzle given some information you already have.
+                    <div>
+                        <b>1. Starting Point</b>: You're given a question like "What's the probability of event A happening given evidence E?" This is like asking about a specific piece of the puzzle given some information you already have.
 <br><br><b>2. Breaking Down</b> the Question: Variable Elimination is all about breaking down complex questions into simpler ones. You start by focusing on a small part of the puzzle (local factors).
 <br><br><b>3. Message Passing</b>: Imagine you have a piece of the puzzle with missing edges. Instead of looking at all the pieces, you ask neighboring pieces about their missing parts. Similarly, in Variable Elimination, you ask neighboring variables about their probabilities given the evidence. This is the "passing messages" part.
 <br><br><b>4. Summing Out Variables</b>: When you encounter a piece with too many possible values, you try to simplify it. In the puzzle analogy, this is like realizing a piece can fit in multiple places. In Variable Elimination, this is done by "summing out" variables. You merge all possibilities for a variable except the one you're interested in.
 <br><br><b>5. Building the Answer</b>: As you keep breaking down the question, asking neighbors, and simplifying parts, you're building an answer. It's like assembling the pieces of the puzzle that matter to your question.
 <br><br><b>6. Reaching the Answer</b>: Once you've asked all the right questions and simplified everything you can, you have your answer. You've effectively used the Bayesian Network's structure to calculate the probability you were interested in.
 <br><br><p>Timeout : 180 (seconds)</p><p>Number of iteration : 1</p><p>The task is interrupted if the number of timeout reached 3</p>
+                    </div>
+                    <div>
+                        
+                    </div>
                 </div>
-                <div>
-                    
-                </div>
-            </div>
-        </details>
-        
+            </details>
+            
+        </div>
     </div>
 
     <div id="compare-tool">

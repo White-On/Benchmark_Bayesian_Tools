@@ -33,7 +33,8 @@
             </a>
             
         </nav>
-    </header><!-- Navigation Bar -->
+    </header>
+<!-- Navigation Bar -->
 
 <nav id = "leftNavBar">
     <ul>
@@ -49,57 +50,57 @@
             
         </ul>
         </li>
-        <li class="menu-item has-submenu">
+        <!-- <li class="menu-item has-submenu">
         <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow">Theme</button>
-        <ul class="subMenu collapse">
+        <ul class="subMenu collapse"> -->
+        
+            <li class="menu-item has-submenu">
+            <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><img src="../assets/clipboard-list.svg" class="theme-icon"><a href='Inference.html' id='Inference-nav'>Inference</a></button>
             
-                <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Inference.html' id='Inference-nav'>Inference</a></button>
+            <ul class="subMenu collapse">
                 
-                <ul class="subMenu collapse">
-                    
-                        <a href='Best_Inference.html' id='Best_Inference-nav'>Best Inference</a>
-                    
-                        <a href='Variable_Elimination.html' id='Variable_Elimination-nav'>Variable Elimination Inference</a>
-                    
-                </ul>
-                </li>
-            
-                <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Input_Output.html' id='Input_Output-nav'>Input/Output of Bayesian Networks</a></button>
+                    <a href='Best_Inference.html' id='Best_Inference-nav'>Best Inference</a>
                 
-                <ul class="subMenu collapse">
-                    
-                        <a href='BIF.html' id='BIF-nav'>Reading time of file in BIF format</a>
-                    
-                        <a href='BIFXML.html' id='BIFXML-nav'>Reading time of file in BIFXML format</a>
-                    
-                        <a href='DSL.html' id='DSL-nav'>Reading time of file in DSL format</a>
-                    
-                        <a href='NET.html' id='NET-nav'>Reading time of file in NET format</a>
-                    
-                        <a href='UAI.html' id='UAI-nav'>Reading time of file in UAI format</a>
-                    
-                        <a href='XDSL.html' id='XDSL-nav'>Reading time of file in XDSL format</a>
-                    
-                </ul>
-                </li>
-            
-                <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Learning.html' id='Learning-nav'>Learning Structured Probabilistic Models</a></button>
+                    <a href='Variable_Elimination.html' id='Variable_Elimination-nav'>Variable Elimination Inference</a>
                 
-                <ul class="subMenu collapse">
-                    
-                        <a href='Learning_micro_child_Kullback_Leibler.html' id='Learning_micro_child_Kullback_Leibler-nav'>Learning micro child Kullback Leibler</a>
-                    
-                        <a href='Learning_structure_large_sampling.html' id='Learning_structure_large_sampling-nav'>Learning structure large sampling</a>
-                    
-                        <a href='Learning_structure_small_sampling.html' id='Learning_structure_small_sampling-nav'>Learning structure small sampling</a>
-                    
-                </ul>
-                </li>
+            </ul>
+            </li>
+        
+            <li class="menu-item has-submenu">
+            <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><img src="../assets/clipboard-list.svg" class="theme-icon"><a href='Input_Output.html' id='Input_Output-nav'>Input/Output of Bayesian Networks</a></button>
             
-        </ul>
+            <ul class="subMenu collapse">
+                
+                    <a href='BIF.html' id='BIF-nav'>Reading time of file in BIF format</a>
+                
+                    <a href='BIFXML.html' id='BIFXML-nav'>Reading time of file in BIFXML format</a>
+                
+                    <a href='DSL.html' id='DSL-nav'>Reading time of file in DSL format</a>
+                
+                    <a href='NET.html' id='NET-nav'>Reading time of file in NET format</a>
+                
+                    <a href='UAI.html' id='UAI-nav'>Reading time of file in UAI format</a>
+                
+                    <a href='XDSL.html' id='XDSL-nav'>Reading time of file in XDSL format</a>
+                
+            </ul>
+            </li>
+        
+            <li class="menu-item has-submenu">
+            <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><img src="../assets/clipboard-list.svg" class="theme-icon"><a href='Learning.html' id='Learning-nav'>Learning Structured Probabilistic Models</a></button>
+            
+            <ul class="subMenu collapse">
+                
+                    <a href='Learning_micro_child_Kullback_Leibler.html' id='Learning_micro_child_Kullback_Leibler-nav'>Learning micro child Kullback Leibler</a>
+                
+                    <a href='Learning_structure_large_sampling.html' id='Learning_structure_large_sampling-nav'>Learning structure large sampling</a>
+                
+                    <a href='Learning_structure_small_sampling.html' id='Learning_structure_small_sampling-nav'>Learning structure small sampling</a>
+                
+            </ul>
+            </li>
+        
+        <!-- </ul> -->
     </ul>
 </nav>
 
@@ -147,7 +148,7 @@
             </a>
         </div>
     </div>
-    <div>2023-09-21 17:21:06</div>
+    <div>2023-09-29 20:04:33</div>
 </div>
 <script type="module">
     import { rankBar } from "../script/rankBar.js";
@@ -190,9 +191,10 @@
 <script defer  >const themeName = 'Learning';</script>
 <script defer type='module' src ='../script/themeScript.js'></script>
 
-<h1 id="entry-title">Learning Structured Probabilistic Models</h1>
-<h2>This theme is compose of <a href='Learning_micro_child_Kullback_Leibler.html' >Learning micro child Kullback Leibler</a>, <a href='Learning_structure_large_sampling.html' >Learning structure large sampling</a>, <a href='Learning_structure_small_sampling.html' >Learning structure small sampling</a></h2>
-<p>Learning a Bayesian Network is like reverse-engineering a puzzle. Instead of having all the pieces and trying to figure out the whole picture, 
+<div class="theme_content">
+    <h1 id="entry-title">Learning Structured Probabilistic Models</h1>
+    <h2>This theme is compose of <a href='Learning_micro_child_Kullback_Leibler.html' >Learning micro child Kullback Leibler</a>, <a href='Learning_structure_large_sampling.html' >Learning structure large sampling</a>, <a href='Learning_structure_small_sampling.html' >Learning structure small sampling</a></h2>
+    <p>Learning a Bayesian Network is like reverse-engineering a puzzle. Instead of having all the pieces and trying to figure out the whole picture, 
     you have the completed puzzle and you're trying to determine how the pieces fit together.
     <br><br>Imagine you have a completed puzzle, and you're not given the picture on the box. Your job is to carefully study the connections between the pieces and the patterns they form. 
     By analyzing how the pieces interlock and the colors and shapes align, you start to piece together the rules that governed the puzzle's creation. You might discover that certain pieces 
@@ -201,6 +203,7 @@
     that generated this data. You observe how variables tend to co-occur, which ones influence others, and the patterns of dependencies. Through statistical methods and algorithms,
     you build a Bayesian Network that best represents these relationships, just as you would gradually recreate the puzzle's image based on the patterns you observe.
     <br><br>So, learning a Bayesian Network is about understanding the hidden rules that generated the observed data, much like figuring out a puzzle's image from the arrangement of its pieces.</p>
+</div>
 <div id="main_container"></div><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
 <script>

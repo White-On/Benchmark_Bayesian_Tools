@@ -33,7 +33,8 @@
             </a>
             
         </nav>
-    </header><!-- Navigation Bar -->
+    </header>
+<!-- Navigation Bar -->
 
 <nav id = "leftNavBar">
     <ul>
@@ -49,57 +50,57 @@
             
         </ul>
         </li>
-        <li class="menu-item has-submenu">
+        <!-- <li class="menu-item has-submenu">
         <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow">Theme</button>
-        <ul class="subMenu collapse">
+        <ul class="subMenu collapse"> -->
+        
+            <li class="menu-item has-submenu">
+            <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><img src="../assets/clipboard-list.svg" class="theme-icon"><a href='Inference.html' id='Inference-nav'>Inference</a></button>
             
-                <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Inference.html' id='Inference-nav'>Inference</a></button>
+            <ul class="subMenu collapse">
                 
-                <ul class="subMenu collapse">
-                    
-                        <a href='Best_Inference.html' id='Best_Inference-nav'>Best Inference</a>
-                    
-                        <a href='Variable_Elimination.html' id='Variable_Elimination-nav'>Variable Elimination Inference</a>
-                    
-                </ul>
-                </li>
-            
-                <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Input_Output.html' id='Input_Output-nav'>Input/Output of Bayesian Networks</a></button>
+                    <a href='Best_Inference.html' id='Best_Inference-nav'>Best Inference</a>
                 
-                <ul class="subMenu collapse">
-                    
-                        <a href='BIF.html' id='BIF-nav'>Reading time of file in BIF format</a>
-                    
-                        <a href='BIFXML.html' id='BIFXML-nav'>Reading time of file in BIFXML format</a>
-                    
-                        <a href='DSL.html' id='DSL-nav'>Reading time of file in DSL format</a>
-                    
-                        <a href='NET.html' id='NET-nav'>Reading time of file in NET format</a>
-                    
-                        <a href='UAI.html' id='UAI-nav'>Reading time of file in UAI format</a>
-                    
-                        <a href='XDSL.html' id='XDSL-nav'>Reading time of file in XDSL format</a>
-                    
-                </ul>
-                </li>
-            
-                <li class="menu-item has-submenu">
-                <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><a href='Learning.html' id='Learning-nav'>Learning Structured Probabilistic Models</a></button>
+                    <a href='Variable_Elimination.html' id='Variable_Elimination-nav'>Variable Elimination Inference</a>
                 
-                <ul class="subMenu collapse">
-                    
-                        <a href='Learning_micro_child_Kullback_Leibler.html' id='Learning_micro_child_Kullback_Leibler-nav'>Learning micro child Kullback Leibler</a>
-                    
-                        <a href='Learning_structure_large_sampling.html' id='Learning_structure_large_sampling-nav'>Learning structure large sampling</a>
-                    
-                        <a href='Learning_structure_small_sampling.html' id='Learning_structure_small_sampling-nav'>Learning structure small sampling</a>
-                    
-                </ul>
-                </li>
+            </ul>
+            </li>
+        
+            <li class="menu-item has-submenu">
+            <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><img src="../assets/clipboard-list.svg" class="theme-icon"><a href='Input_Output.html' id='Input_Output-nav'>Input/Output of Bayesian Networks</a></button>
             
-        </ul>
+            <ul class="subMenu collapse">
+                
+                    <a href='BIF.html' id='BIF-nav'>Reading time of file in BIF format</a>
+                
+                    <a href='BIFXML.html' id='BIFXML-nav'>Reading time of file in BIFXML format</a>
+                
+                    <a href='DSL.html' id='DSL-nav'>Reading time of file in DSL format</a>
+                
+                    <a href='NET.html' id='NET-nav'>Reading time of file in NET format</a>
+                
+                    <a href='UAI.html' id='UAI-nav'>Reading time of file in UAI format</a>
+                
+                    <a href='XDSL.html' id='XDSL-nav'>Reading time of file in XDSL format</a>
+                
+            </ul>
+            </li>
+        
+            <li class="menu-item has-submenu">
+            <button type="button"><img src="../assets/chevron-down-solid.svg" alt="arrow" class="arrow"><img src="../assets/clipboard-list.svg" class="theme-icon"><a href='Learning.html' id='Learning-nav'>Learning Structured Probabilistic Models</a></button>
+            
+            <ul class="subMenu collapse">
+                
+                    <a href='Learning_micro_child_Kullback_Leibler.html' id='Learning_micro_child_Kullback_Leibler-nav'>Learning micro child Kullback Leibler</a>
+                
+                    <a href='Learning_structure_large_sampling.html' id='Learning_structure_large_sampling-nav'>Learning structure large sampling</a>
+                
+                    <a href='Learning_structure_small_sampling.html' id='Learning_structure_small_sampling-nav'>Learning structure small sampling</a>
+                
+            </ul>
+            </li>
+        
+        <!-- </ul> -->
     </ul>
 </nav>
 
@@ -147,7 +148,7 @@
             </a>
         </div>
     </div>
-    <div>2023-09-21 17:21:06</div>
+    <div>2023-09-29 20:04:33</div>
 </div>
 <script type="module">
     import { rankBar } from "../script/rankBar.js";
@@ -188,13 +189,16 @@
 <script defer type='module' src ='../script/libraryScript.js'></script>
 
 <!-- Target main component -->
-<div class="title">
-    <img src='../assets\pyAgrum.png' alt='pyAgrum' width='50' height='50'><h1 id="entry-title">pyAgrum</h1> 
-</div>
-<p class="description">pyAgrum is a scientific C++ and Python library dedicated to Bayesian networks (BN) and other Probabilistic Graphical Models. 
+
+<div class="library_content">
+    <div class="title">
+        <img src='../assets\pyAgrum.png' alt='pyAgrum' width='50' height='50'><h1 id="entry-title">pyAgrum</h1>
+    </div>
+    <p class="description">pyAgrum is a scientific C++ and Python library dedicated to Bayesian networks (BN) and other Probabilistic Graphical Models. 
     Based on the C++ aGrUM library, it provides a high-level interface to the C++ part of aGrUM allowing to create, manage and perform efficient 
     computations with Bayesian networks and others probabilistic graphical models : 
     <br>Markov random fields (MRF), influence diagrams (ID) and LIMIDs, credal networks (CN), dynamic BN (dBN), probabilistic relational models (PRM).</p>
+</div>
 
 <div class ="grid">
     
