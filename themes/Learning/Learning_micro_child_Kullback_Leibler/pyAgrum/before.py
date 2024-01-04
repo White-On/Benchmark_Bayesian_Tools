@@ -1,10 +1,11 @@
 import pyAgrum as gum
 import os
 import sys
+from pathlib import Path
 
-currentdir = os.path.dirname(os.path.realpath(__file__))
+current_dir = Path(__file__).parents[1].absolute()
 
-bn = gum.loadBN(f"{currentdir}/data/micro_child.bif")
+bn = gum.loadBN(f"{current_dir}/data/micro_child.bif")
 
 
-gum.saveBN(bn, f"{currentdir}/data/outContext.bif")
+gum.saveBN(bn, f"{current_dir}/data/outContext.bif")

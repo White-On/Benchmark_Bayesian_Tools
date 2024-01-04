@@ -9,13 +9,15 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-currentdir = os.path.dirname(os.path.realpath(__file__))
+from pathlib import Path
+
+current_dir = Path(__file__).parents[1].absolute()
 
 # Load the BN to compare properly time of learning
-bn = BIFReader(f"{currentdir}/data/micro_child.bif").get_model()
+bn = BIFReader(f"{current_dir}/data/micro_child.bif").get_model()
 
 # Read the data from the file
-samples = read_csv(f"{currentdir}/data/sample_{sys.argv[1]}_micro_child.csv", sep=",")
+samples = read_csv(f"{current_dir}/data/sample_{sys.argv[1]}_micro_child.csv", sep=",")
 
 # estimate structure
 est = PC(samples)
@@ -30,6 +32,6 @@ best_model.fit(samples, estimator=BayesianEstimator, prior_type="K2")
 
 # Save the model
 # best_model.save(
-#     f"{currentdir}/data/pgmpy_learned_{sys.argv[1]}_micro_child.bif", filetype="bif"
+#     f"{current_dir}/data/pgmpy_learned_{sys.argv[1]}_micro_child.bif", filetype="bif"
 # )
-BIFWriter(best_model).write_bif(f"{currentdir}/data/pgmpy_learned_{sys.argv[1]}_micro_child.bif")
+BIFWriter(best_model).write_bif(f"{current_dir}/data/pgmpy_learned_{sys.argv[1]}_micro_child.bif")

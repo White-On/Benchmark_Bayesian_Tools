@@ -3,9 +3,9 @@ from pgmpy.readwrite import BIFWriter
 import pandas as pd
 import os
 import sys
+from pathlib import Path
 
-
-current_dir = os.path.dirname(os.path.realpath(__file__))
+current_dir = Path(__file__).parents[1].absolute()
 
 # Load the BN to compare properly time of learning
 true_model = bn.import_DAG(f"{current_dir}/data/micro_child.bif")
